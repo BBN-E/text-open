@@ -1,0 +1,5 @@
+IMPLEMENTATIONS
+serif/model/impl/event_event_relation_mention/eer_precision_resolver.py
+
+EVENT_EVENT_RELATION_MENTION_MODEL EERPrecisionResolver
+must_have_json_path ANY_STR_WORKS

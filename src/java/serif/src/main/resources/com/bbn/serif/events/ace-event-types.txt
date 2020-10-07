@@ -1,0 +1,12 @@
+Conflict.Attack
+Life.Die
+Life.Injure
+Transaction.Transfer-Money
+Movement.Transport
+Justice.Sue
+Contact.Meet
+Personnel.Start-Position
+Justice.Sentence
+Justice.Convict
+Justice.Charge-Indict
+Justice.Arrest-Jail

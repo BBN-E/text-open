@@ -1,0 +1,26 @@
+#IMPLEMENTATIONS
+#/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/sentence_splitter/newline_sentence_splitter.py
+
+#IMPLEMENTATIONS
+#/d4m/nlp/releases/text-open/R2020_07_13/src/python/serif/model/impl/tokenizer/white_space_tokenizer.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/sentence_splitter/stanza_sentence_splitter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/stanza_adapter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/parser/DTreeToCTreeParser.py
+
+SENTENCE_SPLITTING_MODEL StanzaSentenceSplitter
+lang ar
+dir /nfs/raid66/u11/users/brozonoy/text-open/stanza_models/
+
+#SENTENCE_SPLITTING_MODEL NewlineSentenceSplitter
+
+BASE_MODEL StanzaAdapter
+lang ar
+dir /nfs/raid66/u11/users/brozonoy/text-open/stanza_models/
+
+PARSE_MODEL DTreeToCTreeParser

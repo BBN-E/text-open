@@ -1,0 +1,1610 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SerifXML version="22">
+
+  <Document docid="20190712162216-0" id="a1" is_downcased="FALSE" language="English" source_type="UNKNOWN">
+    <OriginalText char_offsets="0:2314" edt_offsets="0:2314" id="a2">
+      <Contents>By the 1890s, the profound effect of adrenal extracts on many different tissue types had been discovered, setting off a search both for the mechanism of chemical signalling and efforts to exploit these observations for the development of new drugs. The blood pressure raising and vasoconstrictive effects of adrenal extracts were of particular interest to surgeons as hemostatic agents and as treatment for shock, and a number of companies developed products based on adrenal extracts containing varying purities of the active substance. In 1897, John Abel of Johns Hopkins University identified the active principle as epinephrine, which he isolated in an impure state as the sulfate salt. Industrial chemist Jokichi Takamine later developed a method for obtaining epinephrine in a pure state, and licensed the technology to Parke-Davis. Parke-Davis marketed epinephrine under the trade name Adrenalin. Injected epinephrine proved to be especially efficacious for the acute treatment of asthma attacks, and an inhaled version was sold in the United States until 2011 (Primatene Mist). By 1929 epinephrine had been formulated into an inhaler for use in the treatment of nasal congestion.
+
+While highly effective, the requirement for injection limited the use of epinephrine and orally active derivatives were sought. A structurally similar compound, ephedrine, (actually more similar to norepinephrine,) was identified by Japanese chemists in the Ma Huang plant and marketed by Eli Lilly as an oral treatment for asthma. Following the work of Henry Dale and George Barger at Burroughs-Wellcome, academic chemist Gordon Alles synthesized amphetamine and tested it in asthma patients in 1929. The drug proved to have only modest anti-asthma effects, but produced sensations of exhilaration and palpitations. Amphetamine was developed by Smith, Kline and French as a nasal decongestant under the trade name Benzedrine Inhaler. Amphetamine was eventually developed for the treatment of narcolepsy, post-encephalitic parkinsonism, and mood elevation in depression and other psychiatric indications. It received approval as a New and Nonofficial Remedy from the American Medical Association for these uses in 1937 and remained in common use for depression until the development of tricyclic antidepressants in the 1960s.
+</Contents>
+    </OriginalText>
+    <Regions>
+      <Region char_offsets="0:2314" edt_offsets="0:2314" id="a3" is_receiver="FALSE" is_speaker="FALSE" tag="TEXT"/>
+    </Regions>
+    <Segments/>
+    <Metadata/>
+    <Sentences>
+      <Sentence char_offsets="0:247" edt_offsets="0:247" id="a4" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a6" score="0">
+          <Token char_offsets="0:1" edt_offsets="0:1" id="a7">By</Token>
+          <Token char_offsets="3:5" edt_offsets="3:5" id="a8">the</Token>
+          <Token char_offsets="7:11" edt_offsets="7:11" id="a9">1890s</Token>
+          <Token char_offsets="12:12" edt_offsets="12:12" id="a10">,</Token>
+          <Token char_offsets="14:16" edt_offsets="14:16" id="a11">the</Token>
+          <Token char_offsets="18:25" edt_offsets="18:25" id="a12">profound</Token>
+          <Token char_offsets="27:32" edt_offsets="27:32" id="a13">effect</Token>
+          <Token char_offsets="34:35" edt_offsets="34:35" id="a14">of</Token>
+          <Token char_offsets="37:43" edt_offsets="37:43" id="a15">adrenal</Token>
+          <Token char_offsets="45:52" edt_offsets="45:52" id="a16">extracts</Token>
+          <Token char_offsets="54:55" edt_offsets="54:55" id="a17">on</Token>
+          <Token char_offsets="57:60" edt_offsets="57:60" id="a18">many</Token>
+          <Token char_offsets="62:70" edt_offsets="62:70" id="a19">different</Token>
+          <Token char_offsets="72:77" edt_offsets="72:77" id="a20">tissue</Token>
+          <Token char_offsets="79:83" edt_offsets="79:83" id="a21">types</Token>
+          <Token char_offsets="85:87" edt_offsets="85:87" id="a22">had</Token>
+          <Token char_offsets="89:92" edt_offsets="89:92" id="a23">been</Token>
+          <Token char_offsets="94:103" edt_offsets="94:103" id="a24">discovered</Token>
+          <Token char_offsets="104:104" edt_offsets="104:104" id="a25">,</Token>
+          <Token char_offsets="106:112" edt_offsets="106:112" id="a26">setting</Token>
+          <Token char_offsets="114:116" edt_offsets="114:116" id="a27">off</Token>
+          <Token char_offsets="118:118" edt_offsets="118:118" id="a28">a</Token>
+          <Token char_offsets="120:125" edt_offsets="120:125" id="a29">search</Token>
+          <Token char_offsets="127:130" edt_offsets="127:130" id="a30">both</Token>
+          <Token char_offsets="132:134" edt_offsets="132:134" id="a31">for</Token>
+          <Token char_offsets="136:138" edt_offsets="136:138" id="a32">the</Token>
+          <Token char_offsets="140:148" edt_offsets="140:148" id="a33">mechanism</Token>
+          <Token char_offsets="150:151" edt_offsets="150:151" id="a34">of</Token>
+          <Token char_offsets="153:160" edt_offsets="153:160" id="a35">chemical</Token>
+          <Token char_offsets="162:171" edt_offsets="162:171" id="a36">signalling</Token>
+          <Token char_offsets="173:175" edt_offsets="173:175" id="a37">and</Token>
+          <Token char_offsets="177:183" edt_offsets="177:183" id="a38">efforts</Token>
+          <Token char_offsets="185:186" edt_offsets="185:186" id="a39">to</Token>
+          <Token char_offsets="188:194" edt_offsets="188:194" id="a40">exploit</Token>
+          <Token char_offsets="196:200" edt_offsets="196:200" id="a41">these</Token>
+          <Token char_offsets="202:213" edt_offsets="202:213" id="a42">observations</Token>
+          <Token char_offsets="215:217" edt_offsets="215:217" id="a43">for</Token>
+          <Token char_offsets="219:221" edt_offsets="219:221" id="a44">the</Token>
+          <Token char_offsets="223:233" edt_offsets="223:233" id="a45">development</Token>
+          <Token char_offsets="235:236" edt_offsets="235:236" id="a46">of</Token>
+          <Token char_offsets="238:240" edt_offsets="238:240" id="a47">new</Token>
+          <Token char_offsets="242:246" edt_offsets="242:246" id="a48">drugs</Token>
+          <Token char_offsets="247:247" edt_offsets="247:247" id="a49">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a50" score="0" token_sequence_id="a6"/>
+        <NameTheory id="a51" score="0" token_sequence_id="a6"/>
+        <NestedNameTheory id="a52" name_theory_id="a51" score="0" token_sequence_id="a6"/>
+        <ValueMentionSet id="a53" score="0" token_sequence_id="a6">
+          <ValueMention char_offsets="3:11" edt_offsets="3:11" end_token="a9" id="a54" start_token="a8" value_type="TIMEX2.TIME"/>
+        </ValueMentionSet>
+        <Parse id="a55" score="-228.051" token_sequence_id="a6">
+          <TreebankString node_id_method="DFS">(S^ (PP (IN^ by) (NPA (DT the) (NN^ 1890s))) (, ,) (NP (NPA^ (DT the) (NN profound) (NN^ effect)) (PP (IN^ of) (NPA (JJ adrenal) (NNS^ extracts))) (PP (IN^ on) (NPA (JJ many) (JJ different) (NN tissue) (NNS^ types)))) (VP^ (VBD^ had) (VP (VBN^ been) (VP (VBN^ discovered) (, ,) (S (VP^ (VBG^ setting) (PRT (RP^ off)) (NP (NPA^ (DT a) (NN^ search)) (PP (DT both) (IN^ for) (NP (NPA^ (DT the) (NN^ mechanism)) (PP (IN^ of) (NPA (NN chemical) (NN signalling) (CC and) (NNS^ efforts) (S (VP^ (TO^ to) (VP (VB^ exploit) (NP (NPA^ (DT these) (NNS^ observations)) (PP (IN^ for) (NP (NPA^ (DT the) (NN^ development)) (PP (IN^ of) (NPA (JJ new) (NNS^ drugs))))))))))))))))))) (. .))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="14" id="a56" name_score="0" parse_id="a55">
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a57" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a55.4"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a58" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a55.11"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a59" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a55.12"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a60" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a55.15"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a61" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a55.22"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a62" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a55.30"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a63" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a55.35"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a64" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a55.57"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a65" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a55.58"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a66" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a55.68"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a67" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a55.69"/>
+          <Mention child="a69" entity_subtype="UNDET" entity_type="OTH" id="a68" intended_type="UNDET" is_metonymy="FALSE" mention_type="list" role_type="UNDET" syn_node_id="a55.77"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a69" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" next="a70" parent="a68" role_type="UNDET" syn_node_id="a55.78"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a70" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" parent="a68" role_type="UNDET" syn_node_id="a55.80"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a71" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a55.93"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a72" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a55.94"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a73" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a55.102"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a74" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a55.103"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a75" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a55.111"/>
+        </MentionSet>
+        <PropositionSet id="a76" mention_set_id="a56">
+          <Proposition head_id="a55.15" id="a77" type="modifier">
+            <Argument mention_id="a58" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a55.17" id="a78" type="noun">
+            <Argument mention_id="a58" role="&lt;ref>"/>
+            <Argument mention_id="a61" role="of"/>
+            <Argument mention_id="a62" role="on"/>
+          </Proposition>
+          <Proposition head_id="a55.23" id="a79" type="modifier">
+            <Argument mention_id="a61" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a55.25" id="a80" type="noun">
+            <Argument mention_id="a61" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a55.31" id="a81" type="modifier">
+            <Argument mention_id="a62" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a55.33" id="a82" type="modifier">
+            <Argument mention_id="a62" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a55.35" id="a83" type="modifier">
+            <Argument mention_id="a62" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a55.37" id="a84" type="noun">
+            <Argument mention_id="a62" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a55.43" id="a85" type="modifier">
+            <Argument mention_id="a58" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a55.46" id="a86" type="verb">
+            <Argument mention_id="a57" role="&lt;sub>"/>
+            <Argument mention_id="a58" role="&lt;obj>"/>
+          </Proposition>
+          <Proposition head_id="a55.7" id="a87" type="noun">
+            <Argument mention_id="a57" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a55.52" id="a88" particle_id="a55.54" type="verb">
+            <Argument mention_id="a58" role="&lt;sub>"/>
+            <Argument mention_id="a64" role="&lt;obj>"/>
+          </Proposition>
+          <Proposition head_id="a55.61" id="a89" type="noun">
+            <Argument mention_id="a64" role="&lt;ref>"/>
+            <Argument mention_id="a66" role="for"/>
+          </Proposition>
+          <Proposition head_id="a55.72" id="a90" type="noun">
+            <Argument mention_id="a66" role="&lt;ref>"/>
+            <Argument mention_id="a68" role="of"/>
+          </Proposition>
+          <Proposition id="a91" type="set">
+            <Argument mention_id="a68" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a55.91" id="a92" type="verb">
+            <Argument mention_id="a68" role="&lt;sub>"/>
+            <Argument mention_id="a71" role="&lt;obj>"/>
+          </Proposition>
+          <Proposition head_id="a55.97" id="a93" type="noun">
+            <Argument mention_id="a71" role="&lt;ref>"/>
+            <Argument mention_id="a73" role="for"/>
+          </Proposition>
+          <Proposition head_id="a55.106" id="a94" type="noun">
+            <Argument mention_id="a73" role="&lt;ref>"/>
+            <Argument mention_id="a75" role="of"/>
+          </Proposition>
+          <Proposition head_id="a55.112" id="a95" type="modifier">
+            <Argument mention_id="a75" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a55.114" id="a96" type="noun">
+            <Argument mention_id="a75" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a55.78" id="a97" type="noun">
+            <Argument mention_id="a68" role="&lt;ref>"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a5" mention_set_id="a56" name_theory_id="a51" nested_name_theory_id="a52" parse_id="a55" part_of_speech_sequence_id="a50" primary_parse="full_parse" proposition_set_id="a76" token_sequence_id="a6" value_mention_set_id="a53"/>
+      </Sentence>
+      <Sentence char_offsets="249:536" edt_offsets="249:536" id="a98" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a100" score="0">
+          <Token char_offsets="249:251" edt_offsets="249:251" id="a101">The</Token>
+          <Token char_offsets="253:257" edt_offsets="253:257" id="a102">blood</Token>
+          <Token char_offsets="259:266" edt_offsets="259:266" id="a103">pressure</Token>
+          <Token char_offsets="268:274" edt_offsets="268:274" id="a104">raising</Token>
+          <Token char_offsets="276:278" edt_offsets="276:278" id="a105">and</Token>
+          <Token char_offsets="280:295" edt_offsets="280:295" id="a106">vasoconstrictive</Token>
+          <Token char_offsets="297:303" edt_offsets="297:303" id="a107">effects</Token>
+          <Token char_offsets="305:306" edt_offsets="305:306" id="a108">of</Token>
+          <Token char_offsets="308:314" edt_offsets="308:314" id="a109">adrenal</Token>
+          <Token char_offsets="316:323" edt_offsets="316:323" id="a110">extracts</Token>
+          <Token char_offsets="325:328" edt_offsets="325:328" id="a111">were</Token>
+          <Token char_offsets="330:331" edt_offsets="330:331" id="a112">of</Token>
+          <Token char_offsets="333:342" edt_offsets="333:342" id="a113">particular</Token>
+          <Token char_offsets="344:351" edt_offsets="344:351" id="a114">interest</Token>
+          <Token char_offsets="353:354" edt_offsets="353:354" id="a115">to</Token>
+          <Token char_offsets="356:363" edt_offsets="356:363" id="a116">surgeons</Token>
+          <Token char_offsets="365:366" edt_offsets="365:366" id="a117">as</Token>
+          <Token char_offsets="368:377" edt_offsets="368:377" id="a118">hemostatic</Token>
+          <Token char_offsets="379:384" edt_offsets="379:384" id="a119">agents</Token>
+          <Token char_offsets="386:388" edt_offsets="386:388" id="a120">and</Token>
+          <Token char_offsets="390:391" edt_offsets="390:391" id="a121">as</Token>
+          <Token char_offsets="393:401" edt_offsets="393:401" id="a122">treatment</Token>
+          <Token char_offsets="403:405" edt_offsets="403:405" id="a123">for</Token>
+          <Token char_offsets="407:411" edt_offsets="407:411" id="a124">shock</Token>
+          <Token char_offsets="412:412" edt_offsets="412:412" id="a125">,</Token>
+          <Token char_offsets="414:416" edt_offsets="414:416" id="a126">and</Token>
+          <Token char_offsets="418:418" edt_offsets="418:418" id="a127">a</Token>
+          <Token char_offsets="420:425" edt_offsets="420:425" id="a128">number</Token>
+          <Token char_offsets="427:428" edt_offsets="427:428" id="a129">of</Token>
+          <Token char_offsets="430:438" edt_offsets="430:438" id="a130">companies</Token>
+          <Token char_offsets="440:448" edt_offsets="440:448" id="a131">developed</Token>
+          <Token char_offsets="450:457" edt_offsets="450:457" id="a132">products</Token>
+          <Token char_offsets="459:463" edt_offsets="459:463" id="a133">based</Token>
+          <Token char_offsets="465:466" edt_offsets="465:466" id="a134">on</Token>
+          <Token char_offsets="468:474" edt_offsets="468:474" id="a135">adrenal</Token>
+          <Token char_offsets="476:483" edt_offsets="476:483" id="a136">extracts</Token>
+          <Token char_offsets="485:494" edt_offsets="485:494" id="a137">containing</Token>
+          <Token char_offsets="496:502" edt_offsets="496:502" id="a138">varying</Token>
+          <Token char_offsets="504:511" edt_offsets="504:511" id="a139">purities</Token>
+          <Token char_offsets="513:514" edt_offsets="513:514" id="a140">of</Token>
+          <Token char_offsets="516:518" edt_offsets="516:518" id="a141">the</Token>
+          <Token char_offsets="520:525" edt_offsets="520:525" id="a142">active</Token>
+          <Token char_offsets="527:535" edt_offsets="527:535" id="a143">substance</Token>
+          <Token char_offsets="536:536" edt_offsets="536:536" id="a144">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a145" score="0" token_sequence_id="a100"/>
+        <NameTheory id="a146" score="0" token_sequence_id="a100"/>
+        <NestedNameTheory id="a147" name_theory_id="a146" score="0" token_sequence_id="a100"/>
+        <ValueMentionSet id="a148" score="0" token_sequence_id="a100"/>
+        <Parse id="a149" score="-262.537" token_sequence_id="a100">
+          <TreebankString node_id_method="DFS">(S^ (NP (NPA^ (DT the) (NN blood) (NN pressure) (NN^ raising)) (CC and) (NP (NPA^ (JJ vasoconstrictive) (NNS^ effects)) (PP (IN^ of) (NPA (JJ adrenal) (NNS^ extracts))))) (VP^ (VBD^ were) (PP (IN^ of) (NP (NPA^ (JJ particular) (NN^ interest)) (PP (TO^ to) (NP (NPA^ (NNS^ surgeons)) (PP (PP (IN^ as) (NPA (JJ hemostatic) (NNS^ agents))) (CC and) (PP^ (IN^ as) (NP (NP^ (NPA^ (NN^ treatment)) (PP (IN^ for) (NPA (NN^ shock)))) (, ,) (CC and) (NP (NPA^ (DT a) (NN^ number)) (PP (IN^ of) (NP (NPA^ (NNS^ companies)) (VP (VBN^ developed) (NP (NPA^ (NNS^ products)) (VP (VBN^ based) (PP (IN^ on) (NP (NPA^ (JJ adrenal) (NNS^ extracts)) (VP (VBG^ containing) (NP (NPA^ (VBG varying) (NNS^ purities)) (PP (IN^ of) (NPA (DT the) (JJ active) (NN^ substance))))))))))))))))))))) (. .))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="22" id="a150" name_score="0" parse_id="a149">
+          <Mention child="a152" entity_subtype="UNDET" entity_type="OTH" id="a151" intended_type="UNDET" is_metonymy="FALSE" mention_type="list" role_type="UNDET" syn_node_id="a149.1"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a152" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" next="a155" parent="a151" role_type="UNDET" syn_node_id="a149.2"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a153" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a149.5"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a154" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a149.7"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a155" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" parent="a151" role_type="UNDET" syn_node_id="a149.13"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a156" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a149.14"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a157" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a149.22"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a158" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a149.33"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a159" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a149.34"/>
+          <Mention entity_subtype="Group" entity_type="PER" id="a160" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a149.42"/>
+          <Mention entity_subtype="UNDET" entity_type="PER" id="a161" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a149.43"/>
+          <Mention entity_subtype="Group" entity_type="PER" id="a162" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a149.50"/>
+          <Mention child="a164" entity_subtype="UNDET" entity_type="OTH" id="a163" intended_type="UNDET" is_metonymy="FALSE" mention_type="list" role_type="UNDET" syn_node_id="a149.60"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a164" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" next="a167" parent="a163" role_type="UNDET" syn_node_id="a149.61"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a165" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a149.62"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a166" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a149.68"/>
+          <Mention child="a169" entity_subtype="UNDET" entity_type="ORG" id="a167" intended_type="UNDET" is_metonymy="FALSE" mention_type="part" parent="a163" role_type="UNDET" syn_node_id="a149.75"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a168" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a149.76"/>
+          <Mention entity_subtype="UNDET" entity_type="ORG" id="a169" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" parent="a167" role_type="UNDET" syn_node_id="a149.84"/>
+          <Mention entity_subtype="UNDET" entity_type="ORG" id="a170" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a149.85"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a171" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a149.91"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a172" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a149.92"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a173" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a149.101"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a174" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a149.102"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a175" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a149.110"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a176" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a149.111"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a177" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a149.119"/>
+        </MentionSet>
+        <PropositionSet id="a178" mention_set_id="a150">
+          <Proposition id="a179" type="set">
+            <Argument mention_id="a151" role="&lt;ref>"/>
+            <Argument mention_id="a152" role="&lt;member>"/>
+            <Argument mention_id="a155" role="&lt;member>"/>
+          </Proposition>
+          <Proposition head_id="a149.5" id="a180" type="modifier">
+            <Argument mention_id="a152" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.7" id="a181" type="modifier">
+            <Argument mention_id="a152" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.9" id="a182" type="noun">
+            <Argument mention_id="a152" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.15" id="a183" type="modifier">
+            <Argument mention_id="a155" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.17" id="a184" type="noun">
+            <Argument mention_id="a155" role="&lt;ref>"/>
+            <Argument mention_id="a157" role="of"/>
+          </Proposition>
+          <Proposition head_id="a149.23" id="a185" type="modifier">
+            <Argument mention_id="a157" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.25" id="a186" type="noun">
+            <Argument mention_id="a157" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.31" id="a187" type="modifier">
+            <Argument mention_id="a151" role="&lt;ref>"/>
+            <Argument mention_id="a158" role="of"/>
+          </Proposition>
+          <Proposition head_id="a149.35" id="a188" type="modifier">
+            <Argument mention_id="a158" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.37" id="a189" type="noun">
+            <Argument mention_id="a158" role="&lt;ref>"/>
+            <Argument mention_id="a160" role="to"/>
+          </Proposition>
+          <Proposition head_id="a149.44" id="a190" type="noun">
+            <Argument mention_id="a160" role="&lt;ref>"/>
+            <Argument mention_id="a162" role="as"/>
+            <Argument mention_id="a163" role="as"/>
+          </Proposition>
+          <Proposition head_id="a149.51" id="a191" type="modifier">
+            <Argument mention_id="a162" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.53" id="a192" type="noun">
+            <Argument mention_id="a162" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition id="a193" type="set">
+            <Argument mention_id="a163" role="&lt;ref>"/>
+            <Argument mention_id="a164" role="&lt;member>"/>
+            <Argument mention_id="a167" role="&lt;member>"/>
+          </Proposition>
+          <Proposition head_id="a149.63" id="a194" type="noun">
+            <Argument mention_id="a164" role="&lt;ref>"/>
+            <Argument mention_id="a166" role="for"/>
+          </Proposition>
+          <Proposition head_id="a149.69" id="a195" type="noun">
+            <Argument mention_id="a166" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.79" id="a196" type="noun">
+            <Argument mention_id="a167" role="&lt;ref>"/>
+            <Argument mention_id="a169" role="of"/>
+          </Proposition>
+          <Proposition head_id="a149.86" id="a197" type="noun">
+            <Argument mention_id="a169" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.89" id="a198" type="verb">
+            <Argument mention_id="a169" role="&lt;obj>"/>
+            <Argument mention_id="a171" role="&lt;iobj>"/>
+          </Proposition>
+          <Proposition head_id="a149.93" id="a199" type="noun">
+            <Argument mention_id="a171" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.96" id="a200" type="verb">
+            <Argument mention_id="a171" role="&lt;obj>"/>
+            <Argument mention_id="a173" role="on"/>
+          </Proposition>
+          <Proposition head_id="a149.103" id="a201" type="modifier">
+            <Argument mention_id="a173" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.105" id="a202" type="noun">
+            <Argument mention_id="a173" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.108" id="a203" type="verb">
+            <Argument mention_id="a173" role="&lt;sub>"/>
+            <Argument mention_id="a175" role="&lt;obj>"/>
+          </Proposition>
+          <Proposition head_id="a149.112" id="a204" type="modifier">
+            <Argument mention_id="a175" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.114" id="a205" type="noun">
+            <Argument mention_id="a175" role="&lt;ref>"/>
+            <Argument mention_id="a177" role="of"/>
+          </Proposition>
+          <Proposition head_id="a149.122" id="a206" type="modifier">
+            <Argument mention_id="a177" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a149.124" id="a207" type="noun">
+            <Argument mention_id="a177" role="&lt;ref>"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a99" mention_set_id="a150" name_theory_id="a146" nested_name_theory_id="a147" parse_id="a149" part_of_speech_sequence_id="a145" primary_parse="full_parse" proposition_set_id="a178" token_sequence_id="a100" value_mention_set_id="a148"/>
+      </Sentence>
+      <Sentence char_offsets="538:689" edt_offsets="538:689" id="a208" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a210" score="0">
+          <Token char_offsets="538:539" edt_offsets="538:539" id="a211">In</Token>
+          <Token char_offsets="541:544" edt_offsets="541:544" id="a212">1897</Token>
+          <Token char_offsets="545:545" edt_offsets="545:545" id="a213">,</Token>
+          <Token char_offsets="547:550" edt_offsets="547:550" id="a214">John</Token>
+          <Token char_offsets="552:555" edt_offsets="552:555" id="a215">Abel</Token>
+          <Token char_offsets="557:558" edt_offsets="557:558" id="a216">of</Token>
+          <Token char_offsets="560:564" edt_offsets="560:564" id="a217">Johns</Token>
+          <Token char_offsets="566:572" edt_offsets="566:572" id="a218">Hopkins</Token>
+          <Token char_offsets="574:583" edt_offsets="574:583" id="a219">University</Token>
+          <Token char_offsets="585:594" edt_offsets="585:594" id="a220">identified</Token>
+          <Token char_offsets="596:598" edt_offsets="596:598" id="a221">the</Token>
+          <Token char_offsets="600:605" edt_offsets="600:605" id="a222">active</Token>
+          <Token char_offsets="607:615" edt_offsets="607:615" id="a223">principle</Token>
+          <Token char_offsets="617:618" edt_offsets="617:618" id="a224">as</Token>
+          <Token char_offsets="620:630" edt_offsets="620:630" id="a225">epinephrine</Token>
+          <Token char_offsets="631:631" edt_offsets="631:631" id="a226">,</Token>
+          <Token char_offsets="633:637" edt_offsets="633:637" id="a227">which</Token>
+          <Token char_offsets="639:640" edt_offsets="639:640" id="a228">he</Token>
+          <Token char_offsets="642:649" edt_offsets="642:649" id="a229">isolated</Token>
+          <Token char_offsets="651:652" edt_offsets="651:652" id="a230">in</Token>
+          <Token char_offsets="654:655" edt_offsets="654:655" id="a231">an</Token>
+          <Token char_offsets="657:662" edt_offsets="657:662" id="a232">impure</Token>
+          <Token char_offsets="664:668" edt_offsets="664:668" id="a233">state</Token>
+          <Token char_offsets="670:671" edt_offsets="670:671" id="a234">as</Token>
+          <Token char_offsets="673:675" edt_offsets="673:675" id="a235">the</Token>
+          <Token char_offsets="677:683" edt_offsets="677:683" id="a236">sulfate</Token>
+          <Token char_offsets="685:688" edt_offsets="685:688" id="a237">salt</Token>
+          <Token char_offsets="689:689" edt_offsets="689:689" id="a238">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a239" score="0" token_sequence_id="a210"/>
+        <NameTheory id="a240" score="0" token_sequence_id="a210">
+          <Name char_offsets="547:555" edt_offsets="547:555" end_token="a215" entity_type="PER" id="a241" start_token="a214"/>
+          <Name char_offsets="560:583" edt_offsets="560:583" end_token="a219" entity_type="ORG" id="a242" start_token="a217"/>
+        </NameTheory>
+        <NestedNameTheory id="a243" name_theory_id="a240" score="0" token_sequence_id="a210"/>
+        <ValueMentionSet id="a244" score="0" token_sequence_id="a210">
+          <ValueMention char_offsets="541:544" edt_offsets="541:544" end_token="a212" id="a245" start_token="a212" value_type="TIMEX2.TIME"/>
+        </ValueMentionSet>
+        <Parse id="a246" score="-136.535" token_sequence_id="a210">
+          <TreebankString node_id_method="DFS">(S^ (PP (IN^ in) (DATE (CD^ 1897))) (, ,) (NP (NPP^ (NNP john) (NNP^ abel)) (PP (IN^ of) (NPP (NNP johns) (NNP hopkins) (NNP^ university)))) (VP^ (VBD^ identified) (NPA (DT the) (JJ active) (NN^ principle)) (PP (IN^ as) (NP (NPA^ (NN^ epinephrine)) (, ,) (SBAR (WHNP^ (WDT^ which)) (S (NPA (PRP^ he)) (VP^ (VBD^ isolated) (PP (IN^ in) (NPA (DT an) (JJ impure) (NN^ state))) (PP (IN^ as) (NPA (DT the) (JJ sulfate) (NN^ salt))))))))) (. .))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="6" id="a247" name_score="0" parse_id="a246">
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a248" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a246.4"/>
+          <Mention child="a250" entity_subtype="UNDET" entity_type="PER" id="a249" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" role_type="UNDET" syn_node_id="a246.9"/>
+          <Mention entity_subtype="UNDET" entity_type="PER" id="a250" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" parent="a249" role_type="UNDET" syn_node_id="a246.10"/>
+          <Mention entity_subtype="Educational" entity_type="ORG" id="a251" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" role_type="UNDET" syn_node_id="a246.18"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a252" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a246.28"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a253" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a246.38"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a254" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a246.39"/>
+          <Mention entity_subtype="UNDET" entity_type="UNDET" id="a255" intended_type="UNDET" is_metonymy="FALSE" mention_type="pron" role_type="UNDET" syn_node_id="a246.45"/>
+          <Mention entity_subtype="UNDET" entity_type="UNDET" id="a256" intended_type="UNDET" is_metonymy="FALSE" mention_type="pron" role_type="UNDET" syn_node_id="a246.49"/>
+          <Mention entity_subtype="UNDET" entity_type="UNDET" id="a257" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a246.50"/>
+          <Mention entity_subtype="State-or-Province" entity_type="GPE" id="a258" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a246.58"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a259" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a246.68"/>
+        </MentionSet>
+        <PropositionSet id="a260" mention_set_id="a247">
+          <Proposition head_id="a246.16" id="a261" type="modifier">
+            <Argument mention_id="a249" role="&lt;ref>"/>
+            <Argument mention_id="a251" role="of"/>
+          </Proposition>
+          <Proposition id="a262" type="name">
+            <Argument mention_id="a251" role="&lt;ref>"/>
+            <Argument syn_node_id="a246.18"/>
+          </Proposition>
+          <Proposition id="a263" type="name">
+            <Argument mention_id="a249" role="&lt;ref>"/>
+            <Argument syn_node_id="a246.10"/>
+          </Proposition>
+          <Proposition head_id="a246.26" id="a264" type="verb">
+            <Argument mention_id="a249" role="&lt;sub>"/>
+            <Argument mention_id="a252" role="&lt;obj>"/>
+            <Argument mention_id="a248" role="&lt;temp>"/>
+            <Argument mention_id="a253" role="as"/>
+          </Proposition>
+          <Proposition head_id="a246.5" id="a265" type="modifier">
+            <Argument mention_id="a248" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a246.31" id="a266" type="modifier">
+            <Argument mention_id="a252" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a246.33" id="a267" type="noun">
+            <Argument mention_id="a252" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a246.40" id="a268" type="noun">
+            <Argument mention_id="a253" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a246.45" id="a269" type="pronoun">
+            <Argument mention_id="a255" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a246.49" id="a270" type="pronoun">
+            <Argument mention_id="a256" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a246.53" id="a271" type="verb">
+            <Argument mention_id="a256" role="&lt;sub>"/>
+            <Argument mention_id="a258" role="in"/>
+            <Argument mention_id="a259" role="as"/>
+          </Proposition>
+          <Proposition head_id="a246.61" id="a272" type="modifier">
+            <Argument mention_id="a258" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a246.63" id="a273" type="noun">
+            <Argument mention_id="a258" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a246.71" id="a274" type="modifier">
+            <Argument mention_id="a259" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a246.73" id="a275" type="noun">
+            <Argument mention_id="a259" role="&lt;ref>"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a209" mention_set_id="a247" name_theory_id="a240" nested_name_theory_id="a243" parse_id="a246" part_of_speech_sequence_id="a239" primary_parse="full_parse" proposition_set_id="a260" token_sequence_id="a210" value_mention_set_id="a244"/>
+      </Sentence>
+      <Sentence char_offsets="691:837" edt_offsets="691:837" id="a276" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a278" score="0">
+          <Token char_offsets="691:700" edt_offsets="691:700" id="a279">Industrial</Token>
+          <Token char_offsets="702:708" edt_offsets="702:708" id="a280">chemist</Token>
+          <Token char_offsets="710:716" edt_offsets="710:716" id="a281">Jokichi</Token>
+          <Token char_offsets="718:725" edt_offsets="718:725" id="a282">Takamine</Token>
+          <Token char_offsets="727:731" edt_offsets="727:731" id="a283">later</Token>
+          <Token char_offsets="733:741" edt_offsets="733:741" id="a284">developed</Token>
+          <Token char_offsets="743:743" edt_offsets="743:743" id="a285">a</Token>
+          <Token char_offsets="745:750" edt_offsets="745:750" id="a286">method</Token>
+          <Token char_offsets="752:754" edt_offsets="752:754" id="a287">for</Token>
+          <Token char_offsets="756:764" edt_offsets="756:764" id="a288">obtaining</Token>
+          <Token char_offsets="766:776" edt_offsets="766:776" id="a289">epinephrine</Token>
+          <Token char_offsets="778:779" edt_offsets="778:779" id="a290">in</Token>
+          <Token char_offsets="781:781" edt_offsets="781:781" id="a291">a</Token>
+          <Token char_offsets="783:786" edt_offsets="783:786" id="a292">pure</Token>
+          <Token char_offsets="788:792" edt_offsets="788:792" id="a293">state</Token>
+          <Token char_offsets="793:793" edt_offsets="793:793" id="a294">,</Token>
+          <Token char_offsets="795:797" edt_offsets="795:797" id="a295">and</Token>
+          <Token char_offsets="799:806" edt_offsets="799:806" id="a296">licensed</Token>
+          <Token char_offsets="808:810" edt_offsets="808:810" id="a297">the</Token>
+          <Token char_offsets="812:821" edt_offsets="812:821" id="a298">technology</Token>
+          <Token char_offsets="823:824" edt_offsets="823:824" id="a299">to</Token>
+          <Token char_offsets="826:830" edt_offsets="826:830" id="a300">Parke</Token>
+          <Token char_offsets="831:831" edt_offsets="831:831" id="a301">-</Token>
+          <Token char_offsets="832:836" edt_offsets="832:836" id="a302">Davis</Token>
+          <Token char_offsets="837:837" edt_offsets="837:837" id="a303">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a304" score="0" token_sequence_id="a278"/>
+        <NameTheory id="a305" score="0" token_sequence_id="a278">
+          <Name char_offsets="710:725" edt_offsets="710:725" end_token="a282" entity_type="PER" id="a306" start_token="a281"/>
+          <Name char_offsets="826:836" edt_offsets="826:836" end_token="a302" entity_type="ORG" id="a307" start_token="a300"/>
+        </NameTheory>
+        <NestedNameTheory id="a308" name_theory_id="a305" score="0" token_sequence_id="a278"/>
+        <ValueMentionSet id="a309" score="0" token_sequence_id="a278"/>
+        <Parse id="a310" score="-143.466" token_sequence_id="a278">
+          <TreebankString node_id_method="DFS">(S^ (NPA (NNP industrial) (NN chemist) (NPP^ (NNP jokichi) (NNP^ takamine))) (ADVP (RB^ later)) (VP^ (VP^ (VBN^ developed) (NP (NPA^ (DT a) (NN^ method)) (PP (IN^ for) (S (VP^ (VBG^ obtaining) (NP (NPA^ (NN^ epinephrine)) (PP (IN^ in) (NPA (DT a) (JJ pure) (NN^ state))))))))) (, ,) (CC and) (VP (VBN^ licensed) (NP (NPA^ (DT the) (NN^ technology)) (PP (TO^ to) (NPP (NNP parke) (NNP -) (NNP^ davis)))))) (. .))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="7" id="a311" name_score="0" parse_id="a310">
+          <Mention child="a315" entity_subtype="UNDET" entity_type="PER" id="a312" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" role_type="UNDET" syn_node_id="a310.1"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a313" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a310.2"/>
+          <Mention entity_subtype="UNDET" entity_type="PER" id="a314" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a310.4"/>
+          <Mention entity_subtype="UNDET" entity_type="PER" id="a315" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" parent="a312" role_type="UNDET" syn_node_id="a310.6"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a316" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a310.18"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a317" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a310.19"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a318" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a310.31"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a319" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a310.32"/>
+          <Mention entity_subtype="State-or-Province" entity_type="GPE" id="a320" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a310.38"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a321" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a310.52"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a322" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a310.53"/>
+          <Mention entity_subtype="UNDET" entity_type="ORG" id="a323" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" role_type="UNDET" syn_node_id="a310.61"/>
+        </MentionSet>
+        <PropositionSet id="a324" mention_set_id="a311">
+          <Proposition head_id="a310.2" id="a325" type="modifier">
+            <Argument mention_id="a314" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a310.4" id="a326" type="noun">
+            <Argument mention_id="a314" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition id="a327" type="name">
+            <Argument mention_id="a312" role="&lt;ref>"/>
+            <Argument syn_node_id="a310.6"/>
+          </Proposition>
+          <Proposition head_id="a310.47" id="a328" type="comp">
+            <Argument proposition_id="a329" role="&lt;member>"/>
+            <Argument proposition_id="a335" role="&lt;member>"/>
+          </Proposition>
+          <Proposition head_id="a310.16" id="a329" type="verb">
+            <Argument mention_id="a312" role="&lt;sub>"/>
+            <Argument mention_id="a316" role="&lt;obj>"/>
+          </Proposition>
+          <Proposition head_id="a310.22" id="a330" type="noun">
+            <Argument mention_id="a316" role="&lt;ref>"/>
+            <Argument proposition_id="a331" role="for"/>
+          </Proposition>
+          <Proposition head_id="a310.29" id="a331" type="verb">
+            <Argument mention_id="a312" role="&lt;sub>"/>
+            <Argument mention_id="a318" role="&lt;obj>"/>
+          </Proposition>
+          <Proposition head_id="a310.33" id="a332" type="noun">
+            <Argument mention_id="a318" role="&lt;ref>"/>
+            <Argument mention_id="a320" role="in"/>
+          </Proposition>
+          <Proposition head_id="a310.41" id="a333" type="modifier">
+            <Argument mention_id="a320" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a310.43" id="a334" type="noun">
+            <Argument mention_id="a320" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a310.50" id="a335" type="verb">
+            <Argument mention_id="a312" role="&lt;sub>"/>
+            <Argument mention_id="a321" role="&lt;obj>"/>
+          </Proposition>
+          <Proposition head_id="a310.56" id="a336" type="noun">
+            <Argument mention_id="a321" role="&lt;ref>"/>
+            <Argument mention_id="a323" role="to"/>
+          </Proposition>
+          <Proposition id="a337" type="name">
+            <Argument mention_id="a323" role="&lt;ref>"/>
+            <Argument syn_node_id="a310.61"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a277" mention_set_id="a311" name_theory_id="a305" nested_name_theory_id="a308" parse_id="a310" part_of_speech_sequence_id="a304" primary_parse="full_parse" proposition_set_id="a324" token_sequence_id="a278" value_mention_set_id="a309"/>
+      </Sentence>
+      <Sentence char_offsets="839:902" edt_offsets="839:902" id="a338" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a340" score="0">
+          <Token char_offsets="839:843" edt_offsets="839:843" id="a341">Parke</Token>
+          <Token char_offsets="844:844" edt_offsets="844:844" id="a342">-</Token>
+          <Token char_offsets="845:849" edt_offsets="845:849" id="a343">Davis</Token>
+          <Token char_offsets="851:858" edt_offsets="851:858" id="a344">marketed</Token>
+          <Token char_offsets="860:870" edt_offsets="860:870" id="a345">epinephrine</Token>
+          <Token char_offsets="872:876" edt_offsets="872:876" id="a346">under</Token>
+          <Token char_offsets="878:880" edt_offsets="878:880" id="a347">the</Token>
+          <Token char_offsets="882:886" edt_offsets="882:886" id="a348">trade</Token>
+          <Token char_offsets="888:891" edt_offsets="888:891" id="a349">name</Token>
+          <Token char_offsets="893:901" edt_offsets="893:901" id="a350">Adrenalin</Token>
+          <Token char_offsets="902:902" edt_offsets="902:902" id="a351">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a352" score="0" token_sequence_id="a340"/>
+        <NameTheory id="a353" score="0" token_sequence_id="a340">
+          <Name char_offsets="839:849" edt_offsets="839:849" end_token="a343" entity_type="ORG" id="a354" start_token="a341"/>
+        </NameTheory>
+        <NestedNameTheory id="a355" name_theory_id="a353" score="0" token_sequence_id="a340"/>
+        <ValueMentionSet id="a356" score="0" token_sequence_id="a340"/>
+        <Parse id="a357" score="-61.2389" token_sequence_id="a340">
+          <TreebankString node_id_method="DFS">(S^ (NPP (NNP parke) (NNP -) (NNP^ davis)) (VP^ (VBD^ marketed) (NPA (NN^ epinephrine)) (PP (IN^ under) (NP (NPA^ (DT the) (NN trade) (NN^ name)) (NPA (NNP^ adrenalin))))) (. .))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="4" id="a358" name_score="0" parse_id="a357">
+          <Mention entity_subtype="UNDET" entity_type="ORG" id="a359" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" role_type="UNDET" syn_node_id="a357.1"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a360" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a357.11"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a361" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a357.17"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a362" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a357.18"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a363" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a357.21"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a364" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a357.25"/>
+        </MentionSet>
+        <PropositionSet id="a365" mention_set_id="a358">
+          <Proposition id="a366" type="name">
+            <Argument mention_id="a359" role="&lt;ref>"/>
+            <Argument syn_node_id="a357.1"/>
+          </Proposition>
+          <Proposition head_id="a357.9" id="a367" type="verb">
+            <Argument mention_id="a359" role="&lt;sub>"/>
+            <Argument mention_id="a360" role="&lt;obj>"/>
+            <Argument mention_id="a361" role="under"/>
+          </Proposition>
+          <Proposition head_id="a357.12" id="a368" type="noun">
+            <Argument mention_id="a360" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a357.21" id="a369" type="modifier">
+            <Argument mention_id="a361" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a357.23" id="a370" type="noun">
+            <Argument mention_id="a361" role="&lt;ref>"/>
+            <Argument mention_id="a364" role="&lt;unknown>"/>
+          </Proposition>
+          <Proposition head_id="a357.26" id="a371" type="noun">
+            <Argument mention_id="a364" role="&lt;ref>"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a339" mention_set_id="a358" name_theory_id="a353" nested_name_theory_id="a355" parse_id="a357" part_of_speech_sequence_id="a352" primary_parse="full_parse" proposition_set_id="a365" token_sequence_id="a340" value_mention_set_id="a356"/>
+      </Sentence>
+      <Sentence char_offsets="904:1084" edt_offsets="904:1084" id="a372" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a374" score="0">
+          <Token char_offsets="904:911" edt_offsets="904:911" id="a375">Injected</Token>
+          <Token char_offsets="913:923" edt_offsets="913:923" id="a376">epinephrine</Token>
+          <Token char_offsets="925:930" edt_offsets="925:930" id="a377">proved</Token>
+          <Token char_offsets="932:933" edt_offsets="932:933" id="a378">to</Token>
+          <Token char_offsets="935:936" edt_offsets="935:936" id="a379">be</Token>
+          <Token char_offsets="938:947" edt_offsets="938:947" id="a380">especially</Token>
+          <Token char_offsets="949:959" edt_offsets="949:959" id="a381">efficacious</Token>
+          <Token char_offsets="961:963" edt_offsets="961:963" id="a382">for</Token>
+          <Token char_offsets="965:967" edt_offsets="965:967" id="a383">the</Token>
+          <Token char_offsets="969:973" edt_offsets="969:973" id="a384">acute</Token>
+          <Token char_offsets="975:983" edt_offsets="975:983" id="a385">treatment</Token>
+          <Token char_offsets="985:986" edt_offsets="985:986" id="a386">of</Token>
+          <Token char_offsets="988:993" edt_offsets="988:993" id="a387">asthma</Token>
+          <Token char_offsets="995:1001" edt_offsets="995:1001" id="a388">attacks</Token>
+          <Token char_offsets="1002:1002" edt_offsets="1002:1002" id="a389">,</Token>
+          <Token char_offsets="1004:1006" edt_offsets="1004:1006" id="a390">and</Token>
+          <Token char_offsets="1008:1009" edt_offsets="1008:1009" id="a391">an</Token>
+          <Token char_offsets="1011:1017" edt_offsets="1011:1017" id="a392">inhaled</Token>
+          <Token char_offsets="1019:1025" edt_offsets="1019:1025" id="a393">version</Token>
+          <Token char_offsets="1027:1029" edt_offsets="1027:1029" id="a394">was</Token>
+          <Token char_offsets="1031:1034" edt_offsets="1031:1034" id="a395">sold</Token>
+          <Token char_offsets="1036:1037" edt_offsets="1036:1037" id="a396">in</Token>
+          <Token char_offsets="1039:1041" edt_offsets="1039:1041" id="a397">the</Token>
+          <Token char_offsets="1043:1048" edt_offsets="1043:1048" id="a398">United</Token>
+          <Token char_offsets="1050:1055" edt_offsets="1050:1055" id="a399">States</Token>
+          <Token char_offsets="1057:1061" edt_offsets="1057:1061" id="a400">until</Token>
+          <Token char_offsets="1063:1066" edt_offsets="1063:1066" id="a401">2011</Token>
+          <Token char_offsets="1068:1068" edt_offsets="1068:1068" id="a402">-LRB-</Token>
+          <Token char_offsets="1069:1077" edt_offsets="1069:1077" id="a403">Primatene</Token>
+          <Token char_offsets="1079:1082" edt_offsets="1079:1082" id="a404">Mist</Token>
+          <Token char_offsets="1083:1083" edt_offsets="1083:1083" id="a405">-RRB-</Token>
+          <Token char_offsets="1084:1084" edt_offsets="1084:1084" id="a406">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a407" score="0" token_sequence_id="a374"/>
+        <NameTheory id="a408" score="0" token_sequence_id="a374">
+          <Name char_offsets="1043:1055" edt_offsets="1043:1055" end_token="a399" entity_type="GPE" id="a409" start_token="a398"/>
+        </NameTheory>
+        <NestedNameTheory id="a410" name_theory_id="a408" score="0" token_sequence_id="a374"/>
+        <ValueMentionSet id="a411" score="0" token_sequence_id="a374">
+          <ValueMention char_offsets="1063:1066" edt_offsets="1063:1066" end_token="a401" id="a412" start_token="a401" value_type="TIMEX2.TIME"/>
+        </ValueMentionSet>
+        <Parse id="a413" score="-162.264" token_sequence_id="a374">
+          <TreebankString node_id_method="DFS">(S^ (S^ (NPA (JJ injected) (NN^ epinephrine)) (VP^ (VBD^ proved) (S (VP^ (TO^ to) (VP (VB^ be) (ADJP (RB especially) (JJ^ efficacious) (PP (IN^ for) (NP (NPA^ (DT the) (NN acute) (NN^ treatment)) (PP (IN^ of) (NPA (JJ asthma) (NNS^ attacks))))))))))) (, ,) (CC and) (S (NPA (DT an) (JJ inhaled) (NN^ version)) (VP^ (VBD^ was) (VP (VBN^ sold) (PP (IN^ in) (NPA (DT the) (NPP^ (NNPS united) (NNPS^ states)))) (PP (IN^ until) (NP (NPA^ (CD^ 2011)) (PRN (-LRB-^ -lrb-) (NPA (NNP primatene) (NNP^ mist)) (-RRB- -rrb-))))))) (. .))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="8" id="a414" name_score="0" parse_id="a413">
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a415" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a413.2"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a416" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a413.25"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a417" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a413.26"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a418" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a413.29"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a419" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a413.36"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a420" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a413.46"/>
+          <Mention child="a422" entity_subtype="Nation" entity_type="GPE" id="a421" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" role_type="UNDET" syn_node_id="a413.62"/>
+          <Mention entity_subtype="UNDET" entity_type="GPE" id="a422" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" parent="a421" role_type="UNDET" syn_node_id="a413.65"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a423" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a413.73"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a424" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a413.74"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a425" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a413.80"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a426" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a413.81"/>
+        </MentionSet>
+        <PropositionSet id="a427" mention_set_id="a414">
+          <Proposition head_id="a413.3" id="a428" type="modifier">
+            <Argument mention_id="a415" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a413.5" id="a429" type="noun">
+            <Argument mention_id="a415" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a413.8" id="a430" type="verb">
+            <Argument mention_id="a415" role="&lt;sub>"/>
+            <Argument proposition_id="a431" role="&lt;obj>"/>
+          </Proposition>
+          <Proposition head_id="a413.20" id="a431" type="modifier">
+            <Argument mention_id="a415" role="&lt;ref>"/>
+            <Argument mention_id="a416" role="for"/>
+          </Proposition>
+          <Proposition head_id="a413.29" id="a432" type="modifier">
+            <Argument mention_id="a416" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a413.31" id="a433" type="noun">
+            <Argument mention_id="a416" role="&lt;ref>"/>
+            <Argument mention_id="a419" role="of"/>
+          </Proposition>
+          <Proposition head_id="a413.37" id="a434" type="modifier">
+            <Argument mention_id="a419" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a413.39" id="a435" type="noun">
+            <Argument mention_id="a419" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a413.49" id="a436" type="modifier">
+            <Argument mention_id="a420" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a413.51" id="a437" type="noun">
+            <Argument mention_id="a420" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a413.57" id="a438" type="verb">
+            <Argument mention_id="a420" role="&lt;obj>"/>
+            <Argument mention_id="a421" role="in"/>
+            <Argument mention_id="a423" role="until"/>
+          </Proposition>
+          <Proposition id="a439" type="name">
+            <Argument mention_id="a421" role="&lt;ref>"/>
+            <Argument syn_node_id="a413.65"/>
+          </Proposition>
+          <Proposition head_id="a413.75" id="a440" type="modifier">
+            <Argument mention_id="a423" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a413.81" id="a441" type="modifier">
+            <Argument mention_id="a425" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a413.83" id="a442" type="noun">
+            <Argument mention_id="a425" role="&lt;ref>"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a373" mention_set_id="a414" name_theory_id="a408" nested_name_theory_id="a410" parse_id="a413" part_of_speech_sequence_id="a407" primary_parse="full_parse" proposition_set_id="a427" token_sequence_id="a374" value_mention_set_id="a411"/>
+      </Sentence>
+      <Sentence char_offsets="1086:1186" edt_offsets="1086:1186" id="a443" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a445" score="0">
+          <Token char_offsets="1086:1087" edt_offsets="1086:1087" id="a446">By</Token>
+          <Token char_offsets="1089:1092" edt_offsets="1089:1092" id="a447">1929</Token>
+          <Token char_offsets="1094:1104" edt_offsets="1094:1104" id="a448">epinephrine</Token>
+          <Token char_offsets="1106:1108" edt_offsets="1106:1108" id="a449">had</Token>
+          <Token char_offsets="1110:1113" edt_offsets="1110:1113" id="a450">been</Token>
+          <Token char_offsets="1115:1124" edt_offsets="1115:1124" id="a451">formulated</Token>
+          <Token char_offsets="1126:1129" edt_offsets="1126:1129" id="a452">into</Token>
+          <Token char_offsets="1131:1132" edt_offsets="1131:1132" id="a453">an</Token>
+          <Token char_offsets="1134:1140" edt_offsets="1134:1140" id="a454">inhaler</Token>
+          <Token char_offsets="1142:1144" edt_offsets="1142:1144" id="a455">for</Token>
+          <Token char_offsets="1146:1148" edt_offsets="1146:1148" id="a456">use</Token>
+          <Token char_offsets="1150:1151" edt_offsets="1150:1151" id="a457">in</Token>
+          <Token char_offsets="1153:1155" edt_offsets="1153:1155" id="a458">the</Token>
+          <Token char_offsets="1157:1165" edt_offsets="1157:1165" id="a459">treatment</Token>
+          <Token char_offsets="1167:1168" edt_offsets="1167:1168" id="a460">of</Token>
+          <Token char_offsets="1170:1174" edt_offsets="1170:1174" id="a461">nasal</Token>
+          <Token char_offsets="1176:1185" edt_offsets="1176:1185" id="a462">congestion</Token>
+          <Token char_offsets="1186:1186" edt_offsets="1186:1186" id="a463">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a464" score="0" token_sequence_id="a445"/>
+        <NameTheory id="a465" score="0" token_sequence_id="a445"/>
+        <NestedNameTheory id="a466" name_theory_id="a465" score="0" token_sequence_id="a445"/>
+        <ValueMentionSet id="a467" score="0" token_sequence_id="a445">
+          <ValueMention char_offsets="1089:1092" edt_offsets="1089:1092" end_token="a447" id="a468" start_token="a447" value_type="TIMEX2.TIME"/>
+        </ValueMentionSet>
+        <Parse id="a469" score="-93.0152" token_sequence_id="a445">
+          <TreebankString node_id_method="DFS">(S^ (PP (IN^ by) (NPA (CD 1929) (NN^ epinephrine))) (VP^ (VBD^ had) (VP (VBN^ been) (VP (VBN^ formulated) (PP (IN^ into) (NP (NPA^ (DT an) (NN^ inhaler)) (PP (IN^ for) (NP (NPA^ (NN^ use)) (PP (IN^ in) (NP (NPA^ (DT the) (NN^ treatment)) (PP (IN^ of) (NPA (JJ nasal) (NN^ congestion)))))))))))) (. .))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="8" id="a470" name_score="0" parse_id="a469">
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a471" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a469.4"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a472" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a469.21"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a473" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a469.22"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a474" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a469.30"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a475" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a469.31"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a476" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a469.37"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a477" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a469.38"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a478" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a469.46"/>
+        </MentionSet>
+        <PropositionSet id="a479" mention_set_id="a470">
+          <Proposition head_id="a469.16" id="a480" type="verb">
+            <Argument mention_id="a471" role="&lt;sub>"/>
+            <Argument mention_id="a472" role="into"/>
+          </Proposition>
+          <Proposition head_id="a469.5" id="a481" type="modifier">
+            <Argument mention_id="a471" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a469.7" id="a482" type="noun">
+            <Argument mention_id="a471" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a469.25" id="a483" type="noun">
+            <Argument mention_id="a472" role="&lt;ref>"/>
+            <Argument mention_id="a474" role="for"/>
+          </Proposition>
+          <Proposition head_id="a469.32" id="a484" type="noun">
+            <Argument mention_id="a474" role="&lt;ref>"/>
+            <Argument mention_id="a476" role="in"/>
+          </Proposition>
+          <Proposition head_id="a469.41" id="a485" type="noun">
+            <Argument mention_id="a476" role="&lt;ref>"/>
+            <Argument mention_id="a478" role="of"/>
+          </Proposition>
+          <Proposition head_id="a469.47" id="a486" type="modifier">
+            <Argument mention_id="a478" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a469.49" id="a487" type="noun">
+            <Argument mention_id="a478" role="&lt;ref>"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a444" mention_set_id="a470" name_theory_id="a465" nested_name_theory_id="a466" parse_id="a469" part_of_speech_sequence_id="a464" primary_parse="full_parse" proposition_set_id="a479" token_sequence_id="a445" value_mention_set_id="a467"/>
+      </Sentence>
+      <Sentence char_offsets="1189:1315" edt_offsets="1189:1315" id="a488" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a490" score="0">
+          <Token char_offsets="1189:1193" edt_offsets="1189:1193" id="a491">While</Token>
+          <Token char_offsets="1195:1200" edt_offsets="1195:1200" id="a492">highly</Token>
+          <Token char_offsets="1202:1210" edt_offsets="1202:1210" id="a493">effective</Token>
+          <Token char_offsets="1211:1211" edt_offsets="1211:1211" id="a494">,</Token>
+          <Token char_offsets="1213:1215" edt_offsets="1213:1215" id="a495">the</Token>
+          <Token char_offsets="1217:1227" edt_offsets="1217:1227" id="a496">requirement</Token>
+          <Token char_offsets="1229:1231" edt_offsets="1229:1231" id="a497">for</Token>
+          <Token char_offsets="1233:1241" edt_offsets="1233:1241" id="a498">injection</Token>
+          <Token char_offsets="1243:1249" edt_offsets="1243:1249" id="a499">limited</Token>
+          <Token char_offsets="1251:1253" edt_offsets="1251:1253" id="a500">the</Token>
+          <Token char_offsets="1255:1257" edt_offsets="1255:1257" id="a501">use</Token>
+          <Token char_offsets="1259:1260" edt_offsets="1259:1260" id="a502">of</Token>
+          <Token char_offsets="1262:1272" edt_offsets="1262:1272" id="a503">epinephrine</Token>
+          <Token char_offsets="1274:1276" edt_offsets="1274:1276" id="a504">and</Token>
+          <Token char_offsets="1278:1283" edt_offsets="1278:1283" id="a505">orally</Token>
+          <Token char_offsets="1285:1290" edt_offsets="1285:1290" id="a506">active</Token>
+          <Token char_offsets="1292:1302" edt_offsets="1292:1302" id="a507">derivatives</Token>
+          <Token char_offsets="1304:1307" edt_offsets="1304:1307" id="a508">were</Token>
+          <Token char_offsets="1309:1314" edt_offsets="1309:1314" id="a509">sought</Token>
+          <Token char_offsets="1315:1315" edt_offsets="1315:1315" id="a510">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a511" score="0" token_sequence_id="a490"/>
+        <NameTheory id="a512" score="0" token_sequence_id="a490"/>
+        <NestedNameTheory id="a513" name_theory_id="a512" score="0" token_sequence_id="a490"/>
+        <ValueMentionSet id="a514" score="0" token_sequence_id="a490"/>
+        <Parse id="a515" score="-136.353" token_sequence_id="a490">
+          <TreebankString node_id_method="DFS">(S^ (SBAR (IN^ while) (S (ADJP^ (RB highly) (JJ^ effective)))) (, ,) (NP (NPA^ (DT the) (NN^ requirement)) (PP (IN^ for) (NP (NPA^ (NN^ injection)) (VP (VBN^ limited) (NP (NPA^ (DT the) (NN^ use)) (PP (IN^ of) (NP (NPA^ (NN^ epinephrine)) (CC and) (NPA (JJ orally) (JJ active) (NNS^ derivatives))))))))) (VP^ (VBD^ were) (VP (VBN^ sought))) (. .))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="8" id="a516" name_score="0" parse_id="a515">
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a517" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a515.12"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a518" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a515.13"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a519" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a515.21"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a520" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a515.22"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a521" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a515.28"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a522" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a515.29"/>
+          <Mention child="a524" entity_subtype="UNDET" entity_type="OTH" id="a523" intended_type="UNDET" is_metonymy="FALSE" mention_type="list" role_type="UNDET" syn_node_id="a515.37"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a524" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" next="a525" parent="a523" role_type="UNDET" syn_node_id="a515.38"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a525" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" parent="a523" role_type="UNDET" syn_node_id="a515.43"/>
+        </MentionSet>
+        <PropositionSet id="a526" mention_set_id="a516">
+          <Proposition head_id="a515.16" id="a527" type="noun">
+            <Argument mention_id="a517" role="&lt;ref>"/>
+            <Argument mention_id="a519" role="for"/>
+          </Proposition>
+          <Proposition head_id="a515.23" id="a528" type="noun">
+            <Argument mention_id="a519" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a515.26" id="a529" type="verb">
+            <Argument mention_id="a519" role="&lt;obj>"/>
+            <Argument mention_id="a521" role="&lt;iobj>"/>
+          </Proposition>
+          <Proposition head_id="a515.32" id="a530" type="noun">
+            <Argument mention_id="a521" role="&lt;ref>"/>
+            <Argument mention_id="a523" role="of"/>
+          </Proposition>
+          <Proposition id="a531" type="set">
+            <Argument mention_id="a523" role="&lt;ref>"/>
+            <Argument mention_id="a524" role="&lt;member>"/>
+            <Argument mention_id="a525" role="&lt;member>"/>
+          </Proposition>
+          <Proposition head_id="a515.39" id="a532" type="noun">
+            <Argument mention_id="a524" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a515.44" id="a533" type="modifier">
+            <Argument mention_id="a525" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a515.46" id="a534" type="modifier">
+            <Argument mention_id="a525" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a515.48" id="a535" type="noun">
+            <Argument mention_id="a525" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a515.54" id="a536" type="verb">
+            <Argument mention_id="a517" role="&lt;obj>"/>
+            <Argument proposition_id="a537" role="while"/>
+          </Proposition>
+          <Proposition head_id="a515.8" id="a537" type="modifier">
+            <Argument mention_id="a517" role="&lt;ref>"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a489" mention_set_id="a516" name_theory_id="a512" nested_name_theory_id="a513" parse_id="a515" part_of_speech_sequence_id="a511" primary_parse="full_parse" proposition_set_id="a526" token_sequence_id="a490" value_mention_set_id="a514"/>
+      </Sentence>
+      <Sentence char_offsets="1317:1519" edt_offsets="1317:1519" id="a538" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a540" score="0">
+          <Token char_offsets="1317:1317" edt_offsets="1317:1317" id="a541">A</Token>
+          <Token char_offsets="1319:1330" edt_offsets="1319:1330" id="a542">structurally</Token>
+          <Token char_offsets="1332:1338" edt_offsets="1332:1338" id="a543">similar</Token>
+          <Token char_offsets="1340:1347" edt_offsets="1340:1347" id="a544">compound</Token>
+          <Token char_offsets="1348:1348" edt_offsets="1348:1348" id="a545">,</Token>
+          <Token char_offsets="1350:1358" edt_offsets="1350:1358" id="a546">ephedrine</Token>
+          <Token char_offsets="1359:1359" edt_offsets="1359:1359" id="a547">,</Token>
+          <Token char_offsets="1361:1361" edt_offsets="1361:1361" id="a548">-LRB-</Token>
+          <Token char_offsets="1362:1369" edt_offsets="1362:1369" id="a549">actually</Token>
+          <Token char_offsets="1371:1374" edt_offsets="1371:1374" id="a550">more</Token>
+          <Token char_offsets="1376:1382" edt_offsets="1376:1382" id="a551">similar</Token>
+          <Token char_offsets="1384:1385" edt_offsets="1384:1385" id="a552">to</Token>
+          <Token char_offsets="1387:1400" edt_offsets="1387:1400" id="a553">norepinephrine</Token>
+          <Token char_offsets="1401:1401" edt_offsets="1401:1401" id="a554">,</Token>
+          <Token char_offsets="1402:1402" edt_offsets="1402:1402" id="a555">-RRB-</Token>
+          <Token char_offsets="1404:1406" edt_offsets="1404:1406" id="a556">was</Token>
+          <Token char_offsets="1408:1417" edt_offsets="1408:1417" id="a557">identified</Token>
+          <Token char_offsets="1419:1420" edt_offsets="1419:1420" id="a558">by</Token>
+          <Token char_offsets="1422:1429" edt_offsets="1422:1429" id="a559">Japanese</Token>
+          <Token char_offsets="1431:1438" edt_offsets="1431:1438" id="a560">chemists</Token>
+          <Token char_offsets="1440:1441" edt_offsets="1440:1441" id="a561">in</Token>
+          <Token char_offsets="1443:1445" edt_offsets="1443:1445" id="a562">the</Token>
+          <Token char_offsets="1447:1448" edt_offsets="1447:1448" id="a563">Ma</Token>
+          <Token char_offsets="1450:1454" edt_offsets="1450:1454" id="a564">Huang</Token>
+          <Token char_offsets="1456:1460" edt_offsets="1456:1460" id="a565">plant</Token>
+          <Token char_offsets="1462:1464" edt_offsets="1462:1464" id="a566">and</Token>
+          <Token char_offsets="1466:1473" edt_offsets="1466:1473" id="a567">marketed</Token>
+          <Token char_offsets="1475:1476" edt_offsets="1475:1476" id="a568">by</Token>
+          <Token char_offsets="1478:1480" edt_offsets="1478:1480" id="a569">Eli</Token>
+          <Token char_offsets="1482:1486" edt_offsets="1482:1486" id="a570">Lilly</Token>
+          <Token char_offsets="1488:1489" edt_offsets="1488:1489" id="a571">as</Token>
+          <Token char_offsets="1491:1492" edt_offsets="1491:1492" id="a572">an</Token>
+          <Token char_offsets="1494:1497" edt_offsets="1494:1497" id="a573">oral</Token>
+          <Token char_offsets="1499:1507" edt_offsets="1499:1507" id="a574">treatment</Token>
+          <Token char_offsets="1509:1511" edt_offsets="1509:1511" id="a575">for</Token>
+          <Token char_offsets="1513:1518" edt_offsets="1513:1518" id="a576">asthma</Token>
+          <Token char_offsets="1519:1519" edt_offsets="1519:1519" id="a577">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a578" score="0" token_sequence_id="a540"/>
+        <NameTheory id="a579" score="0" token_sequence_id="a540">
+          <Name char_offsets="1422:1429" edt_offsets="1422:1429" end_token="a559" entity_type="GPE" id="a580" start_token="a559"/>
+          <Name char_offsets="1447:1454" edt_offsets="1447:1454" end_token="a564" entity_type="ORG" id="a581" start_token="a563"/>
+          <Name char_offsets="1478:1486" edt_offsets="1478:1486" end_token="a570" entity_type="ORG" id="a582" start_token="a569"/>
+        </NameTheory>
+        <NestedNameTheory id="a583" name_theory_id="a579" score="0" token_sequence_id="a540"/>
+        <ValueMentionSet id="a584" score="0" token_sequence_id="a540"/>
+        <Parse id="a585" score="-522.858" token_sequence_id="a540">
+          <TreebankString node_id_method="DFS">(FRAGMENTS^ (NP^ (NPA^ (DT a) (ADJP (RB structurally) (JJ^ similar)) (NN^ compound)) (, ,) (NPA (NN^ ephedrine)) (, ,)) (FRAGMENTS (PRN^ (-LRB-^ -lrb-) (ADVP (RB^ actually)) (ADJP (RBR more) (JJ^ similar) (PP (TO^ to) (NP (NPA^ (NN^ norepinephrine)) (, ,))))) (FRAGMENTS (S^ (-RRB- -rrb-) (VP^ (VBD^ was) (VP (VP^ (VBN^ identified) (PP (IN^ by) (NPA (NPP (JJ^ japanese)) (NNS^ chemists))) (PP (IN^ in) (NPA (DT the) (NPP (NNP ma) (NNP^ huang)) (NN^ plant)))) (CC and) (VP (VBN^ marketed) (PP (IN^ by) (NPP (NNP eli) (NNP^ lilly))) (PP (IN^ as) (NP (NPA^ (DT an) (JJ oral) (NN^ treatment)) (PP (IN^ for) (NPA (NN^ asthma))))))))) (. .))))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="9" id="a586" name_score="0" parse_id="a585">
+          <Mention child="a588" entity_subtype="UNDET" entity_type="OTH" id="a587" intended_type="UNDET" is_metonymy="FALSE" mention_type="list" role_type="UNDET" syn_node_id="a585.1"/>
+          <Mention entity_subtype="UNDET" entity_type="FAC" id="a588" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" next="a589" parent="a587" role_type="UNDET" syn_node_id="a585.2"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a589" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" parent="a587" role_type="UNDET" syn_node_id="a585.14"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a590" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a585.34"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a591" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a585.35"/>
+          <Mention entity_subtype="Group" entity_type="PER" id="a592" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a585.54"/>
+          <Mention entity_subtype="Nation" entity_type="GPE" id="a593" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" role_type="UNDET" syn_node_id="a585.55"/>
+          <Mention entity_subtype="Plant" entity_type="FAC" id="a594" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a585.63"/>
+          <Mention entity_subtype="UNDET" entity_type="ORG" id="a595" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" role_type="UNDET" syn_node_id="a585.66"/>
+          <Mention entity_subtype="UNDET" entity_type="ORG" id="a596" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" role_type="UNDET" syn_node_id="a585.81"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a597" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a585.89"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a598" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a585.90"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a599" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a585.100"/>
+        </MentionSet>
+        <PropositionSet id="a600" mention_set_id="a586">
+          <Proposition id="a601" type="set">
+            <Argument mention_id="a587" role="&lt;ref>"/>
+            <Argument mention_id="a588" role="&lt;member>"/>
+            <Argument mention_id="a589" role="&lt;member>"/>
+          </Proposition>
+          <Proposition head_id="a585.8" id="a602" type="modifier">
+            <Argument mention_id="a588" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a585.10" id="a603" type="noun">
+            <Argument mention_id="a588" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a585.15" id="a604" type="noun">
+            <Argument mention_id="a589" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a585.29" id="a605" type="modifier">
+            <Argument mention_id="a587" role="&lt;ref>"/>
+            <Argument mention_id="a590" role="to"/>
+          </Proposition>
+          <Proposition head_id="a585.36" id="a606" type="noun">
+            <Argument mention_id="a590" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a585.73" id="a607" type="comp">
+            <Argument proposition_id="a608" role="&lt;member>"/>
+            <Argument proposition_id="a613" role="&lt;member>"/>
+          </Proposition>
+          <Proposition head_id="a585.49" id="a608" type="verb">
+            <Argument mention_id="a592" role="&lt;sub>"/>
+            <Argument mention_id="a587" role="&lt;obj>"/>
+            <Argument mention_id="a594" role="in"/>
+          </Proposition>
+          <Proposition head_id="a585.58" id="a609" type="noun">
+            <Argument mention_id="a592" role="&lt;ref>"/>
+            <Argument mention_id="a593" role="&lt;unknown>"/>
+          </Proposition>
+          <Proposition id="a610" type="name">
+            <Argument mention_id="a593" role="&lt;ref>"/>
+            <Argument syn_node_id="a585.55"/>
+          </Proposition>
+          <Proposition head_id="a585.71" id="a611" type="noun">
+            <Argument mention_id="a594" role="&lt;ref>"/>
+            <Argument mention_id="a595" role="&lt;unknown>"/>
+          </Proposition>
+          <Proposition id="a612" type="name">
+            <Argument mention_id="a595" role="&lt;ref>"/>
+            <Argument syn_node_id="a585.66"/>
+          </Proposition>
+          <Proposition head_id="a585.76" id="a613" type="verb">
+            <Argument mention_id="a596" role="&lt;sub>"/>
+            <Argument mention_id="a587" role="&lt;obj>"/>
+            <Argument mention_id="a597" role="as"/>
+          </Proposition>
+          <Proposition id="a614" type="name">
+            <Argument mention_id="a596" role="&lt;ref>"/>
+            <Argument syn_node_id="a585.81"/>
+          </Proposition>
+          <Proposition head_id="a585.93" id="a615" type="modifier">
+            <Argument mention_id="a597" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a585.95" id="a616" type="noun">
+            <Argument mention_id="a597" role="&lt;ref>"/>
+            <Argument mention_id="a599" role="for"/>
+          </Proposition>
+          <Proposition head_id="a585.101" id="a617" type="noun">
+            <Argument mention_id="a599" role="&lt;ref>"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a539" mention_set_id="a586" name_theory_id="a579" nested_name_theory_id="a583" parse_id="a585" part_of_speech_sequence_id="a578" primary_parse="full_parse" proposition_set_id="a600" token_sequence_id="a540" value_mention_set_id="a584"/>
+      </Sentence>
+      <Sentence char_offsets="1521:1689" edt_offsets="1521:1689" id="a618" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a620" score="0">
+          <Token char_offsets="1521:1529" edt_offsets="1521:1529" id="a621">Following</Token>
+          <Token char_offsets="1531:1533" edt_offsets="1531:1533" id="a622">the</Token>
+          <Token char_offsets="1535:1538" edt_offsets="1535:1538" id="a623">work</Token>
+          <Token char_offsets="1540:1541" edt_offsets="1540:1541" id="a624">of</Token>
+          <Token char_offsets="1543:1547" edt_offsets="1543:1547" id="a625">Henry</Token>
+          <Token char_offsets="1549:1552" edt_offsets="1549:1552" id="a626">Dale</Token>
+          <Token char_offsets="1554:1556" edt_offsets="1554:1556" id="a627">and</Token>
+          <Token char_offsets="1558:1563" edt_offsets="1558:1563" id="a628">George</Token>
+          <Token char_offsets="1565:1570" edt_offsets="1565:1570" id="a629">Barger</Token>
+          <Token char_offsets="1572:1573" edt_offsets="1572:1573" id="a630">at</Token>
+          <Token char_offsets="1575:1583" edt_offsets="1575:1583" id="a631">Burroughs</Token>
+          <Token char_offsets="1584:1584" edt_offsets="1584:1584" id="a632">-</Token>
+          <Token char_offsets="1585:1592" edt_offsets="1585:1592" id="a633">Wellcome</Token>
+          <Token char_offsets="1593:1593" edt_offsets="1593:1593" id="a634">,</Token>
+          <Token char_offsets="1595:1602" edt_offsets="1595:1602" id="a635">academic</Token>
+          <Token char_offsets="1604:1610" edt_offsets="1604:1610" id="a636">chemist</Token>
+          <Token char_offsets="1612:1617" edt_offsets="1612:1617" id="a637">Gordon</Token>
+          <Token char_offsets="1619:1623" edt_offsets="1619:1623" id="a638">Alles</Token>
+          <Token char_offsets="1625:1635" edt_offsets="1625:1635" id="a639">synthesized</Token>
+          <Token char_offsets="1637:1647" edt_offsets="1637:1647" id="a640">amphetamine</Token>
+          <Token char_offsets="1649:1651" edt_offsets="1649:1651" id="a641">and</Token>
+          <Token char_offsets="1653:1658" edt_offsets="1653:1658" id="a642">tested</Token>
+          <Token char_offsets="1660:1661" edt_offsets="1660:1661" id="a643">it</Token>
+          <Token char_offsets="1663:1664" edt_offsets="1663:1664" id="a644">in</Token>
+          <Token char_offsets="1666:1671" edt_offsets="1666:1671" id="a645">asthma</Token>
+          <Token char_offsets="1673:1680" edt_offsets="1673:1680" id="a646">patients</Token>
+          <Token char_offsets="1682:1683" edt_offsets="1682:1683" id="a647">in</Token>
+          <Token char_offsets="1685:1688" edt_offsets="1685:1688" id="a648">1929</Token>
+          <Token char_offsets="1689:1689" edt_offsets="1689:1689" id="a649">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a650" score="0" token_sequence_id="a620"/>
+        <NameTheory id="a651" score="0" token_sequence_id="a620">
+          <Name char_offsets="1543:1552" edt_offsets="1543:1552" end_token="a626" entity_type="PER" id="a652" start_token="a625"/>
+          <Name char_offsets="1558:1570" edt_offsets="1558:1570" end_token="a629" entity_type="PER" id="a653" start_token="a628"/>
+          <Name char_offsets="1575:1592" edt_offsets="1575:1592" end_token="a633" entity_type="ORG" id="a654" start_token="a631"/>
+          <Name char_offsets="1612:1623" edt_offsets="1612:1623" end_token="a638" entity_type="PER" id="a655" start_token="a637"/>
+        </NameTheory>
+        <NestedNameTheory id="a656" name_theory_id="a651" score="0" token_sequence_id="a620"/>
+        <ValueMentionSet id="a657" score="0" token_sequence_id="a620">
+          <ValueMention char_offsets="1685:1688" edt_offsets="1685:1688" end_token="a648" id="a658" start_token="a648" value_type="TIMEX2.TIME"/>
+        </ValueMentionSet>
+        <Parse id="a659" score="-142.431" token_sequence_id="a620">
+          <TreebankString node_id_method="DFS">(S^ (PP (VBG^ following) (NP (NPA^ (DT the) (NN^ work)) (PP (IN^ of) (NP (NP^ (NPP (NNP henry) (NNP^ dale)) (CC and) (NPP^ (NNP george) (NNP^ barger))) (PP (IN^ at) (NPP (NNP burroughs) (NNP -) (NNP^ wellcome))))))) (, ,) (NPA (JJ academic) (NN chemist) (NPP^ (NNPS gordon) (NNPS^ alles))) (VP^ (VP^ (VBD^ synthesized) (NPA (NN^ amphetamine))) (CC and) (VP (VBD^ tested) (NPA (PRP^ it)) (PP (IN^ in) (NPA (NN asthma) (NNS^ patients))) (PP (IN^ in) (DATE (CD^ 1929))))) (. .))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="6" id="a660" name_score="0" parse_id="a659">
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a661" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a659.4"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a662" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a659.5"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a663" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a659.13"/>
+          <Mention child="a665" entity_subtype="UNDET" entity_type="PER" id="a664" intended_type="UNDET" is_metonymy="FALSE" mention_type="list" role_type="UNDET" syn_node_id="a659.14"/>
+          <Mention entity_subtype="UNDET" entity_type="PER" id="a665" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" next="a666" parent="a664" role_type="UNDET" syn_node_id="a659.15"/>
+          <Mention entity_subtype="UNDET" entity_type="PER" id="a666" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" parent="a664" role_type="UNDET" syn_node_id="a659.22"/>
+          <Mention entity_subtype="UNDET" entity_type="ORG" id="a667" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" role_type="UNDET" syn_node_id="a659.30"/>
+          <Mention child="a670" entity_subtype="UNDET" entity_type="PER" id="a668" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" role_type="UNDET" syn_node_id="a659.39"/>
+          <Mention entity_subtype="UNDET" entity_type="PER" id="a669" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a659.42"/>
+          <Mention entity_subtype="UNDET" entity_type="PER" id="a670" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" parent="a668" role_type="UNDET" syn_node_id="a659.44"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a671" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a659.53"/>
+          <Mention entity_subtype="UNDET" entity_type="UNDET" id="a672" intended_type="UNDET" is_metonymy="FALSE" mention_type="pron" role_type="UNDET" syn_node_id="a659.61"/>
+          <Mention entity_subtype="UNDET" entity_type="UNDET" id="a673" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a659.62"/>
+          <Mention entity_subtype="Group" entity_type="PER" id="a674" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a659.67"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a675" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a659.68"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a676" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a659.75"/>
+        </MentionSet>
+        <PropositionSet id="a677" mention_set_id="a660">
+          <Proposition head_id="a659.40" id="a678" type="modifier">
+            <Argument mention_id="a669" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a659.42" id="a679" type="noun">
+            <Argument mention_id="a669" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition id="a680" type="name">
+            <Argument mention_id="a668" role="&lt;ref>"/>
+            <Argument syn_node_id="a659.44"/>
+          </Proposition>
+          <Proposition head_id="a659.56" id="a681" type="comp">
+            <Argument mention_id="a661" role="following"/>
+            <Argument proposition_id="a688" role="&lt;member>"/>
+            <Argument proposition_id="a690" role="&lt;member>"/>
+          </Proposition>
+          <Proposition head_id="a659.8" id="a682" type="noun">
+            <Argument mention_id="a661" role="&lt;ref>"/>
+            <Argument mention_id="a664" role="of"/>
+          </Proposition>
+          <Proposition id="a683" type="set">
+            <Argument mention_id="a664" role="&lt;ref>"/>
+            <Argument mention_id="a665" role="&lt;member>"/>
+            <Argument mention_id="a666" role="&lt;member>"/>
+          </Proposition>
+          <Proposition id="a684" type="name">
+            <Argument mention_id="a665" role="&lt;ref>"/>
+            <Argument syn_node_id="a659.15"/>
+          </Proposition>
+          <Proposition id="a685" type="name">
+            <Argument mention_id="a666" role="&lt;ref>"/>
+            <Argument syn_node_id="a659.22"/>
+          </Proposition>
+          <Proposition head_id="a659.28" id="a686" type="modifier">
+            <Argument mention_id="a664" role="&lt;ref>"/>
+            <Argument mention_id="a667" role="at"/>
+          </Proposition>
+          <Proposition id="a687" type="name">
+            <Argument mention_id="a667" role="&lt;ref>"/>
+            <Argument syn_node_id="a659.30"/>
+          </Proposition>
+          <Proposition head_id="a659.51" id="a688" type="verb">
+            <Argument mention_id="a668" role="&lt;sub>"/>
+            <Argument mention_id="a671" role="&lt;obj>"/>
+          </Proposition>
+          <Proposition head_id="a659.54" id="a689" type="noun">
+            <Argument mention_id="a671" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a659.59" id="a690" type="verb">
+            <Argument mention_id="a668" role="&lt;sub>"/>
+            <Argument mention_id="a672" role="&lt;obj>"/>
+            <Argument mention_id="a674" role="in"/>
+            <Argument mention_id="a676" role="&lt;temp>"/>
+          </Proposition>
+          <Proposition head_id="a659.61" id="a691" type="pronoun">
+            <Argument mention_id="a672" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a659.68" id="a692" type="modifier">
+            <Argument mention_id="a674" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a659.70" id="a693" type="noun">
+            <Argument mention_id="a674" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a659.76" id="a694" type="modifier">
+            <Argument mention_id="a676" role="&lt;ref>"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a619" mention_set_id="a660" name_theory_id="a651" nested_name_theory_id="a656" parse_id="a659" part_of_speech_sequence_id="a650" primary_parse="full_parse" proposition_set_id="a677" token_sequence_id="a620" value_mention_set_id="a657"/>
+      </Sentence>
+      <Sentence char_offsets="1691:1804" edt_offsets="1691:1804" id="a695" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a697" score="0">
+          <Token char_offsets="1691:1693" edt_offsets="1691:1693" id="a698">The</Token>
+          <Token char_offsets="1695:1698" edt_offsets="1695:1698" id="a699">drug</Token>
+          <Token char_offsets="1700:1705" edt_offsets="1700:1705" id="a700">proved</Token>
+          <Token char_offsets="1707:1708" edt_offsets="1707:1708" id="a701">to</Token>
+          <Token char_offsets="1710:1713" edt_offsets="1710:1713" id="a702">have</Token>
+          <Token char_offsets="1715:1718" edt_offsets="1715:1718" id="a703">only</Token>
+          <Token char_offsets="1720:1725" edt_offsets="1720:1725" id="a704">modest</Token>
+          <Token char_offsets="1727:1737" edt_offsets="1727:1737" id="a705">anti-asthma</Token>
+          <Token char_offsets="1739:1745" edt_offsets="1739:1745" id="a706">effects</Token>
+          <Token char_offsets="1746:1746" edt_offsets="1746:1746" id="a707">,</Token>
+          <Token char_offsets="1748:1750" edt_offsets="1748:1750" id="a708">but</Token>
+          <Token char_offsets="1752:1759" edt_offsets="1752:1759" id="a709">produced</Token>
+          <Token char_offsets="1761:1770" edt_offsets="1761:1770" id="a710">sensations</Token>
+          <Token char_offsets="1772:1773" edt_offsets="1772:1773" id="a711">of</Token>
+          <Token char_offsets="1775:1786" edt_offsets="1775:1786" id="a712">exhilaration</Token>
+          <Token char_offsets="1788:1790" edt_offsets="1788:1790" id="a713">and</Token>
+          <Token char_offsets="1792:1803" edt_offsets="1792:1803" id="a714">palpitations</Token>
+          <Token char_offsets="1804:1804" edt_offsets="1804:1804" id="a715">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a716" score="0" token_sequence_id="a697"/>
+        <NameTheory id="a717" score="0" token_sequence_id="a697"/>
+        <NestedNameTheory id="a718" name_theory_id="a717" score="0" token_sequence_id="a697"/>
+        <ValueMentionSet id="a719" score="0" token_sequence_id="a697"/>
+        <Parse id="a720" score="-112.445" token_sequence_id="a697">
+          <TreebankString node_id_method="DFS">(S^ (NPA (DT the) (NN^ drug)) (VP^ (VP^ (VBD^ proved) (S (VP^ (TO^ to) (VP (VB^ have) (NPA (RB only) (JJ modest) (JJ anti-asthma) (NNS^ effects)))))) (, ,) (CC but) (VP (VBD^ produced) (NP (NPA^ (NNS^ sensations)) (PP (IN^ of) (NP (NPA^ (NN^ exhilaration)) (CC and) (NPA (NNS^ palpitations))))))) (. .))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="6" id="a721" name_score="0" parse_id="a720">
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a722" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a720.1"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a723" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a720.17"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a724" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a720.33"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a725" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a720.34"/>
+          <Mention child="a727" entity_subtype="UNDET" entity_type="OTH" id="a726" intended_type="UNDET" is_metonymy="FALSE" mention_type="list" role_type="UNDET" syn_node_id="a720.40"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a727" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" next="a728" parent="a726" role_type="UNDET" syn_node_id="a720.41"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a728" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" parent="a726" role_type="UNDET" syn_node_id="a720.46"/>
+        </MentionSet>
+        <PropositionSet id="a729" mention_set_id="a721">
+          <Proposition head_id="a720.4" id="a730" type="noun">
+            <Argument mention_id="a722" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a720.28" id="a731" type="comp">
+            <Argument proposition_id="a732" role="&lt;member>"/>
+            <Argument proposition_id="a737" role="&lt;member>"/>
+          </Proposition>
+          <Proposition head_id="a720.8" id="a732" type="verb">
+            <Argument mention_id="a722" role="&lt;sub>"/>
+            <Argument proposition_id="a733" role="&lt;obj>"/>
+          </Proposition>
+          <Proposition head_id="a720.15" id="a733" type="verb">
+            <Argument mention_id="a722" role="&lt;sub>"/>
+            <Argument mention_id="a723" role="&lt;obj>"/>
+          </Proposition>
+          <Proposition head_id="a720.20" id="a734" type="modifier">
+            <Argument mention_id="a723" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a720.22" id="a735" type="modifier">
+            <Argument mention_id="a723" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a720.24" id="a736" type="noun">
+            <Argument mention_id="a723" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a720.31" id="a737" type="verb">
+            <Argument mention_id="a722" role="&lt;sub>"/>
+            <Argument mention_id="a724" role="&lt;obj>"/>
+          </Proposition>
+          <Proposition head_id="a720.35" id="a738" type="noun">
+            <Argument mention_id="a724" role="&lt;ref>"/>
+            <Argument mention_id="a726" role="of"/>
+          </Proposition>
+          <Proposition id="a739" type="set">
+            <Argument mention_id="a726" role="&lt;ref>"/>
+            <Argument mention_id="a727" role="&lt;member>"/>
+            <Argument mention_id="a728" role="&lt;member>"/>
+          </Proposition>
+          <Proposition head_id="a720.42" id="a740" type="noun">
+            <Argument mention_id="a727" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a720.47" id="a741" type="noun">
+            <Argument mention_id="a728" role="&lt;ref>"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a696" mention_set_id="a721" name_theory_id="a717" nested_name_theory_id="a718" parse_id="a720" part_of_speech_sequence_id="a716" primary_parse="full_parse" proposition_set_id="a729" token_sequence_id="a697" value_mention_set_id="a719"/>
+      </Sentence>
+      <Sentence char_offsets="1806:1922" edt_offsets="1806:1922" id="a742" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a744" score="0">
+          <Token char_offsets="1806:1816" edt_offsets="1806:1816" id="a745">Amphetamine</Token>
+          <Token char_offsets="1818:1820" edt_offsets="1818:1820" id="a746">was</Token>
+          <Token char_offsets="1822:1830" edt_offsets="1822:1830" id="a747">developed</Token>
+          <Token char_offsets="1832:1833" edt_offsets="1832:1833" id="a748">by</Token>
+          <Token char_offsets="1835:1839" edt_offsets="1835:1839" id="a749">Smith</Token>
+          <Token char_offsets="1840:1840" edt_offsets="1840:1840" id="a750">,</Token>
+          <Token char_offsets="1842:1846" edt_offsets="1842:1846" id="a751">Kline</Token>
+          <Token char_offsets="1848:1850" edt_offsets="1848:1850" id="a752">and</Token>
+          <Token char_offsets="1852:1857" edt_offsets="1852:1857" id="a753">French</Token>
+          <Token char_offsets="1859:1860" edt_offsets="1859:1860" id="a754">as</Token>
+          <Token char_offsets="1862:1862" edt_offsets="1862:1862" id="a755">a</Token>
+          <Token char_offsets="1864:1868" edt_offsets="1864:1868" id="a756">nasal</Token>
+          <Token char_offsets="1870:1881" edt_offsets="1870:1881" id="a757">decongestant</Token>
+          <Token char_offsets="1883:1887" edt_offsets="1883:1887" id="a758">under</Token>
+          <Token char_offsets="1889:1891" edt_offsets="1889:1891" id="a759">the</Token>
+          <Token char_offsets="1893:1897" edt_offsets="1893:1897" id="a760">trade</Token>
+          <Token char_offsets="1899:1902" edt_offsets="1899:1902" id="a761">name</Token>
+          <Token char_offsets="1904:1913" edt_offsets="1904:1913" id="a762">Benzedrine</Token>
+          <Token char_offsets="1915:1921" edt_offsets="1915:1921" id="a763">Inhaler</Token>
+          <Token char_offsets="1922:1922" edt_offsets="1922:1922" id="a764">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a765" score="0" token_sequence_id="a744"/>
+        <NameTheory id="a766" score="0" token_sequence_id="a744">
+          <Name char_offsets="1835:1839" edt_offsets="1835:1839" end_token="a749" entity_type="PER" id="a767" start_token="a749"/>
+          <Name char_offsets="1842:1846" edt_offsets="1842:1846" end_token="a751" entity_type="PER" id="a768" start_token="a751"/>
+          <Name char_offsets="1852:1857" edt_offsets="1852:1857" end_token="a753" entity_type="GPE" id="a769" start_token="a753"/>
+          <Name char_offsets="1904:1921" edt_offsets="1904:1921" end_token="a763" entity_type="PER" id="a770" start_token="a762"/>
+        </NameTheory>
+        <NestedNameTheory id="a771" name_theory_id="a766" score="0" token_sequence_id="a744"/>
+        <ValueMentionSet id="a772" score="0" token_sequence_id="a744"/>
+        <Parse id="a773" score="-109.731" token_sequence_id="a744">
+          <TreebankString node_id_method="DFS">(S^ (NP (NPA^ (NN^ amphetamine))) (VP^ (VBD^ was) (VP (VP^ (VBN^ developed) (PP (IN^ by) (NP (NPP^ (NNP^ smith)) (, ,) (NPP (NNP^ kline))))) (CC and) (VP (NPP^ (JJ^ french)) (PP (IN^ as) (NP (NPA^ (DT a) (JJ nasal) (NN^ decongestant)) (PP (IN^ under) (NP (NPA^ (DT the) (NN trade) (NN^ name)) (NPP (NNP benzedrine) (NNP^ inhaler))))))))) (. .))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="6" id="a774" name_score="0" parse_id="a773">
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a775" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a773.1"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a776" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a773.2"/>
+          <Mention child="a778" entity_subtype="UNDET" entity_type="PER" id="a777" intended_type="UNDET" is_metonymy="FALSE" mention_type="list" role_type="UNDET" syn_node_id="a773.15"/>
+          <Mention entity_subtype="UNDET" entity_type="PER" id="a778" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" next="a779" parent="a777" role_type="UNDET" syn_node_id="a773.16"/>
+          <Mention entity_subtype="UNDET" entity_type="PER" id="a779" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" parent="a777" role_type="UNDET" syn_node_id="a773.21"/>
+          <Mention entity_subtype="UNDET" entity_type="PER" id="a780" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a773.27"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a781" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a773.33"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a782" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a773.34"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a783" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a773.44"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a784" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a773.45"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a785" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a773.48"/>
+          <Mention entity_subtype="UNDET" entity_type="PER" id="a786" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" role_type="UNDET" syn_node_id="a773.52"/>
+        </MentionSet>
+        <PropositionSet id="a787" mention_set_id="a774">
+          <Proposition head_id="a773.3" id="a788" type="noun">
+            <Argument mention_id="a775" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a773.24" id="a789" type="comp">
+            <Argument proposition_id="a790" role="&lt;member>"/>
+            <Argument proposition_id="a794" role="&lt;member>"/>
+          </Proposition>
+          <Proposition head_id="a773.10" id="a790" type="verb">
+            <Argument mention_id="a777" role="&lt;sub>"/>
+            <Argument mention_id="a775" role="&lt;obj>"/>
+          </Proposition>
+          <Proposition id="a791" type="set">
+            <Argument mention_id="a777" role="&lt;ref>"/>
+            <Argument mention_id="a778" role="&lt;member>"/>
+            <Argument mention_id="a779" role="&lt;member>"/>
+          </Proposition>
+          <Proposition id="a792" type="name">
+            <Argument mention_id="a778" role="&lt;ref>"/>
+            <Argument syn_node_id="a773.16"/>
+          </Proposition>
+          <Proposition id="a793" type="name">
+            <Argument mention_id="a779" role="&lt;ref>"/>
+            <Argument syn_node_id="a773.21"/>
+          </Proposition>
+          <Proposition head_id="a773.27" id="a794" type="verb">
+            <Argument mention_id="a775" role="&lt;sub>"/>
+            <Argument mention_id="a780" role="&lt;obj>"/>
+            <Argument mention_id="a781" role="as"/>
+          </Proposition>
+          <Proposition head_id="a773.28" id="a795" type="modifier">
+            <Argument mention_id="a780" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a773.37" id="a796" type="modifier">
+            <Argument mention_id="a781" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a773.39" id="a797" type="noun">
+            <Argument mention_id="a781" role="&lt;ref>"/>
+            <Argument mention_id="a783" role="under"/>
+          </Proposition>
+          <Proposition head_id="a773.48" id="a798" type="modifier">
+            <Argument mention_id="a783" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a773.50" id="a799" type="noun">
+            <Argument mention_id="a783" role="&lt;ref>"/>
+            <Argument mention_id="a786" role="&lt;unknown>"/>
+          </Proposition>
+          <Proposition id="a800" type="name">
+            <Argument mention_id="a786" role="&lt;ref>"/>
+            <Argument syn_node_id="a773.52"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a743" mention_set_id="a774" name_theory_id="a766" nested_name_theory_id="a771" parse_id="a773" part_of_speech_sequence_id="a765" primary_parse="full_parse" proposition_set_id="a787" token_sequence_id="a744" value_mention_set_id="a772"/>
+      </Sentence>
+      <Sentence char_offsets="1924:2092" edt_offsets="1924:2092" id="a801" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a803" score="0">
+          <Token char_offsets="1924:1934" edt_offsets="1924:1934" id="a804">Amphetamine</Token>
+          <Token char_offsets="1936:1938" edt_offsets="1936:1938" id="a805">was</Token>
+          <Token char_offsets="1940:1949" edt_offsets="1940:1949" id="a806">eventually</Token>
+          <Token char_offsets="1951:1959" edt_offsets="1951:1959" id="a807">developed</Token>
+          <Token char_offsets="1961:1963" edt_offsets="1961:1963" id="a808">for</Token>
+          <Token char_offsets="1965:1967" edt_offsets="1965:1967" id="a809">the</Token>
+          <Token char_offsets="1969:1977" edt_offsets="1969:1977" id="a810">treatment</Token>
+          <Token char_offsets="1979:1980" edt_offsets="1979:1980" id="a811">of</Token>
+          <Token char_offsets="1982:1991" edt_offsets="1982:1991" id="a812">narcolepsy</Token>
+          <Token char_offsets="1992:1992" edt_offsets="1992:1992" id="a813">,</Token>
+          <Token char_offsets="1994:2010" edt_offsets="1994:2010" id="a814">post-encephalitic</Token>
+          <Token char_offsets="2012:2023" edt_offsets="2012:2023" id="a815">parkinsonism</Token>
+          <Token char_offsets="2024:2024" edt_offsets="2024:2024" id="a816">,</Token>
+          <Token char_offsets="2026:2028" edt_offsets="2026:2028" id="a817">and</Token>
+          <Token char_offsets="2030:2033" edt_offsets="2030:2033" id="a818">mood</Token>
+          <Token char_offsets="2035:2043" edt_offsets="2035:2043" id="a819">elevation</Token>
+          <Token char_offsets="2045:2046" edt_offsets="2045:2046" id="a820">in</Token>
+          <Token char_offsets="2048:2057" edt_offsets="2048:2057" id="a821">depression</Token>
+          <Token char_offsets="2059:2061" edt_offsets="2059:2061" id="a822">and</Token>
+          <Token char_offsets="2063:2067" edt_offsets="2063:2067" id="a823">other</Token>
+          <Token char_offsets="2069:2079" edt_offsets="2069:2079" id="a824">psychiatric</Token>
+          <Token char_offsets="2081:2091" edt_offsets="2081:2091" id="a825">indications</Token>
+          <Token char_offsets="2092:2092" edt_offsets="2092:2092" id="a826">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a827" score="0" token_sequence_id="a803"/>
+        <NameTheory id="a828" score="0" token_sequence_id="a803"/>
+        <NestedNameTheory id="a829" name_theory_id="a828" score="0" token_sequence_id="a803"/>
+        <ValueMentionSet id="a830" score="0" token_sequence_id="a803"/>
+        <Parse id="a831" score="-151.69" token_sequence_id="a803">
+          <TreebankString node_id_method="DFS">(S^ (NP (NPA^ (NN^ amphetamine))) (VP^ (VBD^ was) (VP (ADVP (RB^ eventually)) (VBN^ developed) (PP (IN^ for) (NP (NP^ (NPA^ (DT the) (NN^ treatment)) (PP (IN^ of) (NPA (NN narcolepsy) (, ,) (JJ post-encephalitic) (NN^ parkinsonism)))) (, ,) (CC and) (NP (NPA^ (NN mood) (NN^ elevation)) (PP (IN^ in) (NPA (NN^ depression)))) (CC and) (NPA (JJ other) (JJ psychiatric) (NNS^ indications)))))) (. .))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="9" id="a832" name_score="0" parse_id="a831">
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a833" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a831.1"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a834" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a831.2"/>
+          <Mention child="a836" entity_subtype="UNDET" entity_type="OTH" id="a835" intended_type="UNDET" is_metonymy="FALSE" mention_type="list" role_type="UNDET" syn_node_id="a831.17"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a836" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" next="a839" parent="a835" role_type="UNDET" syn_node_id="a831.18"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a837" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a831.19"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a838" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a831.27"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a839" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" next="a843" parent="a835" role_type="UNDET" syn_node_id="a831.40"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a840" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a831.41"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a841" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a831.42"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a842" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a831.49"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a843" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" parent="a835" role_type="UNDET" syn_node_id="a831.54"/>
+        </MentionSet>
+        <PropositionSet id="a844" mention_set_id="a832">
+          <Proposition head_id="a831.3" id="a845" type="noun">
+            <Argument mention_id="a833" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition adverb_id="a831.9" head_id="a831.12" id="a846" type="verb">
+            <Argument mention_id="a833" role="&lt;obj>"/>
+            <Argument mention_id="a835" role="for"/>
+          </Proposition>
+          <Proposition id="a847" type="set">
+            <Argument mention_id="a835" role="&lt;ref>"/>
+            <Argument mention_id="a836" role="&lt;member>"/>
+            <Argument mention_id="a839" role="&lt;member>"/>
+            <Argument mention_id="a843" role="&lt;member>"/>
+          </Proposition>
+          <Proposition head_id="a831.22" id="a848" type="noun">
+            <Argument mention_id="a836" role="&lt;ref>"/>
+            <Argument mention_id="a838" role="of"/>
+          </Proposition>
+          <Proposition head_id="a831.28" id="a849" type="modifier">
+            <Argument mention_id="a838" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a831.34" id="a850" type="noun">
+            <Argument mention_id="a838" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a831.32" id="a851" type="modifier">
+            <Argument mention_id="a838" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a831.42" id="a852" type="modifier">
+            <Argument mention_id="a839" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a831.44" id="a853" type="noun">
+            <Argument mention_id="a839" role="&lt;ref>"/>
+            <Argument mention_id="a842" role="in"/>
+          </Proposition>
+          <Proposition head_id="a831.50" id="a854" type="noun">
+            <Argument mention_id="a842" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a831.55" id="a855" type="modifier">
+            <Argument mention_id="a843" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a831.57" id="a856" type="modifier">
+            <Argument mention_id="a843" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a831.59" id="a857" type="noun">
+            <Argument mention_id="a843" role="&lt;ref>"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a802" mention_set_id="a832" name_theory_id="a828" nested_name_theory_id="a829" parse_id="a831" part_of_speech_sequence_id="a827" primary_parse="full_parse" proposition_set_id="a844" token_sequence_id="a803" value_mention_set_id="a830"/>
+      </Sentence>
+      <Sentence char_offsets="2094:2313" edt_offsets="2094:2313" id="a858" is_annotated="TRUE" region_id="a3">
+        <TokenSequence id="a860" score="0">
+          <Token char_offsets="2094:2095" edt_offsets="2094:2095" id="a861">It</Token>
+          <Token char_offsets="2097:2104" edt_offsets="2097:2104" id="a862">received</Token>
+          <Token char_offsets="2106:2113" edt_offsets="2106:2113" id="a863">approval</Token>
+          <Token char_offsets="2115:2116" edt_offsets="2115:2116" id="a864">as</Token>
+          <Token char_offsets="2118:2118" edt_offsets="2118:2118" id="a865">a</Token>
+          <Token char_offsets="2120:2122" edt_offsets="2120:2122" id="a866">New</Token>
+          <Token char_offsets="2124:2126" edt_offsets="2124:2126" id="a867">and</Token>
+          <Token char_offsets="2128:2138" edt_offsets="2128:2138" id="a868">Nonofficial</Token>
+          <Token char_offsets="2140:2145" edt_offsets="2140:2145" id="a869">Remedy</Token>
+          <Token char_offsets="2147:2150" edt_offsets="2147:2150" id="a870">from</Token>
+          <Token char_offsets="2152:2154" edt_offsets="2152:2154" id="a871">the</Token>
+          <Token char_offsets="2156:2163" edt_offsets="2156:2163" id="a872">American</Token>
+          <Token char_offsets="2165:2171" edt_offsets="2165:2171" id="a873">Medical</Token>
+          <Token char_offsets="2173:2183" edt_offsets="2173:2183" id="a874">Association</Token>
+          <Token char_offsets="2185:2187" edt_offsets="2185:2187" id="a875">for</Token>
+          <Token char_offsets="2189:2193" edt_offsets="2189:2193" id="a876">these</Token>
+          <Token char_offsets="2195:2198" edt_offsets="2195:2198" id="a877">uses</Token>
+          <Token char_offsets="2200:2201" edt_offsets="2200:2201" id="a878">in</Token>
+          <Token char_offsets="2203:2206" edt_offsets="2203:2206" id="a879">1937</Token>
+          <Token char_offsets="2208:2210" edt_offsets="2208:2210" id="a880">and</Token>
+          <Token char_offsets="2212:2219" edt_offsets="2212:2219" id="a881">remained</Token>
+          <Token char_offsets="2221:2222" edt_offsets="2221:2222" id="a882">in</Token>
+          <Token char_offsets="2224:2229" edt_offsets="2224:2229" id="a883">common</Token>
+          <Token char_offsets="2231:2233" edt_offsets="2231:2233" id="a884">use</Token>
+          <Token char_offsets="2235:2237" edt_offsets="2235:2237" id="a885">for</Token>
+          <Token char_offsets="2239:2248" edt_offsets="2239:2248" id="a886">depression</Token>
+          <Token char_offsets="2250:2254" edt_offsets="2250:2254" id="a887">until</Token>
+          <Token char_offsets="2256:2258" edt_offsets="2256:2258" id="a888">the</Token>
+          <Token char_offsets="2260:2270" edt_offsets="2260:2270" id="a889">development</Token>
+          <Token char_offsets="2272:2273" edt_offsets="2272:2273" id="a890">of</Token>
+          <Token char_offsets="2275:2283" edt_offsets="2275:2283" id="a891">tricyclic</Token>
+          <Token char_offsets="2285:2299" edt_offsets="2285:2299" id="a892">antidepressants</Token>
+          <Token char_offsets="2301:2302" edt_offsets="2301:2302" id="a893">in</Token>
+          <Token char_offsets="2304:2306" edt_offsets="2304:2306" id="a894">the</Token>
+          <Token char_offsets="2308:2312" edt_offsets="2308:2312" id="a895">1960s</Token>
+          <Token char_offsets="2313:2313" edt_offsets="2313:2313" id="a896">.</Token>
+        </TokenSequence>
+        <PartOfSpeechSequence id="a897" score="0" token_sequence_id="a860"/>
+        <NameTheory id="a898" score="0" token_sequence_id="a860">
+          <Name char_offsets="2156:2183" edt_offsets="2156:2183" end_token="a874" entity_type="ORG" id="a899" start_token="a872"/>
+        </NameTheory>
+        <NestedNameTheory id="a900" name_theory_id="a898" score="0" token_sequence_id="a860"/>
+        <ValueMentionSet id="a901" score="0" token_sequence_id="a860">
+          <ValueMention char_offsets="2203:2206" edt_offsets="2203:2206" end_token="a879" id="a902" start_token="a879" value_type="TIMEX2.TIME"/>
+          <ValueMention char_offsets="2304:2312" edt_offsets="2304:2312" end_token="a895" id="a903" start_token="a894" value_type="TIMEX2.TIME"/>
+        </ValueMentionSet>
+        <Parse id="a904" score="-186.602" token_sequence_id="a860">
+          <TreebankString node_id_method="DFS">(S^ (NPA (PRP^ it)) (VP^ (VP^ (VBD^ received) (NP (NPA^ (NN^ approval)) (PP (IN^ as) (NP (NPA^ (DT a) (NNP^ new)) (CC and) (NPA (NNP nonofficial) (NNP^ remedy))))) (PP (IN^ from) (NP (NPA^ (DT the) (NPP^ (NNP american) (NNP medical) (NNP^ association))) (PP (IN^ for) (NPA (DT these) (NNS^ uses))))) (PP (IN^ in) (DATE (CD^ 1937)))) (CC and) (VP (VBD^ remained) (PP (IN^ in) (NP (NPA^ (JJ common) (NN^ use)) (PP (IN^ for) (NPA (NN^ depression))) (PP (IN^ until) (NP (NPA^ (DT the) (NN^ development)) (PP (IN^ of) (NP (NPA^ (JJ tricyclic) (NNS^ antidepressants)) (PP (IN^ in) (NP (DT the) (DATE^ (NNS^ 1960s)))))))))))) (. .))</TreebankString>
+        </Parse>
+        <MentionSet desc_score="15" id="a905" name_score="0" parse_id="a904">
+          <Mention entity_subtype="UNDET" entity_type="UNDET" id="a906" intended_type="UNDET" is_metonymy="FALSE" mention_type="pron" role_type="UNDET" syn_node_id="a904.1"/>
+          <Mention entity_subtype="UNDET" entity_type="UNDET" id="a907" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a904.2"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a908" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a904.8"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a909" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a904.9"/>
+          <Mention child="a911" entity_subtype="UNDET" entity_type="OTH" id="a910" intended_type="UNDET" is_metonymy="FALSE" mention_type="list" role_type="UNDET" syn_node_id="a904.15"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a911" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" next="a912" parent="a910" role_type="UNDET" syn_node_id="a904.16"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a912" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" parent="a910" role_type="UNDET" syn_node_id="a904.23"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a913" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a904.24"/>
+          <Mention child="a916" entity_subtype="Medical-Science" entity_type="ORG" id="a914" intended_type="UNDET" is_metonymy="FALSE" mention_type="name" role_type="UNDET" syn_node_id="a904.31"/>
+          <Mention entity_subtype="UNDET" entity_type="ORG" id="a915" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a904.32"/>
+          <Mention entity_subtype="UNDET" entity_type="ORG" id="a916" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" parent="a914" role_type="UNDET" syn_node_id="a904.35"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a917" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a904.45"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a918" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a904.53"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a919" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a904.64"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a920" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a904.65"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a921" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a904.73"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a922" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a904.79"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a923" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a904.80"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a924" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a904.88"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a925" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a904.89"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a926" intended_type="UNDET" is_metonymy="FALSE" mention_type="desc" role_type="UNDET" syn_node_id="a904.97"/>
+          <Mention entity_subtype="UNDET" entity_type="OTH" id="a927" intended_type="UNDET" is_metonymy="FALSE" mention_type="none" role_type="UNDET" syn_node_id="a904.100"/>
+        </MentionSet>
+        <PropositionSet id="a928" mention_set_id="a905">
+          <Proposition head_id="a904.1" id="a929" type="pronoun">
+            <Argument mention_id="a906" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a904.56" id="a930" type="comp">
+            <Argument proposition_id="a931" role="&lt;member>"/>
+            <Argument proposition_id="a941" role="&lt;member>"/>
+          </Proposition>
+          <Proposition head_id="a904.6" id="a931" type="verb">
+            <Argument mention_id="a906" role="&lt;sub>"/>
+            <Argument mention_id="a908" role="&lt;obj>"/>
+            <Argument mention_id="a914" role="from"/>
+            <Argument mention_id="a918" role="&lt;temp>"/>
+          </Proposition>
+          <Proposition head_id="a904.10" id="a932" type="noun">
+            <Argument mention_id="a908" role="&lt;ref>"/>
+            <Argument mention_id="a910" role="as"/>
+          </Proposition>
+          <Proposition id="a933" type="set">
+            <Argument mention_id="a910" role="&lt;ref>"/>
+            <Argument mention_id="a911" role="&lt;member>"/>
+            <Argument mention_id="a912" role="&lt;member>"/>
+          </Proposition>
+          <Proposition head_id="a904.19" id="a934" type="noun">
+            <Argument mention_id="a911" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a904.24" id="a935" type="modifier">
+            <Argument mention_id="a912" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a904.26" id="a936" type="noun">
+            <Argument mention_id="a912" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a904.43" id="a937" type="modifier">
+            <Argument mention_id="a914" role="&lt;ref>"/>
+            <Argument mention_id="a917" role="for"/>
+          </Proposition>
+          <Proposition head_id="a904.48" id="a938" type="noun">
+            <Argument mention_id="a917" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition id="a939" type="name">
+            <Argument mention_id="a914" role="&lt;ref>"/>
+            <Argument syn_node_id="a904.35"/>
+          </Proposition>
+          <Proposition head_id="a904.54" id="a940" type="modifier">
+            <Argument mention_id="a918" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a904.59" id="a941" type="verb">
+            <Argument mention_id="a906" role="&lt;sub>"/>
+            <Argument mention_id="a919" role="in"/>
+          </Proposition>
+          <Proposition head_id="a904.66" id="a942" type="modifier">
+            <Argument mention_id="a919" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a904.68" id="a943" type="noun">
+            <Argument mention_id="a919" role="&lt;ref>"/>
+            <Argument mention_id="a921" role="for"/>
+            <Argument mention_id="a922" role="until"/>
+          </Proposition>
+          <Proposition head_id="a904.74" id="a944" type="noun">
+            <Argument mention_id="a921" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a904.83" id="a945" type="noun">
+            <Argument mention_id="a922" role="&lt;ref>"/>
+            <Argument mention_id="a924" role="of"/>
+          </Proposition>
+          <Proposition head_id="a904.90" id="a946" type="modifier">
+            <Argument mention_id="a924" role="&lt;ref>"/>
+          </Proposition>
+          <Proposition head_id="a904.92" id="a947" type="noun">
+            <Argument mention_id="a924" role="&lt;ref>"/>
+            <Argument mention_id="a926" role="in"/>
+          </Proposition>
+          <Proposition head_id="a904.101" id="a948" type="noun">
+            <Argument mention_id="a926" role="&lt;ref>"/>
+          </Proposition>
+        </PropositionSet>
+        <SentenceTheory id="a859" mention_set_id="a905" name_theory_id="a898" nested_name_theory_id="a900" parse_id="a904" part_of_speech_sequence_id="a897" primary_parse="full_parse" proposition_set_id="a928" token_sequence_id="a860" value_mention_set_id="a901"/>
+      </Sentence>
+    </Sentences>
+  </Document>
+
+</SerifXML>

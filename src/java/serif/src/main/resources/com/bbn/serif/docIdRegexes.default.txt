@@ -1,0 +1,8 @@
+# common LDC newswire document IDs and PSYCHIC newswire feed (newsscraper)
+((AFP|APW|CNA|LTW|NYT|OSI|WPB|XIN|ENG_NW|CMN_NW|SPA_NW)_|RCV|newsscraper).*	newswire
+# LDC discussion forum docIDs
+[a-f0-9]{32}	web
+# PSYCHIC vulnerability reports
+(nvdAlerts|packetstorm|usCERT|rssreader).*	vulnerabilityReport
+# PSYCHIC twitter feed documents
+(twitter).*	  twitter

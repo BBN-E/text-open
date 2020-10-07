@@ -1,0 +1,30 @@
+# testing config file
+
+# implementations go here
+IMPLEMENTATIONS
+./misc/sample_implementations_sgm_to_end.py
+
+SENTENCE_SPLITTING_MODEL PunctuationSentenceSplitter
+
+TOKENIZE_MODEL WhiteSpaceTokenizer
+
+PARSE_MODEL NLTKParser
+
+NAME_MODEL DogAndBreadNameModel
+
+#NAME_MODEL InstitutionNameModel
+
+MENTION_MODEL NameMentionModel
+require_names
+
+RELATION_MENTION_MODEL DogFoodFinderRelationMentionModel
+
+EVENT_MENTION_MODEL EatEventMentionModel
+
+ENTITY_MODEL SimpleEntityModel
+
+RELATION_MODEL SimpleRelationModel
+
+EVENT_MODEL SimpleEventModel
+
+EVENT_EVENT_RELATION_MENTION_MODEL DummyEventEventRelationMentionModel

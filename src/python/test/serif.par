@@ -1,0 +1,25 @@
+########################################################################
+# 08/29/11, Liz Boschee                                                #
+#                                                                      #
+# regtest.best-english.par                                             #
+#   This is a Serif parameter file designed to run the ACE2008	       #
+#   regression test of the English ACE Serif system.                   #
+#                                                                      #
+########################################################################
+
+# External variables (must be defined first)
+parallel:           000
+serif_data:         /d4m/serif/data
+serif_score:        NONE
+start_stage:        START
+end_stage:          props
+perl_binary:        NONE
+serif_regression:   NONE
+experiment_dir:     /nfs/raid87/u11/users/azamania/serifxml_api/rundir
+state_saver_stages: NONE
+
+INCLUDE /nfs/raid66/u14/users/azamania/TextGroup/Active/Projects/SERIF/par/master.english.par
+license_file: /d4m/serif/data/unspec/misc/bbn_idx.lic
+
+OVERRIDE input_type: text
+OVERRIDE output_format: serifxml

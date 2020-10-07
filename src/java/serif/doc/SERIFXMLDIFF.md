@@ -1,0 +1,40 @@
+# Diffing SerifXML files
+
+Diffing SerifXML files with `diff` can be a pain due to scores, IDs, etc. 
+Instead you can use `SerifXMLDiff` located in 
+`serif-config/target/appassembler/bin/serifXMLDiff`.  Just provide a param file 
+with two params, `com.bbn.serif.diff.leftFileMap` and `com.bbn.serif.diff.rightFileMap`
+pointing at documentID-to-file maps.
+
+* Currently only names and event mentions are diffed. Any other differences
+will not be detected!  Extending the differ to other theories is straightforward
+if a little tedious.  
+* If the optional parameter `com.bbn.serif.diff.ignoreScores` is true, differences
+in scores will be ignored.
+
+Example output:
+```
+sentenceTheories:                                                                                                                                                                                                                                                                                                            
+  Differing items:                                                                                                                                                                                                                                                                                                           
+    Ranar Litinin din nan an yiwa mutane kusan dari biyar gwaji a iyaka da jamhuriyar Benin kafin a bari su shigo kasar.                                                                                                                                                                                                     
+      names:                                                                                                                                                                                                                                                                                                                 
+        leftOnly  = [Name{type=LOC, span=jamhuriyar Benin, score=Optional.of(1.0), transliteration=Optional.absent(), externalID=Optional.absent()}]                                                                                                                                                                         
+        rightOnly =                                                                                                                                                                                                                                                                                                          
+                    Name{type=PER, span=mutane kusan dari biyar gwaji a iyaka da jamhuriyar, score=Optional.of(1.0), transliteration=Optional.absent(), externalID=Optional.absent()}                                                                                                                                        
+                    Name{type=LOC, span=Benin, score=Optional.of(1.0), transliteration=Optional.absent(), externalID=Optional.absent()}                                                                                                                                                                                      
+    A filin jirgin saman Nnamdi Azikiwe dake Abuja fiye da mutane dari tara suka shigo kasar kuma dukansu sai da aka yi masu gwaji.                                                                                                                                                                                          
+      names:                                                                                                                                                                                                                                                                                                                 
+        leftOnly  = [Name{type=LOC, span=Abuja, score=Optional.of(1.0), transliteration=Optional.absent(), externalID=Optional.absent()}]                                                                                                                                                                                    
+    Akan labarin da wasu suke rurutawa wai ana samun cutar ebola ta cin kilishi, Dr Gwarzo yace babu kashin gaskiya a batun.                                                                                                                                                                                                 
+      names:                                                                                                                                                                                                                                                                                                                 
+        rightOnly = [Name{type=ORG, span=cutar ebola ta cin kilishi, score=Optional.of(1.0), transliteration=Optional.absent(), externalID=Optional.absent()}]                                                                                                                                                               
+    Ya kara da cewa baʼa samunsa a dabbobin gida sai na daji.                                                                                                                                                                                                                                                                
+      names:                                                                                                                                                                                                                                                                                                                 
+        rightOnly = [Name{type=ORG, span=samunsa a dabbobin gida sai na daji, score=Optional.of(1.0), transliteration=Optional.absent(), externalID=Optional.absent()}]                                                                                                                                                      
+    Ko suma baʼa daukar cutar daga busashen nama sai danye ko wanda bai dahu ba sosai.                                                                                                                                                                                                                                       
+      names:                                                                                                                                                                                                                                                                                                                 
+        rightOnly = [Name{type=ORG, span=cutar daga busashen nama sai danye ko wanda bai dahu ba sosai, score=Optional.of(1.0), transliteration=Optional.absent(), externalID=Optional.absent()}]                                                                                                                            
+    Najeriya Ta Karyata Batun Kamuwa da Cutar Ebola Sanadiyar Cin Kilishi - 2' 51" Kwandon Shirye-shirye na Sauko Da Sauti                                                                                                                                                                                                   
+      names:                                                                                                                                                                                                                                                                                                                 
+        rightOnly = [Name{type=ORG, span=Ta Karyata Batun Kamuwa da Cutar Ebola Sanadiyar Cin Kilishi - 2 ' 51 " Kwandon Shirye - shirye na Sauko Da Sauti, score=Optional.of(1.0), transliteration=Optional.absent(), externalID=Optional.absent()}]    
+        ```

@@ -1,0 +1,25 @@
+# testing config file
+
+# implementations go here
+IMPLEMENTATIONS
+./misc/tacred_to_serif_implementation.py
+
+SENTENCE_SPLITTING_MODEL NewlineSentenceSplitter
+
+TOKENIZE_MODEL PlainWhiteSpaceTokenizer
+
+# treat all annotatied TACRED entities as names to facilitate creation of entities in pipeline
+# (synnodes for MENTION_MODEL are created in PARSE_MODEL from info provided by NAME_MODEL)
+NAME_MODEL AIDA_TACRED_NameModel
+mapping_file /nfs/raid66/u11/users/brozonoy/NER/data/tacred_words_annotations/tacred_mapping_file
+
+PARSE_MODEL DummyNameNPParser
+
+MENTION_MODEL NameMentionModel
+
+ENTITY_MODEL SimpleEntityModel
+
+RELATION_MENTION_MODEL AIDARelationMentionModel
+mapping_file /nfs/raid66/u11/users/brozonoy/NER/data/tacred_words_annotations/tacred_mapping_file
+
+RELATION_MODEL SimpleRelationModel

@@ -1,0 +1,9 @@
+# testing config file
+
+# implementations go here
+IMPLEMENTATIONS
+./misc/nlplingo_event_model_impl.py
+
+EVENT_MENTION_MODEL NLPLingoDecoder
+params_path /home/hqiu/ld100/Hume_pipeline_2/Hume/etemplates/nlplingo_decoder.012020.modified/nn_events/Hume-00000_cx_trigger_082219.nlplingo_decode.par.cx.json
+npz_filelist /home/hqiu/ld100/Hume_pipeline_2/Hume/expts/causeex_sams_estonia.120719.121419/bert/bert_npz.list

@@ -1,0 +1,8 @@
+broadcast conversation	speech
+telephone	speech
+broadcast news	newswire
+newswire	newswire
+story	newswire
+discussion_forum	discussion_forum
+usenet	usenet
+weblog	web

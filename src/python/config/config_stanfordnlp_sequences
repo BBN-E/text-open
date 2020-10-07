@@ -1,0 +1,36 @@
+# testing config file
+
+# implementations go here
+IMPLEMENTATIONS
+./serif/model/impl/stanfordnlp_adapter.py
+
+IMPLEMENTATIONS
+./serif/model/impl/sentence_splitter/no_sentence_breaking_model.py
+
+IMPLEMENTATIONS
+./serif/model/impl/parser/benepar_parser.py
+
+IMPLEMENTATIONS
+./serif/model/impl/mention/noun_phrase_mention_model.py
+
+IMPLEMENTATIONS
+./serif/model/impl/dependency_parser/stanford_nlp_dependency_parser.py
+
+SENTENCE_SPLITTING_MODEL NoSentenceBreakingModel
+
+BASE_MODEL StanfordNLPAdapter
+lang en
+models_dir /nfs/raid87/u10/shared/Hume/common/stanfordnlp_resources
+max_tokens 200
+
+PARSE_MODEL BeneparParser
+model /nfs/raid87/u10/shared/Hume/common/nltk_data/models/benepar_en
+add_heads
+max_tokens 200
+
+MENTION_MODEL NounPhraseMentionModel
+
+DEPENDENCY_MODEL StanfordNLPDependencyParser
+lang en
+models_dir /nfs/raid87/u10/shared/Hume/common/stanfordnlp_resources
+use_data_from_stanford_adapter

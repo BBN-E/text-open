@@ -1,0 +1,6 @@
+IMPLEMENTATIONS
+./serif/model/impl/java_doc_resolver.py
+
+BASE_MODEL JavaDocResolverModel
+doc_resolver_jar_path /home/hqiu/ld100/Hume_pipeline_int/Hume/src/java/serif-util/target/causeex-serif-util-1.0.0-jar-with-dependencies.jar
+doc_resolver_par_path /home/hqiu/ld100/Hume_pipeline_int/Hume/etemplates/hume_test.040220.wm.v1/doc_consolidation/0/event_consolidation/Hume-run_event_consolidation_0.event_consolidation_wm.par

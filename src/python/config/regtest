@@ -1,0 +1,24 @@
+# testing config file
+
+# implementations go here
+IMPLEMENTATIONS
+./misc/regtest.py
+
+NAME_MODEL DrugNameModel
+
+NAME_MODEL InstitutionNameModel
+
+MENTION_MODEL NameMentionModel
+
+
+RELATION_MENTION_MODEL DrugFinderRelationMentionModel
+
+EVENT_MENTION_MODEL DummyEventMentionDemoModel
+
+ENTITY_MODEL SimpleEntityModel
+
+RELATION_MODEL SimpleRelationModel
+
+EVENT_MODEL SimpleEventModel
+
+EVENT_EVENT_RELATION_MENTION_MODEL DummyEventEventRelationMentionModel

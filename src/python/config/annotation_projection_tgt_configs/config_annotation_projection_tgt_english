@@ -1,0 +1,18 @@
+# Requires access to stanfordnlp and benepar libraries and models
+# http://e-gitlab.bbn.com/text-group/text-open/issues/27
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/sentence_splitter/newline_sentence_splitter.py
+
+IMPLEMENTATIONS
+/d4m/nlp/releases/text-open/R2020_07_13/src/python/serif/model/impl/tokenizer/white_space_tokenizer.py
+
+IMPLEMENTATIONS
+/d4m/nlp/releases/text-open/R2020_07_13/src/python/serif/model/impl/parser/benepar_parser.py
+
+SENTENCE_SPLITTING_MODEL NewlineSentenceSplitter
+
+TOKENIZE_MODEL WhiteSpaceTokenizer
+
+PARSE_MODEL BeneparParser
+model /nfs/raid87/u10/shared/Hume/common/nltk_data/models/benepar_en

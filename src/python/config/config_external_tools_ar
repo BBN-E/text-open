@@ -1,0 +1,23 @@
+# Requires access to stanfordnlp and benepar libraries and models 
+# http://e-gitlab.bbn.com/text-group/text-open/issues/27
+
+IMPLEMENTATIONS
+/d4m/nlp/releases/text-open/R2020_06_16/src/python/misc/sample_implementations_external_tools.py
+
+SENTENCE_SPLITTING_MODEL StanfordNLPSentenceSplitter
+lang ar
+models_dir /nfs/raid87/u10/shared/Hume/common/stanfordnlp_resources
+
+TOKENIZE_MODEL StanfordNLPTokenizer
+lang ar
+models_dir /nfs/raid87/u10/shared/Hume/common/stanfordnlp_resources
+
+PARSE_MODEL BeneparParser
+model /nfs/raid87/u10/shared/Hume/common/nltk_data/models/benepar_ar
+
+MENTION_MODEL NounPhraseMentionModel
+
+DEPENDENCY_MODEL StanfordNLPDependencyParser
+lang ar
+models_dir /nfs/raid87/u10/shared/Hume/common/stanfordnlp_resources
+

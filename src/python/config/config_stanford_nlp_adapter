@@ -1,0 +1,19 @@
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/sentence_splitter/stanford_nlp_sentence_splitter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/stanfordnlp_adapter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/parser/DTreeToCTreeParser.py
+
+
+SENTENCE_SPLITTING_MODEL StanfordNLPSentenceSplitter
+lang en
+models_dir /nfs/raid87/u10/shared/Hume/common/stanfordnlp_resources
+
+BASE_MODEL StanfordNLPAdapter
+lang en
+models_dir /nfs/raid87/u10/shared/Hume/common/stanfordnlp_resources
+
+PARSE_MODEL DTreeToCTreeParser

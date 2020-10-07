@@ -1,0 +1,37 @@
+# for converting TACRED to serifxml
+PYTHONPATH=/nfs/raid66/u11/users/brozonoy/text-open/ \
+    python3 /nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/driver/pipeline.py \
+    /nfs/raid66/u11/users/brozonoy/text-open/src/python/config/config_tacred_to_serif \
+    /nfs/raid66/u11/users/brozonoy/text-open/src/python/test/rundir/output/tacred_to_serif_input_list.txt \
+    /nfs/raid66/u11/users/brozonoy/text-open/src/python/test/rundir/output/
+
+# for converting CONLL to serifxml
+PYTHONPATH=/nfs/raid66/u11/users/brozonoy/text-open/ \
+    python3 /nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/driver/pipeline.py \
+    /nfs/raid66/u11/users/brozonoy/text-open/src/python/config/config_conll_to_serif \
+    /nfs/raid66/u11/users/brozonoy/text-open/src/python/test/rundir/output/conll_to_serif_input_list.txt \
+    /nfs/raid66/u11/users/brozonoy/text-open/src/python/test/rundir/output/
+
+# for converting CONLL to serifxml, pyserif python
+PYTHONPATH=/nfs/raid66/u11/users/brozonoy/text-open/ \
+    /nfs/mercury-06/u19/jmacbrid/anaconda3/envs/pyserif-cpu/bin/python \
+    /nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/driver/pipeline.py \
+    /nfs/raid66/u11/users/brozonoy/text-open/src/python/config/config_external_parser_on_sent_tokenized_en \
+    /nfs/raid66/u11/users/brozonoy/text-open/src/python/test/rundir/output/conll_to_serif_input_list.txt \
+    /nfs/raid66/u11/users/brozonoy/text-open/src/python/test/rundir/output/
+
+PYTHONPATH=/nfs/raid66/u11/users/brozonoy/text-open/ /nfs/mercury-06/u19/jmacbrid/anaconda3/envs/pyserif-cpu/bin/python /nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/driver/pipeline.py /nfs/raid66/u11/users/brozonoy/text-open/src/python/config/config_external_parser_on_sent_tokenized_en /nfs/raid66/u11/users/brozonoy/text-open/src/python/test/rundir/output/conll_to_serif_input_list.txt /nfs/raid66/u11/users/brozonoy/text-open/src/python/test/rundir/output/
+
+# for doing dep parsing
+PYTHONPATH=/nfs/raid66/u11/users/brozonoy/text-open/src/python/ \
+                    python3 /nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/driver/pipeline.py \
+                    /nfs/raid66/u11/users/brozonoy/text-open/src/python/config/config_stanford_nlp_adapter \
+                    /nfs/raid66/u11/users/brozonoy/NER/data/tacred_words_annotations/filelist \
+                    /nfs/raid66/u11/users/brozonoy/text-open/src/python/test/rundir/output/
+
+# testing stanza
+PYTHONPATH=/nfs/raid66/u11/users/brozonoy/text-open/src/python/ \
+                    python3 /nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/driver/pipeline.py \
+                    /nfs/raid66/u11/users/brozonoy/text-open/src/python/config/config_stanza_adapter \
+                    /nfs/raid66/u11/users/brozonoy/text-open/src/python/test/rundir/output/russian_sample.filelist \
+                    /nfs/raid66/u11/users/brozonoy/text-open/src/python/test/rundir/output/

@@ -1,0 +1,15 @@
+# config file for converting conll name corpus to serif format (for nlplingo)
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/misc/ner_to_serif_implementation.py
+
+SENTENCE_SPLITTING_MODEL NewlineSentenceSplitter
+
+TOKENIZE_MODEL PlainWhiteSpaceTokenizer
+
+NAME_MODEL AIDANameModel
+mapping_file /nfs/raid66/u11/users/brozonoy/NER/data/conll/data/conll_words_tags/conll_mapping_file
+
+PARSE_MODEL DummyNameNPParser
+
+MENTION_MODEL NameMentionModel

@@ -1,0 +1,7 @@
+#text	/nfs/raid66/u11/users/brozonoy/NER/data/conll/data/conll_words_tags/esp.testa.words
+#text	/nfs/raid66/u11/users/brozonoy/NER/data/conll/data/conll_words_tags/esp.testb.words
+#text	/nfs/raid66/u11/users/brozonoy/NER/data/conll/data/conll_words_tags/esp.train.words
+#text	/nfs/raid66/u11/users/brozonoy/NER/data/conll/data/conll_words_tags/eng.testa.words
+#text	/nfs/raid66/u11/users/brozonoy/NER/data/conll/data/conll_words_tags/eng.testb.words
+#text	/nfs/raid66/u11/users/brozonoy/NER/data/conll/data/conll_words_tags/eng.train.words
+text	/nfs/raid66/u11/users/brozonoy/text-open/src/python/test/rundir/output/test_parse_for_conll.txt

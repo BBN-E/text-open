@@ -1,0 +1,12 @@
+**/*~
+**/*.pyc
+src/python/tmp_driver
+**/__pycache__
+
+ckpts
+expts
+logfiles
+etemplates
+.idea
+
+*.swp

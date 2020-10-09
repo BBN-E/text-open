@@ -1,6 +1,8 @@
-Java and Python APIs for reading and writing SERIF XMLs
+# Text-Open
 
-# Using the Driver
+Java and Python APIs for reading and writing BBN's SerifXML format.
+
+### Using the Driver
 
 #### From sgm to serifxml(pure writing)
 

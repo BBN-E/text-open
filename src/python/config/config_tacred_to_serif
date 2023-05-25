@@ -1,25 +1,29 @@
 # testing config file
 
-# implementations go here
 IMPLEMENTATIONS
-./misc/tacred_to_serif_implementation.py
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/ingester/text_ingester.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/sentence_splitter/newline_sentence_splitter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/tokenizer/plain_white_space_tokenizer.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/mention_from_tokens/mentions_from_words_tacred_annotations.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/relation_mention/aida_relation_mention_model.py
+
+INGESTER TextIngester
+lang English
 
 SENTENCE_SPLITTING_MODEL NewlineSentenceSplitter
 
 TOKENIZE_MODEL PlainWhiteSpaceTokenizer
 
-# treat all annotatied TACRED entities as names to facilitate creation of entities in pipeline
-# (synnodes for MENTION_MODEL are created in PARSE_MODEL from info provided by NAME_MODEL)
-NAME_MODEL AIDA_TACRED_NameModel
-mapping_file /nfs/raid66/u11/users/brozonoy/NER/data/tacred_words_annotations/tacred_mapping_file
-
-PARSE_MODEL DummyNameNPParser
-
-MENTION_MODEL NameMentionModel
-
-ENTITY_MODEL SimpleEntityModel
+MENTION_MODEL MentionsFromWordsTACREDAnnotations
+mapping_file /nfs/raid90/u10/users/brozonoy-ad/data/tacred/mapping_file
 
 RELATION_MENTION_MODEL AIDARelationMentionModel
-mapping_file /nfs/raid66/u11/users/brozonoy/NER/data/tacred_words_annotations/tacred_mapping_file
-
-RELATION_MODEL SimpleRelationModel
+mapping_file /nfs/raid90/u10/users/brozonoy-ad/data/tacred/mapping_file

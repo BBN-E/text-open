@@ -202,8 +202,11 @@ class SerifTheory(object, metaclass=metaSerifTheory):
     @property
     def document(self):
         """The document that contains this SerifTheory"""
-        from serif.theory.document import Document
-        return self.owner_with_type(Document)
+        return self.owner_with_type("Document")
+
+    @property
+    def sentence(self):
+        return self.owner_with_type("Sentence")
 
     def get_original_text_substring(self, start_char, end_char):
         """

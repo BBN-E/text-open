@@ -1,0 +1,41 @@
+{
+    "add_serif_event_mentions": false,
+    "allow_anchor_as_event_argument": false,
+    "data": {
+        "test": {
+            "filelist": "+test_filelist+"
+        }
+    },
+    "extractors": [
+        {
+            "add_serif_only_fillers": true,
+            "annotation_scheme": "identification_classification",
+            "cache_dir": "/nfs/raid88/u10/users/ychan-ad/BETTER/transformers_ner/cache",
+            "domain_ontology": "/nfs/raid88/u10/users/hqiu_ad/repos/text-open/src/python/serif/model/impl/a2t_adapter/domain_ontology_ner.txt",
+            "encoder_name": "xlm-roberta-large",
+            "extractor_name": "template-slot-filler",
+            "extractor_type": "templateslot-filler_sequence",
+            "hyper-parameters": {
+                "batch_size": 16,
+                "epoch": 30,
+                "max_sentence_length": 128
+            },
+            "model_name": "sequence_model",
+            "model_path": "/nfs/raid88/u10/users/ychan-ad/BETTER/p2_granular_events/nlplingo_models/templateslot_filler/p2/better_serif_fillers/b16_lr8e-06/output/epoch-23",
+            "model_saving_policy": {
+                "save_every_epoch": true
+            },
+            "optimizer": {
+                "lr": 1e-05,
+                "name": "adamw"
+            },
+            "seed": 42,
+            "task": "ner",
+            "use_only_begin_tag": true,
+            "use_only_headword": true,
+            "warmstart_training_model_path": ""
+        }
+    ],
+    "output_dir": "+output_dir+",
+    "predictions_file": "+output_dir+/predictions.json.as_obj"
+}

@@ -7,25 +7,23 @@ class PlainWhiteSpaceTokenizer(TokenizerModel):
     def __init__(self,**kwargs):
         super(PlainWhiteSpaceTokenizer,self).__init__(**kwargs)
 
-    def get_token_info(self, sentence):
-        texts_starts_ends = []
+    def add_tokens_to_sentence(self, sentence):
+        ret = []
 
         text = sentence.text
         chunks = text.split(" ")
         char_visited = 0
-        for i in range(0, len(chunks)):
-
-            chunk = chunks[i]
+        for i,chunk in enumerate(chunks):
             token_text = chunk.strip()
 
             char_start = sentence.start_char + char_visited + chunk.find(token_text)
             char_end = char_start + len(token_text) - 1
-            print(token_text)
+
 
             char_visited += len(chunk) + 1
 
             # Do not add empty sentence
             if len(token_text) > 0:
-                texts_starts_ends.append((token_text, char_start, char_end))
+                ret.extend(TokenizerModel.add_new_token(sentence.token_sequence, token_text, char_start, char_end))
 
-        return texts_starts_ends
+        return ret

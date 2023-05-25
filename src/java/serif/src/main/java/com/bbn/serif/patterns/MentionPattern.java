@@ -1,16 +1,30 @@
 package com.bbn.serif.patterns;
 
 import com.bbn.bue.common.symbols.Symbol;
+import com.bbn.serif.patterns.matching.ArgumentValueMatchingPattern;
+import com.bbn.serif.patterns.matching.MentionMatchingPattern;
+import com.bbn.serif.patterns.matching.PatternMatchState;
+import com.bbn.serif.patterns.matching.MentionPatternMatch;
+import com.bbn.serif.patterns.matching.PatternMatch;
+import com.bbn.serif.patterns.matching.PatternReturns;
+import com.bbn.serif.theories.DocTheory;
+import com.bbn.serif.theories.Entity;
 import com.bbn.serif.theories.Mention;
+import com.bbn.serif.theories.SentenceTheory;
+import com.bbn.serif.theories.Proposition.Argument;
+import com.bbn.serif.theories.Proposition.MentionArgument;
 import com.bbn.serif.types.EntitySubtype;
 import com.bbn.serif.types.EntityType;
+
+import com.google.common.base.Optional;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public final class MentionPattern extends LanguageVariantSwitchingPattern {
+public final class MentionPattern extends LanguageVariantSwitchingPattern implements
+    MentionMatchingPattern, ArgumentValueMatchingPattern {
 
   private final List<ComparisonConstraint> comparisonConstraints;
   private final List<EntityType> aceTypes;
@@ -787,4 +801,139 @@ public final class MentionPattern extends LanguageVariantSwitchingPattern {
     }
     return true;
   }
+
+  @Override
+  public PatternReturns match(DocTheory dt, SentenceTheory st, Mention m,
+      PatternMatchState matchState, boolean fallThroughChildren) {
+    final Optional<PatternReturns> cachedMatch = matchState.cachedMatches(this, m);
+    if (cachedMatch.isPresent()) {
+      return cachedMatch.get();
+    }
+
+    // TODO entity label
+    final boolean matches = passesEntityTypeConstraints(m)
+        && passesMentionTypeConstraints(m)
+        && passesAppositiveConstraints(m)
+        && passesEntityConstraints(m.entity(dt))
+        && !isExplicitlyBlocked(dt, m, matchState)
+        && passesHeadWordConstraints(m)
+        && matchesRegexConstraint(dt, st, m, matchState);
+
+    if (matches) {
+      final PatternMatch match = MentionPatternMatch.of(this, dt, st, m);
+      return matchState.registerPatternMatch(this, m, match);
+      // TODO: do we need to include regex pattern features as well? Issue #335
+    } else {
+      // TODO handle lists, parts, appositives, etc. Issue #334
+      return matchState.registerUnmatched(this, m);
+    }
+  }
+
+  // This is the match function for ArgumentValueMatchingPattern
+  @Override
+  public PatternReturns match(DocTheory dt, SentenceTheory st, Argument a,
+      PatternMatchState matchState, boolean fallThroughChildren) {
+    final Optional<PatternReturns> cachedMatch = matchState.cachedMatches(this, a);
+    if (cachedMatch.isPresent()) {
+      return cachedMatch.get();
+    }
+
+    if (a instanceof MentionArgument) {
+      MentionArgument ma = (MentionArgument) a;
+      return match(dt, st, ma.mention(), matchState, fallThroughChildren);
+    }
+    return matchState.registerUnmatched(this, a);
+  }
+
+  private boolean passesEntityTypeConstraints(final Mention m) {
+    return (aceTypes.isEmpty() || aceTypes.contains(m.entityType()) &&
+        (aceSubtypes.isEmpty() || aceSubtypes.contains(m.entitySubtype())));
+  }
+
+  private boolean passesMentionTypeConstraints(final Mention m) {
+    return mentionTypes.isEmpty()
+        || mentionTypes.contains(m.mentionType());
+  }
+
+  private boolean passesAppositiveConstraints(final Mention m) {
+    final boolean passesAppositive = !isAppositive || Mention.Type.APPO.equals(m.mentionType());
+    final boolean isAppositiveChildTest =
+        m.parent().isPresent() && Mention.Type.APPO.equals(m.parent().get().mentionType());
+    final boolean passesAppositiveChild = !isAppositive || isAppositiveChildTest;
+
+    final boolean isNamedAppositiveChildTest =
+        isAppositiveChild && m.parent().get().hasNamedChild();
+    final boolean passesNamedAppositiveChild = !isAppositiveChild || isNamedAppositiveChildTest;
+
+    return passesAppositive && passesAppositiveChild && passesNamedAppositiveChild;
+  }
+
+  private boolean passesEntityConstraints(final Optional<Entity> e) {
+    return (!requiresName || (e.isPresent() && e.get().hasNameMention()))
+        && (!requiresNameOrDesc || (e.isPresent() && e.get().hasNameOrDescMention()))
+        && (!isGeneric || (e.isPresent() && e.get().isGeneric()))
+        && (!isSpecific() || (e.isPresent() && !e.get().isGeneric()));
+  }
+
+  private boolean matchesInEntityLabel(DocTheory dt, Mention m, PatternMatchState matchState) {
+    final Optional<Entity> entity = m.entity(dt);
+    if (entity.isPresent())
+      for (final Symbol labelForEntity : matchState.labelsForEntity(entity.get())) {
+        if (entityLabels.contains(labelForEntity)) {
+          return true;
+        }
+      }
+    return false;
+  }
+
+  private boolean isExplicitlyBlocked(final DocTheory dt, final Mention mention,
+      final PatternMatchState matchState) {
+
+    if (blockedAceTypes.contains(mention.entityType())) {
+      return true;
+    }
+
+    if (hasBlockedEntityLabel(dt, mention, matchState)) {
+      return true;
+    }
+
+    // TODO: does this do anything to handle casing?
+    final Symbol headWord = mention.node().headWord();
+    if (blockedHeadwords.contains(headWord)) {
+      return true;
+    }
+
+    // TODO: headword prefixes
+
+    return false;
+  }
+
+  private boolean passesHeadWordConstraints(Mention m) {
+    // TODO: headword below is always lower case, should we be loading in headword list to
+    // always be lowercase?
+
+    return (headwords.isEmpty() || headwords.contains(m.node().headWord()));
+
+    // TODO headword prefixes
+  }
+
+  private boolean matchesRegexConstraint(final DocTheory dt, final SentenceTheory st,
+      final Mention m, final PatternMatchState matchState)
+  {
+    if (regexPattern == null)
+      return true;
+
+    PatternReturns regexPatternReturns = ((RegexPattern) regexPattern).match(dt, st, m, matchState, !blockFallThrough);
+    return regexPatternReturns.matched();
+  }
+
+
+  // TODO: does this do anything to handle casing? Issue #337
+  private boolean hasBlockedEntityLabel(final DocTheory dt, final Mention m,
+      final PatternMatchState matchState) {
+    // TODO handle entity labels
+    return false;
+  }
+
 }
+

@@ -4,23 +4,20 @@ import logging
 import numpy as np
 import collections
 import serifxml3
-from serif.model.base_model import BaseModel
+from serif.model.corpus_model import CorpusModel
 import time
 import pickle
 
 logger = logging.getLogger(__name__)
 
-class LearnItRelationCounter(BaseModel):
+class LearnItRelationCounter(CorpusModel):
 
     def __init__(self, task, **kwargs):
         super(LearnItRelationCounter, self).__init__(**kwargs)
         self.task = task
         self.output_path = kwargs['argparse'].output_directory
 
-    def process(self, serif_doc):
-        pass
-
-    def process_barrier(self, serif_doc_list):
+    def process_documents(self, serif_doc_list):
         # Read in LearnIt EER's and write them into a list, paired with the docid
         start = time.time()
         logging.info('Start of counting relation EERs')

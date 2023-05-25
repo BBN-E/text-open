@@ -1,31 +1,34 @@
 from abc import abstractmethod
 
-from serif.model.base_model import BaseModel
-from serif.theory.token import Token
-from serif.model.validate import *
+from serif.model.document_model import DocumentModel
 
-class TokenizerModel(BaseModel):
 
-    def __init__(self,**kwargs):
-        super(TokenizerModel,self).__init__(**kwargs)
+class TokenizerModel(DocumentModel):
+
+    def __init__(self, **kwargs):
+        super(TokenizerModel, self).__init__(**kwargs)
 
     @abstractmethod
-    def get_token_info(self, sentence):
+    def add_tokens_to_sentence(self, sentence):
         """
-        :type Sentence: sentence
-        :return: List where each element corresponds to one Token. Each
-                 element consists of a string, a start char offset,
-                 and an end char offset.
+        :type sentence: sentence
+        :return: List where each element corresponds to one Token.
         :rtype: list(tuple(str, int, int))
         """
         pass
 
-    def add_tokens_to_sentence(self, sentence):
-        token_sequence = sentence.add_new_token_sequence(0.7)
-        texts_starts_ends = self.get_token_info(sentence)
-        for t in texts_starts_ends:
-            token_sequence.add_new_token(t[1], t[2], t[0])
+    @staticmethod
+    def add_new_token(token_sequence, tokenized_text, start_char, end_char, *, lemma=None, original_token_index=None):
+        new_token = token_sequence.add_new_token(start_char, end_char, tokenized_text, lemma=lemma)
+        new_token.original_token_index = original_token_index
+        return [new_token]
 
-    def process(self, serif_doc):
+    @staticmethod
+    def add_token_head(token, head_token):
+        assert token.owner == head_token.owner
+        token.head = head_token
+
+    def process_document(self, serif_doc):
         for sentence in serif_doc.sentences:
+            token_sequence = sentence.add_new_token_sequence()
             self.add_tokens_to_sentence(sentence)

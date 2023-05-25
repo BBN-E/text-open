@@ -11,6 +11,17 @@ class EventMentionSet(SerifSequenceTheory):
     parse = _ReferenceAttribute('parse_id', cls=Parse)
     _children = _ChildTheoryElementList('EventMention')
 
+    @classmethod
+    def from_values(cls, owner=None, parse=None, score=0):
+        ret = cls(owner=owner)
+        ret.parse = parse
+        ret.score = score
+        return ret
+
+    @classmethod
+    def empty(cls, owner=None, parse=None):
+        return cls.from_values(owner=owner, parse=parse)
+
     def add_event_mention(self, event_mention):
         self._children.append(event_mention)
 

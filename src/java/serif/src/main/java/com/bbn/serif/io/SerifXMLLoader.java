@@ -2423,12 +2423,38 @@ public abstract class SerifXMLLoader implements DocTheoryLoader {
             final double linkConfidence =
                 optionalDoubleAttribute(childElement, "link_confidence").or(1.0);
 
-            final SynNode synNode = this.fetch("syn_node_id", childElement);
+            SynNode synNodeTmp;
+            boolean synNodeIsTerminalFromToken = false;
+            Token startTokenTmp = null;
+            Token endTokenTmp = null;
+
+            if (childElement.hasAttribute("syn_node_id")) {
+              synNodeTmp = this.fetch("syn_node_id", childElement);
+              if (childElement.hasAttribute("start_token")) {
+                startTokenTmp = this.fetch("start_token", childElement);
+                endTokenTmp = this.fetch("end_token", childElement);
+              }
+            } else {
+              startTokenTmp = this.fetch("start_token", childElement);
+              endTokenTmp = this.fetch("end_token", childElement);
+              synNodeTmp = parse.nodeForToken(endTokenTmp); // use terminal parse node for last token in mention as synNode
+              synNodeIsTerminalFromToken = true;
+            }
+
+            final Token startToken = startTokenTmp;
+            final Token endToken = endTokenTmp;
+            final SynNode synNode = synNodeTmp;
+
             final Symbol external_id = getExternalID(childElement).orNull();
 
-            final Mention m =
-                synNode.setMention(mentionType, entityType, entitySubtype, metonymyInfo,
-                    confidence, linkConfidence, external_id);
+            final Mention m;
+            if (!synNodeIsTerminalFromToken) {
+              m = synNode.setMention(mentionType, entityType, entitySubtype, metonymyInfo,
+                      confidence, linkConfidence, external_id);
+            } else {
+              m = new Mention(startToken, endToken, synNode, mentionType, entityType, entitySubtype,
+                      metonymyInfo, confidence, linkConfidence, external_id);
+            }
             m.setModel(optionalStringAttribute(childElement,"model"));
             m.setPattern(optionalStringAttribute(childElement,"pattern"));
             record(m, childElement);

@@ -14,6 +14,8 @@ import com.google.common.collect.ImmutableMultimap;
 
 import org.immutables.value.Value;
 
+import java.util.Map;
+
 import static com.google.common.base.Preconditions.checkArgument;
 
 /**
@@ -125,7 +127,7 @@ abstract class _DocumentEvent implements HasExternalID {
     ArgumentFiller filler();
 
     @Override
-    ImmutableMap<Symbol, String> metadata();
+    Map<Symbol, String>  metadata();
 
     /**
      * Algorithm-consumable evidence for that {@link #filler()}  plays {@link #role()} in this event.

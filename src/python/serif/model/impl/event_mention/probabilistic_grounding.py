@@ -1,10 +1,10 @@
 import os,importlib,logging,sys,copy
-from serif.model.base_model import BaseModel
+from serif.model.document_model import DocumentModel
 
 
 logger = logging.getLogger(__name__)
 
-class ProbabilisticGrounding(BaseModel):
+class ProbabilisticGrounding(DocumentModel):
     def __init__(self,probabilictic_grounding_main_entry,**kwargs):
 
         super(ProbabilisticGrounding,self).__init__(**kwargs)
@@ -44,5 +44,5 @@ class ProbabilisticGrounding(BaseModel):
         pg_config['threshold'] = float(kwargs['threshold'])
         self.serifxml_grounder = implementations.SerifXMLGrounder(**pg_config)
 
-    def process(self, serif_doc):
+    def process_document(self, serif_doc):
         self.serifxml_grounder.process_doc(serif_doc)

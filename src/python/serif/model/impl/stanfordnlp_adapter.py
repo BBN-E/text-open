@@ -1,11 +1,11 @@
-from serif.model.base_model import BaseModel
+from serif.model.document_model import DocumentModel
 import stanfordnlp
 import copy, re
 import logging
 
 logger = logging.getLogger(__name__)
 
-class StanfordNLPAdapter(BaseModel):
+class StanfordNLPAdapter(DocumentModel):
     control_characters_re = re.compile(r'(\u202C)')
 
     def __init__(self, lang, models_dir, **kwargs):
@@ -44,7 +44,7 @@ class StanfordNLPAdapter(BaseModel):
         token_pos = 0
         sentence_pos = start_search
 
-        def stanford_normalize_char(ch):
+        def stanford_normalize_char(current_char):
             """Stanford's normalizer is designed to work on token and strips leading space.
             Adding an 'X' to avoid that to work on single character.
 
@@ -95,7 +95,7 @@ class StanfordNLPAdapter(BaseModel):
             t += txt
         return t
 
-    def process(self, serif_doc):
+    def process_document(self, serif_doc):
         for sentence in serif_doc.sentences:
             # Create token sequence from words, could have multiple sentences
             # and multiple words per token
@@ -106,7 +106,8 @@ class StanfordNLPAdapter(BaseModel):
                   
             stanfordnlp_doc = self.pipeline_tokenize(sentence_text)
             last_end = -1
-            token_sequence = sentence.add_new_token_sequence(0.7)
+            token_sequence = sentence.add_new_token_sequence()
+            token_sequence.set_score(0.7)
             for stanford_sentence in stanfordnlp_doc.sentences:
                 for stanford_token in stanford_sentence.tokens:
                     start_offset, end_offset = self.get_offsets_for_token(
@@ -133,7 +134,8 @@ class StanfordNLPAdapter(BaseModel):
                     """Expected StanfordNLP tokens to match Serif tokens due to
                        tokenize_pretokenized=True"""
 
-                pos_sequence = sentence.add_new_part_of_speech_sequence(0.7)
+                pos_sequence = sentence.add_new_part_of_speech_sequence()
+                pos_sequence.set_score(0.7)
                 for i in range(len(stanford_sentence.tokens)):
                     stanford_token = stanford_sentence.tokens[i]
                     serif_token = token_sequence[i]
@@ -156,8 +158,8 @@ def test_serif():
     sent_splitter = StanfordNLPSentenceSplitter("en","/nfs/raid87/u10/shared/Hume/common/stanfordnlp_resources")
     stanford_adapter = StanfordNLPAdapter("en","/nfs/raid87/u10/shared/Hume/common/stanfordnlp_resources")
     serif_doc = Document.from_sgm("/nfs/raid88/u10/users/hqiu/sgm_corpus/cx/ldc_denmark/sgms/Unstructured/ENG_NW_20190620_LDC_DENMARK_0011.sgm","english")
-    sent_splitter.process(serif_doc)
-    stanford_adapter.process(serif_doc)
+    sent_splitter.process_document(serif_doc)
+    stanford_adapter.process_document(serif_doc)
     serif_doc.save("/home/hqiu/tmp/test.xml")
 
 

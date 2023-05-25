@@ -102,7 +102,7 @@ sub pyserif_pipeline {
                 [ "mkdir -p $batch_output_folder" ],
                 [ "env PYTHONPATH=$PYTHONPATH:$self->{TEXT_OPEN_PYTHONPATH} " .
                     "KERAS_BACKEND=\"tensorflow\" " .
-                    "OMP_NUM_THREADS=1 " .
+                    "MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 " .
                     "$PYTHON $self->{TEXT_OPEN_PYTHONPATH}/serif/driver/pipeline.py", $pipeline_template_path, "SCHEDULE_PROCESSES $batch_file\.with_type $batch_output_folder" ]
             );
         } 
@@ -113,7 +113,7 @@ sub pyserif_pipeline {
                 $pipeline_template_items,
                 [ "mkdir -p $batch_output_folder" ],
                 [ "env PYTHONPATH=$PYTHONPATH:$self->{TEXT_OPEN_PYTHONPATH} " .
-                    "KERAS_BACKEND=\"tensorflow\" " .
+                    "MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 KERAS_BACKEND=\"tensorflow\" " .
                     "$PYTHON $self->{TEXT_OPEN_PYTHONPATH}/serif/driver/pipeline.py", $pipeline_template_path, "$batch_file\.with_type $batch_output_folder" ]
             );
         }  

@@ -2,7 +2,7 @@ import os, json
 import logging
 import traceback
 import serifxml3
-from serif.model.base_model import BaseModel
+from serif.model.corpus_model import CorpusModel
 from serif.theory.sentence import Sentence
 from serif.theory.event_mention import EventMention
 import pickle
@@ -24,16 +24,14 @@ def get_event_anchor(serif_em: EventMention):
     else:
         return serif_em.anchor_node.text
 
-class WordPairCount(BaseModel):
+class WordPairCount(CorpusModel):
     def __init__(self, argparse, **kwargs):
         super(WordPairCount, self).__init__(**kwargs)
         self.argparse = argparse
         self.output_directory = argparse.output_directory
 
-    def process(self, serif_doc):
-        pass
 
-    def process_barrier(self, serif_doc_list):
+    def process_documents(self, serif_doc_list):
         try:
             # record the count for each word pair
             word_pair_counts = Counter()

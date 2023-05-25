@@ -1,6 +1,5 @@
 from serif.theory.sentence import Sentence
 from serif.theory.event_mention import EventMention
-from serif.theory.token_sequence import TokenSequence
 from serif.model.event_event_relation_mention_model import EventEventRelationMentionModel
 
 def get_event_anchor(serif_em:EventMention):
@@ -21,7 +20,7 @@ class EERPrecisionResolver(EventEventRelationMentionModel):
     def get_event_event_relation_mention_info(self,serif_doc):
         raise ValueError("You should not call this")
 
-    def process(self,serif_doc):
+    def process_document(self, serif_doc):
         eid_to_em = dict()
         valid_eerm = list()
         for serif_eerm in serif_doc.event_event_relation_mention_set or []:

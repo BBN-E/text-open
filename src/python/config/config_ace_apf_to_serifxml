@@ -1,0 +1,7 @@
+
+
+IMPLEMENTATIONS
+./serif/model/impl/nlplingo_proxy.py
+
+BASE_MODEL NLPLingoProxy
+nlplingo_filelist /home/hqiu/Public/ace.filelist

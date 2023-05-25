@@ -1,0 +1,69 @@
+# replaces the cserif first step of Hume's covid_pipeline.pl
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/ingester/sgm_ingester.py
+
+#IMPLEMENTATIONS
+#/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/dependency_parser/stanford_nlp_dependency_parser.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/parser/benepar_parser.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/sentence_splitter/stanza_sentence_splitter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/stanza_adapter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention/name_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention/noun_phrase_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention/pronoun_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention_coreference/allennlp_coreference_model.py
+
+#IMPLEMENTATIONS
+#/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/entity_linker/blink_entity_linking.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/actor_mention/blink_mention_linker.py
+
+INGESTER SgmIngester
+lang en
+
+SENTENCE_SPLITTING_MODEL StanzaSentenceSplitter
+lang en
+dir /nfs/raid66/u11/users/brozonoy-ad/text-open/stanza_models/
+
+BASE_MODEL StanzaAdapter
+lang en
+dir /nfs/raid66/u11/users/brozonoy-ad/text-open/stanza_models/
+
+PARSE_MODEL BeneparParser
+model /nfs/raid66/u11/users/brozonoy-ad/covid_base_analytics/benepar_en3_large
+add_heads
+max_tokens 200
+
+MENTION_MODEL NounPhraseMentionModel
+
+MENTION_MODEL PronounMentionModel
+modify_existing_mention
+
+MENTION_MODEL NameMentionModel
+modify_existing_mention
+
+#DEPENDENCY_MODEL StanfordNLPDependencyParser
+#lang en
+#models_dir /nfs/raid87/u10/shared/Hume/common/stanfordnlp_resources
+#use_data_from_stanford_adapter
+
+MENTION_COREF_MODEL AllenNLPCoreferenceModel
+model https://storage.googleapis.com/allennlp-public-models/coref-spanbert-large-2021.03.10.tar.gz
+
+BASE_MODEL BlinkMentionLinker
+models_path /nfs/raid66/u11/users/brozonoy-ad/BLINK/models/

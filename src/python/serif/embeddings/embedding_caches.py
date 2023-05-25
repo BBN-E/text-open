@@ -51,6 +51,7 @@ class BertEmbCache(object):
             embedding = embeddings[sent_id][head_token_idx_in_bert]
         return embedding[start_index:end_index]
 
+
 def get_name(arg: serifxml3.EventMentionArg,
              event_mention: serifxml3.EventMention):
     name = arg.value.text
@@ -74,12 +75,16 @@ def get_name(arg: serifxml3.EventMentionArg,
 
 
 class NlplingoEmbCache(object):
-    def __init__(self,serif_list_path,nplinogo_npz_list_path,bert_list_path):
+    # We either pass in paths to filelists, or optionally the dictionary mapping
+    # doc_id to serifxml/npz path that we would build from them
+    def __init__(self, serif_list_path, nlplingo_npz_list_path, bert_list_path,
+                 *, doc_id_to_bert_npz_path=None):
         self.em_to_serif_doc = dict()
-        # self.em_to_feature_dict = dict()
         self.serif_list_path = serif_list_path
-        self.nplinogo_npz_list_path = nplinogo_npz_list_path
-        doc_id_to_bert_npz_path = create_doc_id_to_path(bert_list_path, '.npz')
+        self.nlplingo_npz_list_path = nlplingo_npz_list_path
+        if doc_id_to_bert_npz_path is None:
+            doc_id_to_bert_npz_path = create_doc_id_to_path(
+                bert_list_path, '.npz')
         self.bert_emb_cache = BertEmbCache(doc_id_to_bert_npz_path)
         self.em_to_names = dict()
         self.em_to_embs = dict()
@@ -173,33 +178,36 @@ class NlplingoEmbCache(object):
         # that is needed are sentence embeddings.
         get_pretrained_embeddings(
             self.serif_list_path,
-            self.nplinogo_npz_list_path,
+            self.nlplingo_npz_list_path,
             self.event_trigger_callback_builder(),
             self.event_argument_callback_builder())
         return self
 
-    def get_bert_emb_for_a_word(self,serif_token:serifxml3.Token):
+    def get_bert_emb_for_a_word(
+            self, serif_token: serifxml3.Token, *, start_index=0,
+            end_index=3072):
         serif_doc = serif_token.owner_with_type(serifxml3.Document)
         doc_id = serif_doc.docid
         serif_sent = serif_token.owner_with_type(serifxml3.Sentence)
         sent_id = serif_sent.sent_no
         token_to_token_idx = {token:idx for idx,token in enumerate(serif_sent.token_sequence)}
-        try:
-            e = self.bert_emb_cache.get_bert_emb(doc_id, sent_id, token_to_token_idx[serif_token])
-            return e
-        except:
-            logger.warning("Cannot find emb for token {} {} {}".format(doc_id,sent_id,token_to_token_idx[serif_token]))
-            return None
+        return self.bert_emb_cache.get_bert_emb(
+            doc_id, sent_id, token_to_token_idx[serif_token],
+            start_index=start_index, end_index=end_index)
 
-    def get_bert_emb_for_a_sentence(self, serif_sentence:serifxml3.Sentence):
+    def get_bert_emb_for_a_sentence(
+            self, serif_sentence:serifxml3.Sentence, *, start_index=768,
+            end_index=1536):
         serif_doc = serif_sentence.owner_with_type(serifxml3.Document)
         doc_id = serif_doc.docid
         sent_id = serif_sentence.sent_no
         try:
             e = self.bert_emb_cache.get_bert_emb(
-                doc_id, sent_id, 'REDUCE_MEAN', start_index=768, end_index=1536)
+                doc_id, sent_id, 'REDUCE_MEAN', start_index=start_index,
+                end_index=end_index)
             return e
-        except:
+        except Exception as e:
+            print(e)
             logger.warning("Cannot find emb for sentence {} {}".format(doc_id,sent_id))
             return None
 
@@ -226,9 +234,9 @@ class NlplingoEmbCache(object):
 def main():
     serif_list_path = "/home/hqiu/tmp/serif.list"
     bert_list_path = "/home/hqiu/tmp/bert.list"
-    nplinogo_npz_list_path = "/home/hqiu/tmp/nlplingo_npz.list.new"
+    nlplingo_npz_list_path = "/home/hqiu/tmp/nlplingo_npz.list.new"
 
-    nlplingo_emb_cache = NlplingoEmbCache(serif_list_path,nplinogo_npz_list_path,bert_list_path)
+    nlplingo_emb_cache = NlplingoEmbCache(serif_list_path,nlplingo_npz_list_path,bert_list_path)
     nlplingo_emb_cache.build()
     serif_doc_sets = set(nlplingo_emb_cache.em_to_serif_doc.values())
     serif_ems = set(nlplingo_emb_cache.em_to_serif_doc.keys())

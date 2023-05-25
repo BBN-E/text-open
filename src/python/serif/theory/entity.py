@@ -12,3 +12,5 @@ class Entity(SerifEntityTheory):
     entity_guid = _SimpleAttribute()
     confidence = _SimpleAttribute(float, default=1.0)
     mention_confidences = _SimpleAttribute()
+    cross_document_instance_id = _SimpleAttribute()  # ECB+
+    model = _SimpleAttribute()

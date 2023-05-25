@@ -6,7 +6,7 @@ class DummyNameNPParser(ParserModel):
     def __init__(self, **kwargs):
         super(ParserModel, self).__init__(**kwargs)
         self.add_heads = False
-        #self.parser = benepar.Parser(model)
+        # self.parser = benepar.Parser(model)
 
     def get_tokens(self, sentence):
 
@@ -48,7 +48,6 @@ class DummyNameNPParser(ParserModel):
                 else:
                     continue
 
-
         token_partitions = []
 
         i = 0
@@ -59,7 +58,7 @@ class DummyNameNPParser(ParserModel):
             is_part_of_name = False
             name_index = -1
 
-            for j,name_tokens in enumerate(names_tokens):
+            for j, name_tokens in enumerate(names_tokens):
                 for token in name_tokens:
                     if curr_token == token:
                         is_part_of_name = True
@@ -138,7 +137,6 @@ class DummyNameNPParser(ParserModel):
     #     print(token_partitions)
     #     return token_partitions
 
-
     def parse(self, token_partition):
         '''
         :param token_pos: reflects name sequences in sent: e.g. "Vladimir Putin sneezes ." --> [[N, N], X, X]
@@ -149,7 +147,7 @@ class DummyNameNPParser(ParserModel):
 
         for chunk in token_partition:
 
-            if isinstance(chunk, list): # we're inside a name
+            if isinstance(chunk, list):  # we're inside a name
                 NP = []
                 for token in chunk:
                     text = re.sub(r"\)", r"]", token.text)
@@ -158,7 +156,7 @@ class DummyNameNPParser(ParserModel):
                 NP = "(NP {})".format(" ".join(NP))
                 parse.append(NP)
 
-            else: # plain old token
+            else:  # plain old token
                 token = chunk
                 text = re.sub(r"\)", r"]", token.text)
                 text = re.sub(r"\(", r"[", text)
@@ -168,12 +166,10 @@ class DummyNameNPParser(ParserModel):
 
         return parse
 
-    def get_parse_info(self, sentence):
+    def add_parse_to_sentence(self, sentence):
         token_partitions = self.get_tokens(sentence)
         tree = self.parse(token_partitions)
-        print(tree)
-        return tree
-
+        return self.add_new_parse(sentence, tree)
 
 # if __name__ == '__main__':
 #

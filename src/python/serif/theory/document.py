@@ -51,6 +51,9 @@ from serif.theory.mention import Mention
 from serif.theory.mention_fact_argument import MentionFactArgument
 from serif.theory.mention_set import MentionSet
 from serif.theory.metadata import Metadata
+from serif.theory.modal_temporal_relation_mention import ModalTemporalRelationMention
+from serif.theory.modal_temporal_relation_argument import ModalTemporalRelationArgument
+from serif.theory.modal_temporal_relation_mention_set import ModalTemporalRelationMentionSet
 from serif.theory.name import Name
 from serif.theory.name_theory import NameTheory
 from serif.theory.nested_name import NestedName
@@ -70,6 +73,7 @@ from serif.theory.rel_mention_set import RelMentionSet
 from serif.theory.relation import Relation
 from serif.theory.relation_argument import RelationArgument
 from serif.theory.relation_set import RelationSet
+from serif.theory.actor_entity_set import ActorEntitySet
 from serif.theory.segment import Segment
 from serif.theory.segments import Segments
 from serif.theory.sentence import Sentence
@@ -88,7 +92,8 @@ from serif.theory.value_mention import ValueMention
 from serif.theory.value_mention_fact_argument import ValueMentionFactArgument
 from serif.theory.value_mention_set import ValueMentionSet
 from serif.theory.value_set import ValueSet
-
+from serif.theory.alert_metadata import ALERTMetadata
+from serif.theory.better_template_metadata import BETTERTemplateMetadata
 class Document(SerifDocumentTheory):
 
     docid = _SimpleAttribute(is_required=True)
@@ -119,6 +124,9 @@ class Document(SerifDocumentTheory):
     icews_event_mention_set = _ChildTheoryElement('ICEWSEventMentionSet')
     flexible_event_mention_set = _ChildTheoryElement('FlexibleEventMentionSet')
     event_event_relation_mention_set = _ChildTheoryElement('EventEventRelationMentionSet')
+    modal_temporal_relation_mention_set = _ChildTheoryElement('ModalTemporalRelationMentionSet')
+    alert_metadata = _ChildTheoryElement('ALERTMetadata')
+    better_template_metadata = _ChildTheoryElement('BETTERTemplateMetadata')
 
     def construct_original_text(self, text,
                                 start_char, end_char):
@@ -138,11 +146,11 @@ class Document(SerifDocumentTheory):
         # date_time = ET.Element("Contents")
         # date_time.set("char_offsets",)
 
-    def construct_regions(self, start_char, end_char):
+    def construct_regions(self, start_char, end_char, tag=None):
         from serif.theory.regions import Regions
         from serif.theory.region import Region
         regions = Regions(owner=self)
-        region = Region.from_values(owner=regions, start_char=start_char, end_char=end_char)
+        region = Region.from_values(owner=regions, start_char=start_char, end_char=end_char, tag=tag)
         region.document.generate_id(region)
         regions.add_region(region)
         self.regions = regions
@@ -152,18 +160,22 @@ class Document(SerifDocumentTheory):
         segments = Segments(owner=self)
         self.segments = segments
 
-    def construct_metadata(self, start_char, end_char, span_type, region_type):
+    def construct_metadata(self, start_char=None, end_char=None, span_type=None, region_type=None):
         from serif.theory.metadata import Metadata
         from serif.theory.span import Span
         metadata = Metadata(owner=self)
-        span = Span.from_values(owner=metadata, start_char=start_char, end_char=end_char, span_type=span_type,
-                                region_type=region_type)
-        span.document.generate_id(span)
-        metadata.add_span(span)
+        if start_char is not None and end_char is not None:
+            span = Span.from_values(owner=metadata, start_char=start_char, end_char=end_char, span_type=span_type,
+                                    region_type=region_type)
+            span.document.generate_id(span)
+            metadata.add_span(span)
         self.metadata = metadata
 
     def add_event_event_relation_mention_set(self, evt_evt_rel_mention_set):
         self.event_event_relation_mention_set = evt_evt_rel_mention_set
+
+    def add_modal_temporal_relation_mention_set(self, mod_tmp_rel_mention_set):
+        self.modal_temporal_relation_mention_set = mod_tmp_rel_mention_set
 
     def add_new_event_event_relation_mention_set(self):
         evt_evt_rel_men_set = self.construct_event_event_relation_mention_set()
@@ -172,10 +184,33 @@ class Document(SerifDocumentTheory):
 
     def construct_event_event_relation_mention_set(self):
         from serif.theory.event_event_relation_mention_set import EventEventRelationMentionSet
-        event_event_rel_mention_set = EventEventRelationMentionSet(owner=self)
+        event_event_rel_mention_set = EventEventRelationMentionSet.empty(owner=self)
         event_event_rel_mention_set.document.generate_id(
             event_event_rel_mention_set)
         return event_event_rel_mention_set
+
+    def construct_rel_mention_set(self):
+        from serif.theory.rel_mention_set import RelMentionSet
+        rel_mention_set = RelMentionSet.empty(owner=self)
+        rel_mention_set.document.generate_id(rel_mention_set)
+        return rel_mention_set
+
+    def add_new_rel_mention_set(self):
+        rel_mention_set = self.construct_rel_mention_set()
+        self.rel_mention_set = rel_mention_set
+        return rel_mention_set
+
+    def add_new_modal_temporal_relation_mention_set(self):
+        mod_tmp_rel_men_set = self.construct_modal_temporal_relation_mention_set()
+        self.add_modal_temporal_relation_mention_set(mod_tmp_rel_men_set)
+        return mod_tmp_rel_men_set
+
+    def construct_modal_temporal_relation_mention_set(self):
+        from serif.theory.modal_temporal_relation_mention_set import ModalTemporalRelationMentionSet
+        modal_temporal_rel_mention_set = ModalTemporalRelationMentionSet.empty(owner=self)
+        modal_temporal_rel_mention_set.document.generate_id(
+            modal_temporal_rel_mention_set)
+        return modal_temporal_rel_mention_set
 
     def add_entity_set(self, entity_set):
         self.entity_set = entity_set
@@ -187,9 +222,23 @@ class Document(SerifDocumentTheory):
 
     def construct_entity_set(self):
         from serif.theory.entity_set import EntitySet
-        entity_set = EntitySet(owner=self)
+        entity_set = EntitySet.empty(owner=self)
         entity_set.document.generate_id(entity_set)
         return entity_set
+
+    def add_value_set(self, value_set):
+        self.value_set = value_set
+
+    def add_new_value_set(self):
+        value_set = self.construct_value_set()
+        self.add_value_set(value_set)
+        return value_set
+
+    def construct_value_set(self):
+        from serif.theory.value_set import ValueSet
+        value_set = ValueSet.empty(owner=self)
+        value_set.document.generate_id(value_set)
+        return value_set
 
     def add_event_set(self, event_set):
         self.event_set = event_set
@@ -201,7 +250,7 @@ class Document(SerifDocumentTheory):
 
     def construct_event_set(self):
         from serif.theory.event_set import EventSet
-        event_set = EventSet(owner=self)
+        event_set = EventSet.empty(owner=self)
         event_set.document.generate_id(event_set)
         return event_set
 
@@ -214,10 +263,22 @@ class Document(SerifDocumentTheory):
         return relation_set
 
     def construct_relation_set(self):
-        from serif.theory.relation_set import RelationSet
-        relation_set = RelationSet(owner=self)
+        relation_set = RelationSet.empty(owner=self)
         relation_set.document.generate_id(relation_set)
         return relation_set
+
+    def add_new_actor_entity_set(self):
+        actor_entity_set = self.construct_actor_entity_set()
+        self.add_actor_entity_set(actor_entity_set)
+        return actor_entity_set
+
+    def construct_actor_entity_set(self):
+        actor_entity_set = ActorEntitySet.empty(owner=self)
+        actor_entity_set.document.generate_id(actor_entity_set)
+        return actor_entity_set
+        
+    def add_actor_entity_set(self, actor_entity_set):
+        self.actor_entity_set = actor_entity_set
 
     def add_new_sentences(self):
         sentences = self.construct_sentences()
@@ -226,11 +287,27 @@ class Document(SerifDocumentTheory):
 
     def construct_sentences(self):
         from serif.theory.sentences import Sentences
-        sentences = Sentences(owner=self)
+        sentences = Sentences.empty(owner=self)
         return sentences
 
     def add_sentences(self, sentences):
         self.sentences = sentences
+
+    def construct_alert_metadata(self):
+        from serif.theory.alert_metadata import ALERTMetadata
+        alert_metadata = ALERTMetadata(owner=self)
+        return alert_metadata
+
+    def add_alert_metadata(self):
+        self.alert_metadata = self.construct_alert_metadata()
+
+    def construct_better_template_metadata(self):
+        from serif.theory.better_template_metadata import BETTERTemplateMetadata
+        better_template_metadata = BETTERTemplateMetadata(owner=self)
+        return better_template_metadata
+
+    def add_better_template_metadata(self):
+        self.better_template_metadata = self.construct_better_template_metadata()
 
     @staticmethod
     def construct(doc_id):
@@ -243,9 +320,18 @@ class Document(SerifDocumentTheory):
         with open(input_file) as f:
             s = f.read()
 
-            start_id = s.find("<DOC id=\"") + 9
-            end_id = s.find("\"", start_id + 1)
-            docid = s[start_id:end_id]
+
+            start_doc_tag = s.find("<DOC id=\"")
+            start_docid_tag = s.find("<DOCID>")
+            docid = ""
+            if start_doc_tag != -1:
+                start_id = start_doc_tag + 9
+                end_id = s.find("\"", start_id + 1)
+                docid = s[start_id:end_id].strip()
+            elif start_docid_tag != -1:
+                start_id = start_docid_tag + 7
+                end_id = s.find("</", start_id + 1)
+                docid = s[start_id:end_id].strip()
 
             contents_offset = (0, len(s) - 1)
             date_time_offset = (s.find("<DATETIME>") + 10, s.find("</DATETIME>") - 1)
@@ -254,7 +340,7 @@ class Document(SerifDocumentTheory):
             span_text_offset = (region_offset[0], region_offset[1] + 1)
 
             # TODO: do we need customized region detectors & segment detectors?
-            logger.info("Creating a SERIF XML document")
+            logger.info("Creating {} from sgm".format(docid))
             new_doc = Document.construct(docid)
             new_doc.language = language
             new_doc.construct_original_text(s, contents_offset[0], contents_offset[1])
@@ -269,13 +355,16 @@ class Document(SerifDocumentTheory):
     def from_text(input_file, language, docid):
         with open(input_file, 'r', newline='', encoding='utf8') as f:
             s = f.read()
+        return Document.from_string(s, language, docid)
 
-            logger.info("Creating a SERIF XML document")
-            new_doc = Document.construct(docid)
-            new_doc.language = language
-            new_doc.construct_original_text(s, 0, len(s) - 1)
-            new_doc.construct_regions(0, len(s) - 1)
-            new_doc.construct_segments()
-            new_doc.construct_metadata(0, len(s) - 1, "RegionSpan", "TEXT")
+    @staticmethod
+    def from_string(s, language, docid):
+        logger.info("Creating {} from text".format(docid))
+        new_doc = Document.construct(docid)
+        new_doc.language = language
+        new_doc.construct_original_text(s, 0, max(len(s) - 1, 0))
+        new_doc.construct_regions(0, max(len(s) - 1, 0))
+        new_doc.construct_segments()
+        new_doc.construct_metadata()
+        return new_doc
 
-            return new_doc

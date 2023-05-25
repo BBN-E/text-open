@@ -1,0 +1,132 @@
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/ingester/text_ingester.py
+
+#IMPLEMENTATIONS
+#/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/sentence_splitter/trankit_sentence_splitter.py
+
+#IMPLEMENTATIONS
+#/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/trankit_adapter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/sentence_splitter/stanza_sentence_splitter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/stanza_adapter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/parser/benepar_parser.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention/name_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention/noun_phrase_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention/pronoun_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/time_value_mention/sutime_time_value_mention_model.py
+
+#IMPLEMENTATIONS
+#/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/dependency_parser/trankit_dependency_parser.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/dependency_parser/stanford_nlp_dependency_parser.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention_coreference/allennlp_coreference_model.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/entity/orphan_mention_to_entity_model.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/actor_mention/blink_mention_linker.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/actor_entity/simple_actor_entity_model.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/serif/model/impl/ingester/serifxml_ingester.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/nlplingo_decoder.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/nlplingo_ner_adapter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/event_arg_remover_model.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/serif/model/impl/mtdp_decoder.py
+
+INGESTER TextIngester
+lang en
+
+#SENTENCE_SPLITTING_MODEL TrankitSentenceSplitter
+#lang english
+#dir /nfs/raid66/u11/users/brozonoy-ad/text-open/trankit_models/
+
+#BASE_MODEL TrankitAdapter
+#lang english
+#dir /nfs/raid66/u11/users/brozonoy-ad/text-open/trankit_models/
+
+SENTENCE_SPLITTING_MODEL StanzaSentenceSplitter
+lang en
+dir /nfs/raid66/u11/users/brozonoy-ad/text-open/stanza_models/
+
+BASE_MODEL StanzaAdapter
+lang en
+dir /nfs/raid66/u11/users/brozonoy-ad/text-open/stanza_models/
+
+PARSE_MODEL BeneparParser
+model /nfs/raid66/u11/users/brozonoy-ad/covid_base_analytics/benepar_en3_large
+add_heads
+max_tokens 200
+
+MENTION_MODEL NounPhraseMentionModel
+
+MENTION_MODEL PronounMentionModel
+modify_existing_mention
+
+MENTION_MODEL NameMentionModel
+modify_existing_mention
+
+BASE_MODEL NLPLingoNERAdapter
+params_path /nfs/raid66/u11/users/brozonoy-ad/nlplingo_models/ner/params/train.params
+
+TIME_VALUE_MENTION_MODEL SUTime_TimeValueMentionModel
+
+#DEPENDENCY_MODEL TrankitDependencyParser
+#lang english
+#dir /nfs/raid66/u11/users/brozonoy-ad/text-open/trankit_models/
+#use_data_from_trankit_adapter
+
+DEPENDENCY_MODEL StanfordNLPDependencyParser
+lang en
+models_dir /nfs/raid87/u10/shared/Hume/common/stanfordnlp_resources
+
+MENTION_COREF_MODEL AllenNLPCoreferenceModel
+model https://storage.googleapis.com/allennlp-public-models/coref-spanbert-large-2021.03.10.tar.gz
+
+BASE_MODEL BlinkMentionLinker
+models_path /nfs/raid66/u11/users/brozonoy-ad/BLINK/models/
+
+ENTITY_MODEL OrphanMentionToEntityModel
+
+ACTOR_ENTITY_MODEL SimpleActorEntityModel
+
+BASE_MODEL NLPLingoDecoder
+params_path /nfs/raid88/u10/users/ychan-ad/nlplingo_models/canonical/decode_covid/nlplingo.json
+use_sequence_tagging_adder true
+
+#BASE_MODEL EventArgRemoverModel
+
+BASE_MODEL MTDPDecoder
+data_type modal
+pretrained_model_dir /nfs/raid66/u11/users/brozonoy-ad/modal_and_temporal_parsing/xlm_modal
+
+BASE_MODEL MTDPDecoder
+data_type time
+pretrained_model_dir /nfs/raid66/u11/users/brozonoy-ad/modal_and_temporal_parsing/xlm_temporal

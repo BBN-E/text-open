@@ -1,17 +1,31 @@
 import logging
-from serif.model.parser_model import ParserModel
+import traceback
+import sys
 
 import benepar
 
+from serif.model.parser_model import ParserModel
+
 logger = logging.getLogger(__name__)
+
 
 class BeneparParser(ParserModel):
     def __init__(self, model, **kwargs):
         super(BeneparParser, self).__init__(**kwargs)
-        self.parser = benepar.Parser(model)
+        self.model = model
         self.max_tokens = 100000
         if "max_tokens" in kwargs:
             self.max_tokens = int(kwargs["max_tokens"])
+
+    def load_model(self):
+        self.parser = benepar.Parser(self.model)
+
+    def unload_model(self):
+        del self.parser
+        self.parser = None
+        if "tensorflow" in sys.modules.keys():
+            import tensorflow as tf
+            tf.keras.backend.clear_session()
 
     def fix_token_for_benepar(self, text):
         text = text.strip()
@@ -33,18 +47,15 @@ class BeneparParser(ParserModel):
             token_texts.append(self.fix_token_for_benepar(token.text))
         return token_texts
 
-    def get_parse_info(self, sentence):
+    def add_parse_to_sentence(self, sentence):
         if len(sentence.token_sequence) > self.max_tokens:
             logger.info(f"Skipping Benepar on long sentence: ({len(sentence.token_sequence)})")
-            sentence_text = " ".join([t.text for t in sentence.token_sequence])
-            logger.debug(f"{sentence_text}")
-            return None
+            return []
         token_texts = self.get_tokens(sentence)
         try:
             tree = self.parser.parse(token_texts)
-            return tree.pformat()
+            treebank_str = tree.pformat()
+            return self.add_new_parse(sentence, treebank_str)
         except Exception as e:
-            logger.error("Error in benepar parser:")
-            logger.error(e)
-            return None
-
+            logger.exception(traceback.format_exc())
+            return []

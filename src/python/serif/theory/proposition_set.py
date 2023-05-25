@@ -9,6 +9,16 @@ class PropositionSet(SerifSequenceTheory):
     mention_set = _ReferenceAttribute('mention_set_id', cls=MentionSet)
     _children = _ChildTheoryElementList('Proposition')
 
+    @classmethod
+    def from_values(cls, owner=None, mention_set=None):
+        ret = cls(owner=owner)
+        ret.mention_set = mention_set
+        return ret
+
+    @classmethod
+    def empty(cls, owner=None, mention_set=None):
+        return cls.from_values(owner=owner, mention_set=mention_set)
+
     def add_proposition(self, proposition):
         self._children.append(proposition)
 

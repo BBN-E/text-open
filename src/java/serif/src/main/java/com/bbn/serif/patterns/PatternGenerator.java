@@ -96,6 +96,8 @@ public final class PatternGenerator {
       for (Mention m : st.mentions()) {
         if (m.mentionType() == Mention.Type.NONE)
           continue;
+        if (m.node() == null)
+          continue;
         SynNode mentionHead = m.node().headPreterminal();
         if (!mentionCache.containsKey(mentionHead))
           mentionCache.put(mentionHead, new HashSet<Mention>());
@@ -734,6 +736,8 @@ public final class PatternGenerator {
     SynNode synNodePreterminal = synNode.headPreterminal();
 
     for (Mention mention : st.mentions()) {
+      if (mention.node() == null)
+        continue;
       if (synNodePreterminal == mention.node().headPreterminal()) {
         results.add(mention);
       }

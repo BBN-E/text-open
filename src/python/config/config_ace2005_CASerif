@@ -1,0 +1,25 @@
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/ingester/serifxml_ingester.py
+
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/value_mention/value_mention_cleaner.py
+
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/mention/mention_cleaner.py
+
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/event_mention/event_mention_cleaner.py
+
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/nlplingo_proxy.py
+
+INGESTER SerifxmlIngester
+
+BASE_MODEL ValueMentionCleaner
+
+BASE_MODEL MentionCleaner
+
+BASE_MODEL EventMentionCleaner
+
+BASE_MODEL NLPLingoProxy
+nlplingo_filelist +NLPLINGO_FILELIST+

@@ -1,0 +1,12 @@
+# implementations go here
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/ingester/serifxml_ingester.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/entity_linker/blink_entity_linking.py
+
+INGESTER SerifxmlIngester
+
+BASE_MODEL BlinkEntityLinker
+models_path /nfs/raid66/u11/users/brozonoy-ad/BLINK/models/

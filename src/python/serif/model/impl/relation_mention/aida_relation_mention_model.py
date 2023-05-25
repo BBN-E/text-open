@@ -3,35 +3,33 @@ from serif.model.relation_mention_model import RelationMentionModel
 
 from serif.theory.enumerated_type import Tense, Modality
 
+
 # Modified from DogFoodFinderRelationMentionModel
 class AIDARelationMentionModel(RelationMentionModel):
     '''adds TACRED relations to TACRED entities'''
 
     def __init__(self, mapping_file, **kwargs):
 
-        super(AIDARelationMentionModel,self).__init__(**kwargs)
+        super(AIDARelationMentionModel, self).__init__(**kwargs)
 
         self.words2anno = self.load_words2anno_dict(mapping_file)
         self.anno_dict = self.load_anno_dict(self.words2anno)
 
-        self.external_tag_file = True # to permit the model to accept annotations file as argument
+        self.external_tag_file = True  # to permit the model to accept annotations file as argument
 
+    def add_relation_mentions_to_sentence(self, sentence):
 
-    def get_relation_mention_info(self, sentence):
-
-        #annotations = self.anno_dict[serif_doc_name][sent_index_in_doc]
+        # annotations = self.anno_dict[serif_doc_name][sent_index_in_doc]
         annotations = self.anno_dict[sentence.document.docid][sentence.sent_no]
         [subj_start, subj_end, subj_type, obj_start, obj_end, obj_type, relation] = annotations
 
         # each TACRED sentence should have exactly two entity mentions created
-        print(sentence.mention_set)
         l_mention = sentence.mention_set[0]
         r_mention = sentence.mention_set[1]
 
-        tuples = [(relation, l_mention, r_mention, Tense.Unspecified, Modality.Asserted)]
-
-        return tuples
-
+        return self.add_or_update_relation_mention(sentence.rel_mention_set, relation, l_mention, r_mention,
+                                                   Tense.Unspecified,
+                                                   Modality.Asserted)
 
     def load_words2anno_dict(self, mapping_file):
         '''
@@ -50,7 +48,6 @@ class AIDARelationMentionModel(RelationMentionModel):
 
         return words2anno
 
-
     def load_anno_dict(self, mapping_dict):
         '''
         :param mapping_dict: created by self.load_mapping_dict
@@ -60,12 +57,11 @@ class AIDARelationMentionModel(RelationMentionModel):
         '''
         anno_dict = dict()
 
-        for words_file,anno_file in mapping_dict.items():
+        for words_file, anno_file in mapping_dict.items():
             anno_sents = self.preprocess_anno_file(anno_file)
             anno_dict[os.path.basename(words_file)] = anno_sents
 
         return anno_dict
-
 
     def preprocess_anno_file(self, anno_file):
         '''processes supplementary .annotations file into sents to provide as labelling info to entity indices, types and relations to doc'''

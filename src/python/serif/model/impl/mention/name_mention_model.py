@@ -1,11 +1,8 @@
 from serif.model.mention_model import MentionModel
+import logging
 
-def get_np_covering_tokens(sentence, start_token, end_token):
-    return sentence.parse.get_covering_syn_node(
-        start_token, end_token, ['NP'])
+logger = logging.getLogger(__name__)
 
-def get_covering_np(sentence, name):
-    return get_np_covering_tokens(sentence, name.start_token, name.end_token)
 
 class NameMentionModel(MentionModel):
     """Makes Mentions for existing Names"""
@@ -13,15 +10,15 @@ class NameMentionModel(MentionModel):
     def __init__(self,**kwargs):
         super(NameMentionModel,self).__init__(**kwargs)
 
-    def get_mention_info(self, sentence):
-        tuples = []
-        for name in sentence.name_theory:
+    def add_mentions_to_sentence(self, sentence):
+        new_mentions = []
+        if sentence.name_theory is None:
+            logger.warning("No name theory for sentence {}, skipping NameMentionModel".
+                           format(sentence.id))
+        else:
             mention_type = "NAME"
-            #if name.entity_type == "FOOD":
-            #    mention_type = "DESC"
-            syn_node = get_covering_np(sentence, name)
-            if syn_node:
-                tuples.append(
-                    (name.entity_type, mention_type, syn_node))
-            print("tuples",tuples)
-        return tuples
+            for name in sentence.name_theory:
+                new_mentions.extend(self.add_or_update_mention(sentence.mention_set, name.entity_type, mention_type,
+                                                               name.start_token, name.end_token,
+                                                               loose_synnode_constraint=True))
+        return new_mentions

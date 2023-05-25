@@ -1,5 +1,6 @@
 from serif.model.mention_model import MentionModel
 
+
 class EmptyMentionSetModel(MentionModel):
     """Adds empty mention set to sentence. 
        Depenency parses rely on having a mention set, so this could be
@@ -8,5 +9,5 @@ class EmptyMentionSetModel(MentionModel):
     def __init__(self, **kwargs):
         super(EmptyMentionSetModel, self).__init__(**kwargs)
 
-    def get_mention_info(self, sentence):
+    def add_mentions_to_sentence(self, sentence):
         return []

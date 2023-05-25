@@ -526,7 +526,7 @@ class _ChildTextElement(_ChildTheoryElement):
         if child_elt is None:
             return None
         else:
-            return child_elt.text
+            return child_elt.text or ""
 
     def serialize(self, etree, theory, **options):
         text = getattr(theory, self.__name__, None)

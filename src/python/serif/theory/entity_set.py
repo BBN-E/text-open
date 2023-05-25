@@ -7,6 +7,16 @@ class EntitySet(SerifSequenceTheory):
     score = _SimpleAttribute(float)
     _children = _ChildTheoryElementList('Entity')
 
+    @classmethod
+    def from_values(cls, owner=None, score=0):
+        ret = cls(owner=owner)
+        ret.score = score
+        return ret
+
+    @classmethod
+    def empty(cls, owner=None):
+        return cls.from_values(owner=owner)
+
     def add_entity(self, entity):
         self._children.append(entity)
 

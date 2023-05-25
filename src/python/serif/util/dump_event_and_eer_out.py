@@ -41,6 +41,10 @@ def get_event_arg(serif_em:serifxml3.EventMention):
             ret.append("event_arg: {}: {}".format(argument.role,argument.mention.text))
         elif isinstance(argument.value_mention,serifxml3.ValueMention):
             ret.append("event_arg: {}: {}".format(argument.role,argument.value_mention.text))
+        elif isinstance(argument.anchor_node,serifxml3.SynNode):
+            ret.append("event_arg: {}: {}".format(argument.role,argument.anchor_node.text))
+        elif isinstance(argument.event_mention,serifxml3.EventMention):
+            ret.append("event_arg: {}: {}".format(argument.role,argument.event_mention.anchor_node.text))
         else:
             raise NotImplementedError
     return ret

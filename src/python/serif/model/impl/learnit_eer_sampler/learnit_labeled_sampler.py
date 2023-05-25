@@ -1,5 +1,5 @@
 import logging
-from serif.model.base_model import BaseModel
+from serif.model.document_model import DocumentModel
 import time
 import pickle
 import random
@@ -7,7 +7,7 @@ import random
 logger = logging.getLogger(__name__)
 
 HUMAN_LABEL = 'HumanLabeled'
-class LearnItLabeledSampler(BaseModel):
+class LearnItLabeledSampler(DocumentModel):
 
     def __init__(self, task, docid_to_relation_pattern_map, docid_to_na_map, **kwargs):
         super(LearnItLabeledSampler, self).__init__(**kwargs)
@@ -21,7 +21,7 @@ class LearnItLabeledSampler(BaseModel):
 
         self.output_path = kwargs['argparse'].output_directory
 
-    def process(self, serif_doc):
+    def process_document(self, serif_doc):
         start = time.time()
         logging.info('Start of sampling labeled LearnIt EERs')
 

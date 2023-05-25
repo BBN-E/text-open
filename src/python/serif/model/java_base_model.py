@@ -1,10 +1,10 @@
 import io, typing
-from serif.model.base_model import BaseModel
+from serif.model.document_model import DocumentModel
 from serif.theory.document import Document
 
 
-class JavaBaseModel(BaseModel):
+class JavaDocumentModel(DocumentModel):
     def __init__(self, **kwargs):
-        super(JavaBaseModel, self).__init__(**kwargs)
+        super(JavaDocumentModel, self).__init__(**kwargs)
 
 

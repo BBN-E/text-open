@@ -1,11 +1,11 @@
 import os,sys,io
-from serif.model.java_base_model import JavaBaseModel
+from serif.model.java_base_model import JavaDocumentModel
 from serifxml3 import Document
 from jnius import autoclass
 
 
 
-class JavaDocResolverModel(JavaBaseModel):
+class JavaDocResolverModel(JavaDocumentModel):
     def __init__(self,**kwargs):
         super(JavaDocResolverModel,self).__init__(**kwargs)
         self.java_class_ins = dict()
@@ -46,7 +46,7 @@ class JavaDocResolverModel(JavaBaseModel):
         serif_doc = Document(xml_string)
         return serif_doc
 
-    def process(self, serif_doc):
+    def process_document(self, serif_doc):
         serif_doc_java_in = self.convert_doc_theory_python_to_java(serif_doc)
         serif_doc_java_out = self.java_class_ins['docTheoryResolver'].resolve(serif_doc_java_in)
         serif_doc_out = self.convert_doc_theory_java_to_python(serif_doc_java_out)

@@ -1,6 +1,10 @@
-# Copyright 2019 by Raytheon BBN Technologies Corp.
-# All Rights Reserved.
-import os, sys, logging
+import argparse
+import importlib
+import logging
+import os
+import sys
+
+from serif.model.ingester import Ingester
 
 logger = logging.getLogger(__name__)
 
@@ -8,22 +12,13 @@ current_script_path = __file__
 project_root = os.path.realpath(os.path.join(current_script_path, os.path.pardir, os.path.pardir, os.path.pardir))
 sys.path.append(project_root)
 
-import argparse
-import importlib
-import os
-import sys
-
-from serif import Document
-import time
-
-def get_docid_from_filename(filepath):
-    basename = os.path.basename(filepath)
-    if basename.endswith(".txt"):
-        basename = basename[0:-4]
-    return basename
-
 
 def main(args):
+    args.PRODUCTION_MODE = False
+    if os.environ.get("PRODUCTION_MODE", "false").lower() == "true":
+        args.PRODUCTION_MODE = True
+        logger.critical("PRODUCTION MODE ON.")
+
     if not os.path.isdir(args.output_directory):
         os.makedirs(args.output_directory)
 
@@ -34,51 +29,30 @@ def main(args):
         line = line.strip()
         if len(line) == 0 or line.startswith("#"):
             continue
-        items = line.split("\t")
-        files_to_process.append((items[0], items[1]))
+        files_to_process.append(line)
 
-    for idx, input_file in enumerate(files_to_process):
-        file_type = input_file[0]
-        input_file_path = input_file[1]
-        logger.info("({}/{})Loading: {}".format(idx + 1, len(files_to_process), input_file_path))
-        if file_type.lower() == "serifxml":
-            # TODO: check if (1) serifxml is loaded in correctly, and (2) later stages won't fail
-            document = Document(input_file_path)
-        elif file_type.lower() == "sgm_arabic":
-            document = Document.from_sgm(input_file_path, "Arabic")
-        elif file_type.lower() == "sgm_english":
-            document = Document.from_sgm(input_file_path, "English")
-        elif file_type.lower() == "sgm":
-            document = Document.from_sgm(input_file_path, "Unknown")
-        elif file_type.lower() == "text_arabic":
-            document = Document.from_text(input_file_path, "Arabic", get_docid_from_filename(input_file_path))
-        elif file_type.lower() == "text_english":
-            document = Document.from_text(input_file_path, "English", get_docid_from_filename(input_file_path))
-        elif file_type.lower() == "text":
-            document = Document.from_text(input_file_path, "Unknown", get_docid_from_filename(input_file_path))
-        else:
-            print("Bad filetype: " + file_type)
-            sys.exit(1)
+    serif_docs = list()
+    for idx, input_file_path in enumerate(files_to_process):
+        logger.info("({}/{}) Ingesting: {}".format(idx + 1, len(files_to_process), input_file_path))
+        ingester = args.models[0]
+        documents = ingester.ingest(input_file_path)
+        serif_docs.extend(documents)
 
-        logger.info('Processing: Begin {}'.format(document.docid))
-        for model in args.models:
-            
-            try:
-                logger.info('Processing: Applying {}'.format(type(model).__name__))
-                ret = model.process(document)
-                if isinstance(ret, Document):
-                    document = ret
-            except AssertionError as error:
-                logger.exception(error)
-            except Exception as exception:
-                logger.exception(exception)
+    for i, model in enumerate(args.models[1:]):
+        logger.info('Loading resources for {}'.format(type(model).__name__))
+        model.load_model()
+        logger.info('Processing: Applying {}'.format(type(model).__name__))
+        serif_docs = model.apply(serif_docs)
+        logger.info('Releasing resources for {}'.format(type(model).__name__))
+        model.unload_model()
 
-        logger.info('Writing SerifXML file {}'.format(document.docid))
-        filename = document.docid + ".xml"
+    for serif_doc in serif_docs:
+        logger.info('Writing SerifXML file {}'.format(serif_doc.docid))
+        filename = serif_doc.docid + ".xml"
         output_file = os.path.join(args.output_directory, filename)
-        document.save(output_file)
-        
-    
+        serif_doc.save(output_file)
+
+
 def read_config(arguments):
     """
     Adapted from HUME
@@ -89,21 +63,30 @@ def read_config(arguments):
     implementations_path = ''
 
     model_types = [
+        'INGESTER',
         'BASE_MODEL',
         'JAVA_BASE_MODEL',
         'SENTENCE_SPLITTING_MODEL',
         'TOKENIZE_MODEL',
         'PART_OF_SPEECH_MODEL',
+        'VALUE_MENTION_MODEL',
+        'TIME_VALUE_MENTION_MODEL',
         'DEPENDENCY_MODEL',
         'PARSE_MODEL',
+        'AMR_MODEL',
         'NAME_MODEL',
         'MENTION_MODEL',
+        'ACTOR_MENTION_MODEL',
+        'MENTION_COREF_MODEL',
+        'EVENT_MENTION_COREF_MODEL',
         'RELATION_MENTION_MODEL',
         'EVENT_MENTION_MODEL',
         'ENTITY_MODEL',
+        'VALUE_MODEL',
         'RELATION_MODEL',
         'EVENT_MODEL',
-        'EVENT_EVENT_RELATION_MENTION_MODEL'
+        'EVENT_EVENT_RELATION_MENTION_MODEL',
+        'ACTOR_ENTITY_MODEL'
     ]
 
     config_path = os.path.abspath(arguments.config)
@@ -127,7 +110,7 @@ def read_config(arguments):
                         module_name, package=package_name)
                     for cls_name in dir(implementations):
                         if cls_name not in class_name_to_class:
-                            class_name_to_class[cls_name] = getattr(implementations,cls_name)
+                            class_name_to_class[cls_name] = getattr(implementations, cls_name)
                 except ImportError as e:
                     logger.critical('Implementations at {} could not be imported; '
                                     'make sure that the file exists and is a python '
@@ -137,22 +120,24 @@ def read_config(arguments):
                 continue
             if line.startswith('JAVA_CLASSPATH'):
                 java_class_path = os.path.realpath(next(f).strip())
-                l = set(os.environ.get("CLASSPATH","").split(":"))
+                l = set(os.environ.get("CLASSPATH", "").split(":"))
                 l.discard("")
                 l.add(java_class_path)
                 os.environ['CLASSPATH'] = ":".join(l)
                 continue
 
-
             # Set up a model
             model_line = False
-            is_barrier = False
             for model_type in model_types:
                 if line.startswith(model_type + ' '):
                     model_line = True
                     model_line_split = line.split()
                     model_classname = model_line_split[1]
 
+                    if model_type == 'INGESTER' and len(models) > 0:
+                        raise IOError(
+                            'Only one INGESTER should be specified and it must be '
+                            'the first model listed')
                     try:
                         _Model = class_name_to_class[model_classname]
                         # _Model = getattr(implementations, model_classname)
@@ -186,6 +171,13 @@ def read_config(arguments):
 
     arguments.models = [m(**kwargs) for m, kwargs in models]
     arguments.implementations = implementations
+    config_logger()
+    if not isinstance(arguments.models[0], Ingester):
+        raise IOError(
+            'First model in config file must be an Ingester '
+            'for instance: "INGESTER SerifxmlIngester" or '
+            'or "INGESTER TextIngester" followed by any arguments')
+
 
 def parse(args_list):
     arg_parser = argparse.ArgumentParser()
@@ -196,7 +188,9 @@ def parse(args_list):
     read_config(_args)
     return _args
 
-if __name__ == '__main__':
+
+def config_logger():
+    # We need to run it twice due to some model may alter the behavior
     log_format = '[%(asctime)s] {P%(process)d:%(module)s:%(lineno)d} %(levelname)s - %(message)s'
     try:
         logging.basicConfig(level=logging.getLevelName(os.environ.get('LOGLEVEL', 'INFO').upper()),
@@ -206,4 +200,8 @@ if __name__ == '__main__':
             "Unparseable level {}, will use default {}.".format(os.environ.get('LOGLEVEL', 'INFO').upper(),
                                                                 logging.root.level))
         logging.basicConfig(format=log_format)
+
+
+if __name__ == '__main__':
+    config_logger()
     main(parse(sys.argv[1:]))

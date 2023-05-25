@@ -4,19 +4,9 @@ from serif.theory.serif_offset_theory import SerifOffsetTheory
 class SerifValueMentionTheory(SerifOffsetTheory):
     @property
     def tokens(self):
-        from serif.theory.sentence import Sentence
-        """The list of tokens covered by this ValueMention"""
-        tok_seq = list(self.owner_with_type(Sentence).token_sequence)
-        s = tok_seq.index(self.start_token)
-        e = tok_seq.index(self.end_token)
-        return tok_seq[s:e + 1]
-
-    @property
-    def sentence(self):
-        if self.sent_no:
-            return self.sent_no
-        else:
-            return self.owner.owner.sent_no
+        s = self.start_token.index()
+        e = self.end_token.index()
+        return self.sentence.token_sequence[s:e + 1]
 
     def get_normalized_time(self):
         """If this is a time ValueMention, return the normalized time

@@ -547,6 +547,7 @@ public final class Proposition implements Spanning {
     public static final PredicateType NAME = new PredicateType("name");
     public static final PredicateType PRONOUN = new PredicateType("pronoun");
     public static final PredicateType COMP = new PredicateType("comp");
+    public static final PredicateType ANY = new PredicateType("any");
     public static final PredicateType DEPENDENCY = new PredicateType("dependency");
 
     public static final ImmutableList<PredicateType> VALUES =

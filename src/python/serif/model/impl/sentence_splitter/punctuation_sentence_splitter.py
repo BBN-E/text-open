@@ -2,11 +2,11 @@ from serif.model.sentence_splitter_model import SentenceSplitterModel
 
 
 class PunctuationSentenceSplitter(SentenceSplitterModel):
-    def __init__(self,**kwargs):
-        super(PunctuationSentenceSplitter,self).__init__(**kwargs)
+    def __init__(self, **kwargs):
+        super(PunctuationSentenceSplitter, self).__init__(**kwargs)
 
-    def get_sentence_info(self, region):
-        regions_starts_ends = []
+    def add_sentences_to_document(self, serif_doc, region):
+        ret = []
 
         text = region.text
         chunks = text.split(".")
@@ -26,5 +26,5 @@ class PunctuationSentenceSplitter(SentenceSplitterModel):
             # Do not add empty sentence
             if len(sentence_text) > 0:
                 # print(sentence_text)
-                regions_starts_ends.append((region, char_start, char_end))
-        return regions_starts_ends
+                ret.extend(SentenceSplitterModel.add_new_sentence(serif_doc.sentences, region, char_start, char_end))
+        return ret

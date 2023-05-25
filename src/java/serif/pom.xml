@@ -42,6 +42,7 @@
 	    <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>appassembler-maven-plugin</artifactId>
+                <version>1.10</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -59,6 +60,10 @@
                 <program>
                     <mainClass>com.bbn.serif.util.PatternGeneratorCoverageTester</mainClass>
                     <name>PatternGeneratorCoverageTester</name>
+                </program>
+                <program>
+                        <mainClass>com.bbn.serif.util.PatternMatcherTester</mainClass>
+                        <name>PatternMatcherTester</name>
                 </program>
            </programs>
 

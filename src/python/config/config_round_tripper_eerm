@@ -1,0 +1,106 @@
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/ingester/round_tripper_ingester.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/sentence_splitter/round_tripper_sentence_splitter.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/tokenizer/round_tripper_tokenizer.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/part_of_speech/round_tripper_pos_model.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/name/round_tripper_name_model.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/value_mention/round_tripper_value_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/parser/round_tripper_parser_model.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/mention/round_tripper_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/proposition/round_tripper_proposition_model
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/event_mention/round_tripper_event_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/relation_mention/round_tripper_relation_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/actor_mention/round_tripper_actor_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/entity/round_tripper_entity_model.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/value/round_tripper_value_model.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/relation/round_tripper_relation_model.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/event/round_tripper_event_model.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/actor_entity/round_tripper_actor_entity_model.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/bmin-ad/Projects/PySerif/text-open.master/src/python/serif/model/impl/event_event_relation_mention/round_tripper_eer_model.py
+
+INGESTER RoundTripperIngester
+
+SENTENCE_SPLITTING_MODEL RoundTripperSentenceSplitter
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+TOKENIZE_MODEL RoundTripperTokenizer
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+PART_OF_SPEECH_MODEL RoundTripperPOSModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+NAME_MODEL RoundTripperNameModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+VALUE_MENTION_MODEL RoundTripperValueMentionModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+PARSE_MODEL RoundTripperParserModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+MENTION_MODEL RoundTripperMentionModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+BASE_MODEL RoundTripperPropositionModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+EVENT_MENTION_MODEL RoundTripperEventMentionModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+RELATION_MENTION_MODEL RoundTripperRelationMentionModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+ACTOR_MENTION_MODEL RoundTripperActorMentionModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+ENTITY_MODEL RoundTripperEntityModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+VALUE_MODEL RoundTripperValueModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+RELATION_MODEL RoundTripperRelationModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+EVENT_MODEL RoundTripperEventModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+ACTOR_ENTITY_MODEL RoundTripperActorEntityModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml
+
+EVENT_EVENT_RELATION_MENTION_MODEL RoundTripperEERModel
+input_serifxml_file /nfs/raid88/u10/users/bmin-ad/Projects/PySerif/round_tripper/input/ENG_NW_WM_4dn02a35_10.xml

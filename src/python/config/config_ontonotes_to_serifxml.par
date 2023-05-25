@@ -1,0 +1,34 @@
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/ingester/text_ingester.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/sentence_splitter/newline_sentence_splitter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/tokenizer/plain_white_space_tokenizer.py
+
+IMPLEMENTATIONS
+/nfs/raid88/u10/users/hqiu_ad/repos/text-open/src/python/serif/model/impl/parser/all_token_flatten_parser.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention_from_tokens/mentions_and_coref_from_ontonotes_json.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention_coreference/entity_from_coref_chain.py
+
+INGESTER TextIngester
+lang en
+
+SENTENCE_SPLITTING_MODEL NewlineSentenceSplitter
+create_empty
+
+TOKENIZE_MODEL PlainWhiteSpaceTokenizer
+
+PARSE_MODEL AllTokenFlattenParser
+postag_attr_getter_str unknown
+fallback_pos_tag X
+
+MENTION_MODEL MentionsAndCorefFromOntonotesJson
+doc_to_anno_mapping /nfs/raid90/u10/users/brozonoy-ad/data/ontonotes.v2/docid_to_anno.en
+
+MENTION_COREF_MODEL EntityFromCorefChainModel

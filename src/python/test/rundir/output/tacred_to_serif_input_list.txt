@@ -1,4 +1,4 @@
-text	/nfs/raid66/u11/users/brozonoy/NER/data/tacred_words_annotations/train
-text	/nfs/raid66/u11/users/brozonoy/NER/data/tacred_words_annotations/dev
-text	/nfs/raid66/u11/users/brozonoy/NER/data/tacred_words_annotations/test
-#text	/nfs/raid66/u11/users/brozonoy/NER/data/tacred_words_annotations/mini
+/nfs/raid66/u11/users/brozonoy/NER/data/tacred_words_annotations/train
+/nfs/raid66/u11/users/brozonoy/NER/data/tacred_words_annotations/dev
+/nfs/raid66/u11/users/brozonoy/NER/data/tacred_words_annotations/test
+#/nfs/raid66/u11/users/brozonoy/NER/data/tacred_words_annotations/mini

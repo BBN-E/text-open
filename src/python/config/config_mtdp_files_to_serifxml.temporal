@@ -1,0 +1,49 @@
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/ingester/text_ingester.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/sentence_splitter/newline_sentence_splitter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/tokenizer/plain_white_space_tokenizer.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/stanza_adapter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/parser/benepar_parser.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/dependency_parser/stanford_nlp_dependency_parser.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mtdp_decoder.py
+
+INGESTER TextIngester
+lang en
+mtdp_to_serifxml_preprocessing_metadata_file_path /nfs/raid66/u11/users/brozonoy-ad/modal_and_temporal_parsing/mtdp_data/temporal.docid_to_mtdp_metadata_paths
+
+SENTENCE_SPLITTING_MODEL NewlineSentenceSplitter
+create_empty
+
+# TOKENIZE_MODEL PlainWhiteSpaceTokenizer
+
+BASE_MODEL StanzaAdapter
+lang en
+dir /nfs/raid87/u10/nlp/stanza_1_2/
+trust_tokenization
+max_tokens 200
+
+PARSE_MODEL BeneparParser
+model /nfs/raid66/u11/users/brozonoy-ad/covid_base_analytics/benepar_en3_large
+add_heads
+max_tokens 200
+
+DEPENDENCY_MODEL StanfordNLPDependencyParser
+lang en
+models_dir /nfs/raid87/u10/shared/Hume/common/stanfordnlp_resources
+
+BASE_MODEL MTDPDecoder
+data_type time
+mode use_gold_data
+docid_to_edge_list_path_file /nfs/raid66/u11/users/brozonoy-ad/modal_and_temporal_parsing/mtdp_data/temporal.docid_to_edge_list_paths

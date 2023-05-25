@@ -1,0 +1,14 @@
+# implementations go here
+
+IMPLEMENTATIONS
+/nfs/raid83/u13/caml/users/mselvagg_ad/text-open-2/src/python/serif/model/impl/ingester/serifxml_ingester.py
+
+IMPLEMENTATIONS
+/nfs/raid83/u13/caml/users/mselvagg_ad/text-open-2/src/python/serif/model/impl/actor_mention/genre_mention_linker.py
+
+INGESTER SerifxmlIngester
+
+BASE_MODEL GenreMentionLinker
+model_path /nfs/raid83/u13/caml/users/mselvagg_ad/wiki_extract/GENRE/models/hf_entity_disambiguation_aidayago
+trie_path /nfs/raid83/u13/caml/users/mselvagg_ad/wiki_extract/GENRE/data/kilt_titles_trie_dict.pkl
+redirections_path /nfs/raid66/u15/aida/releases/entity_linking_files/redirections.json

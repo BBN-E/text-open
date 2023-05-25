@@ -1,19 +1,20 @@
-from serif.model.name_model import NameModel
 import os
+from serif.model.name_model import NameModel
+
 
 class AIDA_TACRED_NameModel(NameModel):
     ''' Model for parsing TACRED corpus into Serifxml by first reading entity mentions as names and then converting them to entities
     '''
+
     def __init__(self, mapping_file, **kwargs):
         ''':param mapping_file: mapping word docs to their corresponding annotations docs'''
 
-        super(AIDA_TACRED_NameModel,self).__init__(**kwargs)
+        super(AIDA_TACRED_NameModel, self).__init__(**kwargs)
 
         self.words2anno = self.load_words2anno_dict(mapping_file)
         self.anno_dict = self.load_anno_dict(self.words2anno)
 
-        self.external_tag_file = True # to permit the model to accept annotations file as argument
-
+        self.external_tag_file = True  # to permit the model to accept annotations file as argument
 
     def load_words2anno_dict(self, mapping_file):
         '''
@@ -32,7 +33,6 @@ class AIDA_TACRED_NameModel(NameModel):
 
         return words2anno
 
-
     def load_anno_dict(self, mapping_dict):
         '''
         :param mapping_dict: created by self.load_mapping_dict
@@ -42,40 +42,37 @@ class AIDA_TACRED_NameModel(NameModel):
         '''
         anno_dict = dict()
 
-        for words_file,anno_file in mapping_dict.items():
+        for words_file, anno_file in mapping_dict.items():
             anno_sents = self.preprocess_anno_file(anno_file)
             anno_dict[os.path.basename(words_file)] = anno_sents
 
         return anno_dict
-
 
     def preprocess_anno_file(self, anno_file):
         '''processes supplementary .annotations file into sents to provide as labelling info to entity indices, types and relations to doc'''
         anno_sents = [s.strip().split() for s in open(anno_file).readlines()]
         return anno_sents
 
-
-    def get_name_info(self, sentence):
+    def add_names_to_sentence(self, sentence):
         """
         :type sentence: Sentence
-        :return: List where each element corresponds to on Name. Each
-                 element consists of an entity type string, a start Token
-                 object, and an end Token object.
-        :rtype: list(tuple(str, Token, Token))
+        :return: List where each element corresponds to on Name.
+        :rtype: list(Name)
         """
 
         # get annotations corresponding to sentence in given doc
         print(sentence.document.docid)
         print(self.anno_dict.keys())
-        #annotations = self.anno_dict[serif_doc_name][sent_index_in_doc]
+        # annotations = self.anno_dict[serif_doc_name][sent_index_in_doc]
         annotations = self.anno_dict[sentence.document.docid][sentence.sent_no]
         [subj_start, subj_end, subj_type, obj_start, obj_end, obj_type, relation] = annotations
 
-        type_start_end = [(subj_type, sentence.token_sequence[int(subj_start)], sentence.token_sequence[int(subj_end)]),
-                          (obj_type, sentence.token_sequence[int(obj_start)], sentence.token_sequence[int(obj_end)])]
-
-        return type_start_end
-
+        added_names = list()
+        added_names.extend(self.add_or_update_name(sentence.name_theory, subj_type, sentence.token_sequence[int(subj_start)],
+                                                   sentence.token_sequence[int(subj_end)]))
+        added_names.extend(self.add_or_update_name(sentence.name_theory, obj_type, sentence.token_sequence[int(obj_start)],
+                                                   sentence.token_sequence[int(obj_end)]))
+        return added_names
 
     ## if this were a mention model instead
     # def get_mention_info(self, sentence, serif_doc_name, sent_index_in_doc):

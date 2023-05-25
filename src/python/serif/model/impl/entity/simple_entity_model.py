@@ -1,18 +1,20 @@
-from serif.model.entity_model import EntityModel
+from serif.model.mention_coref_model import MentionCoreferenceModel
 
 
-class SimpleEntityModel(EntityModel):
-    def __init__(self,**kwargs):
-        super(SimpleEntityModel,self).__init__(**kwargs)
-    def get_entity_info(self, serif_doc):
-        # Put any Mention with a type in its own Entity
-        tuples = []
+class SimpleEntityModel(MentionCoreferenceModel):
+    def __init__(self, **kwargs):
+        super(SimpleEntityModel, self).__init__(**kwargs)
+
+    def add_entities_to_document(self, serif_doc):
+        added_entities = list()
         for sentence in serif_doc.sentences:
             for mention in sentence.mention_set:
                 if (mention.entity_type == 'OTH' or
                         mention.entity_type == 'UNDET'):
                     continue
                 entity_subtype = 'UNDET'
-                entity_info = (mention.entity_type, entity_subtype, [mention], True) # True dummy for is_generic attribute
-                tuples.append(entity_info)
-        return tuples
+                added_entities.extend(
+                    MentionCoreferenceModel.add_new_entity(serif_doc.entity_set, [mention],
+                                                           entity_type=mention.entity_type,
+                                                           entity_subtype=entity_subtype, is_generic=True))
+        return added_entities

@@ -139,8 +139,14 @@ class SerifParseTheory(SerifTheory):
         s = tok_seq.index(node.start_token)
         e = tok_seq.index(node.end_token)
 
-        if any(node.tag.startswith(t) for t in tags) and s <= start and e >= end:
-            smallest_node = node
+        if len(tags) == 0:
+            # Allow any tag
+            if s <= start and e >= end:
+                smallest_node = node
+        else:
+            # Restrict tags
+            if any(node.tag.startswith(t) for t in tags) and s <= start and e >= end:
+                smallest_node = node
 
         # Prefer child NPs
         for child in node:
@@ -155,8 +161,9 @@ class SerifParseTheory(SerifTheory):
            tag prefix
         """
         matches = []
-        matches = self._get_nodes_matching_tags_rec(
-            self.root, tags, matches)
+        if self.root is not None:
+            matches = self._get_nodes_matching_tags_rec(
+                self.root, tags, matches)
         return matches
     
     def _get_nodes_matching_tags_rec(self, node, tags, matches):

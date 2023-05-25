@@ -1,0 +1,19 @@
+IMPLEMENTATIONS
+/home/dzajic/dev/projects/text-group/text-open/src/python/serif/model/impl/ingester/serifxml_ingester.py
+
+IMPLEMENTATIONS
+/home/dzajic/dev/projects/text-group/text-open/src/python/serif/model/impl/mtdp_decoder.py
+
+INGESTER SerifxmlIngester
+
+BASE_MODEL MTDPDecoder
+data_type modal
+mode use_decoder
+pretrained_model_dir /nfs/raid66/u11/users/brozonoy-ad/modal_and_temporal_parsing/xlm_modal
+do_eval false
+do_write_mtdp_output true
+do_write_mtdp_eval true
+
+# BASE_MODEL MTDPEvaluator
+# data_type modal
+# docid_to_edge_list_path_file /nfs/raid66/u11/users/brozonoy-ad/modal_and_temporal_parsing/mtdp_data/modal.docid_to_edge_list_paths

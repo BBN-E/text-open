@@ -67,7 +67,11 @@ public final class Mention implements Spanning, HasExternalID {
   }
 
   public int sentenceNumber() {
-    return node().span().tokenSequence().sentenceIndex();
+    if (node != null) {
+      return node().span().tokenSequence().sentenceIndex();
+    } else {
+      return startToken.tokenSequence().sentenceIndex();
+    }
   }
 
   public double confidence() {
@@ -79,7 +83,11 @@ public final class Mention implements Spanning, HasExternalID {
   }
 
   public SentenceTheory sentenceTheory(final DocTheory dt) {
-    return node().sentenceTheory(dt);
+    if (node != null) {
+      return node().sentenceTheory(dt);
+    } else {
+      return startToken.tokenSequence().sentenceTheory(dt);
+    }
   }
 
   public Collection<Proposition.MentionArgument> propositionArguments(final DocTheory dt) {
@@ -100,6 +108,18 @@ public final class Mention implements Spanning, HasExternalID {
 
   public SynNode node() {
     return node;
+  }
+
+  public Token startToken() {
+    return startToken;
+  }
+
+  public Token endToken() {
+    return endToken;
+  }
+
+  public boolean synNodeIsTerminalFromToken() {
+    return synNodeIsTerminalFromToken;
   }
 
   public Optional<String> model(){return this.model;}
@@ -165,24 +185,28 @@ public final class Mention implements Spanning, HasExternalID {
 		public EntityType intendedType() { return intendedType; }*/
 
   public SynNode head() {
-    switch (mentionType) {
-      case NAME:
-        if (child != null) { // want the preterminal head - marj
-          Mention m = child;
-          while (m.child != null) {
-            m = m.child;
+    if (node != null) {
+      switch (mentionType) {
+        case NAME:
+          if (child != null) { // want the preterminal head - marj
+            Mention m = child;
+            while (m.child != null) {
+              m = m.child;
+            }
+            return m.node;
+          } else {
+            return node;
           }
-          return m.node;
-        } else {
+        case PRON:
           return node;
-        }
-      case PRON:
-        return node;
-      case APPO:
-      case LIST:
-        return child().get().node();
-      default:
-        return node.headPreterminal();
+        case APPO:
+        case LIST:
+          return child().get().node();
+        default:
+          return node.headPreterminal();
+      }
+    } else {
+      return null;
     }
   }
 
@@ -212,6 +236,8 @@ public final class Mention implements Spanning, HasExternalID {
    * non-NAME mentions with NAME heads.
    */
   public SynNode atomicHead() {
+    if (node() == null)
+      return null;
     final SynNode preTerm = node().headPreterminal();
 
     if (mentionType == Type.NAME && preTerm.parent().isPresent()) {
@@ -228,6 +254,8 @@ public final class Mention implements Spanning, HasExternalID {
    * SynNode's headPreterminalOrName (which this calls) or a complete description.
    */
   public SynNode headPreterminalOrName() {
+    if (node == null)
+      return null;
     return node.headPreterminalOrName();
   }
 
@@ -342,6 +370,9 @@ public final class Mention implements Spanning, HasExternalID {
   private final EntitySubtype entitySubtype;
   private final SynNode node;
   private final Type mentionType;
+  private final Token startToken;
+  private final Token endToken;
+  private final boolean synNodeIsTerminalFromToken;
 
   private final double confidence;
   private final double linkConfidence;
@@ -390,6 +421,23 @@ public final class Mention implements Spanning, HasExternalID {
 
   private final MetonymyInfo metonymyInfo;
 
+  public Mention(final Token startToken, final Token endToken, final SynNode node, final Type mentionType,
+                 final EntityType entityType, final EntitySubtype entitySubtype,
+                 final MetonymyInfo metonymyInfo, final double confidence, final double linkConfidence,
+                 @Nullable final Symbol external_id) {
+    this.external_id = external_id;
+    this.startToken = checkNotNull(startToken);
+    this.endToken = checkNotNull(endToken);
+    this.node = node;
+    this.synNodeIsTerminalFromToken = true;  // synNode inferred from final token of mention
+    this.mentionType = checkNotNull(mentionType);
+    this.entityType = checkNotNull(entityType);
+    this.entitySubtype = checkNotNull(entitySubtype);
+    this.metonymyInfo = metonymyInfo;
+    this.confidence = confidence;
+    this.linkConfidence = linkConfidence;
+  }
+
   // exists to preserve backward compatibilty until we can bump versions
   @Deprecated
   public Mention(final SynNode node, final Type mentionType, final EntityType entityType,
@@ -410,6 +458,9 @@ public final class Mention implements Spanning, HasExternalID {
       @Nullable final Symbol external_id) {
     this.external_id = external_id;
     this.node = checkNotNull(node);
+    this.synNodeIsTerminalFromToken = false;  // synNode existed in serifxml
+    this.startToken = node.span().startToken();
+    this.endToken = node.span().endToken();
     this.mentionType = checkNotNull(mentionType);
     this.entityType = checkNotNull(entityType);
     this.entitySubtype = checkNotNull(entitySubtype);
@@ -440,7 +491,11 @@ public final class Mention implements Spanning, HasExternalID {
 
   @Override
   public Span span() {
-    return node.span();
+    if (node != null) {
+      return node.span();
+    } else {
+      return startToken.tokenSequence().span(startToken.index(), endToken.index());
+    }
   }
 
   @Override
@@ -450,7 +505,11 @@ public final class Mention implements Spanning, HasExternalID {
 
   @Override
   public String toString() {
-    return entityType + "." + entitySubtype + "/" + mentionType + "/" + node;
+    if (node != null) {
+      return entityType + "." + entitySubtype + "/" + mentionType + "/" + node;
+    } else {
+      return entityType + "." + entitySubtype + "/" + mentionType + "/" + tokenSpan();
+    }
   }
 
   /**

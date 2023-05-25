@@ -1,0 +1,19 @@
+IMPLEMENTATIONS
+/home/dzajic/dev/projects/text-group/text-open/src/python/serif/model/impl/ingester/text_ingester.py
+
+IMPLEMENTATIONS
+/home/dzajic/dev/projects/text-group/text-open/src/python/serif/model/impl/sentence_splitter/newline_sentence_splitter.py
+
+IMPLEMENTATIONS
+/home/dzajic/dev/projects/text-group/text-open/src/python/serif/model/impl/stanza_adapter.py
+
+INGESTER TextIngester
+lang en
+
+SENTENCE_SPLITTING_MODEL NewlineSentenceSplitter
+# create_empty
+
+BASE_MODEL StanzaAdapter
+lang en
+dir /nfs/raid87/u10/nlp/stanza_1_2/
+max_tokens 200

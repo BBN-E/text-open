@@ -1,7 +1,10 @@
+import io
+import os.path
 import re
 import weakref
 
 from serif.theory.serif_theory import SerifTheory
+from serif.util.file_utils import fopen
 from serif.xmlio import ET, SERIFXML_VERSION
 
 
@@ -23,8 +26,9 @@ class SerifDocumentTheory(SerifTheory):
         elif isinstance(etree, str):
             if re.match('^\s*<', etree):
                 etree = ET.fromstring(etree)  # xml string
-            elif '\n' not in etree:
-                etree = ET.parse(etree).getroot()  # filename
+            elif os.path.exists(etree):
+                with fopen(etree) as fp:
+                    etree = ET.fromstring(fp.read())  # filename
             else:
                 raise ValueError('Expected a filename, xml string, stream, '
                                  'or ElementTree.  Got a %s' %
@@ -49,7 +53,11 @@ class SerifDocumentTheory(SerifTheory):
         serifxml_etree.attrib['version'] = str(SERIFXML_VERSION)
         etree = getattr(self, '_etree', None)
         serifxml_etree.append(self.toxml(etree, indent='  '))
-        ET.ElementTree(serifxml_etree).write(file_or_filename, encoding='utf-8')
+        if isinstance(file_or_filename, io.IOBase):
+            ET.ElementTree(serifxml_etree).write(file_or_filename, encoding='utf-8')
+        else:
+            with fopen(file_or_filename, 'wb') as wfp:
+                ET.ElementTree(serifxml_etree).write(wfp, encoding='utf-8')
 
     def register_id(self, theory):
         if theory.id is not None:
@@ -74,14 +82,36 @@ class SerifDocumentTheory(SerifTheory):
 
     def entity_by_mention(self, mention):
         """Returns the Entity which contains the given Mention"""
+        if self.entity_set is None:
+            return None
+        for entity in self.entity_set:
+            for m in entity.mentions:
+                if mention == m:
+                    return entity
+        return None
+
+    def entity_by_mention_no_type_check(self, mention):
+        """Returns the Entity which contains the given Mention"""
+        if self.entity_set is None:
+            return None
+        for entity in self.entity_set:
+            for m in entity.mentions:
+                if mention == m:
+                    return entity
+        return None
+
+    def entity_by_mention_with_type_check(self, mention):
+        """Returns the Entity which contains the given Mention
+           but only when entity type matches"""
+        if self.entity_set is None:
+            return None
         for entity in self.entity_set:
             if entity.entity_type == mention.entity_type:
                 for m in entity.mentions:
                     if mention == m:
-                        return m
+                        return entity
         return None
 
-    
     def get_entity_to_actor_entity_cache(self):
         """Returns a dict containing high confidence entity -> actor
            links. The dict has a key of Entity and an value of 
@@ -95,4 +125,3 @@ class SerifDocumentTheory(SerifTheory):
                 continue
             entity_to_actor_entity[ae.entity] = ae
         return entity_to_actor_entity
-

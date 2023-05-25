@@ -57,8 +57,6 @@ public abstract class PositionMarker extends AbstractConstraintlessProcessingSte
 
   private static final Logger log = LoggerFactory.getLogger(PositionMarker.class);
 
-  private int matchesFound = 0;
-
   private static final ValueType JOB_TITLE = ValueType.parseDottedPair("Job-Title");
 
   abstract PatternSetMatcher titleWordsMatcher();
@@ -81,7 +79,6 @@ public abstract class PositionMarker extends AbstractConstraintlessProcessingSte
             final TokenSequence.Span matchSpan = match.spanning().get().span();
             log.info("In {} matches {} at offsets {}", inputDoc.docid(),
                 matchSpan.tokenizedText(), matchSpan.charOffsetRange());
-            ++matchesFound;
             newVMs.addValueMentions(ValueMention.builder(JOB_TITLE, matchSpan).build());
           }
         }
@@ -97,10 +94,6 @@ public abstract class PositionMarker extends AbstractConstraintlessProcessingSte
     } else {
       return inputDoc;
     }
-  }
-
-  public void logMatches() {
-    log.info("Found {} matches", matchesFound);
   }
 
   public static PositionMarker forTitleWords(final Iterable<String> titleWords) {
@@ -198,7 +191,6 @@ public abstract class PositionMarker extends AbstractConstraintlessProcessingSte
       }
 
       final ImmutableMap<Symbol, File> outputMap = outputMapB.build();
-      positionMarker.logMatches();
       log.info("Writing output file map of {} files to {}", outputMap.size(), outputFileMapFile);
       FileUtils
           .writeSymbolToFileMap(outputMap, Files.asCharSink(outputFileMapFile, Charsets.UTF_8));

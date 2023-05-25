@@ -9,7 +9,9 @@ class Region(SerifOffsetTheory):
     is_receiver = _SimpleAttribute(bool, default=False)
 
     @classmethod
-    def from_values(cls, owner=None, start_char=0, end_char=0):
+    def from_values(cls, owner=None, start_char=0, end_char=0, tag=None):
         ret = cls(owner=owner)
         ret.set_offset(start_char, end_char)
+        if tag is not None:
+            ret.tag = tag
         return ret

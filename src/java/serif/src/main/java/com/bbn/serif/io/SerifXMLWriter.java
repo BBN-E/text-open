@@ -1745,7 +1745,12 @@ public final class SerifXMLWriter {
       }
       ret.setAttribute("entity_type", mention.entityType().name().toString());
       ret.setAttribute("mention_type", mention.mentionType().name().toLowerCase());
-      ret.setAttribute("syn_node_id", idStringByIdentity(mention.node()));
+      if (!mention.synNodeIsTerminalFromToken()) {
+        ret.setAttribute("syn_node_id", idStringByIdentity(mention.node()));
+      } else {
+        ret.setAttribute("start_token", idStringByIdentity(mention.startToken()));
+        ret.setAttribute("end_token", idStringByIdentity(mention.endToken()));
+      }
 
       ret.setAttribute("confidence", Double.toString(mention.confidence()));
       ret.setAttribute("link_confidence", Double.toString(mention.linkConfidence()));

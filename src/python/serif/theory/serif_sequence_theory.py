@@ -6,6 +6,9 @@ from serif.theory.serif_theory import SerifTheory
 class SerifSequenceTheory(SerifTheory):
     _children = "This class attr must be defined by subclasses."
 
+    def __init__(self, *args, **kwargs):
+        super(SerifSequenceTheory, self).__init__(*args, **kwargs)
+
     def __len__(self):
         return len(self._children)
 
@@ -13,7 +16,11 @@ class SerifSequenceTheory(SerifTheory):
         return self._children.__iter__()
 
     def __contains__(self, item):
-        return self._children.__contains__(item)
+        try:
+            self.index(item)
+            return True
+        except ValueError as e:
+            return False
 
     def __getitem__(self, n):
         return self._children.__getitem__(n)
@@ -33,3 +40,6 @@ class SerifSequenceTheory(SerifTheory):
             'The %r class acts as a sequence of %r elements.  '
             'Additionally, it defines the following attributes:'
             % (cls.__theory_name__, child_class_name))
+
+    def index(self, elem):
+        return self._children.index(elem)

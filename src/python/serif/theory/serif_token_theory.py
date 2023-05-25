@@ -27,8 +27,11 @@ class SerifTokenTheory(SerifOffsetTheory):
 
     def _find_syn_node(self, syn_node):
         if len(syn_node) == 0:
-            assert syn_node.start_token == syn_node.end_token == self
-            return syn_node
+            # @hqiu. There's a chance that max token length is small that not every token appears in the parse tree
+            if syn_node.start_token == syn_node.end_token == self:
+                return syn_node
+            else:
+                return None
         elif len(syn_node) == 1:
             return self._find_syn_node(syn_node[0])
         else:
@@ -39,8 +42,7 @@ class SerifTokenTheory(SerifOffsetTheory):
             return None  # should never happen
 
     def index(self):
-        """Returns the index of this token in its token sequence. This is 
-           slow -- order n with length of sentence.
+        """Returns the index of this token in its token sequence.
         """
         return self.owner.index(self)
 

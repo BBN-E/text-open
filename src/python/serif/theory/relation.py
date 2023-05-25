@@ -15,6 +15,6 @@ class Relation(SerifTheory):
                                        is_required=True)
     tense = _SimpleAttribute(Tense, is_required=True)
     modality = _SimpleAttribute(Modality, is_required=True)
-    confidence = _SimpleAttribute(float, default=1.0)
+    confidence = _SimpleAttribute(float, default=1.0,is_required=True)
     model = _SimpleAttribute()
     pattern = _SimpleAttribute()

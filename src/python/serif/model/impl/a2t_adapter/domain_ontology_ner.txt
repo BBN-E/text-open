@@ -1,0 +1,6 @@
+<Entity type="DISEASE">
+<Entity type="FAC">
+<Entity type="LOC-GPE">
+<Entity type="PER">
+<Entity type="WEA">
+<Entity type="WHEN">

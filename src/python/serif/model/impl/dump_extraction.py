@@ -2,7 +2,7 @@ import os, json
 import logging
 import traceback
 import serifxml3
-from serif.model.base_model import BaseModel
+from serif.model.document_model import DocumentModel
 
 
 
@@ -12,12 +12,12 @@ def log_type_to_cnt(prefix,cnt_dict):
     for t,cnt in cnt_dict.items():
         logger.info("{}\t{}\t{}".format(prefix,t,cnt))
 
-class DumpExtraction(BaseModel):
+class DumpExtraction(DocumentModel):
 
     def __init__(self,**kwargs):
         super(DumpExtraction, self).__init__(**kwargs)
 
-    def process(self, serif_doc):
+    def process_document(self, serif_doc):
         try:
             event_mention_in_eer = set()
 

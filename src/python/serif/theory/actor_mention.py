@@ -1,14 +1,12 @@
 from serif.theory.actor_mention_theory import ActorMentionTheory
 from serif.theory.mention import Mention
-from serif.theory.sentence_theory import SentenceTheory
 from serif.xmlio import _ReferenceAttribute, _SimpleAttribute, _TextOfElement
 
 
 class ActorMention(ActorMentionTheory):
-    mention = _ReferenceAttribute('mention_id', cls=Mention)
-    sentence_theory = _ReferenceAttribute('sentence_theory_id',
-                                          cls=SentenceTheory)
-    source_note = _SimpleAttribute()
+    mention = _ReferenceAttribute('mention_id', cls=Mention, is_required=True)
+    sentence_theory = _ReferenceAttribute('sentence_theory_id', cls="SentenceTheory")
+    source_note = _SimpleAttribute(is_required=True, default="")
     # For Proper Name Actor Mentions:
     actor_db_name = _SimpleAttribute()
     actor_uid = _SimpleAttribute(int)

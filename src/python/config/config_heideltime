@@ -1,0 +1,25 @@
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/ingester/text_ingester.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/sentence_splitter/stanza_sentence_splitter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/stanza_adapter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/time_value_mention/heideltime_time_value_mention_model.py
+
+INGESTER TextIngester
+lang zh
+
+SENTENCE_SPLITTING_MODEL StanzaSentenceSplitter
+lang zh
+dir /nfs/raid87/u10/nlp/stanza/
+
+BASE_MODEL StanzaAdapter
+lang zh
+dir /nfs/raid87/u10/nlp/stanza/
+
+TIME_VALUE_MENTION_MODEL HeidelTime_TimeValueMentionModel
+lang chinese

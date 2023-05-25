@@ -11,9 +11,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.bbn.bue.common.symbols.Symbol;
 import com.bbn.serif.io.SerifXMLLoader;
 import com.bbn.serif.patterns.PatternGenerator;
-import com.bbn.serif.patterns.PatternGenerator.CONSTRAINTS;
+import com.bbn.serif.patterns.PatternGeneratorUD;
 import com.bbn.serif.theories.DocTheory;
 import com.bbn.serif.theories.EventMention;
 import com.bbn.serif.theories.SentenceTheory;
@@ -24,14 +25,22 @@ import com.bbn.serif.patterns.Pattern;
 public final class PatternGeneratorCoverageTester {
 
   public static void main(String argv[]) {
-    List<CONSTRAINTS> constraintsList = Arrays.asList(
-        CONSTRAINTS.PREDICATE_HEAD,
-        CONSTRAINTS.MENTION_ARGUMENT,
-        CONSTRAINTS.MENTION_ENTITY_TYPE,
-        CONSTRAINTS.PROPOSITION_ARGUMENT,
-        CONSTRAINTS.ARGUMENT_ROLE
+    List<PatternGenerator.CONSTRAINTS> propConstraintsList = Arrays.asList(
+            PatternGenerator.CONSTRAINTS.PREDICATE_HEAD,
+            PatternGenerator.CONSTRAINTS.MENTION_ARGUMENT,
+            PatternGenerator.CONSTRAINTS.MENTION_ENTITY_TYPE,
+            PatternGenerator.CONSTRAINTS.PROPOSITION_ARGUMENT,
+            PatternGenerator.CONSTRAINTS.ARGUMENT_ROLE
     );
-    Set<CONSTRAINTS> constraints = new HashSet<>(constraintsList);
+    Set<PatternGenerator.CONSTRAINTS> propConstraints = new HashSet<>(propConstraintsList);
+      List<PatternGeneratorUD.CONSTRAINTS> udConstraintsList = Arrays.asList(
+              PatternGeneratorUD.CONSTRAINTS.PREDICATE_HEAD,
+              PatternGeneratorUD.CONSTRAINTS.MENTION_ARGUMENT,
+              PatternGeneratorUD.CONSTRAINTS.MENTION_ENTITY_TYPE,
+              PatternGeneratorUD.CONSTRAINTS.PROPOSITION_ARGUMENT,
+              PatternGeneratorUD.CONSTRAINTS.ARGUMENT_ROLE
+      );
+      Set<PatternGeneratorUD.CONSTRAINTS> udConstraints = new HashSet<>(udConstraintsList);
 
     List<String> mentionPremodStopWordsList = Arrays.asList(
         "of", "the", "this", "his", "hers", "a", "an"
@@ -51,6 +60,7 @@ public final class PatternGeneratorCoverageTester {
         content = content.replace(" version=\"18\"", "");
         DocTheory docTheory = loader.loadFrom(content);
         PatternGenerator patternGenerator = new PatternGenerator(docTheory, mentionPremodStopWords);
+        PatternGeneratorUD patternGeneratorUD = new PatternGeneratorUD(docTheory, mentionPremodStopWords, true, 3);
 
         for (SentenceTheory st : docTheory.sentenceTheories()) {
          for (EventMention em: st.eventMentions()) {
@@ -60,16 +70,19 @@ public final class PatternGeneratorCoverageTester {
           System.out.println("Anchor node: " + anchorNode.toString());
           List<Pattern> patterns =
               patternGenerator.generateUnaryPropPatterns(
-                  anchorNode, 2, constraints);
-          System.out.println("Found: " + patterns.size() + " patterns");
-
+                  anchorNode, 2, propConstraints);
+          System.out.println("Found: " + patterns.size() + " PropPatterns");
+            patterns = patternGeneratorUD.generateUnaryPropPatterns(em, 2, udConstraints, new HashSet<Symbol>(), new HashSet<Symbol>());
+             System.out.println("Found: " + patterns.size() + " UDPatterns");
 /*          for (Pattern p : patterns) {
             System.out.println(p.toString() + "\n");
           }*/
          }
         }
 
-        line = reader.readLine();
+
+
+          line = reader.readLine();
       }
     } catch (IOException e) {
       e.printStackTrace();

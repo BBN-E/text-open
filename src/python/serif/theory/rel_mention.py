@@ -18,3 +18,4 @@ class RelMention(SerifTheory):
     time_arg = _ReferenceAttribute('time_arg_id', cls=ValueMention)
     time_arg_role = _SimpleAttribute()
     time_arg_score = _SimpleAttribute(float, default=0.0)
+    model = _SimpleAttribute(is_required=False)

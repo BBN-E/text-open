@@ -3,10 +3,10 @@ from serif.model.relation_model import RelationModel
 
 class SimpleRelationModel(RelationModel):
 
-    def __init__(self,**kwargs):
-        super(SimpleRelationModel,self).__init__(**kwargs)
+    def __init__(self, **kwargs):
+        super(SimpleRelationModel, self).__init__(**kwargs)
 
-    def get_relation_info(self, serif_doc):
+    def add_relations_to_document(self, serif_doc):
         # Put each RelMention into its own Relation
         mention_to_entity_dict = {}
         for entity in serif_doc.entity_set:
@@ -24,8 +24,6 @@ class SimpleRelationModel(RelationModel):
                     continue
                 left_entity = mention_to_entity_dict[left_mention]
                 right_entity = mention_to_entity_dict[right_mention]
-                relation_info = \
-                    (relation_mention.type, left_entity,
-                     right_entity, [relation_mention])
-                tuples.append(relation_info)
+                tuples.extend(RelationModel.add_new_relation(serif_doc.relation_set, relation_mention.type, left_entity,
+                                                             right_entity, [relation_mention]))
         return tuples

@@ -170,7 +170,12 @@ public final class SynNode implements Iterable<SynNode>, Spanning, HasHeadPreter
     if (children.isEmpty()) {
       return this;
     } else {
-      return children.get(headIndex);
+      if(headIndex < 0){
+        return null;
+      }
+      else{
+        return children.get(headIndex);
+      }
     }
   }
 
@@ -781,7 +786,8 @@ public final class SynNode implements Iterable<SynNode>, Spanning, HasHeadPreter
       if (child.isTerminal()) {
         result.append(child.tag.toString());
       } else {
-        if (child == head && markHead) {
+        // Currently we don't have head detection on all languages in PySerif
+        if (head != null && child == head && markHead) {
           result.append(child.toFlatString(markHead, true));
         } else {
           result.append(child.toFlatString(markHead, false));

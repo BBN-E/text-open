@@ -166,7 +166,7 @@ def parse_to_html(sentence, highlights=None):
         highlights = dict()
     parse = None
     score = float("-inf")
-    parses = [st.parse for st in sentence.sentence_theories] 
+    parses = [st.parse for st in sentence.sentence_theories if st.parse is not None]
     for p in parses:
         if p.score > score:
             parse = p
@@ -356,16 +356,19 @@ def entity_dot_label1(entity, mention):
     for (m, port) in mention_texts:
         text = m.text
         temp_text = quote_dot1(text).replace("\l", " ").strip()
-        parts = temp_text.split(m.atomic_head.text)
+        atomic_head_text = m.text
+        if m.syn_node is not None:
+            atomic_head_text = m.atomic_head.text
+        parts = temp_text.split(atomic_head_text)
         last_part = ""
         if len(parts) > 1:
             last_part = parts[1]
         if mention is not None and mention.text == text:
             s += '<TR><TD><FONT COLOR="red">"%s(%s)%s"</FONT></TD></TR>' % (
-            parts[0], escape_xml(m.atomic_head.text), last_part)
+            parts[0], escape_xml(atomic_head_text), last_part)
         # s += '<TR><TD><FONT COLOR="red">"%s" (%s)</FONT></TD></TR>' % (quote_dot1(text).replace("\l"," ").strip(),m.atomic_head.text)
         else:
-            s += '<TR><TD>"%s(%s)%s"</TD></TR>' % (parts[0], escape_xml(m.atomic_head.text), last_part)
+            s += '<TR><TD>"%s(%s)%s"</TD></TR>' % (parts[0], escape_xml(atomic_head_text), last_part)
         # s += '<TR><TD>"%s" (%s)</TD></TR>' % (quote_dot1(text).replace("\l"," ").strip(), m.atomic_head.text)
     s += "</TABLE>>"
     # print "%s++\n" %s
@@ -886,6 +889,8 @@ def event_dot_edges(doc, events, include_prop_anchors=False, focus=None,
                     if arg.entity:
                         entity = arg.entity
                         dst = dot_id(arg.entity)
+                    elif arg.event_mention:
+                        dst = dot_id(arg.event_mention)
                     else:
                         dst = dot_id(arg.value.value_mention)
                 if focus is not None and entity == focus:
@@ -1411,7 +1416,8 @@ def write_doc_entities_page(doc, out_dir):
         for mention in entity.mentions:
             sent = mention.owner_with_type(Sentence)
             sentences.add(sent)
-            s, e = mention.syn_node.start_char, mention.syn_node.end_char
+            s, e = mention.start_char, mention.end_char
+
             left_context = doc.get_original_text_substring(
                 max(sent.start_char, s - CONTEXT_SIZE), s - 1)
             if sent.start_char < s - CONTEXT_SIZE:
@@ -1422,7 +1428,16 @@ def write_doc_entities_page(doc, out_dir):
                 right_context += '...'
 
             temp_mention = escape_xml(mention.text)
-            temp_head = escape_xml(mention.atomic_head.text)
+            atomic_head_text = mention.text
+            if mention.atomic_head is not None:     
+                atomic_head_text = mention.atomic_head.text
+                
+            # Fix for name mentions that aren't in an NPP 
+            if (mention.syn_node is not None and 
+                mention.syn_node.parent == mention.atomic_head):
+                atomic_head_text = mention.text
+
+            temp_head = escape_xml(atomic_head_text)
             parts = temp_mention.split(temp_head)
             # print "%s--%s"% (parts[0],parts[1])
             mention_rows += ENTITY_MENTION_ROW % dict(
@@ -1433,7 +1448,7 @@ def write_doc_entities_page(doc, out_dir):
                 before_head=parts[0],
                 after_head=parts[1],
                 type=escape_xml(mention.mention_type.value),
-                atomicHead=escape_xml(mention.atomic_head.text),
+                atomicHead=escape_xml(atomic_head_text),
                 right=escape_xml(right_context))
         css = ''
         if (i % 2 == 0): css += ' even-entity'
@@ -1553,7 +1568,9 @@ def sentence_to_html(sent, highlights=None):
                                    or ()))
 
     def mention_sort_key(m):
-        return (m.syn_node.end_char - m.syn_node.start_char)
+        if m.syn_node is not None:
+            return m.syn_node.end_char - m.syn_node.start_char
+        return m.end_token.end_char - m.start_token.start_char
 
     mentions = []
     if sent.mention_set is not None:
@@ -1564,8 +1581,16 @@ def sentence_to_html(sent, highlights=None):
         if mention.mention_type not in (MentionType.name, MentionType.pron,  # @UndefinedVariable
                                         MentionType.desc):  # @UndefinedVariable
             continue
-        s = tok_list.index(mention.syn_node.start_token)
-        e = tok_list.index(mention.syn_node.end_token)
+
+        s = None
+        e = None
+        if mention.syn_node is not None:
+            s = tok_list.index(mention.syn_node.start_token)
+            e = tok_list.index(mention.syn_node.end_token)
+        else:
+            s = tok_list.index(mention.start_token)
+            e = tok_list.index(mention.end_token)
+
         entity_type = mention.entity_type
         if mention.entity_subtype != 'UNDET':
             entity_type += '.' + mention.entity_subtype

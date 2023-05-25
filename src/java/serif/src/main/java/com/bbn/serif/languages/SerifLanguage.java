@@ -429,7 +429,9 @@ public abstract class SerifLanguage {
         "english", EnglishSerifLanguage.getInstance(),
         "chinese", ChineseSerifLanguage.getInstance(),
         "spanish", SpanishSerifLanguage.getInstance(),
-        "arabic", ArabicSerifLanguage.getInstance()));
+        "arabic", ArabicSerifLanguage.getInstance(),
+            "farsi", FarsiSerifLanguage.getInstance()
+            ));
   }
 
   public final Predicate<SynNode> isPrepositionPredicate() {

@@ -5,6 +5,7 @@ import com.bbn.bue.sexp.Sexp;
 import com.bbn.bue.sexp.SexpAtom;
 import com.bbn.bue.sexp.SexpList;
 import com.bbn.bue.sexp.SexpUtils;
+import com.bbn.serif.theories.Event;
 import com.bbn.serif.theories.Mention;
 import com.bbn.serif.theories.Proposition.PredicateType;
 import com.bbn.serif.types.EntitySubtype;
@@ -38,6 +39,7 @@ public class PatternFactory {
   public final static Symbol ARGUMENT_SYM = Symbol.from("argument");
   public final static Symbol DOC_SYM = Symbol.from("doc");
   public final static Symbol EVENT_SYM = Symbol.from("event");
+  public final static Symbol EER_SYM = Symbol.from("event-event-relation");
   public final static Symbol INTERSECTION_SYM = Symbol.from("intersection");
   public final static Symbol MENTION_SYM = Symbol.from("mention");
   public final static Symbol NEGATION_SYM = Symbol.from("negation");
@@ -47,6 +49,7 @@ public class PatternFactory {
   public final static Symbol MPROP_SYM = Symbol.from("mprop");
   public final static Symbol CPROP_SYM = Symbol.from("cprop");
   public final static Symbol SPROP_SYM = Symbol.from("sprop");
+  public final static Symbol DPROP_SYM = Symbol.from("dprop");
   public final static Symbol ANYPROP_SYM = Symbol.from("anyprop");
   public final static Symbol QUOTATION_SYM = Symbol.from("quotation");
   public final static Symbol REGEX_SYM = Symbol.from("regex");
@@ -153,6 +156,15 @@ public class PatternFactory {
   public final static Symbol MEMBERS_SYM = Symbol.from("members");
   public final static Symbol GREEDY_SYM = Symbol.from("GREEDY");
 
+  //Event Pattern
+  public final static Symbol EVENTTYPE_SYM = Symbol.from("eventtype");
+  public final static Symbol ANCHOR_SYM = Symbol.from("anchor");
+  public final static Symbol BLOCK_ANCHOR_SYM = Symbol.from("block_anchor");
+
+  //EventEventRelation Pattern
+  public final static Symbol RELATIONTYPE_SYM = Symbol.from("relationtype");
+  public final static Symbol TRIGGER_SYM = Symbol.from("trigger");
+  public final static Symbol BLOCK_TRIGGER_SYM = Symbol.from("block_trigger");
 
   private final Map<Symbol, Pattern> referencePatterns;
   private final Map<Symbol, Set<Symbol>> wordSets;
@@ -201,8 +213,10 @@ public class PatternFactory {
       return buildPattern(new PropPattern.Builder(PredicateType.COMP), sexp, propPatternBUH);
     } else if (type.equals(SPROP_SYM)) {
       return buildPattern(new PropPattern.Builder(PredicateType.SET), sexp, propPatternBUH);
+    } else if (type.equals(DPROP_SYM)) {
+      return buildPattern(new PropPattern.Builder(PredicateType.DEPENDENCY), sexp, propPatternBUH);
     } else if (type.equals(ANYPROP_SYM)) {
-      return buildPattern(new PropPattern.Builder(null), sexp, propPatternBUH);
+      return buildPattern(new PropPattern.Builder(PredicateType.ANY), sexp, propPatternBUH);
     } else if (type.equals(REGEX_SYM)) {
       return buildPattern(new RegexPattern.Builder(), sexp, regexPatternBUH);
     } else if (type.equals(TEXT_SYM)) {
@@ -226,7 +240,10 @@ public class PatternFactory {
       //} else if (type.equals(QUOTATION_SYM)) {
       //} else if (type.equals(PARSE_NODE_SYM)) {
       //} else if (type.equals(DOC_SYM) {
-      //} else if (type.equals(EVENT_SYM)) {
+    } else if (type.equals(EVENT_SYM)) {
+      return buildPattern(new EventPattern.Builder(), sexp, eventPatternBUH);
+    } else if (type.equals(EER_SYM)) {
+      return buildPattern(new EventEventRelationPattern.Builder(), sexp, eerPatternBUH);
       //} else if (type.equals(NEGATION_SYM)) {
       //} else if (type.equals(RELATION_SYM)) {
     } else if (type.equals(VALUE_SYM)) {
@@ -334,7 +351,6 @@ public class PatternFactory {
           }
         }
       };
-
 
   /**
    * This is a function that will pull out wildcard symbols (ending with *) or non-wildcard symbols
@@ -886,5 +902,84 @@ public class PatternFactory {
   }
 
   private final UnionPatternBuilderUpdateHandler unionPatternBUH =
-      new UnionPatternBuilderUpdateHandler();
+          new UnionPatternBuilderUpdateHandler();
+
+  private class EventPatternBuilderUpdateHandler
+          implements BuilderUpdateHandler<EventPattern.Builder> {
+
+    @Override
+    public boolean updateBuilder(EventPattern.Builder builder,
+                                 Symbol type, Sexp element) {
+
+      if (patternBUH.updateBuilder(builder, type, element)) {
+        return true;
+      }
+
+      if (languageVariantPatternBUH.updateBuilder(builder, type, element)) {
+        return true;
+      }
+
+      if (type.equals(REGEX_SYM)) {
+        Sexp subelement = SexpUtils.forceList(element).get(0);
+        builder.withRegexPattern(convertSexpToPattern.apply(subelement));
+      } else if (type.equals(ANCHOR_SYM)) {
+        builder.withAnchors(SexpUtils.getCheckSymSetWild(element, false));
+      } else if (type.equals(BLOCK_ANCHOR_SYM)) {
+        builder.withBlockedAnchors(SexpUtils.getCheckSymSetWild(element, false));
+      } else if (type.equals(BLOCK_ARGS_SYM)) {
+        builder.withBlockedArgs(SexpUtils.getCheckList(element, convertSexpToArgPattern));
+      } else if (type.equals(ARGS_SYM)) {
+        builder.withArgs(SexpUtils.getCheckList(element, convertSexpToArgPattern));
+      } else if (type.equals(OPT_ARGS_SYM)) {
+        builder.withOptArgs(SexpUtils.getCheckList(element, convertSexpToArgPattern));
+      } else if (type.equals(EVENTTYPE_SYM)) {
+        builder.withEventTypes(SexpUtils.getCheckSymSet(element));
+      } else {
+        throw new PatternSexpParsingException(
+                "Failed to parse event pattern property " + type.toString(), element);
+      }
+      return true;
+    }
+  }
+
+  private final EventPatternBuilderUpdateHandler eventPatternBUH =
+          new EventPatternBuilderUpdateHandler();
+
+  private class EventEventRelationPatternBuilderUpdateHandler
+          implements BuilderUpdateHandler<EventEventRelationPattern.Builder> {
+
+    @Override
+    public boolean updateBuilder(EventEventRelationPattern.Builder builder,
+                                 Symbol type, Sexp element) {
+
+      if (patternBUH.updateBuilder(builder, type, element)) {
+        return true;
+      }
+
+      if (languageVariantPatternBUH.updateBuilder(builder, type, element)) {
+        return true;
+      }
+
+      if (type.equals(TRIGGER_SYM)) {
+        builder.withTriggers(SexpUtils.getCheckSymSetWild(element, false));
+      } else if (type.equals(BLOCK_TRIGGER_SYM)) {
+        builder.withBlockedTriggers(SexpUtils.getCheckSymSetWild(element, false));
+      } else if (type.equals(BLOCK_ARGS_SYM)) {
+        builder.withBlockedArgs(SexpUtils.getCheckList(element, convertSexpToArgPattern));
+      } else if (type.equals(ARGS_SYM)) {
+        builder.withArgs(SexpUtils.getCheckList(element, convertSexpToArgPattern));
+      } else if (type.equals(OPT_ARGS_SYM)) {
+        builder.withOptArgs(SexpUtils.getCheckList(element, convertSexpToArgPattern));
+      } else if (type.equals(RELATIONTYPE_SYM)) {
+        builder.withRelationTypes(SexpUtils.getCheckSymSet(element));
+      } else {
+        throw new PatternSexpParsingException(
+                "Failed to parse event pattern property " + type.toString(), element);
+      }
+      return true;
+    }
+  }
+
+  private final EventEventRelationPatternBuilderUpdateHandler eerPatternBUH =
+          new EventEventRelationPatternBuilderUpdateHandler();
 }

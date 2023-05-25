@@ -2,13 +2,14 @@ from serif.model.relation_mention_model import RelationMentionModel
 
 from serif.theory.enumerated_type import Tense, Modality
 
+
 class DrugFinderRelationMentionModel(RelationMentionModel):
 
-    def __init__(self,**kwargs):
-        super(DrugFinderRelationMentionModel,self).__init__(**kwargs)
+    def __init__(self, **kwargs):
+        super(DrugFinderRelationMentionModel, self).__init__(**kwargs)
 
-    def get_relation_mention_info(self, sentence):
-        tuples = []
+    def add_relation_mentions_to_sentence(self, sentence):
+        ret = []
         relation_type = 'DISCOVERER'
         persons = [m for m in sentence.mention_set if m.entity_type == 'PER']
         drugs = [m for m in sentence.mention_set if m.entity_type == 'DRUG']
@@ -28,5 +29,7 @@ class DrugFinderRelationMentionModel(RelationMentionModel):
                     closest = person
                     closest_distance = distance
             if closest is not None:
-                tuples.append((relation_type, closest, drug, Tense.Unspecified, Modality.Asserted))
-        return tuples
+                ret.extend(self.add_or_update_relation_mention(sentence.rel_mention_set, relation_type, closest, drug,
+                                                               Tense.Unspecified,
+                                                               Modality.Asserted))
+        return ret

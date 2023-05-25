@@ -21,7 +21,10 @@ class SerifEntityTheory(SerifTheory):
         for mention in self.mentions:
             if mention.mention_type != MentionType.name:
                 continue
-            name = mention.atomic_head.text.lower()
+            
+            name = mention.text
+            if mention.atomic_head is not None:
+                name = mention.atomic_head.text.lower()
             if longest_name_mention is None or len(name) > longest_length:
                 longest_name_mention = mention
                 longest_length = len(name)

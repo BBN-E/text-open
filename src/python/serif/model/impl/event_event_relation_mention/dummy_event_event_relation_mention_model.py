@@ -2,17 +2,19 @@ from serif.model.event_event_relation_mention_model import EventEventRelationMen
 
 
 class DummyEventEventRelationMentionModel(EventEventRelationMentionModel):
-    def __init__(self,**kwargs):
-        super(DummyEventEventRelationMentionModel,self).__init__(**kwargs)
-    def get_event_event_relation_mention_info(self, serif_doc):
-        # Look for two event mentions in one sentence and
-        # create EventEventRelationMention from them
-        tuples = []
+    def __init__(self, **kwargs):
+        super(DummyEventEventRelationMentionModel, self).__init__(**kwargs)
+
+    def add_event_event_relation_mentions_to_document(self, serif_doc):
+        ret = list()
         for sentence in serif_doc.sentences:
             if len(sentence.event_mention_set) < 2:
                 continue
             ems = sentence.event_mention_set
-            eerm_info = ("DUMMY_RELATION", 0.75, "TESTMODEL",
-                         [("arg1", ems[0]), ("arg2", ems[1])])
-            tuples.append(eerm_info)
-        return tuples
+            ret.extend(EventEventRelationMentionModel.add_new_event_event_relation_mention(
+                serif_doc.event_event_relation_mention_set,
+                "DUMMY_RELATION",
+                0.75,
+                "TESTMODEL",
+                ems[0], ems[1]))
+        return ret

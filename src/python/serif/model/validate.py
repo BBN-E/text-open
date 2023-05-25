@@ -25,6 +25,11 @@ def validate_sentence_tokens(sentence, docid, sentence_count):
             'no `text` attribute'
             .format(j, t_id, sentence_count, sentence.id, docid))
 
+def validate_sentence_value_mention_set(sentence, docid, sentence_count):
+    if sentence.value_mention_set is None:
+        raise IOError(
+            'WARNING: Sentence #{} ({}) in Document {} has no ValueMentionSet '
+            'container'.format(sentence_count, sentence.id, docid))
 
 def validate_sentence_parse(sentence, docid, sentence_count):
 

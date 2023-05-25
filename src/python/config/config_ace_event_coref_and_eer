@@ -1,0 +1,16 @@
+
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/ingester/serifxml_ingester.py
+
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/event/intra_document_same_type_event_cofererence_model.py
+
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/event_event_relation_mention/event_type_based_eerm_allow_list_model.py
+
+INGESTER SerifxmlIngester
+
+EVENT_MENTION_COREF_MODEL IntraDocumentSamTypeEventCoreferenceModel
+
+EVENT_EVENT_RELATION_MENTION_MODEL EventTypeBasedEERMAllowListModel
+input_tabular_path /nfs/raid88/u10/users/hqiu_ad/data/white_listed_eerms.list

@@ -2,6 +2,8 @@ package com.bbn.serif.patterns.converters;
 
 import com.bbn.serif.patterns.ArgumentPattern;
 import com.bbn.serif.patterns.CombinationPattern;
+import com.bbn.serif.patterns.EventPattern;
+import com.bbn.serif.patterns.EventEventRelationPattern;
 import com.bbn.serif.patterns.IntersectionPattern;
 import com.bbn.serif.patterns.MentionPattern;
 import com.bbn.serif.patterns.Pattern;
@@ -16,6 +18,10 @@ public abstract class PatternConverter<T> {
   public abstract T convertArgumentPattern(ArgumentPattern pattern);
 
   public abstract T convertCombinationPattern(CombinationPattern pattern);
+
+  public abstract T convertEventPattern(EventPattern pattern);
+
+  public abstract T convertEventEventRelationPattern(EventEventRelationPattern pattern);
 
   public abstract T convertIntersectionPattern(IntersectionPattern pattern);
 
@@ -36,6 +42,10 @@ public abstract class PatternConverter<T> {
       return convertArgumentPattern((ArgumentPattern) pattern);
     } else if (pattern instanceof CombinationPattern) {
       return convertCombinationPattern((CombinationPattern) pattern);
+    } else if (pattern instanceof EventPattern) {
+      return convertEventPattern((EventPattern) pattern);
+    } else if (pattern instanceof EventEventRelationPattern) {
+      return convertEventEventRelationPattern((EventEventRelationPattern) pattern);
     } else if (pattern instanceof IntersectionPattern) {
       return convertIntersectionPattern((IntersectionPattern) pattern);
     } else if (pattern instanceof MentionPattern) {

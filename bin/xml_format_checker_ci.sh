@@ -5,10 +5,10 @@ set -o pipefail
 set -u
 
 MVN="/opt/apache-maven-3.3.9/bin/mvn"
-JAVA_HOME="/home/hqiu/jdk"
+JAVA_HOME="/opt/jdk1.8.0_201-x86_64"
 REPO_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && cd .. && pwd )"
-PYTHON3="/opt/Python-3.5.2-x86_64/bin/python3.5"
-MVN_SETTING="/home/hqiu/.m2/settings.xml"
+PYTHON3="/opt/Python-3.5.2-x86_64/bin/python3"
+MVN_SETTING="$CI_PROJECT_DIR/m2_settings.xml"
 
 tmp=`mktemp -d`
 

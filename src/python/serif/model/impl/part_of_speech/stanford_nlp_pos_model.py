@@ -1,20 +1,21 @@
+import sys
+
+import stanfordnlp
 from serif.model.part_of_speech_model import PartOfSpeechModel
 
-import sys
-import stanfordnlp
 
 class StanfordNLPPOSModel(PartOfSpeechModel):
     def __init__(self, lang, models_dir, **kwargs):
         super(StanfordNLPPOSModel, self).__init__(**kwargs)
         self.nlp = \
-           stanfordnlp.Pipeline(
-               processors='tokenize,pos', 
-               lang=lang, 
-               tokenize_pretokenized=True,
-               models_dir=models_dir,use_gpu=True)
+            stanfordnlp.Pipeline(
+                processors='tokenize,pos',
+                lang=lang,
+                tokenize_pretokenized=True,
+                models_dir=models_dir, use_gpu=True)
 
-    def get_part_of_speech_info(self, sentence):
-        part_of_speech_info = []
+    def add_pos_to_sentence(self, sentence):
+        ret = []
 
         serif_token_sequence = sentence.token_sequence
         text = ""
@@ -23,7 +24,7 @@ class StanfordNLPPOSModel(PartOfSpeechModel):
                 text += " "
             text += token.text
         doc = self.nlp(text)
-        
+
         serif_token_count = 0
         for stanford_sentence in doc.sentences:
             for stanford_token in stanford_sentence.tokens:
@@ -32,7 +33,6 @@ class StanfordNLPPOSModel(PartOfSpeechModel):
                     print("Token mismatch! " + serif_token.text + " " + stanford_token.text)
                     sys.exit(1)
                 word = stanford_token.words[-1]
-                part_of_speech_info.append((serif_token, word.xpos, word.upos))
+                ret.extend(PartOfSpeechModel.add_new_pos(sentence.pos_sequence, serif_token, word.xpos, upos=word.upos))
                 serif_token_count += 1
-        return part_of_speech_info
-
+        return ret

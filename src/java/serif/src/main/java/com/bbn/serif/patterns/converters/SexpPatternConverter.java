@@ -7,6 +7,8 @@ import com.bbn.bue.sexp.SexpList;
 import com.bbn.serif.patterns.ArgumentPattern;
 import com.bbn.serif.patterns.CombinationPattern;
 import com.bbn.serif.patterns.ComparisonConstraint;
+import com.bbn.serif.patterns.EventPattern;
+import com.bbn.serif.patterns.EventEventRelationPattern;
 import com.bbn.serif.patterns.IntersectionPattern;
 import com.bbn.serif.patterns.LabelPatternReturn;
 import com.bbn.serif.patterns.LanguageVariantSwitchingPattern;
@@ -289,6 +291,45 @@ public class SexpPatternConverter extends PatternConverter<Sexp> {
   }
 
   @Override
+  public Sexp convertEventPattern(EventPattern pattern) {
+    SexpList result = initSexp(PatternFactory.EVENT_SYM);
+    handlePatternProperties(result, pattern);
+    handleLanguageVariantProperties(result, pattern);
+
+    addCollectionProperty(result, PatternFactory.EVENTTYPE_SYM,
+            pattern.getEventTypes(), convertSymbolToSexp);
+    addCollectionProperty(result, PatternFactory.ANCHOR_SYM,
+            pattern.getAnchors(), convertSymbolToSexp);
+    addCollectionProperty(result, PatternFactory.BLOCK_ANCHOR_SYM,
+            pattern.getBlockedAnchors(), convertSymbolToSexp);
+
+    addProperty(result, PatternFactory.REGEX_SYM,
+            pattern.getRegexPattern(), convertPatternToSexp);
+    return result;
+  }
+
+  @Override
+  public Sexp convertEventEventRelationPattern(EventEventRelationPattern pattern) {
+    SexpList result = initSexp(PatternFactory.EER_SYM);
+    handlePatternProperties(result, pattern);
+    handleLanguageVariantProperties(result, pattern);
+
+    addCollectionProperty(result, PatternFactory.RELATIONTYPE_SYM,
+            pattern.getRelationTypes(), convertSymbolToSexp);
+    addCollectionProperty(result, PatternFactory.TRIGGER_SYM,
+            pattern.getTriggers(), convertSymbolToSexp);
+    addCollectionProperty(result, PatternFactory.BLOCK_TRIGGER_SYM,
+            pattern.getBlockedTriggers(), convertSymbolToSexp);
+    addCollectionProperty(result, PatternFactory.ARGS_SYM,
+            pattern.getArgs(), convertPatternToSexp);
+    addCollectionProperty(result, PatternFactory.BLOCK_ARGS_SYM,
+            pattern.getBlockedArgs(), convertPatternToSexp);
+    addCollectionProperty(result, PatternFactory.OPT_ARGS_SYM,
+            pattern.getOptArgs(), convertPatternToSexp);
+    return result;
+  }
+
+  @Override
   public Sexp convertIntersectionPattern(IntersectionPattern pattern) {
     SexpList result = initSexp(PatternFactory.INTERSECTION_SYM);
     handlePatternProperties(result, pattern);
@@ -367,6 +408,8 @@ public class SexpPatternConverter extends PatternConverter<Sexp> {
       result = initSexp(PatternFactory.SPROP_SYM);
     } else if (pattern.getPredicateType().equals(PredicateType.MODIFIER)) {
       result = initSexp(PatternFactory.MPROP_SYM);
+    } else if (pattern.getPredicateType().equals(PredicateType.DEPENDENCY)) {
+      result = initSexp(PatternFactory.DPROP_SYM);
     } else {
       result = initSexp(PatternFactory.ANYPROP_SYM);
     }

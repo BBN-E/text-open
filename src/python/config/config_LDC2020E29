@@ -1,0 +1,28 @@
+## env PYTHONPATH=/nfs/raid66/u11/users/brozonoy/src/aida/experiments/doc_processing/sequences/../../../python:/nfs/raid66/u11/users/brozonoy/text-open:/nfs/raid66/u11/users/brozonoy/NER/nlplingo:/nfs/raid87/u11/users/hqiu/miniconda_prod/envs/pyserif-gpu/lib/python3.7/site-packages /nfs/raid87/u11/users/hqiu/miniconda_prod/envs/pyserif-gpu/bin/python3 /nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/driver/pipeline.py /nfs/raid66/u11/users/brozonoy/text-open/src/python/config/config_LDC2020E29 /nfs/raid66/u11/users/brozonoy/NER/data/LDC2020E29_AIDA_Phase_2_Practice_Topic_Annotation_V2.0_serifxml/filelist /nfs/raid66/u11/users/brozonoy/NER/data/LDC2020E29_AIDA_Phase_2_Practice_Topic_Annotation_V2.0_serifxml/serifxmls/
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/ingester/text_ingester.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/sentence_splitter/stanza_sentence_splitter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/stanza_adapter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/mention_from_tokens/mentions_from_span_annotations.py
+
+INGESTER TextIngester
+lang English
+
+SENTENCE_SPLITTING_MODEL StanzaSentenceSplitter
+lang en
+dir /nfs/raid66/u11/users/brozonoy/text-open/stanza_models/
+
+BASE_MODEL StanzaAdapter
+lang en
+no_ner
+dir /nfs/raid66/u11/users/brozonoy/text-open/stanza_models/
+
+MENTION_MODEL MentionsFromSpanAnnotations
+annotations_file /nfs/raid66/u11/users/brozonoy/NER/data/LDC2020E29_AIDA_Phase_2_Practice_Topic_Annotation_V2.0_serifxml/annotations.json

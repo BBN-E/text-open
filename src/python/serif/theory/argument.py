@@ -6,7 +6,7 @@ from serif.xmlio import _SimpleAttribute, _ReferenceAttribute
 
 
 class Argument(SerifTheory):
-    role = _SimpleAttribute(default='')
+    role = _SimpleAttribute()
     mention = _ReferenceAttribute('mention_id', cls=Mention)
     syn_node = _ReferenceAttribute('syn_node_id', cls=SynNode)
     proposition = _ReferenceAttribute('proposition_id', cls=Proposition)

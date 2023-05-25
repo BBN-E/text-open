@@ -1,7 +1,19 @@
 package com.bbn.serif.patterns;
 
 import com.bbn.bue.common.symbols.Symbol;
+import com.bbn.serif.patterns.matching.ArgumentValueMatchingPattern;
+import com.bbn.serif.patterns.matching.PatternMatch;
+import com.bbn.serif.patterns.matching.PatternMatchState;
+import com.bbn.serif.patterns.matching.PatternReturns;
+import com.bbn.serif.patterns.matching.PropMatchingPattern;
+import com.bbn.serif.patterns.matching.PropPatternMatch;
+import com.bbn.serif.theories.DocTheory;
 import com.bbn.serif.theories.Proposition;
+import com.bbn.serif.theories.Proposition.Argument;
+import com.bbn.serif.theories.Proposition.PropositionArgument;
+import com.bbn.serif.theories.SentenceTheory;
+
+import com.google.common.base.Optional;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,7 +22,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public final class PropPattern extends LanguageVariantSwitchingPattern {
+public final class PropPattern extends LanguageVariantSwitchingPattern implements
+    PropMatchingPattern, ArgumentValueMatchingPattern {
 
   private final Set<Symbol> predicates;
   private final Set<Symbol> predicatePrefixes;
@@ -46,6 +59,12 @@ public final class PropPattern extends LanguageVariantSwitchingPattern {
   public static final Set<Symbol> leftJustifiedRoles =
       new HashSet<>(
           Arrays.asList(Symbol.from("<unknown>"), Symbol.from("<sub>"), Symbol.from("<poss>")));
+  public static final Set<Symbol> leftJustifiedDPropRoles =
+          new HashSet<>(
+                  Arrays.asList(Symbol.from("nsubj"), Symbol.from("nsubj:pass"), Symbol.from("amod"),
+                          Symbol.from("advmod"), Symbol.from("nmod:poss"), Symbol.from("compound"),
+                          Symbol.from("nummod"))
+          );
 
 
   /**
@@ -891,10 +910,43 @@ public final class PropPattern extends LanguageVariantSwitchingPattern {
     return finalString.replaceAll("\\s+", " ");
   }
 
+  public String getDPropPrettyString() {
+    StringBuilder sb = new StringBuilder();
+
+    // Left justified arguments
+    for (ArgumentPattern ap : args) {
+      if (ap.getRoles().size() > 0 && leftJustifiedDPropRoles.contains(ap.getRoles().get(0))) {
+        sb.append(" ");
+        sb.append(ap.toDPropPrettyString());
+        sb.append(" ");
+      }
+    }
+
+    sb.append(" ");
+    sb.append(getPrettyPredicateHead());
+    sb.append(getPrettyReturnLabel());
+
+    // Right justified arguments
+    for (ArgumentPattern ap : args) {
+      if (ap.getRoles().size() == 0 ||
+              !leftJustifiedDPropRoles.contains(ap.getRoles().get(0)))
+      {
+        sb.append(" ");
+        sb.append(ap.toDPropPrettyString());
+      }
+    }
+
+    return sb.toString().replaceAll("\\s+", " ");
+  }
+
   public String toPrettyString() {
 
     if (predicateType == Proposition.PredicateType.MODIFIER) {
       return getMPropPrettyString();
+    }
+
+    if (predicateType == Proposition.PredicateType.DEPENDENCY) {
+      return getDPropPrettyString();
     }
 
     StringBuilder sb = new StringBuilder();
@@ -989,7 +1041,92 @@ public final class PropPattern extends LanguageVariantSwitchingPattern {
       return "[s]";
     else if (predicateType == Proposition.PredicateType.COMP)
       return "[c]";
+    else if (predicateType == Proposition.PredicateType.DEPENDENCY)
+      return "[d]";
     else
       return "[" + predicateType.toString() + "]";
+  }
+
+  // This is the match function for PropMatchingPattern
+  @Override
+  public PatternReturns match(DocTheory dt, SentenceTheory st, Proposition p,
+      PatternMatchState matchState, boolean fallThroughChildren) {
+    final Optional<PatternReturns> cachedMatch = matchState.cachedMatches(this, p);
+    if (cachedMatch.isPresent()) {
+      return cachedMatch.get();
+    }
+
+    final boolean matches = passesPropTypeConstraint(p)
+        && passesPredicateConstraint(p)
+        && passesArgumentConstraint(p, dt, st, matchState, fallThroughChildren);
+
+    if (matches) {
+      final PatternMatch match = PropPatternMatch.of(this, dt, st, p);
+      return matchState.registerPatternMatch(this, p, match);
+    } else {
+      return matchState.registerUnmatched(this, p);
+    }
+  }
+
+  // This is the match function for ArgumentValueMatchingPattern
+  @Override
+  public PatternReturns match(DocTheory dt, SentenceTheory st, Argument a,
+      PatternMatchState matchState, boolean fallThroughChildren) {
+    final Optional<PatternReturns> cachedMatch = matchState.cachedMatches(this, a);
+    if (cachedMatch.isPresent()) {
+      return cachedMatch.get();
+    }
+
+    if (a instanceof PropositionArgument) {
+      PropositionArgument pa = (PropositionArgument) a;
+      return match(dt, st, pa.proposition(), matchState, fallThroughChildren);
+    }
+    return matchState.registerUnmatched(this, a);
+  }
+
+  private boolean passesArgumentConstraint(Proposition p, DocTheory dt, SentenceTheory st,
+      PatternMatchState matchState, boolean fallThroughChildren)
+  {
+    boolean allArgumentPatternsMatch = true;
+    for (ArgumentPattern ap : args) {
+      boolean foundArgumentMatch = false;
+      for (Argument a : p.args()) {
+        PatternReturns argumentPatternReturns =
+            ap.match(dt, st, a, matchState, fallThroughChildren);
+        if (argumentPatternReturns.matched()) {
+          foundArgumentMatch = true;
+          break;
+        }
+      }
+      if (!foundArgumentMatch) {
+        allArgumentPatternsMatch = false;
+        break;
+      }
+    }
+    return allArgumentPatternsMatch;
+  }
+
+  private boolean passesPredicateConstraint(Proposition p) {
+    return predicates.size() == 0 ||
+        (p.predHead().isPresent() && predicates.contains(p.predHead().get().headWord()));
+  }
+
+  private boolean passesPropTypeConstraint(Proposition p) {
+    if (p.predType() != predicateType) {
+      if (p.predType() == Proposition.PredicateType.COPULA && predicateType == Proposition.PredicateType.VERB) {
+        // then that's OK
+      } else if (p.predType() ==  Proposition.PredicateType.NAME && predicateType == Proposition.PredicateType.NOUN) {
+        // this is OK too
+      } else if (p.predType() == Proposition.PredicateType.PRONOUN && predicateType == Proposition.PredicateType.NOUN) {
+        // this is OK too
+      } else if (p.predType() == Proposition.PredicateType.POSS && predicateType == Proposition.PredicateType.MODIFIER) {
+        // this is OK too
+      } else if (predicateType == Proposition.PredicateType.ANY) {
+        // It is OK if this prop pattern should match "any" proposition
+      } else {
+        return false;
+      }
+    }
+    return true;
   }
 }

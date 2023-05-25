@@ -15,7 +15,7 @@ class SerifSentenceTheory(SerifOffsetTheory):
         None if this sentence is not owned by a 'Sentences'.
         """
         if isinstance(self.owner, Sentences):
-            return self.owner._children.index(self)
+            return self.owner.index(self)
 
     def _get_sentence_theory(self):
         if len(self._sentence_theories) == 0:
@@ -39,3 +39,10 @@ class SerifSentenceTheory(SerifOffsetTheory):
         sentence has no sentence_theory.  If the sentence has multiple
         candidate sentence_theories, then this will raise an
         exception.""")
+
+    def get_dependency_info(self):
+        if self.dependency_set is None:
+            return None
+        return self.dependency_set.get_dependency_info(
+            self.mention_set, self.value_mention_set, self.event_mention_set)
+

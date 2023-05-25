@@ -15,30 +15,60 @@
 
 # Then you can run pipeline.py with the python command which points to a miniconda version of python with all the requirements
 
+import logging
+
+import torch
+import stanfordnlp
+
 from serif.model.dependency_model import DependencyModel
 
-import stanfordnlp
-import sys
+logger = logging.getLogger(__name__)
+
+
+def get_governer_from_stanza(stanford_or_stanza_word):
+    if hasattr(stanford_or_stanza_word, "governor"):
+        return stanford_or_stanza_word.governor
+    if hasattr(stanford_or_stanza_word, "head"):
+        return stanford_or_stanza_word.head
+    raise TypeError(
+        "Only support stanfordnlp.Word or stanza.Word, got {}".format(type(stanford_or_stanza_word).__name__))
+
 
 class StanfordNLPDependencyParser(DependencyModel):
-    
+
     def __init__(self, lang, models_dir, **kwargs):
-        super(StanfordNLPDependencyParser,self).__init__(**kwargs)
+        super(StanfordNLPDependencyParser, self).__init__(**kwargs)
+        self.lang = lang
+        self.models_dir = models_dir
         if "use_data_from_stanford_adapter" in kwargs:
-            self.nlp = None
+            self.load_depparse_model = False
         else:
+            self.load_depparse_model = True
+
+    def load_model(self):
+        if self.load_depparse_model is True:
             # For lang,models_dir, refer to https://stanfordnlp.github.io/stanfordnlp/models.html
-            self.nlp = stanfordnlp.Pipeline(processors='tokenize,pos,depparse', lang=lang, tokenize_pretokenized=True, models_dir=models_dir, use_gpu=True)
+            self.nlp = stanfordnlp.Pipeline(processors='tokenize,pos,depparse', lang=self.lang,
+                                            tokenize_pretokenized=True,
+                                            models_dir=self.models_dir, use_gpu=True)
+        else:
+            self.nlp = None
+
+    def unload_model(self):
+        if self.nlp is not None:
+            del self.nlp
+            torch.cuda.empty_cache()
+        self.nlp = None
 
     def add_dependencies_to_sentence(self, sentence):
-        stanford_sentence = None
         if self.nlp is None:
-            try: 
-                stanford_sentence = sentence.stanford_sentence
-            except AttributeError:
-                print("If parameter use_data_from_stanford_adapter is used, the StanfordNLPAdapter model must have been run")
-                sys.exit(1)
-            self.apply_dependencies(sentence, stanford_sentence) 
+            if hasattr(sentence, "stanford_sentence"):
+                self.apply_dependencies(sentence, sentence.stanford_sentence)
+            else:
+                logger.info(
+                    "Skipping {} {} due to cannot find stanford_sentence. It may be stanza_adapter has an issue when processing the sentence".format(
+                        sentence.document.docid, sentence.sent_no))
+
         else:
             # Get tokenized sentence to send through stanfordnlp universal dependency parser
             tokenized_sentence_text = ""
@@ -53,55 +83,61 @@ class StanfordNLPDependencyParser(DependencyModel):
             self.apply_dependencies(sentence, stanford_sentence)
 
     def apply_dependencies(self, serif_sentence, stanford_sentence):
-        dep_set = serif_sentence.add_new_dependency_set(serif_sentence.mention_set)
+        dep_set = serif_sentence.dependency_set
 
         parse = serif_sentence.parse
+        if parse is None or parse.root is None:
+            logger.warning("Skipping sentence {} {} due to no parse tree detected".format(serif_sentence.document.docid,
+                                                                                          serif_sentence.sent_no))
+            return
         token_to_index = self.get_token_to_index_dict(serif_sentence)
         stanford_length = len(stanford_sentence.dependencies)
         serif_length = len(serif_sentence.token_sequence)
 
         if stanford_length != serif_length:
-            print("Different sentence lengths, skipping...")
+            logger.warning("Different sentence lengths, skipping {} {}".format(serif_sentence.document.docid,
+                                                                               serif_sentence.sent_no))
             return
-    
+
         # Go through dependencies, figure out which one are leaves --
         # leaves have nothing dependent on them
         is_leaf = dict()
-        index = -1 # index into the sentence, 0-indexed
+        index = -1  # index into the sentence, 0-indexed
         for dep in stanford_sentence.dependencies:
             index += 1
-            governor = dep[2].governor # index into the sentence, 1-indexed
+            governor = get_governer_from_stanza(dep[2])  # index into the sentence, 1-indexed
             if index not in is_leaf:
                 is_leaf[index] = True
-            is_leaf[governor-1] = False
-    
+            is_leaf[governor - 1] = False
+
         # Create propositions from dependencies
         index_to_prop = dict()
-        index = -1 # index into the sentence, 0-indexed
+        index = -1  # index into the sentence, 0-indexed
         for dep in stanford_sentence.dependencies:
             index += 1
             relation = dep[1]
-            governor = dep[2].governor # index into the sentence, 1-indexed
+            governor = get_governer_from_stanza(dep[2])  # index into the sentence, 1-indexed
             token = dep[2].text
-            
+
             # This is the top node, typically, the relation is "root"
             # but sometimes it's <PAD>
-            if governor == 0: 
+            if governor == 0:
                 continue
 
             # Make prop out of governor, if it doesn't exist already
-            if governor-1 not in index_to_prop:
-                synnode = self.get_covering_preterm(parse.root, governor-1, token_to_index)
+            if governor - 1 not in index_to_prop:
+                synnode = self.get_covering_preterm(parse.root, governor - 1, token_to_index)
                 if not synnode:
-                    print("Could not get covering preterm")
-                    sys.exit(1)
+                    logger.critical("Could not get covering preterm")
+                    raise ValueError("Could not get covering preterm")
                 governor_prop = dep_set.add_new_proposition("dependency", synnode)
-                index_to_prop[governor-1] = governor_prop
-            governor_prop = index_to_prop[governor-1]
-    
+                index_to_prop[governor - 1] = governor_prop
+            governor_prop = index_to_prop[governor - 1]
+
             if is_leaf[index]:
                 # Add to governor prop as syn node argument
-                governor_prop.add_new_synnode_argument(relation, self.get_covering_preterm(parse.root, index, token_to_index))
+                governor_prop.add_new_synnode_argument(relation,
+                                                       self.get_covering_preterm(parse.root, index, token_to_index))
             else:
                 # Add to governor prop as prop argument, may need to create prop here
                 index_prop = None
@@ -111,7 +147,7 @@ class StanfordNLPDependencyParser(DependencyModel):
                     synnode = self.get_covering_preterm(parse.root, index, token_to_index)
                     if not synnode:
                         print("Could not get covering preterm")
-                        sys.exit(1)
+                        raise ValueError("Could not get covering preterm")
                     index_prop = dep_set.add_new_proposition("dependency", synnode)
                     index_to_prop[index] = index_prop
                 governor_prop.add_new_proposition_argument(relation, index_prop)
@@ -120,7 +156,7 @@ class StanfordNLPDependencyParser(DependencyModel):
     def get_covering_preterm(self, synnode, index, token_to_index):
         if synnode.is_preterminal and index == token_to_index[synnode.start_token]:
             return synnode
-    
+
         if index < token_to_index[synnode.start_token] or index > token_to_index[synnode.end_token]:
             return None
 

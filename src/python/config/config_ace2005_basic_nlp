@@ -1,0 +1,36 @@
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/ingester/sgm_ingester_original.py
+
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/sentence_splitter/stanza_sentence_splitter.py
+
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/stanza_adapter.py
+
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/parser/benepar_parser.py
+
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/edt_corrector.py
+
+INGESTER SgmIngester
+lang en
+
+SENTENCE_SPLITTING_MODEL StanzaSentenceSplitter
+lang en
+dir +stanza_model_dir+
+drop_xml_marking_before_processing
+
+BASE_MODEL StanzaAdapter
+lang en
+dir +stanza_model_dir+
+max_tokens 200
+run_tokenization_only
+drop_xml_marking_before_processing
+
+PARSE_MODEL BeneparParser
+model +benepar_model_dir+
+add_heads
+max_tokens 200
+
+BASE_MODEL EDTCorrector

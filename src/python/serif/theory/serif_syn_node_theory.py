@@ -1,6 +1,7 @@
 from serif.theory.serif_sequence_theory import SerifSequenceTheory
 from serif.util.head_finder import *
 
+
 class SerifSynNodeTheory(SerifSequenceTheory):
     @property
     def parent(self):
@@ -101,6 +102,8 @@ class SerifSynNodeTheory(SerifSequenceTheory):
         """The head terminal of this SynNode"""
         if len(self) == 0:
             return self
+        elif self.head is None:
+            return None
         else:
             return self.head.head_terminal
 
@@ -111,6 +114,8 @@ class SerifSynNodeTheory(SerifSequenceTheory):
             raise ValueError('Can not get preterminal of a terminal')
         elif len(self) == 1 and len(self[0]) == 0:
             return self
+        elif self.head is None:
+            return None
         else:
             return self.head.head_preterminal
 
@@ -119,6 +124,8 @@ class SerifSynNodeTheory(SerifSequenceTheory):
         """The tag of the head terminal of this SynNode"""
         if len(self) == 0:
             return self.tag
+        elif self.head is None:
+            return None
         else:
             return self.head.head_tag
 
@@ -253,7 +260,7 @@ class SerifSynNodeTheory(SerifSequenceTheory):
         """Recursively go thorugh the SynNode tree and set the is_head
            attribute based on our head rules (ported from CSerif). 
            This will replace any existing head information.
-        """ 
+        """
         if self.is_terminal:
             return
         head_index = find_head_index(self)

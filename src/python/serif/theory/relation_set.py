@@ -1,10 +1,20 @@
 from serif.theory.relation import Relation
 from serif.theory.serif_sequence_theory import SerifSequenceTheory
 from serif.xmlio import _ChildTheoryElementList
+from serif.theory.enumerated_type import Tense,Modality
 
 
 class RelationSet(SerifSequenceTheory):
     _children = _ChildTheoryElementList('Relation')
+
+    @classmethod
+    def from_values(cls, owner=None):
+        ret = cls(owner=owner)
+        return ret
+
+    @classmethod
+    def empty(cls, owner=None):
+        return cls.from_values(owner=owner)
 
     def add_relation(self, relation):
         self._children.append(relation)
@@ -23,7 +33,7 @@ class RelationSet(SerifSequenceTheory):
         relation.rel_mentions = relation_mentions
         relation.left_entity = left_entity
         relation.right_entity = right_entity
-        relation.tense = "Unspecified"
-        relation.modality = "Asserted"
+        relation.tense = Tense.Unspecified
+        relation.modality = Modality.Asserted
         relation.document.generate_id(relation)
         return relation

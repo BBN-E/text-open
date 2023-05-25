@@ -7,6 +7,16 @@ class RelMentionSet(SerifSequenceTheory):
     score = _SimpleAttribute(float)
     _children = _ChildTheoryElementList('RelMention')
 
+    @classmethod
+    def from_values(cls, owner=None, score=0):
+        ret = cls(owner=owner)
+        ret.score = score
+        return ret
+
+    @classmethod
+    def empty(cls, owner=None):
+        return cls.from_values(owner=owner)
+
     def add_relation_mention(self, rel_mention):
         self._children.append(rel_mention)
 

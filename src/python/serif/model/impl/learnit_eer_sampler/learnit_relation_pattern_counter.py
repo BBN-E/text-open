@@ -1,22 +1,20 @@
 import os
 import logging
-from serif.model.base_model import BaseModel
+from serif.model.corpus_model import CorpusModel
 import time
 import pickle
 
 logger = logging.getLogger(__name__)
 
-class LearnItRelationPatternCounter(BaseModel):
+class LearnItRelationPatternCounter(CorpusModel):
 
     def __init__(self, task, **kwargs):
         super(LearnItRelationPatternCounter, self).__init__(**kwargs)
         self.task = task
         self.output_path = kwargs['argparse'].output_directory
 
-    def process(self, serif_doc):
-        pass
 
-    def process_barrier(self, serif_doc_list):
+    def process_documents(self, serif_doc_list):
         # Read in LearnIt EER's
         # and assign the corresponding relation, pattern a docid.
         # This table is later used for sampling.

@@ -1,0 +1,550 @@
+{
+  "stages_to_run": [
+    "event_mention_argument",
+    "event_mention"
+  ],
+  "entity_mention": {
+    "input_constraints": [],
+    "ontology": {}
+  },
+  "entity_mention_relation": {
+    "input_constraints": [],
+    "ontology": {}
+  },
+  "event_mention": {
+    "input_constraints": [],
+    "ontology": {
+      "Communicate-Event": {
+        "input_constraints": [
+          {
+            "args": {
+              "disallowed_words": [
+                "waves",
+                "go",
+                "out"
+              ]
+            },
+            "name": "DisallowedWordEventFilter"
+          }
+        ],
+        "ontologyName": "Communicate-Event",
+        "templates": [
+          {
+            "template": "{X} is a communication event.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} is a speech.",
+            "threshold": 0.85
+          }
+        ],
+        "use_global_input_constraints": true
+      },
+      "Damage": {
+        "input_constraints": [
+          {
+            "args": {
+              "disallowed_words": [
+                "floods",
+                "protesters",
+                "claim",
+                "protest",
+                "floods",
+                "flooding",
+                "rains",
+                "said"
+              ]
+            },
+            "name": "DisallowedWordEventFilter"
+          }
+        ],
+        "ontologyName": "Damage",
+        "templates": [
+          {
+            "template": "{X} be damages.",
+            "threshold": 0.8
+          },
+          {
+            "template": "The bad weather caused {X}.",
+            "threshold": 0.75
+          }
+        ],
+        "use_global_input_constraints": true
+      },
+      "Disease-Infects-Or-Outbreak": {
+        "input_constraints": [
+          {
+            "args": {
+              "disallowed_words": [
+                "according",
+                "build",
+                "recording",
+                "said",
+                "help",
+                "reported",
+                "organizing",
+                "launched",
+                "dead",
+                "affecting",
+                "deaths",
+                "responding",
+                "registered",
+                "bodies",
+                "response",
+                "the wave",
+                "attacks",
+                "wildfires",
+                "fight",
+                "suffering",
+                "deployment",
+                "go",
+                "spurt",
+                "recorded",
+                "confirmed",
+                "discovered",
+                "come",
+                "trials",
+                "deadly",
+                "changed",
+                "campaign",
+                "measures",
+                "contacts",
+                "died",
+                "says",
+                "indicators",
+                "recovered",
+                "threatened",
+                "added"
+              ]
+            },
+            "name": "DisallowedWordEventFilter"
+          }
+        ],
+        "ontologyName": "Disease-Infects-Or-Outbreak",
+        "templates": [
+          {
+            "template": "{X} be infection of people.",
+            "threshold": 0.8
+          },
+          {
+            "template": "{X} be infection cases.",
+            "threshold": 0.8
+          },
+          {
+            "template": "{X} be infections by a virus.",
+            "threshold": 0.5
+          },
+          {
+            "template": "{X} be a disease outbreak.",
+            "threshold": 0.8
+          },
+          {
+            "template": "{X} be a pandemic.",
+            "threshold": 0.5
+          }
+        ],
+        "use_global_input_constraints": true
+      },
+      "Natural-Phenomenon-Event-or-SoA": {
+        "input_constraints": [
+          {
+            "args": {
+              "disallowed_words": [
+                "cases",
+                "fled",
+                "perished",
+                "reported",
+                "wreckage",
+                "reported",
+                "prepare",
+                "follows up",
+                "warning",
+                "identified",
+                "said",
+                "protesting",
+                "confirmed"
+              ]
+            },
+            "name": "DisallowedWordEventFilter"
+          }
+        ],
+        "ontologyName": "Natural-Phenomenon-Event-or-SoA",
+        "templates": [
+          {
+            "template": "{X} is a natural phenomenon.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} be flooding, rain, or storm.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} be cyclone or hurricane.",
+            "threshold": 0.5
+          },
+          {
+            "template": "{X} be landfall.",
+            "threshold": 0.81
+          },
+          {
+            "template": "{X} be earthquake.",
+            "threshold": 0.5
+          }
+        ],
+        "use_global_input_constraints": true
+      },
+      "Provide-Aid": {
+        "input_constraints": [
+          {
+            "args": {
+              "disallowed_words": [
+                "said",
+                "said",
+                "stressed",
+                "declaration",
+                "infection prevention",
+                "vaccination",
+                "engagement",
+                "displaced",
+                "treatment",
+                "refugees",
+                "finding",
+                "breaking"
+              ]
+            },
+            "name": "DisallowedWordEventFilter"
+          }
+        ],
+        "ontologyName": "Provide-Aid",
+        "templates": [
+          {
+            "template": "{X} be aid provided.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} indicates people are getting help or assistance.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} be help provided to alleviate the situation.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} be aid in the form of providing funds.",
+            "threshold": 0.85
+          }
+        ],
+        "use_global_input_constraints": true
+      },
+      "Refugee-Movement": {
+        "input_constraints": [
+          {
+            "args": {
+              "disallowed_words": [
+                "war",
+                "fighting",
+                "conflict",
+                "stated",
+                "said",
+                "said"
+              ]
+            },
+            "name": "DisallowedWordEventFilter"
+          }
+        ],
+        "ontologyName": "Refugee-Movement",
+        "templates": [
+          {
+            "template": "{X} be refugee migration.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} be refugee movements.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} be movements of migrants.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} be the displacement of people.",
+            "threshold": 0.85
+          }
+        ],
+        "use_global_input_constraints": true
+      }
+    }
+  },
+  "event_mention_argument": {
+    "input_constraints": [
+      {
+        "args": {
+          "allowed_source_pairs": [
+            [
+              "Ask2Transformers",
+              "Ask2Transformers"
+            ],
+            [
+              "Ask2Transformers",
+              "BPAnnotated"
+            ],
+            [
+              "Ask2Transformers",
+              "StanzaAdapter"
+            ],
+            [
+              "Ask2Transformers",
+              "NLPLingo"
+            ]
+          ]
+        },
+        "name": "EventArgumentSourceFilter"
+      },
+      {
+        "args": {
+          "allowed_entity_types": [
+            "DISEASE",
+            "FAC",
+            "LOC-GPE",
+            "PER",
+            "WEA",
+            "WHEN"
+          ]
+        },
+        "name": "GenericEventArgEntityTypeFilter"
+      }
+    ],
+    "ontology": {
+      "infected": {
+        "input_constraints": [
+          {
+            "args": {
+              "allowed_event_type_entity_type_pairs": [
+                [
+                  "Disease-Infects-Or-Outbreak",
+                  "PER"
+                ]
+              ]
+            },
+            "name": "EventTypeArgEntityTypeFilter"
+          }
+        ],
+        "ontologyName": "infected",
+        "templates": [
+          {
+            "template": "There are {Y} people got infected.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{Y} have become infected with the disease.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{Y} have become infected with the virus.",
+            "threshold": 0.85
+          },
+          {
+            "template": "The individual {Y} be infected during {X}.",
+            "threshold": 0.85
+          }
+        ],
+        "use_global_input_constraints": true
+      },
+      "killed": {
+        "input_constraints": [
+          {
+            "args": {
+              "allowed_event_type_entity_type_pairs": [
+                [
+                  "Death",
+                  "PER"
+                ],
+                [
+                  "Disease-Infects-Or-Outbreak",
+                  "PER"
+                ],
+                [
+                  "Refugee-Movement",
+                  "PER"
+                ]
+              ]
+            },
+            "name": "EventTypeArgEntityTypeFilter"
+          }
+        ],
+        "ontologyName": "killed",
+        "templates": [
+          {
+            "template": "{Y} was killed due to {X}.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{Y} is dead due to {X}.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{Y} be dead.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{Y} be killed.",
+            "threshold": 0.85
+          }
+        ],
+        "use_global_input_constraints": true
+      },
+      "location": {
+        "input_constraints": [
+          {
+            "args": {
+              "allowed_event_type_entity_type_pairs": [
+                [
+                  "*",
+                  "LOC-GPE"
+                ],
+                [
+                  "*",
+                  "FAC"
+                ]
+              ]
+            },
+            "name": "EventTypeArgEntityTypeFilter"
+          }
+        ],
+        "ontologyName": "location",
+        "templates": [
+          {
+            "template": "{X} happened in {Y}.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} happened at {Y}.",
+            "threshold": 0.85
+          }
+        ],
+        "use_global_input_constraints": true
+      },
+      "outcome": {
+        "input_constraints": [
+          {
+            "args": {
+              "allowed_event_type_entity_type_pairs": [
+                [
+                  "Damage",
+                  "Death"
+                ],
+                [
+                  "Disease-Infects-Or-Outbreak",
+                  "Death"
+                ],
+                [
+                  "Natural-Phenomenon-Event-or-SoA",
+                  "Death"
+                ],
+                [
+                  "Natural-Phenomenon-Event-or-SoA",
+                  "Damage"
+                ],
+                [
+                  "Disease-Infects-Or-Outbreak",
+                  "Refugee-Movement"
+                ],
+                [
+                  "Natural-Phenomenon-Event-or-SoA",
+                  "Refugee-Movement"
+                ]
+              ]
+            },
+            "name": "EventTypeArgEntityTypeFilter"
+          }
+        ],
+        "ontologyName": "outcome",
+        "templates": [
+          {
+            "template": "{Y} happened because of {X}.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{Y} could happen because of {X}.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{Y} is the outcome of {X}.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} led to {Y}.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{Y} is the outcome of a {X}.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{Y} occurred as the because of {X}.",
+            "threshold": 0.85
+          }
+        ],
+        "use_global_input_constraints": true
+      },
+      "when": {
+        "input_constraints": [
+          {
+            "args": {
+              "allowed_event_type_entity_type_pairs": [
+                [
+                  "*",
+                  "WHEN"
+                ]
+              ]
+            },
+            "name": "EventTypeArgEntityTypeFilter"
+          }
+        ],
+        "ontologyName": "when",
+        "templates": [
+          {
+            "template": "{X} happened on {Y} and {Y} refers to time.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} happened on {Y}.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} happened during {Y}.",
+            "threshold": 0.85
+          },
+          {
+            "template": "{X} happen during {Y}.",
+            "threshold": 0.85
+          }
+        ],
+        "use_global_input_constraints": true
+      },
+      "who": {
+        "input_constraints": [
+          {
+            "args": {
+              "allowed_event_type_entity_type_pairs": [
+                [
+                  "*",
+                  "PER"
+                ]
+              ]
+            },
+            "name": "EventTypeArgEntityTypeFilter"
+          }
+        ],
+        "ontologyName": "who",
+        "templates": [
+          {
+            "template": "{Y} is the person who did {X}.",
+            "threshold": 0.85
+          }
+        ],
+        "use_global_input_constraints": true
+      }
+    }
+  }
+}

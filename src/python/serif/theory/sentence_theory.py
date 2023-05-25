@@ -1,4 +1,6 @@
 from serif.theory.enumerated_type import ParseType
+from serif.theory.nested_name_theory import NestedNameTheory
+from serif.theory.np_chunk_theory import NPChunkTheory
 from serif.theory.serif_theory import SerifTheory
 from serif.xmlio import _ReferenceAttribute, _SimpleAttribute
 
@@ -9,11 +11,11 @@ from serif.theory.mention_set import MentionSet
 from serif.theory.value_mention_set import ValueMentionSet
 from serif.theory.name_theory import NameTheory
 from serif.theory.parse import Parse
+from serif.theory.amr_parse import AMRParse
 from serif.theory.proposition_set import PropositionSet
 from serif.theory.dependency_set import DependencySet
-from serif.theory.region import Region
 from serif.theory.rel_mention_set import RelMentionSet
-from serif.theory.serif_sentence_theory import SerifSentenceTheory
+from serif.theory.actor_mention_set import ActorMentionSet
 
 
 class SentenceTheory(SerifTheory):
@@ -31,6 +33,8 @@ class SentenceTheory(SerifTheory):
                                            cls='NPChunkTheory')
     _parse = _ReferenceAttribute('parse_id',
                                  cls='Parse')
+    _amr_parse = _ReferenceAttribute('amr_parse_id',
+                                     cls='AMRParse')
     _mention_set = _ReferenceAttribute('mention_set_id',
                                        cls='MentionSet')
     _proposition_set = _ReferenceAttribute('proposition_set_id',
@@ -49,6 +53,11 @@ class SentenceTheory(SerifTheory):
     # to the output. -DJE
     primary_parse = _SimpleAttribute(ParseType,
                                      default=ParseType.full_parse)
+
+    @classmethod
+    def empty(cls, owner=None):
+        ret = cls(owner=owner)
+        return ret
 
     def _get_token_sequence(self):
         return self._token_sequence
@@ -119,6 +128,16 @@ class SentenceTheory(SerifTheory):
         self._parse = parse
 
     parse = property(_get_parse, _set_parse)
+
+    def _get_amr_parse(self):
+        return self._amr_parse
+
+    def _set_amr_parse(self, amr_parse):
+        if not isinstance(amr_parse, AMRParse):
+            raise TypeError("AMRParse")
+        self._amr_parse = amr_parse
+
+    amr_parse = property(_get_amr_parse, _set_amr_parse)
 
     def _get_mention_set(self):
         return self._mention_set

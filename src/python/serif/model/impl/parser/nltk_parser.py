@@ -2,8 +2,8 @@ from serif.model.parser_model import ParserModel
 
 
 class NLTKParser(ParserModel):
-    def __init__(self,**kwargs):
-        super(NLTKParser,self).__init__(**kwargs)
+    def __init__(self, **kwargs):
+        super(NLTKParser, self).__init__(**kwargs)
 
     def get_tokens(self, sentence):
         token_texts = []
@@ -12,7 +12,7 @@ class NLTKParser(ParserModel):
 
         return token_texts
 
-    def get_parse_info(self, sentence):
+    def add_parse_to_sentence(self, sentence):
 
         token_texts = self.get_tokens(sentence)
 
@@ -32,8 +32,5 @@ class NLTKParser(ParserModel):
         trees = parser.parse(token_texts)
         for tree in trees:
             treebank_string = str(tree).replace("PERIOD", ".")
-            print(treebank_string)
-
-            return treebank_string
-
-        return "NA"
+            return self.add_new_parse(sentence, treebank_string)
+        return []

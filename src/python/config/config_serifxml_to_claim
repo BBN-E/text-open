@@ -1,0 +1,11 @@
+IMPLEMENTATIONS
+/home/dzajic/dev/projects/text-group/text-open/src/python/serif/model/impl/ingester/serifxml_ingester.py
+
+IMPLEMENTATIONS
+/home/dzajic/dev/projects/text-group/text-open/src/python/serif/model/impl/mtdp_claim.py
+
+INGESTER SerifxmlIngester
+
+BASE_MODEL MTDPClaim
+do_write_claims true
+

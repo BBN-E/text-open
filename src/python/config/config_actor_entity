@@ -1,0 +1,22 @@
+IMPLEMENTATIONS
+/nfs/raid83/u13/caml/users/mselvagg_ad/text-open/src/python/serif/model/impl/ingester/serifxml_ingester.py
+
+IMPLEMENTATIONS
+/nfs/raid83/u13/caml/users/mselvagg_ad/text-open/src/python/serif/model/impl/actor_entity/simple_actor_entity_model.py
+
+IMPLEMENTATIONS
+/nfs/raid83/u13/caml/users/mselvagg_ad/text-open/src/python/serif/model/impl/add_actor_entity_type.py
+
+IMPLEMENTATIONS
+/nfs/raid83/u13/caml/users/mselvagg_ad/text-open/src/python/serif/model/impl/add_actor_entity_affiliation.py
+
+INGESTER SerifxmlIngester
+lang en
+
+ACTOR_ENTITY_MODEL SimpleActorEntityModel
+method majority_wins
+
+BASE_MODEL ActorEntityTypeModel
+query_cache_path /nfs/raid66/u15/aida/docs/ontologies/wikidata/type_qnodes.json
+
+BASE_MODEL ActorEntityAffiliationModel

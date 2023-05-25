@@ -1,0 +1,50 @@
+IMPLEMENTATIONS
+./serif/model/impl/ingester/serifxml_ingester.py
+
+IMPLEMENTATIONS
+./serif/model/impl/mention_coreference/entity_coreference_cleaner.py
+
+IMPLEMENTATIONS
+./serif/model/impl/event/event_coreference_cleaner.py
+
+IMPLEMENTATIONS
+./serif/model/impl/event_event_relation_mention/event_event_realtion_mention_cleaner.py
+
+IMPLEMENTATIONS
+./serif/model/impl/event_mention/untype_event_mention_model.py
+
+IMPLEMENTATIONS
+./serif/model/impl/mention/untype_mention_model.py
+
+IMPLEMENTATIONS
+./serif/model/impl/mention/mention_cleaner_for_jserif.py
+
+IMPLEMENTATIONS
+./serif/model/impl/event_mention/event_mention_cleaner_for_jserif.py
+
+IMPLEMENTATIONS
+./serif/model/impl/language_flag_corrector.py
+
+IMPLEMENTATIONS
+./serif/model/impl/relation_mention/relation_mention_cleaner.py
+
+INGESTER SerifxmlIngester
+
+BASE_MODEL LanguageFlagCorrector
+language English
+
+BASE_MODEL EntityCoreferenceCleaner
+
+BASE_MODEL EventCoreferenceCleaner
+
+BASE_MODEL EventEventRelationMentionCleaner
+
+BASE_MODEL RelationMentionCleaner
+
+#BASE_MODEL UntypeMentionModel
+
+BASE_MODEL UntypeEventMentionModel
+
+BASE_MODEL MentionCleanerForJSerif
+
+BASE_MODEL EventMentionCleanerForJSerif

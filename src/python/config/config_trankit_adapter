@@ -1,0 +1,64 @@
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/ingester/text_ingester.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/sentence_splitter/trankit_sentence_splitter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/trankit_adapter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/parser/benepar_parser.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention/name_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention/noun_phrase_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention/pronoun_mention_model.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/dependency_parser/trankit_dependency_parser.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/mention_coreference/allennlp_coreference_model.py
+
+#IMPLEMENTATIONS
+#/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/actor_mention/blink_mention_linker.py
+
+INGESTER TextIngester
+lang en
+
+SENTENCE_SPLITTING_MODEL TrankitSentenceSplitter
+lang english
+dir /nfs/raid66/u11/users/brozonoy-ad/text-open/trankit_models/
+
+BASE_MODEL TrankitAdapter
+lang english
+dir /nfs/raid66/u11/users/brozonoy-ad/text-open/trankit_models/
+
+PARSE_MODEL BeneparParser
+model /nfs/raid66/u11/users/brozonoy-ad/covid_base_analytics/benepar_en3_large
+add_heads
+max_tokens 200
+
+MENTION_MODEL NounPhraseMentionModel
+
+MENTION_MODEL PronounMentionModel
+modify_existing_mention
+
+MENTION_MODEL NameMentionModel
+modify_existing_mention
+
+DEPENDENCY_MODEL TrankitDependencyParser
+lang english
+dir /nfs/raid66/u11/users/brozonoy-ad/text-open/trankit_models/
+use_data_from_trankit_adapter
+
+MENTION_COREF_MODEL AllenNLPCoreferenceModel
+model https://storage.googleapis.com/allennlp-public-models/coref-spanbert-large-2021.03.10.tar.gz
+
+#BASE_MODEL BlinkMentionLinker
+#models_path /nfs/raid66/u11/users/brozonoy-ad/BLINK/models/

@@ -5,9 +5,9 @@ class DTreeToCTreeParser(ParserModel):
     def __init__(self, **kwargs):
         super(DTreeToCTreeParser, self).__init__(**kwargs)
 
-    def get_parse_info(self, sentence):
-        tree = dep_parse_to_constituency_parse(sentence)
-        return tree
+    def add_parse_to_sentence(self, sentence):
+        tree_str = dep_parse_to_constituency_parse(sentence)
+        return self.add_new_parse(sentence,tree_str)
 
 #####################################################################################################################
 

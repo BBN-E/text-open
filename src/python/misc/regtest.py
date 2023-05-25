@@ -12,3 +12,4 @@ from serif.model.impl.relation_mention.dog_food_finder_relation_mention_model im
 from serif.model.impl.relation_mention.drug_finder_relation_mention_model import DrugFinderRelationMentionModel
 from serif.model.impl.sentence_splitter.punctuation_sentence_splitter import PunctuationSentenceSplitter
 from serif.model.impl.tokenizer.white_space_tokenizer import WhiteSpaceTokenizer
+from serif.model.impl.ingester.serifxml_ingester import SerifxmlIngester

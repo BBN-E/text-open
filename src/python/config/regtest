@@ -4,6 +4,8 @@
 IMPLEMENTATIONS
 ./misc/regtest.py
 
+INGESTER SerifxmlIngester
+
 NAME_MODEL DrugNameModel
 
 NAME_MODEL InstitutionNameModel

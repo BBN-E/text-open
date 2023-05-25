@@ -1,16 +1,15 @@
 IMPLEMENTATIONS
-/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/sentence_splitter/newline_sentence_splitter.py
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/ingester/text_ingester.py
 
 IMPLEMENTATIONS
-/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/stanza_adapter.py
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/sentence_splitter/newline_sentence_splitter.py
 
 IMPLEMENTATIONS
-/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/parser/DTreeToCTreeParser.py
+/nfs/raid66/u11/users/brozonoy-ad/text-open/src/python/serif/model/impl/tokenizer/plain_white_space_tokenizer.py
+
+INGESTER TextIngester
+lang ru
 
 SENTENCE_SPLITTING_MODEL NewlineSentenceSplitter
 
-BASE_MODEL StanzaAdapter
-lang ru
-dir /nfs/raid66/u11/users/brozonoy/text-open/stanza_models/
-
-PARSE_MODEL DTreeToCTreeParser
+TOKENIZE_MODEL PlainWhiteSpaceTokenizer

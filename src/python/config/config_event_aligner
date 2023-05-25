@@ -1,0 +1,29 @@
+IMPLEMENTATIONS
+/nfs/raid83/u13/caml/users/mselvagg_ad/text-open/src/python/serif/model/impl/ingester/serifxml_ingester.py
+
+IMPLEMENTATIONS
+/nfs/raid83/u13/caml/users/mselvagg_ad/text-open/src/python/serif/model/impl/nlplingo_decoder.py
+
+IMPLEMENTATIONS
+/nfs/raid83/u13/caml/users/mselvagg_ad/text-open/src/python/serif/model/impl/event_aligner.py
+
+IMPLEMENTATIONS
+/nfs/raid83/u13/caml/users/mselvagg_ad/text-open/src/python/serif/model/impl/mtdp_decoder.py
+
+INGESTER SerifxmlIngester
+lang en
+
+BASE_MODEL NLPLingoDecoder
+params_path /d4m/ears/expts/48237event-trigger-11-2-21/expts/canonical/canonical_testing_and_decoding/best_model/event_trigger_DECODE.json
+use_sequence_tagging_adder true
+
+BASE_MODEL MTDPDecoder
+data_type modal
+pretrained_model_dir /nfs/raid66/u15/aida/trained_models/modal_and_temporal_parsing/xlm_modal/
+
+BASE_MODEL MTDPDecoder
+data_type time
+pretrained_model_dir /nfs/raid66/u15/aida/trained_models/modal_and_temporal_parsing/xlm_temporal/
+
+BASE_MODEL EventAlignerModel
+

@@ -63,7 +63,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
       <Span char_offsets="92:9652" edt_offsets="92:9652" id="a4" region_type="TEXT" span_type="RegionSpan" />
     </Metadata>
     <Sentences>
-      <Sentence char_offsets="93:111" edt_offsets="93:111" id="a5" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="93:111" edt_offsets="93:111" id="a5" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a7" score="0.0">
           <Token char_offsets="93:99" edt_offsets="93:99" id="a8">PRODUCT</Token>
           <Token char_offsets="101:111" edt_offsets="101:111" id="a9">DESCRIPTION</Token>
@@ -90,7 +90,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a21" />
         <SentenceTheory actor_mention_set_id="a21" event_mention_set_id="a20" id="a6" mention_set_id="a14" name_theory_id="a11" parse_id="a13" part_of_speech_sequence_id="a10" primary_parse="full_parse" proposition_set_id="a16" rel_mention_set_id="a19" token_sequence_id="a7" value_mention_set_id="a12" />
       </Sentence>
-      <Sentence char_offsets="114:185" edt_offsets="114:185" id="a22" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="114:185" edt_offsets="114:185" id="a22" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a24" score="0.0">
           <Token char_offsets="114:116" edt_offsets="114:116" id="a25">The</Token>
           <Token char_offsets="118:121" edt_offsets="118:121" id="a26">body</Token>
@@ -156,7 +156,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a62" />
         <SentenceTheory actor_mention_set_id="a62" event_mention_set_id="a61" id="a23" mention_set_id="a44" name_theory_id="a41" parse_id="a43" part_of_speech_sequence_id="a40" primary_parse="full_parse" proposition_set_id="a51" rel_mention_set_id="a60" token_sequence_id="a24" value_mention_set_id="a42" />
       </Sentence>
-      <Sentence char_offsets="187:246" edt_offsets="187:246" id="a63" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="187:246" edt_offsets="187:246" id="a63" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a65" score="0.0">
           <Token char_offsets="187:195" edt_offsets="187:195" id="a66">Quotation</Token>
           <Token char_offsets="197:201" edt_offsets="197:201" id="a67">marks</Token>
@@ -217,7 +217,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a96" />
         <SentenceTheory actor_mention_set_id="a96" event_mention_set_id="a93" id="a64" mention_set_id="a79" name_theory_id="a76" parse_id="a78" part_of_speech_sequence_id="a75" primary_parse="full_parse" proposition_set_id="a85" rel_mention_set_id="a92" token_sequence_id="a65" value_mention_set_id="a77" />
       </Sentence>
-      <Sentence char_offsets="249:252" edt_offsets="249:252" id="a97" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="249:252" edt_offsets="249:252" id="a97" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a99" score="0.0">
           <Token char_offsets="249:252" edt_offsets="249:252" id="a100">BODY</Token>
         </TokenSequence>
@@ -234,7 +234,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a109" />
         <SentenceTheory actor_mention_set_id="a109" event_mention_set_id="a108" id="a98" mention_set_id="a105" name_theory_id="a102" parse_id="a104" part_of_speech_sequence_id="a101" primary_parse="full_parse" proposition_set_id="a106" rel_mention_set_id="a107" token_sequence_id="a99" value_mention_set_id="a103" />
       </Sentence>
-      <Sentence char_offsets="255:260" edt_offsets="255:260" id="a110" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="255:260" edt_offsets="255:260" id="a110" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a112" score="0.0">
           <Token char_offsets="255:260" edt_offsets="255:260" id="a113">Russia</Token>
         </TokenSequence>
@@ -262,7 +262,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a125" event_mention_set_id="a124" id="a111" mention_set_id="a119" name_theory_id="a115" parse_id="a118" part_of_speech_sequence_id="a114" primary_parse="full_parse" proposition_set_id="a121" rel_mention_set_id="a123" token_sequence_id="a112" value_mention_set_id="a117" />
       </Sentence>
-      <Sentence char_offsets="261:293" edt_offsets="261:293" id="a127" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="261:293" edt_offsets="261:293" id="a127" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a129" score="0.0">
           <Token char_offsets="263:266" edt_offsets="263:266" id="a130">Tech</Token>
           <Token char_offsets="268:270" edt_offsets="268:270" id="a131">and</Token>
@@ -310,7 +310,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a155" />
         <SentenceTheory actor_mention_set_id="a155" event_mention_set_id="a154" id="a128" mention_set_id="a141" name_theory_id="a138" parse_id="a140" part_of_speech_sequence_id="a137" primary_parse="full_parse" proposition_set_id="a147" rel_mention_set_id="a153" token_sequence_id="a129" value_mention_set_id="a139" />
       </Sentence>
-      <Sentence char_offsets="294:309" edt_offsets="294:309" id="a156" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="294:309" edt_offsets="294:309" id="a156" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a158" score="0.0">
           <Token char_offsets="294:295" edt_offsets="294:295" id="a159">27</Token>
           <Token char_offsets="297:304" edt_offsets="297:304" id="a160">February</Token>
@@ -337,7 +337,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a173" />
         <SentenceTheory actor_mention_set_id="a173" event_mention_set_id="a172" id="a157" mention_set_id="a167" name_theory_id="a163" parse_id="a166" part_of_speech_sequence_id="a162" primary_parse="full_parse" proposition_set_id="a169" rel_mention_set_id="a171" token_sequence_id="a158" value_mention_set_id="a164" />
       </Sentence>
-      <Sentence char_offsets="312:424" edt_offsets="312:424" id="a174" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="312:424" edt_offsets="312:424" id="a174" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a176" score="0.0">
           <Token char_offsets="312:318" edt_offsets="312:318" id="a177">Russian</Token>
           <Token char_offsets="320:323" edt_offsets="320:323" id="a178">Tech</Token>
@@ -446,7 +446,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a235" event_mention_set_id="a234" id="a175" mention_set_id="a203" name_theory_id="a198" parse_id="a202" part_of_speech_sequence_id="a197" primary_parse="full_parse" proposition_set_id="a218" rel_mention_set_id="a232" token_sequence_id="a176" value_mention_set_id="a201" />
       </Sentence>
-      <Sentence char_offsets="426:447" edt_offsets="426:447" id="a237" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="426:447" edt_offsets="426:447" id="a237" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a239" score="0.0">
           <Token char_offsets="426:429" edt_offsets="426:429" id="a240">This</Token>
           <Token char_offsets="431:435" edt_offsets="431:435" id="a241">issue</Token>
@@ -484,7 +484,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a260" />
         <SentenceTheory actor_mention_set_id="a260" event_mention_set_id="a259" id="a238" mention_set_id="a250" name_theory_id="a246" parse_id="a249" part_of_speech_sequence_id="a245" primary_parse="full_parse" proposition_set_id="a254" rel_mention_set_id="a258" token_sequence_id="a239" value_mention_set_id="a247" />
       </Sentence>
-      <Sentence char_offsets="448:464" edt_offsets="448:464" id="a261" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="448:464" edt_offsets="448:464" id="a261" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a263" score="0.0">
           <Token char_offsets="448:449" edt_offsets="448:449" id="a264">27</Token>
           <Token char_offsets="451:458" edt_offsets="451:458" id="a265">February</Token>
@@ -512,7 +512,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a279" />
         <SentenceTheory actor_mention_set_id="a279" event_mention_set_id="a278" id="a262" mention_set_id="a273" name_theory_id="a269" parse_id="a272" part_of_speech_sequence_id="a268" primary_parse="full_parse" proposition_set_id="a275" rel_mention_set_id="a277" token_sequence_id="a263" value_mention_set_id="a270" />
       </Sentence>
-      <Sentence char_offsets="467:531" edt_offsets="467:531" id="a280" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="467:531" edt_offsets="467:531" id="a280" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a282" score="0.0">
           <Token char_offsets="467:472" edt_offsets="467:472" id="a283">Ex-FSB</Token>
           <Token char_offsets="474:481" edt_offsets="474:481" id="a284">Official</Token>
@@ -580,7 +580,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a318" />
         <SentenceTheory actor_mention_set_id="a318" event_mention_set_id="a312" id="a281" mention_set_id="a298" name_theory_id="a294" parse_id="a297" part_of_speech_sequence_id="a293" primary_parse="full_parse" proposition_set_id="a304" rel_mention_set_id="a311" token_sequence_id="a282" value_mention_set_id="a296" />
       </Sentence>
-      <Sentence char_offsets="533:934" edt_offsets="533:934" id="a319" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="533:934" edt_offsets="533:934" id="a319" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a321" score="0.0">
           <Token char_offsets="533:535" edt_offsets="533:535" id="a322">The</Token>
           <Token char_offsets="537:542" edt_offsets="537:542" id="a323">Moscow</Token>
@@ -891,7 +891,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a500" event_mention_set_id="a477" id="a320" mention_set_id="a406" name_theory_id="a393" parse_id="a405" part_of_speech_sequence_id="a392" primary_parse="full_parse" proposition_set_id="a439" rel_mention_set_id="a472" token_sequence_id="a321" value_mention_set_id="a401" />
       </Sentence>
-      <Sentence char_offsets="936:1093" edt_offsets="936:1093" id="a504" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="936:1093" edt_offsets="936:1093" id="a504" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a506" score="0.0">
           <Token char_offsets="936:942" edt_offsets="936:942" id="a507">Kremlin</Token>
           <Token char_offsets="944:948" edt_offsets="944:948" id="a508">chief</Token>
@@ -1057,7 +1057,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a597" event_mention_set_id="a590" id="a505" mention_set_id="a548" name_theory_id="a540" parse_id="a547" part_of_speech_sequence_id="a539" primary_parse="full_parse" proposition_set_id="a568" rel_mention_set_id="a587" token_sequence_id="a506" value_mention_set_id="a545" />
       </Sentence>
-      <Sentence char_offsets="1096:1142" edt_offsets="1096:1142" id="a601" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="1096:1142" edt_offsets="1096:1142" id="a601" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a603" score="0.0">
           <Token char_offsets="1096:1101" edt_offsets="1096:1101" id="a604">Russia</Token>
           <Token char_offsets="1103:1104" edt_offsets="1103:1104" id="a605">To</Token>
@@ -1101,7 +1101,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a626" event_mention_set_id="a625" id="a602" mention_set_id="a617" name_theory_id="a612" parse_id="a616" part_of_speech_sequence_id="a611" primary_parse="full_parse" proposition_set_id="a620" rel_mention_set_id="a624" token_sequence_id="a603" value_mention_set_id="a615" />
       </Sentence>
-      <Sentence char_offsets="1144:1604" edt_offsets="1144:1604" id="a628" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="1144:1604" edt_offsets="1144:1604" id="a628" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a630" score="0.0">
           <Token char_offsets="1144:1150" edt_offsets="1144:1150" id="a631">Premier</Token>
           <Token char_offsets="1152:1158" edt_offsets="1152:1158" id="a632">Dmitriy</Token>
@@ -1461,7 +1461,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a833" event_mention_set_id="a812" id="a629" mention_set_id="a719" name_theory_id="a711" parse_id="a718" part_of_speech_sequence_id="a710" primary_parse="full_parse" proposition_set_id="a765" rel_mention_set_id="a810" token_sequence_id="a630" value_mention_set_id="a716" />
       </Sentence>
-      <Sentence char_offsets="1606:1767" edt_offsets="1606:1767" id="a838" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="1606:1767" edt_offsets="1606:1767" id="a838" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a840" score="0.0">
           <Token char_offsets="1606:1606" edt_offsets="1606:1606" id="a841">``</Token>
           <Token char_offsets="1607:1609" edt_offsets="1607:1609" id="a842">The</Token>
@@ -1587,7 +1587,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a909" />
         <SentenceTheory actor_mention_set_id="a909" event_mention_set_id="a903" id="a839" mention_set_id="a872" name_theory_id="a869" parse_id="a871" part_of_speech_sequence_id="a868" primary_parse="full_parse" proposition_set_id="a887" rel_mention_set_id="a902" token_sequence_id="a840" value_mention_set_id="a870" />
       </Sentence>
-      <Sentence char_offsets="1769:1945" edt_offsets="1769:1945" id="a910" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="1769:1945" edt_offsets="1769:1945" id="a910" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a912" score="0.0">
           <Token char_offsets="1769:1771" edt_offsets="1769:1771" id="a913">The</Token>
           <Token char_offsets="1773:1783" edt_offsets="1773:1783" id="a914">aggregation</Token>
@@ -1713,7 +1713,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a980" />
         <SentenceTheory actor_mention_set_id="a980" event_mention_set_id="a975" id="a911" mention_set_id="a944" name_theory_id="a941" parse_id="a943" part_of_speech_sequence_id="a940" primary_parse="full_parse" proposition_set_id="a959" rel_mention_set_id="a974" token_sequence_id="a912" value_mention_set_id="a942" />
       </Sentence>
-      <Sentence char_offsets="1947:2086" edt_offsets="1947:2086" id="a981" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="1947:2086" edt_offsets="1947:2086" id="a981" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a983" score="0.0">
           <Token char_offsets="1947:1949" edt_offsets="1947:1949" id="a984">The</Token>
           <Token char_offsets="1951:1960" edt_offsets="1951:1960" id="a985">monitoring</Token>
@@ -1829,7 +1829,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a1042" />
         <SentenceTheory actor_mention_set_id="a1042" event_mention_set_id="a1038" id="a982" mention_set_id="a1009" name_theory_id="a1005" parse_id="a1008" part_of_speech_sequence_id="a1004" primary_parse="full_parse" proposition_set_id="a1022" rel_mention_set_id="a1037" token_sequence_id="a983" value_mention_set_id="a1006" />
       </Sentence>
-      <Sentence char_offsets="2088:2221" edt_offsets="2088:2221" id="a1043" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="2088:2221" edt_offsets="2088:2221" id="a1043" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a1045" score="0.0">
           <Token char_offsets="2088:2090" edt_offsets="2088:2090" id="a1046">The</Token>
           <Token char_offsets="2092:2094" edt_offsets="2092:2094" id="a1047">FSB</Token>
@@ -1934,7 +1934,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a1101" />
         <SentenceTheory actor_mention_set_id="a1101" event_mention_set_id="a1098" id="a1044" mention_set_id="a1072" name_theory_id="a1067" parse_id="a1071" part_of_speech_sequence_id="a1066" primary_parse="full_parse" proposition_set_id="a1085" rel_mention_set_id="a1097" token_sequence_id="a1045" value_mention_set_id="a1070" />
       </Sentence>
-      <Sentence char_offsets="2224:2296" edt_offsets="2224:2296" id="a1102" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="2224:2296" edt_offsets="2224:2296" id="a1102" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a1104" score="0.0">
           <Token char_offsets="2224:2231" edt_offsets="2224:2231" id="a1105">Sberbank</Token>
           <Token char_offsets="2233:2241" edt_offsets="2233:2241" id="a1106">Executive</Token>
@@ -2034,7 +2034,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a1150" event_mention_set_id="a1142" id="a1103" mention_set_id="a1122" name_theory_id="a1118" parse_id="a1121" part_of_speech_sequence_id="a1117" primary_parse="full_parse" proposition_set_id="a1131" rel_mention_set_id="a1140" token_sequence_id="a1104" value_mention_set_id="a1120" />
       </Sentence>
-      <Sentence char_offsets="2298:2638" edt_offsets="2298:2638" id="a1152" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="2298:2638" edt_offsets="2298:2638" id="a1152" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a1154" score="0.0">
           <Token char_offsets="2298:2306" edt_offsets="2298:2306" id="a1155">Stanislav</Token>
           <Token char_offsets="2308:2316" edt_offsets="2308:2316" id="a1156">Kuznetsov</Token>
@@ -2316,7 +2316,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a1309" event_mention_set_id="a1290" id="a1153" mention_set_id="a1227" name_theory_id="a1216" parse_id="a1226" part_of_speech_sequence_id="a1215" primary_parse="full_parse" proposition_set_id="a1255" rel_mention_set_id="a1285" token_sequence_id="a1154" value_mention_set_id="a1222" />
       </Sentence>
-      <Sentence char_offsets="2640:2722" edt_offsets="2640:2722" id="a1312" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="2640:2722" edt_offsets="2640:2722" id="a1312" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a1314" score="0.0">
           <Token char_offsets="2640:2647" edt_offsets="2640:2647" id="a1315">Sberbank</Token>
           <Token char_offsets="2649:2650" edt_offsets="2649:2650" id="a1316">is</Token>
@@ -2388,7 +2388,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a1354" event_mention_set_id="a1353" id="a1313" mention_set_id="a1338" name_theory_id="a1333" parse_id="a1337" part_of_speech_sequence_id="a1332" primary_parse="full_parse" proposition_set_id="a1343" rel_mention_set_id="a1351" token_sequence_id="a1314" value_mention_set_id="a1336" />
       </Sentence>
-      <Sentence char_offsets="2725:2795" edt_offsets="2725:2795" id="a1357" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="2725:2795" edt_offsets="2725:2795" id="a1357" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a1359" score="0.0">
           <Token char_offsets="2725:2731" edt_offsets="2725:2731" id="a1360">General</Token>
           <Token char_offsets="2733:2738" edt_offsets="2733:2738" id="a1361">Staffs</Token>
@@ -2463,7 +2463,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a1397" event_mention_set_id="a1393" id="a1358" mention_set_id="a1379" name_theory_id="a1373" parse_id="a1378" part_of_speech_sequence_id="a1372" primary_parse="full_parse" proposition_set_id="a1386" rel_mention_set_id="a1392" token_sequence_id="a1359" value_mention_set_id="a1377" />
       </Sentence>
-      <Sentence char_offsets="2797:2922" edt_offsets="2797:2922" id="a1403" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="2797:2922" edt_offsets="2797:2922" id="a1403" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a1405" score="0.0">
           <Token char_offsets="2797:2797" edt_offsets="2797:2797" id="a1406">A</Token>
           <Token char_offsets="2799:2808" edt_offsets="2799:2808" id="a1407">conference</Token>
@@ -2583,7 +2583,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a1473" event_mention_set_id="a1466" id="a1404" mention_set_id="a1438" name_theory_id="a1430" parse_id="a1437" part_of_speech_sequence_id="a1429" primary_parse="full_parse" proposition_set_id="a1451" rel_mention_set_id="a1463" token_sequence_id="a1405" value_mention_set_id="a1435" />
       </Sentence>
-      <Sentence char_offsets="2924:3293" edt_offsets="2924:3293" id="a1478" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="2924:3293" edt_offsets="2924:3293" id="a1478" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a1480" score="0.0">
           <Token char_offsets="2924:2929" edt_offsets="2924:2929" id="a1481">Chiefs</Token>
           <Token char_offsets="2931:2932" edt_offsets="2931:2932" id="a1482">of</Token>
@@ -2897,7 +2897,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a1648" event_mention_set_id="a1637" id="a1479" mention_set_id="a1561" name_theory_id="a1546" parse_id="a1560" part_of_speech_sequence_id="a1545" primary_parse="full_parse" proposition_set_id="a1600" rel_mention_set_id="a1634" token_sequence_id="a1480" value_mention_set_id="a1559" />
       </Sentence>
-      <Sentence char_offsets="3296:3369" edt_offsets="3296:3369" id="a1665" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="3296:3369" edt_offsets="3296:3369" id="a1665" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a1667" score="0.0">
           <Token char_offsets="3296:3302" edt_offsets="3296:3302" id="a1668">Russian</Token>
           <Token char_offsets="3304:3310" edt_offsets="3304:3310" id="a1669">Central</Token>
@@ -2971,7 +2971,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a1706" event_mention_set_id="a1703" id="a1666" mention_set_id="a1685" name_theory_id="a1681" parse_id="a1684" part_of_speech_sequence_id="a1680" primary_parse="full_parse" proposition_set_id="a1693" rel_mention_set_id="a1702" token_sequence_id="a1667" value_mention_set_id="a1683" />
       </Sentence>
-      <Sentence char_offsets="3371:3672" edt_offsets="3371:3672" id="a1708" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="3371:3672" edt_offsets="3371:3672" id="a1708" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a1710" score="0.0">
           <Token char_offsets="3371:3374" edt_offsets="3371:3374" id="a1711">More</Token>
           <Token char_offsets="3376:3379" edt_offsets="3376:3379" id="a1712">than</Token>
@@ -3169,7 +3169,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a1831" />
         <SentenceTheory actor_mention_set_id="a1831" event_mention_set_id="a1822" id="a1709" mention_set_id="a1771" name_theory_id="a1764" parse_id="a1770" part_of_speech_sequence_id="a1763" primary_parse="full_parse" proposition_set_id="a1796" rel_mention_set_id="a1819" token_sequence_id="a1710" value_mention_set_id="a1769" />
       </Sentence>
-      <Sentence char_offsets="3674:3688" edt_offsets="3674:3688" id="a1832" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="3674:3688" edt_offsets="3674:3688" id="a1832" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a1834" score="0.0">
           <Token char_offsets="3674:3682" edt_offsets="3674:3682" id="a1835">Skobelkin</Token>
           <Token char_offsets="3684:3687" edt_offsets="3684:3687" id="a1836">said</Token>
@@ -3207,7 +3207,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a1853" />
         <SentenceTheory actor_mention_set_id="a1853" event_mention_set_id="a1849" id="a1833" mention_set_id="a1843" name_theory_id="a1839" parse_id="a1842" part_of_speech_sequence_id="a1838" primary_parse="full_parse" proposition_set_id="a1845" rel_mention_set_id="a1848" token_sequence_id="a1834" value_mention_set_id="a1841" />
       </Sentence>
-      <Sentence char_offsets="3690:3878" edt_offsets="3690:3878" id="a1854" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="3690:3878" edt_offsets="3690:3878" id="a1854" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a1856" score="0.0">
           <Token char_offsets="3690:3690" edt_offsets="3690:3690" id="a1857">``</Token>
           <Token char_offsets="3691:3695" edt_offsets="3691:3695" id="a1858">Today</Token>
@@ -3342,7 +3342,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a1930" />
         <SentenceTheory actor_mention_set_id="a1930" event_mention_set_id="a1927" id="a1855" mention_set_id="a1892" name_theory_id="a1888" parse_id="a1891" part_of_speech_sequence_id="a1887" primary_parse="full_parse" proposition_set_id="a1906" rel_mention_set_id="a1926" token_sequence_id="a1856" value_mention_set_id="a1889" />
       </Sentence>
-      <Sentence char_offsets="3880:3903" edt_offsets="3880:3903" id="a1931" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="3880:3903" edt_offsets="3880:3903" id="a1931" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a1933" score="0.0">
           <Token char_offsets="3880:3880" edt_offsets="3880:3880" id="a1934">-LRB-</Token>
           <Token char_offsets="3881:3888" edt_offsets="3881:3888" id="a1935">Interfax</Token>
@@ -3382,7 +3382,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a1955" event_mention_set_id="a1954" id="a1932" mention_set_id="a1947" name_theory_id="a1942" parse_id="a1946" part_of_speech_sequence_id="a1941" primary_parse="full_parse" proposition_set_id="a1950" rel_mention_set_id="a1953" token_sequence_id="a1933" value_mention_set_id="a1944" />
       </Sentence>
-      <Sentence char_offsets="3906:3973" edt_offsets="3906:3973" id="a1957" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="3906:3973" edt_offsets="3906:3973" id="a1957" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a1959" score="0.0">
           <Token char_offsets="3906:3914" edt_offsets="3906:3914" id="a1960">Ukrainian</Token>
           <Token char_offsets="3916:3924" edt_offsets="3916:3924" id="a1961">President</Token>
@@ -3475,7 +3475,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a2005" event_mention_set_id="a1996" id="a1958" mention_set_id="a1977" name_theory_id="a1971" parse_id="a1976" part_of_speech_sequence_id="a1970" primary_parse="full_parse" proposition_set_id="a1986" rel_mention_set_id="a1995" token_sequence_id="a1959" value_mention_set_id="a1975" />
       </Sentence>
-      <Sentence char_offsets="3975:4030" edt_offsets="3975:4030" id="a2009" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="3975:4030" edt_offsets="3975:4030" id="a2009" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2011" score="0.0">
           <Token char_offsets="3975:3983" edt_offsets="3975:3983" id="a2012">Ukrainian</Token>
           <Token char_offsets="3985:3993" edt_offsets="3985:3993" id="a2013">President</Token>
@@ -3530,7 +3530,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a2042" event_mention_set_id="a2041" id="a2010" mention_set_id="a2027" name_theory_id="a2021" parse_id="a2026" part_of_speech_sequence_id="a2020" primary_parse="full_parse" proposition_set_id="a2035" rel_mention_set_id="a2040" token_sequence_id="a2011" value_mention_set_id="a2024" />
       </Sentence>
-      <Sentence char_offsets="4032:4137" edt_offsets="4032:4137" id="a2045" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="4032:4137" edt_offsets="4032:4137" id="a2045" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2047" score="0.0">
           <Token char_offsets="4032:4033" edt_offsets="4032:4033" id="a2048">IT</Token>
           <Token char_offsets="4035:4042" edt_offsets="4035:4042" id="a2049">industry</Token>
@@ -3642,7 +3642,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a2106" event_mention_set_id="a2100" id="a2046" mention_set_id="a2076" name_theory_id="a2069" parse_id="a2075" part_of_speech_sequence_id="a2068" primary_parse="full_parse" proposition_set_id="a2087" rel_mention_set_id="a2098" token_sequence_id="a2047" value_mention_set_id="a2072" />
       </Sentence>
-      <Sentence char_offsets="4139:4198" edt_offsets="4139:4198" id="a2109" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="4139:4198" edt_offsets="4139:4198" id="a2109" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2111" score="0.0">
           <Token char_offsets="4139:4141" edt_offsets="4139:4141" id="a2112">The</Token>
           <Token char_offsets="4143:4149" edt_offsets="4143:4149" id="a2113">attacks</Token>
@@ -3702,7 +3702,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a2143" />
         <SentenceTheory actor_mention_set_id="a2143" event_mention_set_id="a2141" id="a2110" mention_set_id="a2128" name_theory_id="a2124" parse_id="a2127" part_of_speech_sequence_id="a2123" primary_parse="full_parse" proposition_set_id="a2134" rel_mention_set_id="a2140" token_sequence_id="a2111" value_mention_set_id="a2125" />
       </Sentence>
-      <Sentence char_offsets="4200:4242" edt_offsets="4200:4242" id="a2144" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="4200:4242" edt_offsets="4200:4242" id="a2144" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2146" score="0.0">
           <Token char_offsets="4200:4208" edt_offsets="4200:4208" id="a2147">Ukrainian</Token>
           <Token char_offsets="4210:4221" edt_offsets="4210:4221" id="a2148">presidential</Token>
@@ -3759,7 +3759,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a2175" event_mention_set_id="a2171" id="a2145" mention_set_id="a2160" name_theory_id="a2155" parse_id="a2159" part_of_speech_sequence_id="a2154" primary_parse="full_parse" proposition_set_id="a2165" rel_mention_set_id="a2170" token_sequence_id="a2146" value_mention_set_id="a2158" />
       </Sentence>
-      <Sentence char_offsets="4245:4291" edt_offsets="4245:4291" id="a2178" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="4245:4291" edt_offsets="4245:4291" id="a2178" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2180" score="0.0">
           <Token char_offsets="4245:4251" edt_offsets="4245:4251" id="a2181">Ukraine</Token>
           <Token char_offsets="4253:4254" edt_offsets="4253:4254" id="a2182">To</Token>
@@ -3848,7 +3848,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a2219" event_mention_set_id="a2212" id="a2179" mention_set_id="a2195" name_theory_id="a2190" parse_id="a2194" part_of_speech_sequence_id="a2189" primary_parse="full_parse" proposition_set_id="a2203" rel_mention_set_id="a2211" token_sequence_id="a2180" value_mention_set_id="a2193" />
       </Sentence>
-      <Sentence char_offsets="4293:4531" edt_offsets="4293:4531" id="a2222" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="4293:4531" edt_offsets="4293:4531" id="a2222" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2224" score="0.0">
           <Token char_offsets="4293:4299" edt_offsets="4293:4299" id="a2225">Ukraine</Token>
           <Token char_offsets="4301:4304" edt_offsets="4301:4304" id="a2226">will</Token>
@@ -4066,7 +4066,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a2336" event_mention_set_id="a2316" id="a2223" mention_set_id="a2278" name_theory_id="a2267" parse_id="a2277" part_of_speech_sequence_id="a2266" primary_parse="full_parse" proposition_set_id="a2294" rel_mention_set_id="a2314" token_sequence_id="a2224" value_mention_set_id="a2275" />
       </Sentence>
-      <Sentence char_offsets="4534:4612" edt_offsets="4534:4612" id="a2345" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="4534:4612" edt_offsets="4534:4612" id="a2345" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2347" score="0.0">
           <Token char_offsets="4534:4540" edt_offsets="4534:4540" id="a2348">Ukraine</Token>
           <Token char_offsets="4541:4542" edt_offsets="4541:4542" id="a2349">'s</Token>
@@ -4150,7 +4150,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a2389" event_mention_set_id="a2383" id="a2346" mention_set_id="a2366" name_theory_id="a2361" parse_id="a2365" part_of_speech_sequence_id="a2360" primary_parse="full_parse" proposition_set_id="a2373" rel_mention_set_id="a2381" token_sequence_id="a2347" value_mention_set_id="a2364" />
       </Sentence>
-      <Sentence char_offsets="4614:4870" edt_offsets="4614:4870" id="a2394" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="4614:4870" edt_offsets="4614:4870" id="a2394" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2396" score="0.0">
           <Token char_offsets="4614:4620" edt_offsets="4614:4620" id="a2397">Ukraine</Token>
           <Token char_offsets="4621:4622" edt_offsets="4621:4622" id="a2398">'s</Token>
@@ -4384,7 +4384,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a2523" event_mention_set_id="a2508" id="a2395" mention_set_id="a2456" name_theory_id="a2445" parse_id="a2455" part_of_speech_sequence_id="a2444" primary_parse="full_parse" proposition_set_id="a2481" rel_mention_set_id="a2505" token_sequence_id="a2396" value_mention_set_id="a2453" />
       </Sentence>
-      <Sentence char_offsets="4873:4951" edt_offsets="4873:4951" id="a2531" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="4873:4951" edt_offsets="4873:4951" id="a2531" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2533" score="0.0">
           <Token char_offsets="4873:4882" edt_offsets="4873:4882" id="a2534">Lithuanian</Token>
           <Token char_offsets="4884:4886" edt_offsets="4884:4886" id="a2535">Top</Token>
@@ -4481,7 +4481,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a2582" event_mention_set_id="a2573" id="a2532" mention_set_id="a2551" name_theory_id="a2547" parse_id="a2550" part_of_speech_sequence_id="a2546" primary_parse="full_parse" proposition_set_id="a2561" rel_mention_set_id="a2572" token_sequence_id="a2533" value_mention_set_id="a2549" />
       </Sentence>
-      <Sentence char_offsets="4953:5356" edt_offsets="4953:5356" id="a2584" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="4953:5356" edt_offsets="4953:5356" id="a2584" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2586" score="0.0">
           <Token char_offsets="4953:4957" edt_offsets="4953:4957" id="a2587">Rytis</Token>
           <Token char_offsets="4959:4964" edt_offsets="4959:4964" id="a2588">Rainys</Token>
@@ -4830,7 +4830,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a2778" event_mention_set_id="a2745" id="a2585" mention_set_id="a2669" name_theory_id="a2656" parse_id="a2668" part_of_speech_sequence_id="a2655" primary_parse="full_parse" proposition_set_id="a2707" rel_mention_set_id="a2743" token_sequence_id="a2586" value_mention_set_id="a2663" />
       </Sentence>
-      <Sentence char_offsets="5359:5360" edt_offsets="5359:5360" id="a2782" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="5359:5360" edt_offsets="5359:5360" id="a2782" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2784" score="0.0">
           <Token char_offsets="5359:5359" edt_offsets="5359:5359" id="a2785">1</Token>
         </TokenSequence>
@@ -4849,7 +4849,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a2795" />
         <SentenceTheory actor_mention_set_id="a2795" event_mention_set_id="a2794" id="a2783" mention_set_id="a2791" name_theory_id="a2787" parse_id="a2790" part_of_speech_sequence_id="a2786" primary_parse="full_parse" proposition_set_id="a2792" rel_mention_set_id="a2793" token_sequence_id="a2784" value_mention_set_id="a2788" />
       </Sentence>
-      <Sentence char_offsets="5361:5384" edt_offsets="5361:5384" id="a2796" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="5361:5384" edt_offsets="5361:5384" id="a2796" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2798" score="0.0">
           <Token char_offsets="5361:5361" edt_offsets="5361:5361" id="a2799">-LRB-</Token>
           <Token char_offsets="5362:5364" edt_offsets="5362:5364" id="a2800">OSE</Token>
@@ -4910,7 +4910,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a2829" event_mention_set_id="a2828" id="a2797" mention_set_id="a2813" name_theory_id="a2807" parse_id="a2812" part_of_speech_sequence_id="a2806" primary_parse="full_parse" proposition_set_id="a2820" rel_mention_set_id="a2827" token_sequence_id="a2798" value_mention_set_id="a2811" />
       </Sentence>
-      <Sentence char_offsets="5385:5584" edt_offsets="5385:5584" id="a2831" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="5385:5584" edt_offsets="5385:5584" id="a2831" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2833" score="0.0">
           <Token char_offsets="5387:5405" edt_offsets="5387:5405" id="a2834">CEW2019022653481263</Token>
           <Token char_offsets="5407:5407" edt_offsets="5407:5407" id="a2835">|</Token>
@@ -5124,7 +5124,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a2949" event_mention_set_id="a2946" id="a2832" mention_set_id="a2887" name_theory_id="a2876" parse_id="a2886" part_of_speech_sequence_id="a2875" primary_parse="full_parse" proposition_set_id="a2913" rel_mention_set_id="a2943" token_sequence_id="a2833" value_mention_set_id="a2883" />
       </Sentence>
-      <Sentence char_offsets="5586:5823" edt_offsets="5586:5823" id="a2954" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="5586:5823" edt_offsets="5586:5823" id="a2954" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a2956" score="0.0">
           <Token char_offsets="5589:5594" edt_offsets="5589:5594" id="a2957">Russia</Token>
           <Token char_offsets="5595:5596" edt_offsets="5595:5596" id="a2958">'s</Token>
@@ -5310,7 +5310,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a3061" event_mention_set_id="a3058" id="a2955" mention_set_id="a3009" name_theory_id="a2999" parse_id="a3008" part_of_speech_sequence_id="a2998" primary_parse="full_parse" proposition_set_id="a3030" rel_mention_set_id="a3054" token_sequence_id="a2956" value_mention_set_id="a3005" />
       </Sentence>
-      <Sentence char_offsets="5824:5828" edt_offsets="5824:5828" id="a3067" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="5824:5828" edt_offsets="5824:5828" id="a3067" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3069" score="0.0">
           <Token char_offsets="5825:5827" edt_offsets="5825:5827" id="a3070">URL</Token>
           <Token char_offsets="5828:5828" edt_offsets="5828:5828" id="a3071">:</Token>
@@ -5334,7 +5334,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a3082" />
         <SentenceTheory actor_mention_set_id="a3082" event_mention_set_id="a3081" id="a3068" mention_set_id="a3076" name_theory_id="a3073" parse_id="a3075" part_of_speech_sequence_id="a3072" primary_parse="full_parse" proposition_set_id="a3078" rel_mention_set_id="a3080" token_sequence_id="a3069" value_mention_set_id="a3074" />
       </Sentence>
-      <Sentence char_offsets="5830:5854" edt_offsets="5830:5854" id="a3083" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="5830:5854" edt_offsets="5830:5854" id="a3083" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3085" score="0.0">
           <Token char_offsets="5830:5853" edt_offsets="5830:5853" id="a3086">https://www.interfax.com</Token>
           <Token char_offsets="5854:5854" edt_offsets="5854:5854" id="a3087">-RRB-</Token>
@@ -5354,7 +5354,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a3097" />
         <SentenceTheory actor_mention_set_id="a3097" event_mention_set_id="a3096" id="a3084" mention_set_id="a3093" name_theory_id="a3089" parse_id="a3092" part_of_speech_sequence_id="a3088" primary_parse="full_parse" proposition_set_id="a3094" rel_mention_set_id="a3095" token_sequence_id="a3085" value_mention_set_id="a3090" />
       </Sentence>
-      <Sentence char_offsets="5857:5858" edt_offsets="5857:5858" id="a3098" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="5857:5858" edt_offsets="5857:5858" id="a3098" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3100" score="0.0">
           <Token char_offsets="5857:5857" edt_offsets="5857:5857" id="a3101">2</Token>
         </TokenSequence>
@@ -5371,7 +5371,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a3110" />
         <SentenceTheory actor_mention_set_id="a3110" event_mention_set_id="a3109" id="a3099" mention_set_id="a3106" name_theory_id="a3103" parse_id="a3105" part_of_speech_sequence_id="a3102" primary_parse="full_parse" proposition_set_id="a3107" rel_mention_set_id="a3108" token_sequence_id="a3100" value_mention_set_id="a3104" />
       </Sentence>
-      <Sentence char_offsets="5859:5882" edt_offsets="5859:5882" id="a3111" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="5859:5882" edt_offsets="5859:5882" id="a3111" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3113" score="0.0">
           <Token char_offsets="5859:5859" edt_offsets="5859:5859" id="a3114">-LRB-</Token>
           <Token char_offsets="5860:5862" edt_offsets="5860:5862" id="a3115">OSE</Token>
@@ -5432,7 +5432,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a3144" event_mention_set_id="a3143" id="a3112" mention_set_id="a3128" name_theory_id="a3122" parse_id="a3127" part_of_speech_sequence_id="a3121" primary_parse="full_parse" proposition_set_id="a3135" rel_mention_set_id="a3142" token_sequence_id="a3113" value_mention_set_id="a3126" />
       </Sentence>
-      <Sentence char_offsets="5883:6080" edt_offsets="5883:6080" id="a3146" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="5883:6080" edt_offsets="5883:6080" id="a3146" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3148" score="0.0">
           <Token char_offsets="5885:5903" edt_offsets="5885:5903" id="a3149">CEW2019022736515303</Token>
           <Token char_offsets="5905:5905" edt_offsets="5905:5905" id="a3150">|</Token>
@@ -5642,7 +5642,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a3259" event_mention_set_id="a3248" id="a3147" mention_set_id="a3200" name_theory_id="a3189" parse_id="a3199" part_of_speech_sequence_id="a3188" primary_parse="full_parse" proposition_set_id="a3223" rel_mention_set_id="a3247" token_sequence_id="a3148" value_mention_set_id="a3196" />
       </Sentence>
-      <Sentence char_offsets="6082:6319" edt_offsets="6082:6319" id="a3266" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="6082:6319" edt_offsets="6082:6319" id="a3266" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3268" score="0.0">
           <Token char_offsets="6085:6090" edt_offsets="6085:6090" id="a3269">Russia</Token>
           <Token char_offsets="6091:6092" edt_offsets="6091:6092" id="a3270">'s</Token>
@@ -5828,7 +5828,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a3373" event_mention_set_id="a3370" id="a3267" mention_set_id="a3321" name_theory_id="a3311" parse_id="a3320" part_of_speech_sequence_id="a3310" primary_parse="full_parse" proposition_set_id="a3342" rel_mention_set_id="a3366" token_sequence_id="a3268" value_mention_set_id="a3317" />
       </Sentence>
-      <Sentence char_offsets="6320:6324" edt_offsets="6320:6324" id="a3379" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="6320:6324" edt_offsets="6320:6324" id="a3379" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3381" score="0.0">
           <Token char_offsets="6321:6323" edt_offsets="6321:6323" id="a3382">URL</Token>
           <Token char_offsets="6324:6324" edt_offsets="6324:6324" id="a3383">:</Token>
@@ -5852,7 +5852,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a3394" />
         <SentenceTheory actor_mention_set_id="a3394" event_mention_set_id="a3393" id="a3380" mention_set_id="a3388" name_theory_id="a3385" parse_id="a3387" part_of_speech_sequence_id="a3384" primary_parse="full_parse" proposition_set_id="a3390" rel_mention_set_id="a3392" token_sequence_id="a3381" value_mention_set_id="a3386" />
       </Sentence>
-      <Sentence char_offsets="6326:6350" edt_offsets="6326:6350" id="a3395" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="6326:6350" edt_offsets="6326:6350" id="a3395" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3397" score="0.0">
           <Token char_offsets="6326:6349" edt_offsets="6326:6349" id="a3398">https://www.interfax.com</Token>
           <Token char_offsets="6350:6350" edt_offsets="6350:6350" id="a3399">-RRB-</Token>
@@ -5872,7 +5872,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a3409" />
         <SentenceTheory actor_mention_set_id="a3409" event_mention_set_id="a3408" id="a3396" mention_set_id="a3405" name_theory_id="a3401" parse_id="a3404" part_of_speech_sequence_id="a3400" primary_parse="full_parse" proposition_set_id="a3406" rel_mention_set_id="a3407" token_sequence_id="a3397" value_mention_set_id="a3402" />
       </Sentence>
-      <Sentence char_offsets="6353:6354" edt_offsets="6353:6354" id="a3410" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="6353:6354" edt_offsets="6353:6354" id="a3410" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3412" score="0.0">
           <Token char_offsets="6353:6353" edt_offsets="6353:6353" id="a3413">3</Token>
         </TokenSequence>
@@ -5889,7 +5889,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a3422" />
         <SentenceTheory actor_mention_set_id="a3422" event_mention_set_id="a3421" id="a3411" mention_set_id="a3418" name_theory_id="a3415" parse_id="a3417" part_of_speech_sequence_id="a3414" primary_parse="full_parse" proposition_set_id="a3419" rel_mention_set_id="a3420" token_sequence_id="a3412" value_mention_set_id="a3416" />
       </Sentence>
-      <Sentence char_offsets="6355:6378" edt_offsets="6355:6378" id="a3423" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="6355:6378" edt_offsets="6355:6378" id="a3423" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3425" score="0.0">
           <Token char_offsets="6355:6355" edt_offsets="6355:6355" id="a3426">-LRB-</Token>
           <Token char_offsets="6356:6358" edt_offsets="6356:6358" id="a3427">OSE</Token>
@@ -5950,7 +5950,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a3456" event_mention_set_id="a3455" id="a3424" mention_set_id="a3440" name_theory_id="a3434" parse_id="a3439" part_of_speech_sequence_id="a3433" primary_parse="full_parse" proposition_set_id="a3447" rel_mention_set_id="a3454" token_sequence_id="a3425" value_mention_set_id="a3438" />
       </Sentence>
-      <Sentence char_offsets="6379:6526" edt_offsets="6379:6526" id="a3458" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="6379:6526" edt_offsets="6379:6526" id="a3458" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3460" score="0.0">
           <Token char_offsets="6381:6399" edt_offsets="6381:6399" id="a3461">CEW2019022240517607</Token>
           <Token char_offsets="6401:6401" edt_offsets="6401:6401" id="a3462">|</Token>
@@ -6101,7 +6101,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a3541" event_mention_set_id="a3540" id="a3459" mention_set_id="a3501" name_theory_id="a3493" parse_id="a3500" part_of_speech_sequence_id="a3492" primary_parse="full_parse" proposition_set_id="a3517" rel_mention_set_id="a3538" token_sequence_id="a3460" value_mention_set_id="a3498" />
       </Sentence>
-      <Sentence char_offsets="6528:6765" edt_offsets="6528:6765" id="a3547" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="6528:6765" edt_offsets="6528:6765" id="a3547" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3549" score="0.0">
           <Token char_offsets="6531:6536" edt_offsets="6531:6536" id="a3550">Russia</Token>
           <Token char_offsets="6537:6538" edt_offsets="6537:6538" id="a3551">'s</Token>
@@ -6287,7 +6287,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a3654" event_mention_set_id="a3651" id="a3548" mention_set_id="a3602" name_theory_id="a3592" parse_id="a3601" part_of_speech_sequence_id="a3591" primary_parse="full_parse" proposition_set_id="a3623" rel_mention_set_id="a3647" token_sequence_id="a3549" value_mention_set_id="a3598" />
       </Sentence>
-      <Sentence char_offsets="6766:6770" edt_offsets="6766:6770" id="a3660" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="6766:6770" edt_offsets="6766:6770" id="a3660" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3662" score="0.0">
           <Token char_offsets="6767:6769" edt_offsets="6767:6769" id="a3663">URL</Token>
           <Token char_offsets="6770:6770" edt_offsets="6770:6770" id="a3664">:</Token>
@@ -6311,7 +6311,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a3675" />
         <SentenceTheory actor_mention_set_id="a3675" event_mention_set_id="a3674" id="a3661" mention_set_id="a3669" name_theory_id="a3666" parse_id="a3668" part_of_speech_sequence_id="a3665" primary_parse="full_parse" proposition_set_id="a3671" rel_mention_set_id="a3673" token_sequence_id="a3662" value_mention_set_id="a3667" />
       </Sentence>
-      <Sentence char_offsets="6772:6797" edt_offsets="6772:6797" id="a3676" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="6772:6797" edt_offsets="6772:6797" id="a3676" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3678" score="0.0">
           <Token char_offsets="6772:6796" edt_offsets="6772:6796" id="a3679">https://www.interfax.com/</Token>
           <Token char_offsets="6797:6797" edt_offsets="6797:6797" id="a3680">-RRB-</Token>
@@ -6331,7 +6331,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a3690" />
         <SentenceTheory actor_mention_set_id="a3690" event_mention_set_id="a3689" id="a3677" mention_set_id="a3686" name_theory_id="a3682" parse_id="a3685" part_of_speech_sequence_id="a3681" primary_parse="full_parse" proposition_set_id="a3687" rel_mention_set_id="a3688" token_sequence_id="a3678" value_mention_set_id="a3683" />
       </Sentence>
-      <Sentence char_offsets="6800:6801" edt_offsets="6800:6801" id="a3691" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="6800:6801" edt_offsets="6800:6801" id="a3691" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3693" score="0.0">
           <Token char_offsets="6800:6800" edt_offsets="6800:6800" id="a3694">4</Token>
         </TokenSequence>
@@ -6348,7 +6348,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a3703" />
         <SentenceTheory actor_mention_set_id="a3703" event_mention_set_id="a3702" id="a3692" mention_set_id="a3699" name_theory_id="a3696" parse_id="a3698" part_of_speech_sequence_id="a3695" primary_parse="full_parse" proposition_set_id="a3700" rel_mention_set_id="a3701" token_sequence_id="a3693" value_mention_set_id="a3697" />
       </Sentence>
-      <Sentence char_offsets="6802:6825" edt_offsets="6802:6825" id="a3704" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="6802:6825" edt_offsets="6802:6825" id="a3704" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3706" score="0.0">
           <Token char_offsets="6802:6802" edt_offsets="6802:6802" id="a3707">-LRB-</Token>
           <Token char_offsets="6803:6805" edt_offsets="6803:6805" id="a3708">OSE</Token>
@@ -6409,7 +6409,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a3737" event_mention_set_id="a3736" id="a3705" mention_set_id="a3721" name_theory_id="a3715" parse_id="a3720" part_of_speech_sequence_id="a3714" primary_parse="full_parse" proposition_set_id="a3728" rel_mention_set_id="a3735" token_sequence_id="a3706" value_mention_set_id="a3719" />
       </Sentence>
-      <Sentence char_offsets="6826:6988" edt_offsets="6826:6988" id="a3739" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="6826:6988" edt_offsets="6826:6988" id="a3739" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3741" score="0.0">
           <Token char_offsets="6828:6846" edt_offsets="6828:6846" id="a3742">CEW2019022269893309</Token>
           <Token char_offsets="6848:6848" edt_offsets="6848:6848" id="a3743">|</Token>
@@ -6566,7 +6566,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a3827" event_mention_set_id="a3825" id="a3740" mention_set_id="a3786" name_theory_id="a3778" parse_id="a3785" part_of_speech_sequence_id="a3777" primary_parse="full_parse" proposition_set_id="a3803" rel_mention_set_id="a3823" token_sequence_id="a3741" value_mention_set_id="a3783" />
       </Sentence>
-      <Sentence char_offsets="6990:7227" edt_offsets="6990:7227" id="a3832" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="6990:7227" edt_offsets="6990:7227" id="a3832" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3834" score="0.0">
           <Token char_offsets="6993:6998" edt_offsets="6993:6998" id="a3835">Russia</Token>
           <Token char_offsets="6999:7000" edt_offsets="6999:7000" id="a3836">'s</Token>
@@ -6752,7 +6752,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a3939" event_mention_set_id="a3936" id="a3833" mention_set_id="a3887" name_theory_id="a3877" parse_id="a3886" part_of_speech_sequence_id="a3876" primary_parse="full_parse" proposition_set_id="a3908" rel_mention_set_id="a3932" token_sequence_id="a3834" value_mention_set_id="a3883" />
       </Sentence>
-      <Sentence char_offsets="7228:7232" edt_offsets="7228:7232" id="a3945" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7228:7232" edt_offsets="7228:7232" id="a3945" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3947" score="0.0">
           <Token char_offsets="7229:7231" edt_offsets="7229:7231" id="a3948">URL</Token>
           <Token char_offsets="7232:7232" edt_offsets="7232:7232" id="a3949">:</Token>
@@ -6776,7 +6776,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a3960" />
         <SentenceTheory actor_mention_set_id="a3960" event_mention_set_id="a3959" id="a3946" mention_set_id="a3954" name_theory_id="a3951" parse_id="a3953" part_of_speech_sequence_id="a3950" primary_parse="full_parse" proposition_set_id="a3956" rel_mention_set_id="a3958" token_sequence_id="a3947" value_mention_set_id="a3952" />
       </Sentence>
-      <Sentence char_offsets="7234:7258" edt_offsets="7234:7258" id="a3961" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7234:7258" edt_offsets="7234:7258" id="a3961" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3963" score="0.0">
           <Token char_offsets="7234:7257" edt_offsets="7234:7257" id="a3964">https://www.interfax.com</Token>
           <Token char_offsets="7258:7258" edt_offsets="7258:7258" id="a3965">-RRB-</Token>
@@ -6796,7 +6796,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a3975" />
         <SentenceTheory actor_mention_set_id="a3975" event_mention_set_id="a3974" id="a3962" mention_set_id="a3971" name_theory_id="a3967" parse_id="a3970" part_of_speech_sequence_id="a3966" primary_parse="full_parse" proposition_set_id="a3972" rel_mention_set_id="a3973" token_sequence_id="a3963" value_mention_set_id="a3968" />
       </Sentence>
-      <Sentence char_offsets="7261:7286" edt_offsets="7261:7286" id="a3976" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7261:7286" edt_offsets="7261:7286" id="a3976" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a3978" score="0.0">
           <Token char_offsets="7261:7261" edt_offsets="7261:7261" id="a3979">5</Token>
           <Token char_offsets="7263:7263" edt_offsets="7263:7263" id="a3980">-LRB-</Token>
@@ -6863,7 +6863,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a4013" event_mention_set_id="a4012" id="a3977" mention_set_id="a3994" name_theory_id="a3988" parse_id="a3993" part_of_speech_sequence_id="a3987" primary_parse="full_parse" proposition_set_id="a4003" rel_mention_set_id="a4011" token_sequence_id="a3978" value_mention_set_id="a3992" />
       </Sentence>
-      <Sentence char_offsets="7287:7485" edt_offsets="7287:7485" id="a4015" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7287:7485" edt_offsets="7287:7485" id="a4015" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4017" score="0.0">
           <Token char_offsets="7289:7307" edt_offsets="7289:7307" id="a4018">CEW2019022058107125</Token>
           <Token char_offsets="7309:7309" edt_offsets="7309:7309" id="a4019">|</Token>
@@ -7058,7 +7058,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a4126" event_mention_set_id="a4118" id="a4016" mention_set_id="a4069" name_theory_id="a4059" parse_id="a4068" part_of_speech_sequence_id="a4058" primary_parse="full_parse" proposition_set_id="a4094" rel_mention_set_id="a4117" token_sequence_id="a4017" value_mention_set_id="a4066" />
       </Sentence>
-      <Sentence char_offsets="7487:7615" edt_offsets="7487:7615" id="a4133" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7487:7615" edt_offsets="7487:7615" id="a4133" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4135" score="0.0">
           <Token char_offsets="7490:7496" edt_offsets="7490:7496" id="a4136">Website</Token>
           <Token char_offsets="7498:7499" edt_offsets="7498:7499" id="a4137">of</Token>
@@ -7146,7 +7146,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a4184" />
         <SentenceTheory actor_mention_set_id="a4184" event_mention_set_id="a4181" id="a4134" mention_set_id="a4158" name_theory_id="a4155" parse_id="a4157" part_of_speech_sequence_id="a4154" primary_parse="full_parse" proposition_set_id="a4169" rel_mention_set_id="a4180" token_sequence_id="a4135" value_mention_set_id="a4156" />
       </Sentence>
-      <Sentence char_offsets="7616:7620" edt_offsets="7616:7620" id="a4185" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7616:7620" edt_offsets="7616:7620" id="a4185" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4187" score="0.0">
           <Token char_offsets="7617:7619" edt_offsets="7617:7619" id="a4188">URL</Token>
           <Token char_offsets="7620:7620" edt_offsets="7620:7620" id="a4189">:</Token>
@@ -7170,7 +7170,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a4200" />
         <SentenceTheory actor_mention_set_id="a4200" event_mention_set_id="a4199" id="a4186" mention_set_id="a4194" name_theory_id="a4191" parse_id="a4193" part_of_speech_sequence_id="a4190" primary_parse="full_parse" proposition_set_id="a4196" rel_mention_set_id="a4198" token_sequence_id="a4187" value_mention_set_id="a4192" />
       </Sentence>
-      <Sentence char_offsets="7622:7647" edt_offsets="7622:7647" id="a4201" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7622:7647" edt_offsets="7622:7647" id="a4201" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4203" score="0.0">
           <Token char_offsets="7622:7646" edt_offsets="7622:7646" id="a4204">https://www.interfax.com/</Token>
           <Token char_offsets="7647:7647" edt_offsets="7647:7647" id="a4205">-RRB-</Token>
@@ -7190,7 +7190,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a4215" />
         <SentenceTheory actor_mention_set_id="a4215" event_mention_set_id="a4214" id="a4202" mention_set_id="a4211" name_theory_id="a4207" parse_id="a4210" part_of_speech_sequence_id="a4206" primary_parse="full_parse" proposition_set_id="a4212" rel_mention_set_id="a4213" token_sequence_id="a4203" value_mention_set_id="a4208" />
       </Sentence>
-      <Sentence char_offsets="7650:7675" edt_offsets="7650:7675" id="a4216" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7650:7675" edt_offsets="7650:7675" id="a4216" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4218" score="0.0">
           <Token char_offsets="7650:7650" edt_offsets="7650:7650" id="a4219">6</Token>
           <Token char_offsets="7652:7652" edt_offsets="7652:7652" id="a4220">-LRB-</Token>
@@ -7257,7 +7257,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a4252" event_mention_set_id="a4251" id="a4217" mention_set_id="a4234" name_theory_id="a4228" parse_id="a4233" part_of_speech_sequence_id="a4227" primary_parse="full_parse" proposition_set_id="a4242" rel_mention_set_id="a4250" token_sequence_id="a4218" value_mention_set_id="a4232" />
       </Sentence>
-      <Sentence char_offsets="7676:7736" edt_offsets="7676:7736" id="a4254" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7676:7736" edt_offsets="7676:7736" id="a4254" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4256" score="0.0">
           <Token char_offsets="7678:7696" edt_offsets="7678:7696" id="a4257">CEW2019021941219670</Token>
           <Token char_offsets="7698:7698" edt_offsets="7698:7698" id="a4258">|</Token>
@@ -7320,7 +7320,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a4289" />
         <SentenceTheory actor_mention_set_id="a4289" event_mention_set_id="a4288" id="a4255" mention_set_id="a4272" name_theory_id="a4268" parse_id="a4271" part_of_speech_sequence_id="a4267" primary_parse="full_parse" proposition_set_id="a4278" rel_mention_set_id="a4287" token_sequence_id="a4256" value_mention_set_id="a4269" />
       </Sentence>
-      <Sentence char_offsets="7738:7807" edt_offsets="7738:7807" id="a4290" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7738:7807" edt_offsets="7738:7807" id="a4290" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4292" score="0.0">
           <Token char_offsets="7738:7741" edt_offsets="7738:7741" id="a4293">Over</Token>
           <Token char_offsets="7743:7745" edt_offsets="7743:7745" id="a4294">600</Token>
@@ -7370,7 +7370,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a4319" />
         <SentenceTheory actor_mention_set_id="a4319" event_mention_set_id="a4318" id="a4291" mention_set_id="a4306" name_theory_id="a4303" parse_id="a4305" part_of_speech_sequence_id="a4302" primary_parse="full_parse" proposition_set_id="a4310" rel_mention_set_id="a4317" token_sequence_id="a4292" value_mention_set_id="a4304" />
       </Sentence>
-      <Sentence char_offsets="7808:7862" edt_offsets="7808:7862" id="a4320" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7808:7862" edt_offsets="7808:7862" id="a4320" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4322" score="0.0">
           <Token char_offsets="7808:7814" edt_offsets="7808:7814" id="a4323">Central</Token>
           <Token char_offsets="7816:7819" edt_offsets="7816:7819" id="a4324">Bank</Token>
@@ -7460,7 +7460,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a4370" event_mention_set_id="a4369" id="a4321" mention_set_id="a4347" name_theory_id="a4340" parse_id="a4346" part_of_speech_sequence_id="a4339" primary_parse="full_parse" proposition_set_id="a4357" rel_mention_set_id="a4367" token_sequence_id="a4322" value_mention_set_id="a4345" />
       </Sentence>
-      <Sentence char_offsets="7864:7992" edt_offsets="7864:7992" id="a4375" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7864:7992" edt_offsets="7864:7992" id="a4375" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4377" score="0.0">
           <Token char_offsets="7867:7873" edt_offsets="7867:7873" id="a4378">Website</Token>
           <Token char_offsets="7875:7876" edt_offsets="7875:7876" id="a4379">of</Token>
@@ -7548,7 +7548,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a4426" />
         <SentenceTheory actor_mention_set_id="a4426" event_mention_set_id="a4423" id="a4376" mention_set_id="a4400" name_theory_id="a4397" parse_id="a4399" part_of_speech_sequence_id="a4396" primary_parse="full_parse" proposition_set_id="a4411" rel_mention_set_id="a4422" token_sequence_id="a4377" value_mention_set_id="a4398" />
       </Sentence>
-      <Sentence char_offsets="7993:7997" edt_offsets="7993:7997" id="a4427" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7993:7997" edt_offsets="7993:7997" id="a4427" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4429" score="0.0">
           <Token char_offsets="7994:7996" edt_offsets="7994:7996" id="a4430">URL</Token>
           <Token char_offsets="7997:7997" edt_offsets="7997:7997" id="a4431">:</Token>
@@ -7572,7 +7572,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a4442" />
         <SentenceTheory actor_mention_set_id="a4442" event_mention_set_id="a4441" id="a4428" mention_set_id="a4436" name_theory_id="a4433" parse_id="a4435" part_of_speech_sequence_id="a4432" primary_parse="full_parse" proposition_set_id="a4438" rel_mention_set_id="a4440" token_sequence_id="a4429" value_mention_set_id="a4434" />
       </Sentence>
-      <Sentence char_offsets="7999:8024" edt_offsets="7999:8024" id="a4443" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="7999:8024" edt_offsets="7999:8024" id="a4443" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4445" score="0.0">
           <Token char_offsets="7999:8023" edt_offsets="7999:8023" id="a4446">https://www.interfax.com/</Token>
           <Token char_offsets="8024:8024" edt_offsets="8024:8024" id="a4447">-RRB-</Token>
@@ -7592,7 +7592,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a4457" />
         <SentenceTheory actor_mention_set_id="a4457" event_mention_set_id="a4456" id="a4444" mention_set_id="a4453" name_theory_id="a4449" parse_id="a4452" part_of_speech_sequence_id="a4448" primary_parse="full_parse" proposition_set_id="a4454" rel_mention_set_id="a4455" token_sequence_id="a4445" value_mention_set_id="a4450" />
       </Sentence>
-      <Sentence char_offsets="8027:8028" edt_offsets="8027:8028" id="a4458" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8027:8028" edt_offsets="8027:8028" id="a4458" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4460" score="0.0">
           <Token char_offsets="8027:8027" edt_offsets="8027:8027" id="a4461">7</Token>
         </TokenSequence>
@@ -7611,7 +7611,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a4471" />
         <SentenceTheory actor_mention_set_id="a4471" event_mention_set_id="a4470" id="a4459" mention_set_id="a4467" name_theory_id="a4463" parse_id="a4466" part_of_speech_sequence_id="a4462" primary_parse="full_parse" proposition_set_id="a4468" rel_mention_set_id="a4469" token_sequence_id="a4460" value_mention_set_id="a4464" />
       </Sentence>
-      <Sentence char_offsets="8029:8052" edt_offsets="8029:8052" id="a4472" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8029:8052" edt_offsets="8029:8052" id="a4472" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4474" score="0.0">
           <Token char_offsets="8029:8029" edt_offsets="8029:8029" id="a4475">-LRB-</Token>
           <Token char_offsets="8030:8032" edt_offsets="8030:8032" id="a4476">OSE</Token>
@@ -7672,7 +7672,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a4505" event_mention_set_id="a4504" id="a4473" mention_set_id="a4489" name_theory_id="a4483" parse_id="a4488" part_of_speech_sequence_id="a4482" primary_parse="full_parse" proposition_set_id="a4496" rel_mention_set_id="a4503" token_sequence_id="a4474" value_mention_set_id="a4487" />
       </Sentence>
-      <Sentence char_offsets="8053:8243" edt_offsets="8053:8243" id="a4507" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8053:8243" edt_offsets="8053:8243" id="a4507" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4509" score="0.0">
           <Token char_offsets="8055:8073" edt_offsets="8055:8073" id="a4510">CEW2019022654785119</Token>
           <Token char_offsets="8075:8075" edt_offsets="8075:8075" id="a4511">|</Token>
@@ -7900,7 +7900,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a4628" event_mention_set_id="a4615" id="a4508" mention_set_id="a4562" name_theory_id="a4550" parse_id="a4561" part_of_speech_sequence_id="a4549" primary_parse="full_parse" proposition_set_id="a4586" rel_mention_set_id="a4612" token_sequence_id="a4509" value_mention_set_id="a4559" />
       </Sentence>
-      <Sentence char_offsets="8245:8482" edt_offsets="8245:8482" id="a4635" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8245:8482" edt_offsets="8245:8482" id="a4635" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4637" score="0.0">
           <Token char_offsets="8248:8253" edt_offsets="8248:8253" id="a4638">Russia</Token>
           <Token char_offsets="8254:8255" edt_offsets="8254:8255" id="a4639">'s</Token>
@@ -8087,7 +8087,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a4743" event_mention_set_id="a4739" id="a4636" mention_set_id="a4690" name_theory_id="a4680" parse_id="a4689" part_of_speech_sequence_id="a4679" primary_parse="full_parse" proposition_set_id="a4711" rel_mention_set_id="a4735" token_sequence_id="a4637" value_mention_set_id="a4686" />
       </Sentence>
-      <Sentence char_offsets="8483:8487" edt_offsets="8483:8487" id="a4749" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8483:8487" edt_offsets="8483:8487" id="a4749" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4751" score="0.0">
           <Token char_offsets="8484:8486" edt_offsets="8484:8486" id="a4752">URL</Token>
           <Token char_offsets="8487:8487" edt_offsets="8487:8487" id="a4753">:</Token>
@@ -8111,7 +8111,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a4764" />
         <SentenceTheory actor_mention_set_id="a4764" event_mention_set_id="a4763" id="a4750" mention_set_id="a4758" name_theory_id="a4755" parse_id="a4757" part_of_speech_sequence_id="a4754" primary_parse="full_parse" proposition_set_id="a4760" rel_mention_set_id="a4762" token_sequence_id="a4751" value_mention_set_id="a4756" />
       </Sentence>
-      <Sentence char_offsets="8489:8513" edt_offsets="8489:8513" id="a4765" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8489:8513" edt_offsets="8489:8513" id="a4765" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4767" score="0.0">
           <Token char_offsets="8489:8512" edt_offsets="8489:8512" id="a4768">https://www.interfax.com</Token>
           <Token char_offsets="8513:8513" edt_offsets="8513:8513" id="a4769">-RRB-</Token>
@@ -8131,7 +8131,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a4779" />
         <SentenceTheory actor_mention_set_id="a4779" event_mention_set_id="a4778" id="a4766" mention_set_id="a4775" name_theory_id="a4771" parse_id="a4774" part_of_speech_sequence_id="a4770" primary_parse="full_parse" proposition_set_id="a4776" rel_mention_set_id="a4777" token_sequence_id="a4767" value_mention_set_id="a4772" />
       </Sentence>
-      <Sentence char_offsets="8516:8541" edt_offsets="8516:8541" id="a4780" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8516:8541" edt_offsets="8516:8541" id="a4780" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4782" score="0.0">
           <Token char_offsets="8516:8516" edt_offsets="8516:8516" id="a4783">8</Token>
           <Token char_offsets="8518:8518" edt_offsets="8518:8518" id="a4784">-LRB-</Token>
@@ -8198,7 +8198,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a4816" event_mention_set_id="a4815" id="a4781" mention_set_id="a4798" name_theory_id="a4792" parse_id="a4797" part_of_speech_sequence_id="a4791" primary_parse="full_parse" proposition_set_id="a4806" rel_mention_set_id="a4814" token_sequence_id="a4782" value_mention_set_id="a4796" />
       </Sentence>
-      <Sentence char_offsets="8542:8678" edt_offsets="8542:8678" id="a4818" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8542:8678" edt_offsets="8542:8678" id="a4818" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4820" score="0.0">
           <Token char_offsets="8544:8562" edt_offsets="8544:8562" id="a4821">CEW2019021959411502</Token>
           <Token char_offsets="8564:8564" edt_offsets="8564:8564" id="a4822">|</Token>
@@ -8335,7 +8335,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a4891" event_mention_set_id="a4883" id="a4819" mention_set_id="a4851" name_theory_id="a4845" parse_id="a4850" part_of_speech_sequence_id="a4844" primary_parse="full_parse" proposition_set_id="a4865" rel_mention_set_id="a4882" token_sequence_id="a4820" value_mention_set_id="a4848" />
       </Sentence>
-      <Sentence char_offsets="8679:8731" edt_offsets="8679:8731" id="a4894" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8679:8731" edt_offsets="8679:8731" id="a4894" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4896" score="0.0">
           <Token char_offsets="8679:8682" edt_offsets="8679:8682" id="a4897">NSDC</Token>
           <Token char_offsets="8684:8688" edt_offsets="8684:8688" id="a4898">chief</Token>
@@ -8426,7 +8426,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a4943" event_mention_set_id="a4942" id="a4895" mention_set_id="a4921" name_theory_id="a4914" parse_id="a4920" part_of_speech_sequence_id="a4913" primary_parse="full_parse" proposition_set_id="a4929" rel_mention_set_id="a4941" token_sequence_id="a4896" value_mention_set_id="a4919" />
       </Sentence>
-      <Sentence char_offsets="8733:8861" edt_offsets="8733:8861" id="a4949" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8733:8861" edt_offsets="8733:8861" id="a4949" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a4951" score="0.0">
           <Token char_offsets="8736:8742" edt_offsets="8736:8742" id="a4952">Website</Token>
           <Token char_offsets="8744:8745" edt_offsets="8744:8745" id="a4953">of</Token>
@@ -8514,7 +8514,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a5000" />
         <SentenceTheory actor_mention_set_id="a5000" event_mention_set_id="a4997" id="a4950" mention_set_id="a4974" name_theory_id="a4971" parse_id="a4973" part_of_speech_sequence_id="a4970" primary_parse="full_parse" proposition_set_id="a4985" rel_mention_set_id="a4996" token_sequence_id="a4951" value_mention_set_id="a4972" />
       </Sentence>
-      <Sentence char_offsets="8862:8866" edt_offsets="8862:8866" id="a5001" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8862:8866" edt_offsets="8862:8866" id="a5001" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a5003" score="0.0">
           <Token char_offsets="8863:8865" edt_offsets="8863:8865" id="a5004">URL</Token>
           <Token char_offsets="8866:8866" edt_offsets="8866:8866" id="a5005">:</Token>
@@ -8538,7 +8538,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a5016" />
         <SentenceTheory actor_mention_set_id="a5016" event_mention_set_id="a5015" id="a5002" mention_set_id="a5010" name_theory_id="a5007" parse_id="a5009" part_of_speech_sequence_id="a5006" primary_parse="full_parse" proposition_set_id="a5012" rel_mention_set_id="a5014" token_sequence_id="a5003" value_mention_set_id="a5008" />
       </Sentence>
-      <Sentence char_offsets="8868:8893" edt_offsets="8868:8893" id="a5017" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8868:8893" edt_offsets="8868:8893" id="a5017" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a5019" score="0.0">
           <Token char_offsets="8868:8892" edt_offsets="8868:8892" id="a5020">https://www.interfax.com/</Token>
           <Token char_offsets="8893:8893" edt_offsets="8893:8893" id="a5021">-RRB-</Token>
@@ -8558,7 +8558,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a5031" />
         <SentenceTheory actor_mention_set_id="a5031" event_mention_set_id="a5030" id="a5018" mention_set_id="a5027" name_theory_id="a5023" parse_id="a5026" part_of_speech_sequence_id="a5022" primary_parse="full_parse" proposition_set_id="a5028" rel_mention_set_id="a5029" token_sequence_id="a5019" value_mention_set_id="a5024" />
       </Sentence>
-      <Sentence char_offsets="8896:8921" edt_offsets="8896:8921" id="a5032" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8896:8921" edt_offsets="8896:8921" id="a5032" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a5034" score="0.0">
           <Token char_offsets="8896:8896" edt_offsets="8896:8896" id="a5035">9</Token>
           <Token char_offsets="8898:8898" edt_offsets="8898:8898" id="a5036">-LRB-</Token>
@@ -8625,7 +8625,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a5069" event_mention_set_id="a5068" id="a5033" mention_set_id="a5050" name_theory_id="a5044" parse_id="a5049" part_of_speech_sequence_id="a5043" primary_parse="full_parse" proposition_set_id="a5059" rel_mention_set_id="a5067" token_sequence_id="a5034" value_mention_set_id="a5048" />
       </Sentence>
-      <Sentence char_offsets="8922:9071" edt_offsets="8922:9071" id="a5071" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="8922:9071" edt_offsets="8922:9071" id="a5071" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a5073" score="0.0">
           <Token char_offsets="8924:8942" edt_offsets="8924:8942" id="a5074">CEW2019020870338646</Token>
           <Token char_offsets="8944:8944" edt_offsets="8944:8944" id="a5075">|</Token>
@@ -8803,7 +8803,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a5168" event_mention_set_id="a5160" id="a5072" mention_set_id="a5115" name_theory_id="a5106" parse_id="a5114" part_of_speech_sequence_id="a5105" primary_parse="full_parse" proposition_set_id="a5135" rel_mention_set_id="a5157" token_sequence_id="a5073" value_mention_set_id="a5112" />
       </Sentence>
-      <Sentence char_offsets="9073:9201" edt_offsets="9073:9201" id="a5174" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="9073:9201" edt_offsets="9073:9201" id="a5174" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a5176" score="0.0">
           <Token char_offsets="9076:9082" edt_offsets="9076:9082" id="a5177">Website</Token>
           <Token char_offsets="9084:9085" edt_offsets="9084:9085" id="a5178">of</Token>
@@ -8891,7 +8891,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a5225" />
         <SentenceTheory actor_mention_set_id="a5225" event_mention_set_id="a5222" id="a5175" mention_set_id="a5199" name_theory_id="a5196" parse_id="a5198" part_of_speech_sequence_id="a5195" primary_parse="full_parse" proposition_set_id="a5210" rel_mention_set_id="a5221" token_sequence_id="a5176" value_mention_set_id="a5197" />
       </Sentence>
-      <Sentence char_offsets="9202:9206" edt_offsets="9202:9206" id="a5226" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="9202:9206" edt_offsets="9202:9206" id="a5226" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a5228" score="0.0">
           <Token char_offsets="9203:9205" edt_offsets="9203:9205" id="a5229">URL</Token>
           <Token char_offsets="9206:9206" edt_offsets="9206:9206" id="a5230">:</Token>
@@ -8915,7 +8915,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a5241" />
         <SentenceTheory actor_mention_set_id="a5241" event_mention_set_id="a5240" id="a5227" mention_set_id="a5235" name_theory_id="a5232" parse_id="a5234" part_of_speech_sequence_id="a5231" primary_parse="full_parse" proposition_set_id="a5237" rel_mention_set_id="a5239" token_sequence_id="a5228" value_mention_set_id="a5233" />
       </Sentence>
-      <Sentence char_offsets="9208:9233" edt_offsets="9208:9233" id="a5242" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="9208:9233" edt_offsets="9208:9233" id="a5242" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a5244" score="0.0">
           <Token char_offsets="9208:9232" edt_offsets="9208:9232" id="a5245">https://www.interfax.com/</Token>
           <Token char_offsets="9233:9233" edt_offsets="9233:9233" id="a5246">-RRB-</Token>
@@ -8935,7 +8935,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a5256" />
         <SentenceTheory actor_mention_set_id="a5256" event_mention_set_id="a5255" id="a5243" mention_set_id="a5252" name_theory_id="a5248" parse_id="a5251" part_of_speech_sequence_id="a5247" primary_parse="full_parse" proposition_set_id="a5253" rel_mention_set_id="a5254" token_sequence_id="a5244" value_mention_set_id="a5249" />
       </Sentence>
-      <Sentence char_offsets="9236:9238" edt_offsets="9236:9238" id="a5257" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="9236:9238" edt_offsets="9236:9238" id="a5257" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a5259" score="0.0">
           <Token char_offsets="9236:9237" edt_offsets="9236:9237" id="a5260">10</Token>
         </TokenSequence>
@@ -8954,7 +8954,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a5270" />
         <SentenceTheory actor_mention_set_id="a5270" event_mention_set_id="a5269" id="a5258" mention_set_id="a5266" name_theory_id="a5262" parse_id="a5265" part_of_speech_sequence_id="a5261" primary_parse="full_parse" proposition_set_id="a5267" rel_mention_set_id="a5268" token_sequence_id="a5259" value_mention_set_id="a5263" />
       </Sentence>
-      <Sentence char_offsets="9239:9258" edt_offsets="9239:9258" id="a5271" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="9239:9258" edt_offsets="9239:9258" id="a5271" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a5273" score="0.0">
           <Token char_offsets="9239:9239" edt_offsets="9239:9239" id="a5274">-LRB-</Token>
           <Token char_offsets="9240:9242" edt_offsets="9240:9242" id="a5275">OSE</Token>
@@ -9016,7 +9016,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a5304" event_mention_set_id="a5303" id="a5272" mention_set_id="a5288" name_theory_id="a5282" parse_id="a5287" part_of_speech_sequence_id="a5281" primary_parse="full_parse" proposition_set_id="a5295" rel_mention_set_id="a5302" token_sequence_id="a5273" value_mention_set_id="a5286" />
       </Sentence>
-      <Sentence char_offsets="9259:9455" edt_offsets="9259:9455" id="a5307" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="9259:9455" edt_offsets="9259:9455" id="a5307" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a5309" score="0.0">
           <Token char_offsets="9261:9279" edt_offsets="9261:9279" id="a5310">EUW2019022672864232</Token>
           <Token char_offsets="9281:9281" edt_offsets="9281:9281" id="a5311">|</Token>
@@ -9214,7 +9214,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a5413" event_mention_set_id="a5405" id="a5308" mention_set_id="a5355" name_theory_id="a5348" parse_id="a5354" part_of_speech_sequence_id="a5347" primary_parse="full_parse" proposition_set_id="a5379" rel_mention_set_id="a5404" token_sequence_id="a5309" value_mention_set_id="a5352" />
       </Sentence>
-      <Sentence char_offsets="9457:9602" edt_offsets="9457:9602" id="a5418" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="9457:9602" edt_offsets="9457:9602" id="a5418" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a5420" score="0.0">
           <Token char_offsets="9460:9469" edt_offsets="9460:9469" id="a5421">Lithuanian</Token>
           <Token char_offsets="9471:9476" edt_offsets="9471:9476" id="a5422">online</Token>
@@ -9346,7 +9346,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         </ActorMentionSet>
         <SentenceTheory actor_mention_set_id="a5491" event_mention_set_id="a5481" id="a5419" mention_set_id="a5452" name_theory_id="a5446" parse_id="a5451" part_of_speech_sequence_id="a5445" primary_parse="full_parse" proposition_set_id="a5464" rel_mention_set_id="a5480" token_sequence_id="a5420" value_mention_set_id="a5448" />
       </Sentence>
-      <Sentence char_offsets="9603:9607" edt_offsets="9603:9607" id="a5493" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="9603:9607" edt_offsets="9603:9607" id="a5493" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a5495" score="0.0">
           <Token char_offsets="9604:9606" edt_offsets="9604:9606" id="a5496">URL</Token>
           <Token char_offsets="9607:9607" edt_offsets="9607:9607" id="a5497">:</Token>
@@ -9370,7 +9370,7 @@ Lithuanian Top Cyber Security Official Warns Cyber Attacks Likely in Elections. 
         <ActorMentionSet id="a5508" />
         <SentenceTheory actor_mention_set_id="a5508" event_mention_set_id="a5507" id="a5494" mention_set_id="a5502" name_theory_id="a5499" parse_id="a5501" part_of_speech_sequence_id="a5498" primary_parse="full_parse" proposition_set_id="a5504" rel_mention_set_id="a5506" token_sequence_id="a5495" value_mention_set_id="a5500" />
       </Sentence>
-      <Sentence char_offsets="9609:9650" edt_offsets="9609:9650" id="a5509" is_annotated="TRUE" primary_parse="full_parse" region_id="a3">
+      <Sentence char_offsets="9609:9650" edt_offsets="9609:9650" id="a5509" is_annotated="TRUE" region_id="a3">
         <TokenSequence id="a5511" score="0.0">
           <Token char_offsets="9609:9649" edt_offsets="9609:9649" id="a5512">http://www.elta.lt/sablonas1.php?kalba=en</Token>
           <Token char_offsets="9650:9650" edt_offsets="9650:9650" id="a5513">-RRB-</Token>

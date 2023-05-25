@@ -1,8 +1,11 @@
-# testing config file
 
-# implementations go here
 IMPLEMENTATIONS
-serif/model/impl/dependency_parser/stanford_nlp_dependency_parser.py
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/ingester/serifxml_ingester.py
+
+IMPLEMENTATIONS
++TEXT_OPEN_PYTHONPATH+/serif/model/impl/dependency_parser/stanford_nlp_dependency_parser.py
+
+INGESTER SerifxmlIngester
 
 DEPENDENCY_MODEL StanfordNLPDependencyParser
 lang en

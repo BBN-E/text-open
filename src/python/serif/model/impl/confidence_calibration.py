@@ -2,7 +2,7 @@ import os, json
 import logging
 import traceback
 import serifxml3
-from serif.model.base_model import BaseModel
+from serif.model.corpus_model import CorpusModel
 from serif.theory.sentence import Sentence
 from serif.theory.event_mention import EventMention
 import pickle
@@ -24,15 +24,13 @@ def get_event_anchor(serif_em: EventMention):
     else:
         return serif_em.anchor_node.text
 
-class ConfidenceCalibration(BaseModel):
+class ConfidenceCalibration(CorpusModel):
     def __init__(self, aggregate_word_pair_count, **kwargs):
         super(ConfidenceCalibration, self).__init__(**kwargs)
         self.aggregate_word_pair_count = aggregate_word_pair_count
         self.conf_threshold = 0.65
         self.conf_threshold_remap = 0.35
 
-    def process(self, serif_doc):
-        pass
 
     def remap_confidence(self, confidence):
         # remap 0.65-1 to range between 0.35-1
@@ -42,7 +40,7 @@ class ConfidenceCalibration(BaseModel):
         return new_confidence
 
 
-    def process_barrier(self, serif_doc_list):
+    def process_documents(self, serif_doc_list):
         try:
             # organize EER's by head/tail word pairs (last word in head/tail phrase)
             word_pair_to_eerm_dict = dict()

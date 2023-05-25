@@ -1,0 +1,37 @@
+
+# implementations go here
+IMPLEMENTATIONS
+./serif/model/impl/stanfordnlp_adapter.py
+
+IMPLEMENTATIONS
+./serif/model/impl/sentence_splitter/stanford_nlp_sentence_splitter.py
+
+IMPLEMENTATIONS
+./serif/model/impl/parser/benepar_parser.py
+
+IMPLEMENTATIONS
+./serif/model/impl/mention/noun_phrase_mention_model.py
+
+IMPLEMENTATIONS
+./serif/model/impl/dependency_parser/stanford_nlp_dependency_parser.py
+
+SENTENCE_SPLITTING_MODEL StanfordNLPSentenceSplitter
+lang en
+models_dir [YOUR_HOME_DIR]/stanfordnlp_resources
+
+BASE_MODEL StanfordNLPAdapter
+lang en
+models_dir [YOUR_HOME_DIR]/stanfordnlp_resources
+max_tokens 200
+
+PARSE_MODEL BeneparParser
+model benepar_en2
+add_heads
+max_tokens 200
+
+MENTION_MODEL NounPhraseMentionModel
+
+DEPENDENCY_MODEL StanfordNLPDependencyParser
+lang en
+models_dir [YOUR_HOME_DIR]/stanfordnlp_resources
+use_data_from_stanford_adapter

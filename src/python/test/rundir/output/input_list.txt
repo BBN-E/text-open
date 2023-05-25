@@ -1,1 +1,1 @@
-serifxml	./test/rundir/output/sample_doc.txt.xml
+./test/rundir/output/sample_doc.txt.xml

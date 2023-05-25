@@ -1,5 +1,5 @@
 from serif.theory.serif_token_theory import SerifTokenTheory
-from serif.xmlio import _ReferenceListAttribute, _SimpleAttribute, _TextOfElement,_ReferenceAttribute
+from serif.xmlio import _ReferenceListAttribute, _SimpleAttribute, _TextOfElement, _ReferenceAttribute
 
 
 class Token(SerifTokenTheory):
@@ -9,7 +9,7 @@ class Token(SerifTokenTheory):
                                               cls='LexicalEntry')
     original_token_index = _SimpleAttribute(int)
     head = _ReferenceAttribute('head_token_id',
-                                         cls="Token")
+                               cls="Token")
     lemma = _SimpleAttribute()
 
     @classmethod
@@ -25,7 +25,7 @@ class Token(SerifTokenTheory):
 
     def get_hosting_sentence_theory(self):
         token_sequence = self.owner
-        for sentence_theory in token_sequence.sentence().sentence_theories:
+        for sentence_theory in token_sequence.sentence.sentence_theories:
             if sentence_theory.token_sequence == token_sequence:
                 return sentence_theory
         return None
@@ -58,5 +58,3 @@ class Token(SerifTokenTheory):
         if pos is not None:
             return pos.dep_rel
         return None
-
-

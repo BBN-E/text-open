@@ -1,9 +1,9 @@
-from serif.theory.enumerated_type import ParseType
 from serif.theory.event_mention_set import EventMentionSet
 from serif.theory.mention_set import MentionSet
 from serif.theory.value_mention_set import ValueMentionSet
 from serif.theory.name_theory import NameTheory
 from serif.theory.parse import Parse
+from serif.theory.amr_parse import AMRParse
 from serif.theory.proposition_set import PropositionSet
 from serif.theory.dependency_set import DependencySet
 from serif.theory.region import Region
@@ -12,6 +12,7 @@ from serif.theory.serif_sentence_theory import SerifSentenceTheory
 from serif.theory.sentence_theory import SentenceTheory
 from serif.theory.token_sequence import TokenSequence
 from serif.theory.part_of_speech_sequence import PartOfSpeechSequence
+from serif.theory.actor_mention_set import ActorMentionSet
 from serif.xmlio import _ReferenceAttribute, _SimpleAttribute, _ChildTextElement, _ChildTheoryElement, \
     _ChildTheoryElementList
 
@@ -19,8 +20,6 @@ class Sentence(SerifSentenceTheory):
     region = _ReferenceAttribute('region_id', cls=Region,
                                   is_required=True)
     is_annotated = _SimpleAttribute(bool, default=True)
-    primary_parse = _SimpleAttribute(ParseType,
-                                     default=ParseType.full_parse)
     contents = _ChildTextElement('Contents')
     _token_sequences = _ChildTheoryElementList('TokenSequence')
     _pos_sequences = _ChildTheoryElementList('PartOfSpeechSequence')
@@ -29,6 +28,7 @@ class Sentence(SerifSentenceTheory):
     _value_mention_sets = _ChildTheoryElementList('ValueMentionSet')
     _np_chunk_theories = _ChildTheoryElementList('NPChunkTheory')
     _parses = _ChildTheoryElementList('Parse')
+    _amr_parses = _ChildTheoryElementList('AMRParse')
     _mention_sets = _ChildTheoryElementList('MentionSet')
     _proposition_sets = _ChildTheoryElementList('PropositionSet')
     _dependency_sets = _ChildTheoryElementList('DependencySet')
@@ -41,10 +41,10 @@ class Sentence(SerifSentenceTheory):
     # n.b.: "parse" and "sentence_theory" are defined as properties.
 
     @classmethod
-    def from_values(cls, owner=None, start_char=0, end_char=0, region_id="", is_annotated=True):
+    def from_values(cls, owner=None, start_char=0, end_char=0, region=None, is_annotated=True):
         ret = cls(owner=owner)
         ret.set_offset(start_char, end_char)
-        ret.set_region_id(region_id)
+        ret.set_region_id(region)
         ret.set_is_annotated(is_annotated)
         st = SentenceTheory(owner=ret)
         st.document.generate_id(st)
@@ -62,7 +62,7 @@ class Sentence(SerifSentenceTheory):
             setattr(st, field, obj)
         
     def add_new_sentence_theory(self):
-        sentence_theory = SentenceTheory(owner=self)
+        sentence_theory = SentenceTheory.empty(owner=self)
         sentence_theory.document.generate_id(sentence_theory)
         self._sentence_theories.append(sentence_theory)
         return sentence_theory
@@ -79,23 +79,22 @@ class Sentence(SerifSentenceTheory):
         """
         return self.sentence_theory.token_sequence
 
-    def add_new_token_sequence(self, score, sentence_theory=None):
+    def add_new_token_sequence(self, sentence_theory=None):
         if sentence_theory is None:
             sentence_theory = self.sentence_theory
-        token_sequence = TokenSequence.from_values(owner=self, score=score)
+        token_sequence = TokenSequence.empty(owner=self)
         token_sequence.document.generate_id(token_sequence)
         self._token_sequences.append(token_sequence)
         sentence_theory.token_sequence = token_sequence
         return token_sequence
 
-    def add_new_part_of_speech_sequence(self,score, sentence_theory=None):
+    def add_new_part_of_speech_sequence(self, sentence_theory=None):
         if sentence_theory is None:
             sentence_theory = self.sentence_theory
-        part_of_speech_sequence = PartOfSpeechSequence(owner=self)
-        part_of_speech_sequence.token_sequence = sentence_theory.token_sequence
+        part_of_speech_sequence = PartOfSpeechSequence.empty(
+            owner=self, token_sequence=sentence_theory.token_sequence)
         part_of_speech_sequence.document.generate_id(part_of_speech_sequence)
         self._pos_sequences.append(part_of_speech_sequence)
-        part_of_speech_sequence.score = score
         sentence_theory.pos_sequence = part_of_speech_sequence
         return part_of_speech_sequence
 
@@ -119,7 +118,8 @@ class Sentence(SerifSentenceTheory):
     def add_new_name_theory(self, sentence_theory=None):
         if sentence_theory is None:
             sentence_theory = self.sentence_theory
-        name_theory = NameTheory(owner=self)
+        name_theory = NameTheory.empty(
+            owner=self, token_sequence=sentence_theory.token_sequence)
         name_theory.document.generate_id(name_theory)
         self._name_theories.append(name_theory)
         sentence_theory.name_theory = name_theory
@@ -144,7 +144,8 @@ class Sentence(SerifSentenceTheory):
     def add_new_value_mention_set(self, sentence_theory=None):
         if sentence_theory is None:
             sentence_theory = self.sentence_theory
-        value_mention_set = ValueMentionSet(owner=self)
+        value_mention_set = ValueMentionSet.empty(
+            owner=self, token_sequence=sentence_theory.token_sequence)
         value_mention_set.document.generate_id(value_mention_set)
         self._value_mention_sets.append(value_mention_set)
         sentence_theory.value_mention_set = value_mention_set
@@ -181,6 +182,21 @@ class Sentence(SerifSentenceTheory):
         return parse
 
     @property
+    def amr_parse(self):
+        """
+        """
+        return self.sentence_theory.amr_parse
+
+    def add_new_amr_parse(self, score, amr_string, sentence_theory=None):
+        if sentence_theory is None:
+            sentence_theory = self.sentence_theory
+        amr_parse = AMRParse.from_values(owner=self, score=score, amr_string=amr_string,
+                                         token_sequence=sentence_theory.token_sequence)
+        self._amr_parses.append(amr_parse)
+        sentence_theory.amr_parse = amr_parse
+        return amr_parse
+
+    @property
     def mention_set(self):
         """If there is a single SentenceTheory for this Sentence, 
            this will return the MentionSet for that SentenceTheory. 
@@ -191,7 +207,8 @@ class Sentence(SerifSentenceTheory):
     def add_new_mention_set(self, sentence_theory=None):
         if sentence_theory is None:
             sentence_theory = self.sentence_theory
-        mention_set = MentionSet(owner=self)
+        mention_set = MentionSet.empty(
+            owner=self, parse=sentence_theory.parse)
         mention_set.document.generate_id(mention_set)
         self._mention_sets.append(mention_set)
         sentence_theory.mention_set = mention_set
@@ -208,8 +225,8 @@ class Sentence(SerifSentenceTheory):
     def add_new_proposition_set(self, mention_set, sentence_theory=None):
         if sentence_theory is None:
             sentence_theory = self.sentence_theory
-        proposition_set = PropositionSet(owner=self)
-        proposition_set.mention_set = mention_set
+        proposition_set = PropositionSet.empty(
+            owner=self, mention_set = mention_set)
         proposition_set.document.generate_id(proposition_set)
         self._proposition_sets.append(proposition_set)
         sentence_theory.proposition_set = proposition_set
@@ -226,8 +243,8 @@ class Sentence(SerifSentenceTheory):
     def add_new_dependency_set(self, mention_set, sentence_theory=None):
         if sentence_theory is None:
             sentence_theory = self.sentence_theory
-        dependency_set = DependencySet(owner=self)
-        dependency_set.mention_set = mention_set
+        dependency_set = DependencySet.empty(
+            owner=self, mention_set=mention_set)
         dependency_set.document.generate_id(dependency_set)
         self._dependency_sets.append(dependency_set)
         sentence_theory.dependency_set = dependency_set
@@ -244,7 +261,7 @@ class Sentence(SerifSentenceTheory):
     def add_new_relation_mention_set(self, sentence_theory=None):
         if sentence_theory is None:
             sentence_theory = self.sentence_theory
-        rel_mention_set = RelMentionSet(owner=self)
+        rel_mention_set = RelMentionSet.empty(owner=self)
         rel_mention_set.document.generate_id(rel_mention_set)
         self._rel_mention_sets.append(rel_mention_set)
         sentence_theory.rel_mention_set = rel_mention_set
@@ -261,7 +278,8 @@ class Sentence(SerifSentenceTheory):
     def add_new_event_mention_set(self, sentence_theory=None):
         if sentence_theory is None:
             sentence_theory = self.sentence_theory
-        event_mention_set = EventMentionSet(owner=self)
+        event_mention_set = EventMentionSet.empty(
+            owner=self, parse=sentence_theory.parse)
         event_mention_set.document.generate_id(event_mention_set)
         self._event_mention_sets.append(event_mention_set)
         sentence_theory.event_mention_set = event_mention_set
@@ -274,3 +292,12 @@ class Sentence(SerifSentenceTheory):
            Otherwise, it will raise an exception.
         """
         return self.sentence_theory.actor_mention_set
+
+    def add_new_actor_mention_set(self, sentence_theory=None):
+        if sentence_theory is None:
+            sentence_theory = self.sentence_theory
+        actor_mention_set = ActorMentionSet.empty(owner=self)
+        actor_mention_set.document.generate_id(actor_mention_set)
+        self._actor_mention_sets.append(actor_mention_set)
+        sentence_theory.actor_mention_set = actor_mention_set
+        return actor_mention_set

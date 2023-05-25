@@ -5,7 +5,7 @@ set -o pipefail
 set -u
 
 REPO_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && cd .. && pwd )"
-PYTHON3="/opt/Python-3.5.2-x86_64/bin/python3.5"
+PYTHON3="/opt/Python-3.5.2-x86_64/bin/python3"
 
 tmp=`mktemp -d`
 

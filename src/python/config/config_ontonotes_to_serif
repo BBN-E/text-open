@@ -1,15 +1,28 @@
-# config file for converting conll name corpus to serif format (for nlplingo)
+# config file for converting ontonotes name corpus to serif format (for nlplingo)
+
+# PYTHONPATH=/nfs/raid66/u11/users/brozonoy/text-open/src/python python3 \
+#  /nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/driver/pipeline.py \
+#  /nfs/raid66/u11/users/brozonoy/text-open/src/python/config/config_ontonotes_to_serif \
+#  /nfs/raid66/u11/users/brozonoy/
 
 IMPLEMENTATIONS
-./misc/ner_to_serif_implementation.py
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/ingester/text_ingester.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/tokenizer/plain_white_space_tokenizer.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/sentence_splitter/newline_sentence_splitter.py
+
+IMPLEMENTATIONS
+/nfs/raid66/u11/users/brozonoy/text-open/src/python/serif/model/impl/mention_from_tokens/mentions_from_words_bio_files.py
+
+INGESTER TextIngester
+lang English
 
 SENTENCE_SPLITTING_MODEL NewlineSentenceSplitter
 
 TOKENIZE_MODEL PlainWhiteSpaceTokenizer
 
-NAME_MODEL AIDANameModel
-mapping_file /nfs/raid66/u11/users/brozonoy/NER/data/ontonotes_words_tags/ontonotes_mapping_file
-
-PARSE_MODEL DummyNameNPParser
-
-MENTION_MODEL NameMentionModel
+MENTION_MODEL MentionsFromWordsBIOFiles
+mapping_file /nfs/raid90/u10/users/brozonoy-ad/data/ontonotes/english/mapping_file

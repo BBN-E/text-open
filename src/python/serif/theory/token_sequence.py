@@ -18,6 +18,10 @@ class TokenSequence(SerifSequenceTheory):
         ret.set_score(score)
         return ret
 
+    @classmethod
+    def empty(cls, owner=None):
+        return cls.from_values(owner=owner)
+
     def set_score(self, score):
         self.score = score
 
@@ -30,24 +34,7 @@ class TokenSequence(SerifSequenceTheory):
         token = Token.from_values(self, start_char, end_char, text, lemma)
         token.document.generate_id(token)
         return token
-    
+
     def add_token(self, token):
         self._children.append(token)
-        
-    def sentence(self):
-        """Returns the sentence that this TokenSeqence belongs to"""
-        return self.owner
-
-    def index(self, token):
-        """Returns the index of the Token in the TokenSequence or None
-           if the Token is not in the Sequence. This is slow -- Order n
-           with the length of the TokenSequence.
-        """
-        try: 
-            i = self._children.index(token)
-            return i
-        except ValueError:
-            return None
-
-
 

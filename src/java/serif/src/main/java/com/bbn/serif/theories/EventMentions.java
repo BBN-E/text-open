@@ -77,7 +77,7 @@ public abstract class EventMentions
     checkArgument(!isAbsent() || eventMentions().isEmpty(), "Absent event mentions must be empty");
   }
 
-  public static Function<SentenceTheory,EventMentions> eventMentionsFunction = new Function<SentenceTheory, EventMentions>() {
+  public static final Function<SentenceTheory,EventMentions> eventMentionsFunction = new Function<SentenceTheory, EventMentions>() {
     @Override
     public EventMentions apply(final SentenceTheory input) {
       return input.eventMentions();
